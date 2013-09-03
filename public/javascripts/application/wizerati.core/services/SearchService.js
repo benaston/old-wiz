@@ -3,13 +3,14 @@
 //try forcing service types to communicate with the UI only via routing and local storage?
 (function (app) {
 
-    function SearchService(resultModelFactory) {
+    function SearchService(croniclService, resultModelFactory) {
 
         if (!(this instanceof app.SearchService)) {
-            return new app.SearchService(resultModelFactory, resultListModel);
+            return new app.SearchService(croniclService, resultModelFactory, resultListModel);
         }
 
         var that = this,
+            _croniclService = null,
             _resultModelFactory = null;
 
         this.runSearch = function (keywords, location, rate) {
@@ -17,7 +18,7 @@
             console.log(keywords, location, rate);
 
             //throw "next: use factory to get the uri, then retrieve the data and add it to local storage.";
-            $.ajax({ url: './items', success: success, cache: false });
+            $.ajax({ url: _croniclService.getCroniclUri(), success: success, cache: false });
         };
 
         function success(data) {
@@ -42,10 +43,15 @@
         }
 
         function init() {
+            if (!croniclService) {
+                throw "croniclService not supplied."
+            }
+
             if (!resultModelFactory) {
                 throw "resultModelFactory not supplied."
             }
 
+            _croniclService = croniclService;
             _resultModelFactory = resultModelFactory;
 
             return that;
