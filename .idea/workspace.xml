@@ -8,7 +8,7 @@
     <file path="/appStart.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378246886445" ignored="false" />
     <file path="/SearchService.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378247802512" ignored="false" />
     <file path="/modules.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378247852148" ignored="false" />
-    <file path="/readme.md" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378249531259" ignored="false" />
+    <file path="/readme.md" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378249595158" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
       <file leaf-file-name="readme.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.164859">
+            <state line="3" column="4" selection-start="23" selection-end="23" vertical-scroll-proportion="0.123644255">
               <folding />
             </state>
           </provider>
@@ -473,7 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.164859">
+        <state line="3" column="4" selection-start="23" selection-end="23" vertical-scroll-proportion="0.123644255">
           <folding />
         </state>
       </provider>

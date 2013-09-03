@@ -3,6 +3,8 @@ wizerati
 
 http://pacific-plains-5947.herokuapp.com/
 
+    git add -A && git commit -m "wip" &&  git push heroku master && git push origin master
+
 ##Launch Guide
 
 	express --ejs wizerati
