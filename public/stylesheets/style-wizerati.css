@@ -9,6 +9,7 @@ body[data-ui-mode=search] #result-list-panel {
     width: 259px;
     left: 316px;
     display:none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .favourite-items .thumbnail:before {
@@ -32,6 +33,7 @@ body[data-ui-mode=search] #result-list-panel {
     margin: 0 8px 0 8px;
     height: 100%; /*important for presence of scrollbars*/
     /*display: inline-block;*/
+    -webkit-overflow-scrolling: touch;
 }
 
 .selected-item .menu {
