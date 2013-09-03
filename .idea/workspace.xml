@@ -5,6 +5,7 @@
     <ignored path="wizerati.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.ejs" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378246208831" ignored="false" />
+    <file path="/appStart.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378246886445" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
       <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="49" selection-start="966" selection-end="966" vertical-scroll-proportion="-8.142858">
+            <state line="16" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="305.5">
               <folding>
                 <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#ul#0;tag#body#0;tag#html#0" expanded="false" />
@@ -40,7 +41,7 @@
       <file leaf-file-name="appStart.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="90" selection-end="90" vertical-scroll-proportion="0.20607375">
+            <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.164859">
               <folding />
             </state>
           </provider>
@@ -58,7 +59,7 @@
       <file leaf-file-name="fast-click.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/fast-click.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="647" column="29" selection-start="20845" selection-end="20845" vertical-scroll-proportion="0.0">
+            <state line="760" column="1" selection-start="24054" selection-end="24054" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -81,6 +82,7 @@
         <option value="$PROJECT_DIR$/public/javascripts/vendor/fastclick.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/application/appStart.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/vendor/fast-click.js" />
       </list>
     </option>
   </component>
@@ -387,18 +389,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/fast-click.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="647" column="29" selection-start="20845" selection-end="20845" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="49" selection-start="966" selection-end="966" vertical-scroll-proportion="-8.142858">
+        <state line="16" column="51" selection-start="916" selection-end="916" vertical-scroll-proportion="305.5">
           <folding>
             <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#ul#0;tag#body#0;tag#html#0" expanded="false" />
@@ -407,9 +400,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/fast-click.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="760" column="1" selection-start="24054" selection-end="24054" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="90" selection-end="90" vertical-scroll-proportion="0.20607375">
+        <state line="4" column="13" selection-start="66" selection-end="66" vertical-scroll-proportion="0.164859">
           <folding />
         </state>
       </provider>
