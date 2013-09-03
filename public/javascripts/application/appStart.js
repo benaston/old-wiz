@@ -2,6 +2,8 @@
 
 jQuery(document).ready(function () {
 
+    FastClick.attach(document.body);
+
     window.wizerati.instance = new wizerati.App(invertebrate.env.dev);
 
     self.wizerati.instance.router = new invertebrate.Router();
@@ -18,9 +20,8 @@ jQuery(document).ready(function () {
     //self.wizerati.instance.favouritesCube = new wizerati.FavouritesCubeView(new wizerati.FavouritesCubeModel());
     //self.wizerati.instance.searchResults = new wizerati.SearchResultsView(new wizerati.SearchResultsModel());
     //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
-    $(function() {
-        FastClick.attach(document.body);
-    });
+
+
 });
 
 
