@@ -13,34 +13,29 @@
             _croniclService = null,
             _resultModelFactory = null;
 
-        this.runSearch = function (keywords, location, rate) {
+        this.runSearch = function (keywords, location, rate, done) {
 
             console.log(keywords, location, rate);
 
-            //throw "next: use factory to get the uri, then retrieve the data and add it to local storage.";
-            $.ajax({ url: _croniclService.getCroniclUri(), success: success, cache: false });
-        };
+            function success(data) {
+                if (!data) {
+                    throw "data not supplied";
+                }
 
-        function success(data) {
-            if (!data) {
-                throw "data not supplied";
+                var results = $.parseJSON(data);
+                var resultModels = [];
+
+                _.each(results, function (r) {
+                    resultModels.push(_resultModelFactory.create(r));
+                });
+
+                done(resultModels);
             }
 
-//            console.log(data);
-            //write the results to local storage, then return to the controller
-            //the controller can then coordinate the updating of any views
-
-            var results = $.parseJSON(data);
-            console.log(data);
-//            var resultModels = [];
-//
-//            _.each(results, function (r) {
-//                resultModels.push(_modelFactory.create(r));
-//            });
-//
-//
-//            _resultListModel.setResults(resultModels);
-        }
+            //throw "next: use cronicl service to get the uri,
+            // then pass it into done argument (which should update the relevant models - and hence the UI)";
+            $.ajax({ url: _croniclService.getCroniclUri() + 'search', success: success, cache: false });
+        };
 
         function init() {
             if (!croniclService) {
@@ -80,3 +75,22 @@
 //};
 //
 //options = _.extend({}, defaults, options);
+//
+//if (!data) {
+//    throw "data not supplied";
+//}
+
+//            console.log(data);
+//write the results to local storage, then return to the controller
+//the controller can then coordinate the updating of any views
+
+//var results = $.parseJSON(data);
+//console.log(data);
+//            var resultModels = [];
+//
+//            _.each(results, function (r) {
+//                resultModels.push(_modelFactory.create(r));
+//            });
+//
+//
+//            _resultListModel.setResults(resultModels);

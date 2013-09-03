@@ -6,19 +6,22 @@
 (function (app) {
     function SearchController(uiRootModel,
                               searchFormModel,
-                              searchService) {
+                              searchService,
+                              resultListModel) {
 
         if (!(this instanceof app.SearchController)) {
             return new app.SearchController(uiRootModel,
                                             searchFormModel,
-                                            searchService);
+                                            searchService,
+                                            resultListModel);
         }
 
         var that = this,
             _uiModeEnum = wizerati.mod("enum").UIMode,
             _uiRootModel = null,
             _searchFormModel = null,
-            _searchService = null;
+            _searchService = null,
+            _resultListModel = null;
 
         this.show = function () {
             try {
@@ -26,7 +29,9 @@
 
                 _searchService.runSearch(_searchFormModel.getKeywords(),
                     _searchFormModel.getLocation(),
-                    _searchFormModel.getRate());
+                    _searchFormModel.getRate(), function(models){
+                        _resultListModel.setResults(models);
+                    });
             } catch (err) {
                 console.log("error: SearchController.show. " + err);
             }
@@ -45,9 +50,14 @@
                 throw "searchService not supplied.";
             }
 
+            if (!resultListModel) {
+                throw "resultListModel not supplied.";
+            }
+
             _uiRootModel = uiRootModel;
             _searchFormModel = searchFormModel;
             _searchService = searchService;
+            _resultListModel = resultListModel;
 
             return that;
         }

@@ -2,49 +2,53 @@
 
 (function (app) {
 
-	function ContractorView(model) {
+    function ContractView(model) {
 
-		if (!(this instanceof app.ContractorView)) {
-			return new app.ContractorView(model);
-		}
+        if (!(this instanceof app.ContractView)) {
+            return new app.ContractView(model);
+        }
 
-		var that = this, 
-			_el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
-			_templateName = "result.html";
+        var that = this,
+            _el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
+            _templateName = "result.html";
 
-		this.$el = $(_el);
-		this.Model = null;
-	
-		this.render = function (options) {
-			options = options || { done: that.postRender };
+        this.$el = $(_el);
+        this.Model = null;
 
-			app.instance.renderTemplate(that.$el, templateName, that.Model, {
-				done: function ($el) { that.bindEvents($el, options.done); }
-			});
-		};
-	
-		this.postRender = function () {
-		};
+        this.render = function (options) {
+            options = options || { done: that.postRender };
 
-		this.bindEvents = function ($el, done) {
-			that.$el.on('click', function () {
-				app.instance.resultList.Model.setSelectedItem(that.$el.data("id"));
-			});			
+            app.instance.renderTemplate(that.$el, _templateName, that.Model, {
+                done: function ($el) {
+                    that.bindEvents($el, options.done);
+                }
+            });
+        };
 
-			done($el);
-		};
+        this.postRender = function () {
+        };
 
-		function init() {
-			if (!model) { throw "model not supplied"; }
-			
-			that.Model = model;					
-			
-			return that;
-		}
+        this.bindEvents = function ($el, done) {
+            that.$el.on('click', function () {
+                app.instance.resultList.Model.setSelectedItem(that.$el.data("id"));
+            });
 
-		return init();
-	};
+            done($el);
+        };
 
-	app.ContractorView = ContractorView;
-	invertebrate.View.isExtendedBy(app.ContractorView);
+        function init() {
+            if (!model) {
+                throw "model not supplied";
+            }
+
+            that.Model = model;
+
+            return that;
+        }
+
+        return init();
+    };
+
+    app.ContractView = ContractView;
+    invertebrate.View.isExtendedBy(app.ContractView);
 }(wizerati));

@@ -13,10 +13,13 @@
             _roleEnum = null;
 
         this.create = function (data) {
+            throw "json is undefined here. likely missing json lib. underscore prob has something (or jquery)";
             switch (_loginService.getCurrentRole()) {
-                case _roleEnum.RoleOne:
+                case _roleEnum.Employer:
+                case _roleEnum.EmployerStranger:
                     return createContractor(data);
-                case _roleEnum.RoleTwo:
+                case _roleEnum.Contractor:
+                case _roleEnum.ContractorStranger:
                     return createContract(data);
                 default:
                     throw "invalid user role '" + role + "'";
@@ -26,7 +29,7 @@
         function createContractor(data) {
             var dataModel = json.Parse(data);
 
-            return new wizerati.ContractorModel(dataModel.id,
+            return new app.ContractorModel(dataModel.id,
                 dataModel.city,
                 dataModel.telephone,
                 dataModel.email,
@@ -39,7 +42,7 @@
         function createContract(data) {
             var dataModel = json.Parse(data);
 
-            return new wizerati.ContractModel(dataModel.id,
+            return new app.ContractModel(dataModel.id,
                 dataModel.city,
                 dataModel.telephone,
                 dataModel.email,

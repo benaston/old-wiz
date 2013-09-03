@@ -32,10 +32,9 @@
 
     mod.AuthenticationService = new wizerati.AuthenticationService();
     mod.CookieService = new wizerati.CookieService();
-    mod.LogInService = new wizerati.LogInService(wizerati.mod("config").Config, mod.CookieService);
+    mod.LogInService = new wizerati.LogInService(mod.CookieService);
     mod.CroniclService = new wizerati.CroniclService(mod.LogInService, wizerati.mod("config").Config); //pass in login service instead?
     mod.ResultModelFactory = new wizerati.ResultModelFactory(mod.LogInService);
-    //could register a search service factory function in the cronicl metadata
     mod.SearchService = new wizerati.SearchService(mod.CroniclService, mod.ResultModelFactory);
 
 }(wizerati.mod("services")));
