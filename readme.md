@@ -1,8 +1,9 @@
 wizerati
 ========
 
+http://pacific-plains-5947.herokuapp.com/
 
-Launch Guide
+##Launch Guide
 
 	express --ejs wizerati
 
@@ -29,4 +30,4 @@ More:
 
 Express documentation: http://expressjs.com/guide.html
 
-http://evanhahn.com/understanding-express-js/	
+http://evanhahn.com/understanding-express-js/
