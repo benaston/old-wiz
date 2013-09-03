@@ -1,0 +1,314 @@
+footer {
+clear: both;
+top: 106px;
+position: relative;
+text-align: center;
+}
+
+figure {
+margin: 0; /*important to ensure rotational origin is centered*/
+}
+
+.cube-container {
+width: 260px;
+height: 260px;
+position: relative;
+-webkit-perspective: 800px;
+margin: auto;
+margin-bottom: 35px; /*space for face label*/
+-webkit-user-select:none;
+}
+
+.us .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg); 
+}
+
+.india .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg);
+}
+
+.france .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg);
+}
+
+.spain .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg);
+}
+
+.italy .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg);
+}
+
+.united-kingdom .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg);
+}
+
+#f-t:not(:checked) ~ .cube-controls label[for="f-t"]:hover,
+#f-l:not(:checked) ~ .cube-controls label[for="f-l"]:hover,
+#f-f:not(:checked) ~ .cube-controls label[for="f-f"]:hover,
+#f-r:not(:checked) ~ .cube-controls label[for="f-r"]:hover,
+#f-bottom:not(:checked) ~ .cube-controls label[for="f-bottom"]:hover,
+#f-back:not(:checked) ~ .cube-controls label[for="f-back"]:hover {
+border-color: rgba(255, 200, 0, 0.3);
+}
+#f-t:checked ~ .cube-controls label[for="f-t"], 
+#f-l:checked ~ .cube-controls label[for="f-l"], 
+#f-f:checked ~ .cube-controls label[for="f-f"], 
+#f-r:checked ~ .cube-controls label[for="f-r"], 
+#f-bottom:checked ~ .cube-controls label[for="f-bottom"], 
+#f-back:checked ~ .cube-controls label[for="f-back"] {
+background-color:rgba(0,109,204,0.95);
+box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
+border: 2px solid white;
+}
+
+.cube-face-labels li {
+display:none;
+}
+
+#f-t:checked ~ .cube-face-labels li[for="f-t"], 
+#f-l:checked ~ .cube-face-labels li[for="f-l"], 
+#f-f:checked ~ .cube-face-labels li[for="f-f"], 
+#f-r:checked ~ .cube-face-labels li[for="f-r"], 
+#f-bottom:checked ~ .cube-face-labels li[for="f-bottom"], 
+#f-back:checked ~ .cube-face-labels li[for="f-back"] {
+display:block;
+}
+
+.cube {  
+position: absolute;
+-webkit-transform-style: preserve-3d;
+-webkit-transition: -webkit-transform 1s;
+width: 100%;
+height: 100%;
+}
+
+.cube figure:not(.center){
+opacity:0.4;
+}
+
+.cube figure {
+display: block;
+position: absolute;
+width: 260px;
+height: 260px;
+text-align: center;
+box-sizing: border-box;
+opacity: 1;
+border: 2px solid #eee;
+}
+
+@-webkit-keyframes 'orbit1'
+{       
+	 0%{
+        -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+    
+    80% {
+        -webkit-transform: rotateY(350deg) rotateX(325deg) rotateZ(285deg);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+}
+@-webkit-keyframes 'orbit2'
+{       
+	 0%{
+        -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+    
+    80% {
+        -webkit-transform: rotateY(200deg) rotateX(725deg) rotateZ(185deg);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes 'orbit3'
+{       
+	 0%{
+        -webkit-transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    }
+    
+    80% {
+        -webkit-transform: rotateY(10deg) rotateX(35deg) rotateZ(75deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg);
+    }
+}
+
+.cube .center.latitude, 
+.cube .center.orbit, 
+.cube .center.longitude {
+height: 130px;
+width: 130px;
+line-height: 130px;
+border-radius: 130px;
+display: block;
+margin: auto;
+top: 69px;
+left: 63px;
+-webkit-animation-duration: 20s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+-webkit-animation-direction: alternate;
+}
+
+.cube .center.longitude {		
+	-webkit-animation-name:'orbit1';
+}
+
+.cube .center.latitude {
+  -webkit-animation-name:'orbit2';
+}
+
+.cube .center.orbit {
+  -webkit-animation-name:'orbit3';
+}
+
+.cube .front {	
+  -webkit-transform: translateZ(130px);
+}
+
+.cube .back {
+  -webkit-transform: rotateX(-180deg) translateZ(130px);
+}
+
+.cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(130px);
+}
+
+.cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(130px);
+}
+
+.cube .top {
+  -webkit-transform: rotateX(90deg) translateZ(130px);
+}
+
+.cube .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(130px);
+}
+
+#f-f:checked ~ .cube {
+  -webkit-transform: translateZ(-130px);
+}
+
+#f-back:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(-180deg);
+}
+
+#f-r:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateY(-90deg);
+}
+
+#f-l:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateY(90deg);
+}
+
+#f-t:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(-90deg);
+}
+
+#f-bottom:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(90deg);
+}
+
+#f-f:checked ~ .cube .front,
+#f-back:checked ~ .cube .back,
+#f-r:checked ~ .cube .right,
+#f-l:checked ~ .cube .left,
+#f-t:checked ~ .cube .top,
+#f-bottom:checked ~ .cube .bottom {
+opacity:1;
+-webkit-transition: opacity 1s linear;
+}
+
+#f-f:not(:checked) ~ .cube .front,
+#f-back:not(:checked) ~ .cube .back,
+#f-r:not(:checked) ~ .cube .right,
+#f-l:not(:checked) ~ .cube .left,
+#f-t:not(:checked) ~ .cube .top,
+#f-bottom:not(:checked) ~ .cube .bottom {
+opacity:.4;
+-webkit-transition: opacity 1s linear;
+}
+
+
+.result {
+height: 100%;
+width: 100%;
+background-size: cover;
+border-radius: 5px;
+background-position:0 0;
+}
+
+.hover:nth-child(even) {
+margin-left:7px !important;
+}
+
+.favourites .hover {
+display: inline-block;
+box-sizing: border-box;
+}
+
+.my-favourites .hover {
+margin:auto;
+}
+
+.favourites {
+height: 100%;
+width: 100%;
+border: none;
+position: relative;
+}
+
+.hover {
+background-color: transparent;
+
+margin: 10px 0 10px 0;
+}
+
+.my-favourites {
+top: 0;
+position: relative;
+width:100%;
+height: 330px;
+-webkit-user-select: none;
+}
+
+.cube-controls {
+width: 100%;
+position: absolute;
+left: 0;
+bottom: -48px;
+margin: auto;
+text-align: center;
+}
+
+.cube-net label {
+margin: auto !important;
+border-radius: 0;
+height: 40px;
+width: 40px;
+border: 2px solid #eee;
+}
+
+.cube-face-labels {
+position: relative;
+top: -32px;
+text-align: center;
+list-style:none;
+    width: 100%;
+    padding: 0;
+}
+
+.cube-controls label{
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border: 2px solid #eee;
+}
+
