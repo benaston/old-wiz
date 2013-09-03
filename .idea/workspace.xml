@@ -27,7 +27,7 @@
       <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="500" column="44" selection-start="22734" selection-end="22734" vertical-scroll-proportion="0.73672056">
+            <state line="15" column="67" selection-start="901" selection-end="901" vertical-scroll-proportion="0.43879908">
               <folding>
                 <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
                 <element signature="tag#ul#0;tag#body#0;tag#html#0" expanded="false" />
@@ -384,7 +384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="500" column="44" selection-start="22734" selection-end="22734" vertical-scroll-proportion="0.73672056">
+        <state line="15" column="67" selection-start="901" selection-end="901" vertical-scroll-proportion="0.43879908">
           <folding>
             <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
             <element signature="tag#ul#0;tag#body#0;tag#html#0" expanded="false" />
