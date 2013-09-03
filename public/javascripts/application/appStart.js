@@ -18,7 +18,9 @@ jQuery(document).ready(function () {
     //self.wizerati.instance.favouritesCube = new wizerati.FavouritesCubeView(new wizerati.FavouritesCubeModel());
     //self.wizerati.instance.searchResults = new wizerati.SearchResultsView(new wizerati.SearchResultsModel());
     //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
-
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
 });
 
 
