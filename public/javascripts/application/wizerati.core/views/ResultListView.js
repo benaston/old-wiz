@@ -1,33 +1,34 @@
 (function (app) {
     "use strict";
 
-    function ResultListView(model, options) {
+    function ResultListView(model, resultViewFactory) {
 
         if (!(this instanceof app.ResultListView)) {
-            return new app.ResultListView(model);
+            return new app.ResultListView(model, resultViewFactory);
         }
 
         var that = this,
             _el = "#result-list-panel",
-            _templateName = "result-list.html";
+            _resultViewFactory = null;
 
         this.$el = $(_el);
         this.Model = null;
 
-        //note how this does not have a template of its own, but delegates
-        //gets a bunch of items to render themselves, via the application router
         this.render = function (options) {
+            throw "wiring up contractview and contractorview rendering here";
             options = options || { done: that.postRender };
 
             that.$el.empty();
-            $.each(that.Model.results, function (index, value) {
-                app.instance.router.route(value, { $parentDomNode: that.$el });
+            $.each(that.Model.getResults(), function (index, value) {
+                that.$el.append(_resultViewFactory.create(value).$el);
             });
+
+            options.done();
         };
 
         this.postRender = function () {
             var $results = that.$el.find(".result");
-            $results.live('click, touch', function () {
+            $results.on('click, touch', function () {
                 that.Model.setSelectedResult($results.find('.is-selected').data('id'), { silent: false });
             });
         };
@@ -36,13 +37,15 @@
             if (!model) {
                 throw "model not supplied";
             }
-            options = options || {  };
+
+            if (!resultViewFactory) {
+                throw "resultViewFactory not supplied";
+            }
 
             that.Model = model;
-            that.$el = $(_el);
+            _resultViewFactory = resultViewFactory;
 
             $.subscribe(that.Model.updateEventUri, that.render);
-            $.subscribe(that.Model.deleteEventUri, that.render);
 
             that.render();
 

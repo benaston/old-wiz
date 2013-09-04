@@ -7,32 +7,37 @@
         }
 
         var that = this,
-            _selectedResultId = null;
+            _selectedResultId = null,
+            _results = [];
 
-        this.updateEventUri = "update://ResultList/";
-        this.deleteEventUri = "delete://ResultList/";
-        that.resourceName = "todoList";
-        this.results = [];
+        this.updateEventUri = "update://ResultListModel/";
+        this.deleteEventUri = "delete://ResultListModel/";
 
         this.setResults = function (results) {
 
-            that._results = results;
+            _results = results;
 
             $.publish(that.updateEventUri);
         };
 
-        this.getResult = function (id, options) {
+        this.getResults = function () {
+
+            return _results;
+        };
+
+        this.getResult = function (id) {
             if (!id) {
                 throw "id not supplied";
             }
 
-            that.results = _.filter(that.results, function (result) {
+            return _results = _.filter(_results, function (result) {
                 result.id === id;
             })[0];
         };
 
         this.getSelectedResultId = function (id) {
-            return that._selectedResultId;
+
+            return _selectedResultId;
         };
 
         this.setSelectedResultId = function (id) {
@@ -40,7 +45,7 @@
                 throw "id not supplied";
             }
 
-            that._selectedResultId = id;
+            _selectedResultId = id;
 
             $.publish(that.updateEventUri);
         };
@@ -50,7 +55,7 @@
                 throw "result not supplied";
             }
 
-            that.results.unshift(results);
+            _results.unshift(results);
 
             $.publish(that.updateEventUri);
         };
@@ -60,21 +65,22 @@
                 throw "id not supplied";
             }
 
-            that.results = _.reject(that.results, function (result) {
+            _results = _.reject(_results, function (result) {
                 result.id === id;
             });
 
             $.publish(that.deleteEventUri);
         };
 
-        this.render = function (options) {
-            options = options || { done: that.postRender };
-
-            that.$el.empty();
-            $.each(that.Model.results, function (index, model) {
-                app.instance.router.route(model, { $parentDomNode: that.$el });
-            });
-        };
+//        this.render = function (options) {
+//            options = options || { done: that.postRender };
+//
+//            that.$el.empty();
+//
+//            $.each(that.Model.results, function (index, model) {
+//                app.instance.router.route(model, { $parentDomNode: that.$el });
+//            });
+//        };
 
         function init() {
 

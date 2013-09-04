@@ -15,6 +15,8 @@
 
         this.runSearch = function (keywords, location, rate, done) {
 
+            done = !done ? function(data) {} : done;
+
             console.log(keywords, location, rate);
 
             function success(data) {
@@ -23,17 +25,10 @@
                 }
 
                 var results = $.parseJSON(data);
-                var resultModels = [];
 
-                _.each(results, function (r) {
-                    resultModels.push(_resultModelFactory.create(r));
-                });
-
-                done(resultModels);
+                done(results);
             }
 
-            //throw "next: use cronicl service to get the uri,
-            // then pass it into done argument (which should update the relevant models - and hence the UI)";
             $.ajax({ url: _croniclService.getCroniclUri() + 'search', success: success, cache: false });
         };
 
@@ -59,6 +54,8 @@
 
 }(wizerati));
 
+//throw "next: use cronicl service to get the uri,
+// then pass it into done argument (which should update the relevant models - and hence the UI)";
 
 //use a factory for the search URI?
 //var defaults = {
@@ -94,3 +91,9 @@
 //
 //
 //            _resultListModel.setResults(resultModels);
+
+//                var resultModels = [];
+//
+//                _.each(results, function (r) {
+//                    resultModels.push(_resultModelFactory.create(r));
+//                });

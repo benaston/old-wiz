@@ -13,7 +13,7 @@
             _roleEnum = null;
 
         this.create = function (data) {
-            throw "json is undefined here. likely missing json lib. underscore prob has something (or jquery)";
+            //throw "json is undefined here. likely missing json lib. underscore prob has something (or jquery)";
             switch (_loginService.getCurrentRole()) {
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
@@ -40,16 +40,21 @@
         }
 
         function createContract(data) {
-            var dataModel = json.Parse(data);
 
-            return new app.ContractModel(dataModel.id,
-                dataModel.city,
-                dataModel.telephone,
-                dataModel.email,
-                dataModel.lastUpdated,
-                dataModel.lastUpdated,
-                dataModel.summary,
-                dataModel.title);
+            return new app.ContractModel(data.id,
+                data.title,
+                data.location,
+                data.organization,
+                data.jobType,
+                data.contact,
+                data.telephoneNumber,
+                data.email,
+                data.rateLower,
+                data.rateUpper,
+                data.postedDatetime,
+                data.updatedDatetime,
+                data.skills,
+                data.eternalLinks);
         }
 
         function init() {

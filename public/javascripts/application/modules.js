@@ -41,6 +41,12 @@
 
 (function (mod) {
 
+    mod.ResultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").LogInService);
+
+}(wizerati.mod("factories")));
+
+(function (mod) {
+
     mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").Config, wizerati.mod("services").CroniclService.getCroniclUri);
 
 }(wizerati.mod("templates")));

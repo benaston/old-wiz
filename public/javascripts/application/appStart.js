@@ -11,13 +11,13 @@ jQuery(document).ready(function () {
     self.wizerati.instance.searchForm = new wizerati.SearchFormView(new wizerati.SearchFormModel());
     self.wizerati.instance.uiRoot = new wizerati.UIRootView(new wizerati.UIRootModel());
     self.wizerati.instance.loginPanel = new wizerati.LoginPanelView(new wizerati.LoginPanelModel());
-    self.wizerati.instance.resultList = new wizerati.ResultListView(new wizerati.ResultListModel());
+    self.wizerati.instance.resultList = new wizerati.ResultListView(new wizerati.ResultListModel(), wizerati.mod("factories").ResultViewFactory);
 
     self.wizerati.instance.sessionController = new wizerati.SessionController(self.wizerati.instance.loginPanel.Model, wizerati.mod("services").AuthenticationService);
     self.wizerati.instance.loginController = new wizerati.LoginController(self.wizerati.instance.loginPanel.Model, self.wizerati.instance.uiRoot.Model);
     self.wizerati.instance.homeController = new wizerati.HomeController(self.wizerati.instance.uiRoot.Model);
     self.wizerati.instance.advertisersController = new wizerati.AdvertisersController(self.wizerati.instance.uiRoot.Model);
-    self.wizerati.instance.searchController = new wizerati.SearchController(self.wizerati.instance.uiRoot.Model, self.wizerati.instance.searchForm.Model, wizerati.mod("services").SearchService,  self.wizerati.instance.resultList.Model);
+    self.wizerati.instance.searchController = new wizerati.SearchController(self.wizerati.instance.uiRoot.Model, self.wizerati.instance.searchForm.Model, wizerati.mod("services").SearchService, self.wizerati.instance.resultList.Model);
 
     //self.wizerati.instance.favouritesCube = new wizerati.FavouritesCubeView(new wizerati.FavouritesCubeModel());
     //self.wizerati.instance.searchResults = new wizerati.SearchResultsView(new wizerati.SearchResultsModel());

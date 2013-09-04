@@ -1,7 +1,9 @@
 "use strict";
 
 (function (app) {
-    function ContractModel(id, city, telephone, email, lastUpdated, summary, title) {
+    function ContractModel(id, title, location, organization, jobType, contact,
+                           telephoneNumber, email, rateLower, rateUpper,
+                           postedDateTime, updatedDateTime, skills, externalLinks) {
 
         if (!(this instanceof app.Contract)) {
             return new app.Contract();

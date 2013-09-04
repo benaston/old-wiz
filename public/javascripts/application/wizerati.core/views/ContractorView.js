@@ -43,6 +43,8 @@
 
             that.Model = model;
 
+            that.render();
+
             return that;
         }
 
