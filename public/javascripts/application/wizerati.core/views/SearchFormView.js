@@ -18,22 +18,23 @@
         this.render = function (e, options) {
             options = options || { done: that.postRender };
 
-            return app.instance.renderTemplate(that.$el, _templateName, that.Model, options);
+            return app.instance.renderTemplate(that.$el,
+                _templateName, that.Model, options);
         };
 
         this.postRender = function () {
             var $keywords = that.$el.find("#keywords");
-            $keywords.live('change', function () {
+            $keywords.on('change', function () {
                 that.Model.setKeywords($keywords.val(), { silent: true });
             });
 
             var $location = that.$el.find("#location");
-            $location.live('change', function () {
+            $location.on('change', function () {
                 that.Model.setLocation($location.val(), { silent: true });
             });
 
             var $rate = that.$el.find("input[name='r']");
-            $rate.live('change', function () {
+            $rate.on('change', function () {
                 that.Model.setRate(that.$el.find("input[name='r']:checked").val(), { silent: true });
             });
 

@@ -17,11 +17,9 @@
                 uri = '/';
             }
             history.pushState(null, null, uri);
-            that.routes[uri](model);
-        };
 
-        this.routeByObject = function (model, options) {
-            that.routes[model.constructor.name](model, options);
+            throw "add querystring parsing for arguments (will ensure possibility of retaining more context when opening in new window)! modify to use underscore to find first match by regex, capture the first argument from the uri?";
+            that.routes[uri](model);
         };
 
         function routeHyperlink(evt) {

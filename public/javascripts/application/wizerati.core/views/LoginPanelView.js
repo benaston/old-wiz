@@ -12,11 +12,15 @@
             _el = "#log-in-panel",
             _cancelButtonEl = ".btn-cancel",
             _successButtonEl = ".log-in .btn-success",
+            _usernameEl = ".username",
+            _passwordEl = ".password",
             _uiModeEnum = wizerati.mod("enum").UIMode;
 
         this.$el = $(_el);
         this.$cancelButton = $(_el).find(_cancelButtonEl);
         this.$successButton = $(_el).find(_successButtonEl);
+        this.$username = $(_el).find(_usernameEl);
+        this.$password = $(_el).find(_passwordEl);
         this.Model = null;
 
         this.render = function (e, options) {
@@ -31,6 +35,14 @@
         };
 
         this.bindEvents = function () {
+            that.$username.on('change', function () {
+                that.Model.setUsername(that.$username.val());
+            });
+
+            that.$password.on('change', function () {
+                that.Model.setPassword(that.$password.val());
+            });
+
             that.$cancelButton.on('click', function () {
                 cancel();
             });

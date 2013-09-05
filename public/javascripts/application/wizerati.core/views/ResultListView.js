@@ -15,7 +15,7 @@
         this.Model = null;
 
         this.render = function (options) {
-            throw "wiring up contractview and contractorview rendering here";
+
             options = options || { done: that.postRender };
 
             that.$el.empty();
@@ -27,10 +27,7 @@
         };
 
         this.postRender = function () {
-            var $results = that.$el.find(".result");
-            $results.on('click, touch', function () {
-                that.Model.setSelectedResult($results.find('.is-selected').data('id'), { silent: false });
-            });
+            //removed functionality to set selected item - this should now be performed via the router
         };
 
         function init() {
@@ -45,9 +42,9 @@
             that.Model = model;
             _resultViewFactory = resultViewFactory;
 
-            $.subscribe(that.Model.updateEventUri, that.render);
-
             that.render();
+
+            $.subscribe(that.Model.updateEventUri, that.render);
 
             return that;
         }

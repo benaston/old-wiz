@@ -11,8 +11,8 @@
             _loginPanelModel = null,
             _authenticationService = null;
 
-        this.create = function(model){
-            if(!_authenticationService.authenticate(model.username, model.password))
+        this.create = function(){
+            if(!_authenticationService.authenticate(_loginPanelModel.getUsername(), _loginPanelModel.getPassword()))
             {
                 _loginPanelModel.setIsLoginFailedMessageVisible(true);
             }
@@ -36,7 +36,7 @@
         }
 
         return init();
-    };
+    }
 
     app.SessionController = SessionController;
 

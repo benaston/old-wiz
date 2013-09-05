@@ -11,7 +11,7 @@
 
         that.resourceName = "not set";
 
-        //todo: ensure base cobnstructor is invoked to subscribe to sync notifications
+        //todo: ensure base constructor is invoked to subscribe to sync notifications
         function init() {
             $.subscribe("sync://syncableModels/", that.sync);
 

@@ -1,7 +1,7 @@
 //a resource can have a template, metadata and a post-render action?
 //note 1: meant to be a function to calculate left-part of the uri to point to to retrieve resources
-//todo: convert to prototype function binding throughout?
 (function (invertebrate) {
+
     "use strict";
 
     function SyncSvc(configSvc, serverUriSelectionFunc) {
@@ -10,7 +10,9 @@
             return new invertebrate.SyncSvc(configSvc, serverUriSelectionFunc);
         }
 
-        var that = this, _configSvc = null, _syncInterval = null;
+        var that = this,
+            _configSvc = null,
+            _syncInterval = null;
 
         this.serverUriSelectionFunc = function () {
             return "./example/templateServer/";
@@ -23,15 +25,15 @@
         };
 
         this.start = function () {
-            var syncinterval = that._configSvc.syncinterval || 10;
+            var syncinterval = _configSvc.syncinterval || 10;
 
-            that._syncInterval = setInterval(function () {
-                that.sync();
-            }, syncInterval);
+            _syncInterval = setInterval(function () {
+                that.sync(null);
+            }, _syncInterval);
         };
 
         this.stop = function () {
-            clearInterval(that._syncInterval);
+            clearInterval(_syncInterval);
         };
 
         function init() {
@@ -39,7 +41,7 @@
                 throw "configSvc not supplied";
             }
 
-            that._configSvc = configSvc;
+            _configSvc = configSvc;
             that.serverUriSelectionFunc = serverUriSelectionFunc || that.serverUriSelectionFunc;
 
             return that;

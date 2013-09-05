@@ -10,7 +10,8 @@
             return new invertebrate.TemplateServerSvc(configSvc, serverUriSelectionFunc);
         }
 
-        var that = this, _configSvc = null;
+        var that = this,
+                   _configSvc = null;
 
         this.serverUriSelectionFunc = function () {
             return "./template-server/";
@@ -42,7 +43,7 @@
                     return options.done(that.metadata[itemName]);
                 }; //closes over the metadata variable
 
-            var metadataUriPart = that.configSvc.config.metadataUriPart,
+            var metadataUriPart = _configSvc.config.metadataUriPart,
                 uri = serverUriSelectionFunc() + metadataUriPart;
 
             if (that.metadata && that.metadata[itemName]) {
@@ -57,13 +58,13 @@
         };
 
         this.getTemplateUri = function (templateName) {
-            var templatesUriPart = that._configSvc.config.templatesUriPart;
+            var templatesUriPart = _configSvc.config.templatesUriPart;
 
             return that.serverUriSelectionFunc() + templatesUriPart + templateName;
         };
 
         this.getPostRenderActionScriptUri = function (templateName) {
-            var postRenderScriptsUriPart = that.configSvc.config.templatePostRenderScriptsUriPart;
+            var postRenderScriptsUriPart = _configSvc.config.templatePostRenderScriptsUriPart;
 
             return that.getSearchItemCroniclUri() + postRenderScriptsUriPart + templateName;
         };
@@ -73,7 +74,7 @@
                 throw "configSvc not supplied";
             }
 
-            that._configSvc = configSvc;
+            _configSvc = configSvc;
             that.serverUriSelectionFunc = serverUriSelectionFunc || that.serverUriSelectionFunc;
 
             return that;

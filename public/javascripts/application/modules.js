@@ -1,7 +1,5 @@
 "use strict";
 
-//builds "namespaces" (or "modules", hence "mod") 
-//of objects for use by the application.
 //order of declaration matters here.
 (function (mod) {
 
@@ -17,6 +15,11 @@
         LogIn: "2",
         Purchase: "3",
         Search: "4"
+    };
+
+    mod.SelectedItemLocation = {
+        ResultsList: "1",
+        FavouritesCube: "2"
     };
 
 }(wizerati.mod("enum")));

@@ -23,6 +23,8 @@
                     that.bindEvents($el, options.done);
                 }
             });
+
+            return that;
         };
 
         this.postRender = function () {

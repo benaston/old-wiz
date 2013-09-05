@@ -18,7 +18,7 @@
         this.render = function (options) {
             options = options || { done: that.postRender };
 
-            app.instance.renderTemplate(that.$el, templateName, that.Model, {
+            app.instance.renderTemplate(that.$el, _templateName, that.Model, {
                 done: function ($el) {
                     that.bindEvents($el, options.done);
                 }

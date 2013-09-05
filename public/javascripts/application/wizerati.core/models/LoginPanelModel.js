@@ -21,8 +21,6 @@
 
         this.setUsername = function (value) {
             _username = value;
-
-            $.publish(that.updateEventUri);
         };
 
         this.getPassword = function () {
@@ -31,8 +29,6 @@
 
         this.setPassword = function (value) {
             _password = value;
-
-            $.publish(that.updateEventUri);
         };
 
         this.getIsLoginFailedMessageVisible = function () {

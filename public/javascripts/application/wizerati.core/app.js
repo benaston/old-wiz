@@ -52,6 +52,11 @@
                 app.instance.searchController.show();
             });
 
+            that.router.registerRoute('/selecteditem/update', function (model) {
+
+                app.instance.selectedItemController.update(model);
+            });
+
         };
 
         function init() {

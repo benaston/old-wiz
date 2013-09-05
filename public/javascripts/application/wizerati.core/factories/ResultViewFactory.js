@@ -15,10 +15,10 @@
             switch (_loginService.getCurrentRole()) {
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
-                    return new app.ContractorView(data);
+                    return new app.ContractorView(data).render();
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
-                    return new app.ContractView(data);
+                    return new app.ContractView(data).render();
                 default:
                     throw "invalid user role '" + role + "'";
             }
@@ -36,7 +36,7 @@
         }
 
         return init();
-    };
+    }
 
     app.ResultViewFactory = ResultViewFactory;
 
