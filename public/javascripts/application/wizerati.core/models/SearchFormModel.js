@@ -8,20 +8,20 @@
         }
 
         var that = this,
-            _title = null,
-            _description = null,
+            _keywords = null,
+            _location = null,
             _rate = null;
 
         this.updateEventUri = "update://SearchFormModel/";
 
         this.getKeywords = function () {
-            return that._keywords;
+            return _keywords;
         };
 
         this.setKeywords = function (value, options) {
             options = options || { silent: false };
 
-            that._keywords = value;
+            _keywords = value;
 
             if (options && options.silent === true) {
                 return;
@@ -35,7 +35,7 @@
         };
 
         this.setLocation = function (value, options) {
-            that._location = value;
+            _location = value;
 
             if (options && options.silent === true) {
                 return;
@@ -45,11 +45,11 @@
         };
 
         this.getRate = function () {
-            return that._rate;
+            return _rate;
         };
 
         this.setRate = function (value, options) {
-            that._rate = value;
+            _rate = value;
 
             if (options && options.silent === true) {
                 return;

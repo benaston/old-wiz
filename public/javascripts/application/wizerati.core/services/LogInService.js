@@ -87,7 +87,7 @@
         }
 
         return init();
-    };
+    }
 
     app.LogInService = LogInService;
 

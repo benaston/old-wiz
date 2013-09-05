@@ -1,12 +1,11 @@
 "use strict";
 
 (function (app) {
-    function SelectedItemController(favoritesCubeModel,
-                                    resultListModel) {
+    function SelectedItemController(favoritesCubeModel, resultListModel) {
 
         if (!(this instanceof app.SelectedItemController)) {
             return new app.SelectedItemController(favoritesCubeModel,
-                                                  resultListModel);
+                resultListModel);
         }
 
         var that = this,
@@ -16,13 +15,13 @@
 
         this.update = function (model) {
             try {
-                    if(model.location === _selectedItemLocationEnum.Favourites) {
-                          _resultListModel.setSelectedResultId(null);
-                        _favoritesCubeModel.setSelectedFavoriteId(model.id);
-                    } else {
-                        _resultListModel.setSelectedResultId(model.id);
-                        _favoritesCubeModel.setSelectedFavoriteId(null);
-                    }
+                if (model.location === _selectedItemLocationEnum.Favourites) {
+                    _resultListModel.setSelectedResultId(null);
+                    _favoritesCubeModel.setSelectedFavoriteId(model.id);
+                } else {
+                    _resultListModel.setSelectedResultId(model.id);
+                    _favoritesCubeModel.setSelectedFavoriteId(null);
+                }
             } catch (err) {
                 console.log("error: SelectedItemController.update. " + err);
             }

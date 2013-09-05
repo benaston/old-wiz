@@ -2,26 +2,24 @@
 
 (function (app) {
     function CookieService() {
-        "use strict";
 
         if (!(this instanceof CookieService)) {
             return new CookieService();
         }
 
         var that = this,
-            cookieValidityDays = 2,
-            cookieName = "wizerati";
+            _cookieName = "wizerati";
 
         this.getAuthorizationCookie = function () {
-            return _.cookie(cookieName);
+            return _.cookie(_cookieName);
         };
 
         this.setAuthorizationCookie = function (role) {
-            _.cookie(cookieName, role, { expires: 7, path: '/' });
+            _.cookie(_cookieName, role, { expires: 7, path: '/' });
         };
 
         this.deleteAuthorizationCookie = function () {
-            _.cookie(cookieName, null);
+            _.cookie(_cookieName, null);
         };
 
         function init() {

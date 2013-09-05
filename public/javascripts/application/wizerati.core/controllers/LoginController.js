@@ -1,7 +1,8 @@
 "use strict";
 
 (function (app) {
-    function LoginController(loginPanelModel, uiRootModel) {
+    function LoginController(loginPanelModel,
+                             uiRootModel) {
 
         if (!(this instanceof app.LoginController)) {
             return new app.LoginController(loginPanelModel, uiRootModel);
@@ -36,7 +37,7 @@
         }
 
         return init();
-    };
+    }
 
     app.LoginController = LoginController;
 

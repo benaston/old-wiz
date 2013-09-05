@@ -28,7 +28,6 @@
             if (!loginService) {
                 throw "loginService not supplied."
             }
-            ;
 
             _loginService = loginService;
 

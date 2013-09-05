@@ -11,17 +11,18 @@
             _uiRootModel = null,
             _uiModeEnum = wizerati.mod("enum").UIMode;
 
-
-        this.index = function(){
+        this.index = function () {
             try {
                 _uiRootModel.setUIMode(_uiModeEnum.Purchase);
-            } catch(err) {
+            } catch (err) {
                 console.log("error: AdvertisersController.index");
             }
         };
 
         function init() {
-            if(!uiRootModel) { throw "uiRootModel not supplied."; }
+            if (!uiRootModel) {
+                throw "uiRootModel not supplied.";
+            }
 
             _uiRootModel = uiRootModel;
 
@@ -29,7 +30,7 @@
         }
 
         return init();
-    };
+    }
 
     app.AdvertisersController = AdvertisersController;
 

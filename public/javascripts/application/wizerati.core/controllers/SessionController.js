@@ -11,9 +11,8 @@
             _loginPanelModel = null,
             _authenticationService = null;
 
-        this.create = function(){
-            if(!_authenticationService.authenticate(_loginPanelModel.getUsername(), _loginPanelModel.getPassword()))
-            {
+        this.create = function () {
+            if (!_authenticationService.authenticate(_loginPanelModel.getUsername(), _loginPanelModel.getPassword())) {
                 _loginPanelModel.setIsLoginFailedMessageVisible(true);
             }
 
@@ -21,11 +20,11 @@
         };
 
         function init() {
-            if(!loginPanelModel) {
+            if (!loginPanelModel) {
                 throw "loginFormPanelModel not supplied.";
             }
 
-            if(!authenticationService) {
+            if (!authenticationService) {
                 throw "authenticationService not supplied.";
             }
 

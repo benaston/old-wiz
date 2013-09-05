@@ -52,7 +52,7 @@
         }
 
         return init();
-    };
+    }
 
     app.LoginPanelModel = LoginPanelModel;
     invertebrate.Model.isExtendedBy(app.LoginPanelModel);

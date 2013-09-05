@@ -76,7 +76,7 @@
         }
 
         return init();
-    };
+    }
 
     app.LoginPanelView = LoginPanelView;
     invertebrate.View.isExtendedBy(app.LoginPanelView);

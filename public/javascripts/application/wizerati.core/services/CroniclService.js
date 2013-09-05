@@ -30,7 +30,7 @@
         }
 
         return init();
-    };
+    }
 
     app.CroniclService = CroniclService;
 

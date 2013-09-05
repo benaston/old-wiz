@@ -48,7 +48,7 @@
         }
 
         return init();
-    };
+    }
 
     app.SearchService = SearchService;
 

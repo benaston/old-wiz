@@ -31,11 +31,7 @@
         };
 
         this.bindEvents = function ($el, done) {
-            that.$el.on('click', function () {
-                app.instance.resultList.Model.setSelectedItem(that.$el.data("id"));
-            });
-
-            done($el);
+            //todo: route
         };
 
         function init() {
@@ -51,7 +47,7 @@
         }
 
         return init();
-    };
+    }
 
     app.ContractorView = ContractorView;
     invertebrate.View.isExtendedBy(app.ContractorView);
