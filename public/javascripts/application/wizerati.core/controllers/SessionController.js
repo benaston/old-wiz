@@ -16,12 +16,12 @@
                 _loginPanelModel.setIsLoginFailedMessageVisible(true);
             }
 
-            console.log('starting session...' + model)
+//            console.log('starting session...' + model)
         };
 
         function init() {
             if (!loginPanelModel) {
-                throw "loginFormPanelModel not supplied.";
+                throw "loginPanelModel not supplied.";
             }
 
             if (!authenticationService) {

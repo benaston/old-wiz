@@ -3,6 +3,18 @@
 
     function Router(homeRoute) {
 
+        function extractQueryString(queryString) {
+            if (queryString == "") return {};
+            var b = {};
+            for (var i = 0; i < queryString.length; ++i) {
+                var p = queryString[i].split('=');
+                if (p.length != 2) continue;
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        }
+
+
         var that = this,
             _homeRoute = '/';
 
@@ -12,21 +24,33 @@
             that.routes[uri] = action;
         };
 
-        this.route = function (uri, model) {
+        this.route = function (uri, dto) {
             if (uri === _homeRoute) {
                 uri = '/';
             }
             history.pushState(null, null, uri);
 
-//            throw "add querystring parsing for arguments (will ensure possibility of retaining more context when opening in new window)! modify to use underscore to find first match by regex, capture the first argument from the uri?";
+            var splitUri = uri.split('?');
+            var uriWithoutQueryString = splitUri[0];
+            var queryString = splitUri[1];
 
-//            var route = _.filter(that.routes, function(route) {
-//                  //
-//            })[0];
-//
-//            var dto = null;
+            var escapedRoute = uriWithoutQueryString.replace(/\//g, '\\/');
+            var pattern = new RegExp('^' + escapedRoute, 'g');
 
-            that.routes[uri]();
+            var firstMatchingRouteUri = _.filter(Object.keys(that.routes), function (key) {
+                return pattern.exec(key);
+            })[0];
+
+            if (!firstMatchingRouteUri) {
+                throw "no matching route " + uriWithoutQueryString;
+            }
+
+            if (!queryString || dto) {
+                that.routes[firstMatchingRouteUri](dto);
+                return;
+            }
+            var queryStringArguments = queryString.split('&');
+            that.routes[firstMatchingRouteUri](extractQueryString(queryStringArguments));
         };
 
         function routeHyperlink(evt) {

@@ -8,13 +8,33 @@
         }
 
         var that = this,
-            _selectedFavoriteId = null;
+            _favourites = [
+                [],
+                [],
+                [],
+                [],
+                [],
+                []
+            ];
 
         this.updateEventUri = "update://FavoritesCubeModel/";
 
-        this.setSelectedFavoriteId = function (id) {
+        this.getSelectedFavoriteId = function () {
+            return _selectedFavoriteId;
+        };
 
-            _selectedFavoriteId = id;
+        this.setSelectedFavoriteId = function (id) {
+            if (!id) {
+                throw "id not supplied";
+            }
+
+            _.each(_favourites, function (r) {
+                if (r.id === id) {
+                    r.isSelected = true;
+                } else {
+                    r.isSelected = false;
+                }
+            });
 
             $.publish(that.updateEventUri);
         };

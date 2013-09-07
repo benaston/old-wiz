@@ -18,6 +18,12 @@
         this.render = function (options) {
             options = options || { done: that.postRender };
 
+            if (that.Model.isSelected) {
+                that.$el.addClass('selected');
+            } else {
+                that.$el.removeClass('selected');
+            }
+
             app.instance.renderTemplate(that.$el, _templateName, that.Model, {
                 done: function ($el) {
                     that.bindEvents($el, options.done);
@@ -31,11 +37,7 @@
         };
 
         this.bindEvents = function ($el, done) {
-            that.$el.on('click', function () {
-                app.instance.resultList.Model.setSelectedItem(that.$el.data("id"));
-            });
 
-            done($el);
         };
 
         function init() {
@@ -49,7 +51,7 @@
         }
 
         return init();
-    };
+    }
 
     app.ContractView = ContractView;
     invertebrate.View.isExtendedBy(app.ContractView);

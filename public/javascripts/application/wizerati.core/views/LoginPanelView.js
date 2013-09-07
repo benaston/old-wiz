@@ -24,7 +24,8 @@
         this.Model = null;
 
         this.render = function (e, options) {
-            options = options || { done: that.postRender };
+            var defaults = { done: that.postRender };
+            options = _.extend({}, defaults, options);
 
             if (that.Model.getIsLoginFailedMessageVisible()) {
                 that.$el.addClass('login-error');

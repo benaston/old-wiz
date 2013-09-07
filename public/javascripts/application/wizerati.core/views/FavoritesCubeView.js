@@ -1,15 +1,14 @@
 (function (app) {
     "use strict";
 
-    function ResultListView(model, resultViewFactory) {
+    function FavoritesCubeView(model) {
 
-        if (!(this instanceof app.ResultListView)) {
-            return new app.ResultListView(model, resultViewFactory);
+        if (!(this instanceof app.FavoritesCubeView)) {
+            return new app.FavoritesCubeView(model);
         }
 
         var that = this,
-            _el = "#result-list-panel",
-            _resultViewFactory = null;
+            _el = "#favorites-cube";
 
         this.$el = $(_el);
         this.Model = null;
@@ -17,11 +16,6 @@
         this.render = function (options) {
             var defaults = { done: that.postRender };
             options = _.extend({}, defaults, options);
-
-            that.$el.empty();
-            $.each(that.Model.getResults(), function (index, value) {
-                that.$el.append(_resultViewFactory.create(value).$el);
-            });
 
             options.done();
         };
@@ -35,12 +29,7 @@
                 throw "model not supplied";
             }
 
-            if (!resultViewFactory) {
-                throw "resultViewFactory not supplied";
-            }
-
             that.Model = model;
-            _resultViewFactory = resultViewFactory;
 
             that.render();
 
@@ -52,6 +41,6 @@
         return init();
     }
 
-    app.ResultListView = ResultListView;
-    invertebrate.View.isExtendedBy(app.ResultListView);
+    app.FavoritesCubeView = FavoritesCubeView;
+    invertebrate.View.isExtendedBy(app.FavoritesCubeView);
 }(wizerati));

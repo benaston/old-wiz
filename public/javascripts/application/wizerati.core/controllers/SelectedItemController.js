@@ -1,7 +1,8 @@
 "use strict";
 
 (function (app) {
-    function SelectedItemController(favoritesCubeModel, resultListModel) {
+    function SelectedItemController(favoritesCubeModel,
+                                    resultListModel) {
 
         if (!(this instanceof app.SelectedItemController)) {
             return new app.SelectedItemController(favoritesCubeModel,
@@ -13,15 +14,10 @@
             _favoritesCubeModel = null,
             _resultListModel = null;
 
-        this.update = function (model) {
+        this.update = function (dto) {
             try {
-                if (model.location === _selectedItemLocationEnum.Favourites) {
-                    _resultListModel.setSelectedResultId(null);
-                    _favoritesCubeModel.setSelectedFavoriteId(model.id);
-                } else {
-                    _resultListModel.setSelectedResultId(model.id);
-                    _favoritesCubeModel.setSelectedFavoriteId(null);
-                }
+                _resultListModel.setSelectedResultId(dto.id);
+                _favoritesCubeModel.setSelectedFavoriteId(dto.id);
             } catch (err) {
                 console.log("error: SelectedItemController.update. " + err);
             }

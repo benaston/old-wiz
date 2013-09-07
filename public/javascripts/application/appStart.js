@@ -18,8 +18,9 @@ jQuery(document).ready(function () {
     self.wizerati.instance.homeController = new wizerati.HomeController(self.wizerati.instance.uiRoot.Model);
     self.wizerati.instance.advertisersController = new wizerati.AdvertisersController(self.wizerati.instance.uiRoot.Model);
     self.wizerati.instance.searchController = new wizerati.SearchController(self.wizerati.instance.uiRoot.Model, self.wizerati.instance.searchForm.Model, wizerati.mod("services").SearchService, self.wizerati.instance.resultList.Model);
+    self.wizerati.instance.favoritesCube = new wizerati.FavoritesCubeView(new wizerati.FavoritesCubeModel());
+    self.wizerati.instance.selectedItemController = new wizerati.SelectedItemController(self.wizerati.instance.favoritesCube.Model, self.wizerati.instance.resultList.Model);
 
-    //self.wizerati.instance.favouritesCube = new wizerati.FavouritesCubeView(new wizerati.FavouritesCubeModel());
     //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
 
 

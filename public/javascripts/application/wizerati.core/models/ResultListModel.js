@@ -7,7 +7,6 @@
         }
 
         var that = this,
-            _selectedResultId = null,
             _results = [];
 
         this.updateEventUri = "update://ResultListModel/";
@@ -35,17 +34,18 @@
             })[0];
         };
 
-        this.getSelectedResultId = function (id) {
-
-            return _selectedResultId;
-        };
-
         this.setSelectedResultId = function (id) {
             if (!id) {
                 throw "id not supplied";
             }
 
-            _selectedResultId = id;
+            _.each(_results, function (r) {
+                if (r.id === id) {
+                    r.isSelected = true;
+                } else {
+                    r.isSelected = false;
+                }
+            });
 
             $.publish(that.updateEventUri);
         };
@@ -71,16 +71,6 @@
 
             $.publish(that.deleteEventUri);
         };
-
-//        this.render = function (options) {
-//            options = options || { done: that.postRender };
-//
-//            that.$el.empty();
-//
-//            $.each(that.Model.results, function (index, model) {
-//                app.instance.router.route(model, { $parentDomNode: that.$el });
-//            });
-//        };
 
         function init() {
 

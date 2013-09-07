@@ -52,9 +52,9 @@
                 app.instance.searchController.show(dto);
             });
 
-            that.router.registerRoute('/selecteditem/update', function (model) {
+            that.router.registerRoute('/selecteditem/update', function (dto) {
 
-                app.instance.selectedItemController.update(model);
+                app.instance.selectedItemController.update(dto);
             });
 
         };
