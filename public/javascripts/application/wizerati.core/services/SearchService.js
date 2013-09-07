@@ -3,10 +3,10 @@
 //try forcing service types to communicate with the UI only via routing and local storage?
 (function (app) {
 
-    function SearchService(croniclService, resultModelFactory) {
+    function SearchService(croniclService) {
 
         if (!(this instanceof app.SearchService)) {
-            return new app.SearchService(croniclService, resultModelFactory, resultListModel);
+            return new app.SearchService(croniclService);
         }
 
         var that = this,
@@ -37,12 +37,7 @@
                 throw "croniclService not supplied."
             }
 
-            if (!resultModelFactory) {
-                throw "resultModelFactory not supplied."
-            }
-
             _croniclService = croniclService;
-            _resultModelFactory = resultModelFactory;
 
             return that;
         }

@@ -18,14 +18,15 @@
             }
             history.pushState(null, null, uri);
 
+//            throw "add querystring parsing for arguments (will ensure possibility of retaining more context when opening in new window)! modify to use underscore to find first match by regex, capture the first argument from the uri?";
 
-            throw "add querystring parsing for arguments (will ensure possibility of retaining more context when opening in new window)! modify to use underscore to find first match by regex, capture the first argument from the uri?";
-//eg:
-//            _.filter(_results, function (result) {
-//                result.id === id;
+//            var route = _.filter(that.routes, function(route) {
+//                  //
 //            })[0];
+//
+//            var dto = null;
 
-            that.routes[uri](model);
+            that.routes[uri]();
         };
 
         function routeHyperlink(evt) {

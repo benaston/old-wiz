@@ -23,7 +23,7 @@
             _searchService = null,
             _resultListModel = null;
 
-        this.show = function () {
+        this.show = function (dto) {
             try {
                 _uiRootModel.setUIMode(_uiModeEnum.Search);
 

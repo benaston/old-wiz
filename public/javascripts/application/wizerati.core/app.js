@@ -10,26 +10,26 @@
 
         this.registerRoutes = function () {
 
-            that.router.registerRoute(app.ResultModel.prototype.constructor.name, function (model, options) {
-                options = options || { $parentDomNode: $('body') };
-                new wizerati.ResultView(model).render({ done: function ($el) {
-                    options.$parentDomNode.append($el);
-                } });
-            });
+//            that.router.registerRoute(app.ResultModel.prototype.constructor.name, function (model, options) {
+//                options = options || { $parentDomNode: $('body') };
+//                new wizerati.ResultView(model).render({ done: function ($el) {
+//                    options.$parentDomNode.append($el);
+//                } });
+//            });
 
-            that.router.registerRoute(app.ContractorModel.prototype.constructor.name, function (model, options) {
-                options = options || { $parentDomNode: $('body') };
-                new wizerati.ContractorView(model).render({ done: function ($el) {
-                    options.$parentDomNode.append($el);
-                } });
-            });
+//            that.router.registerRoute(app.ContractorModel.prototype.constructor.name, function (model, options) {
+//                options = options || { $parentDomNode: $('body') };
+//                new wizerati.ContractorView(model).render({ done: function ($el) {
+//                    options.$parentDomNode.append($el);
+//                } });
+//            });
 
-            that.router.registerRoute(app.ContractModel.prototype.constructor.name, function (model, options) {
-                options = options || { $parentDomNode: $('body') };
-                new wizerati.ContractView(model).render({ done: function ($el) {
-                    options.$parentDomNode.append($el);
-                } });
-            });
+//            that.router.registerRoute(app.ContractModel.prototype.constructor.name, function (model, options) {
+//                options = options || { $parentDomNode: $('body') };
+//                new wizerati.ContractView(model).render({ done: function ($el) {
+//                    options.$parentDomNode.append($el);
+//                } });
+//            });
 
             that.router.registerRoute('/session/create', function (model) {
                 app.instance.sessionController.create(model);
@@ -47,9 +47,9 @@
                 app.instance.homeController.index();
             });
 
-            that.router.registerRoute('/search', function () {
+            that.router.registerRoute('/search', function (dto) {
 
-                app.instance.searchController.show();
+                app.instance.searchController.show(dto);
             });
 
             that.router.registerRoute('/selecteditem/update', function (model) {

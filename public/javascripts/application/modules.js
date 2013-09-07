@@ -37,8 +37,7 @@
     mod.CookieService = new wizerati.CookieService();
     mod.LogInService = new wizerati.LogInService(mod.CookieService);
     mod.CroniclService = new wizerati.CroniclService(mod.LogInService, wizerati.mod("config").Config); //pass in login service instead?
-    mod.ResultModelFactory = new wizerati.ResultModelFactory(mod.LogInService);
-    mod.SearchService = new wizerati.SearchService(mod.CroniclService, mod.ResultModelFactory);
+    mod.SearchService = new wizerati.SearchService(mod.CroniclService);
 
 }(wizerati.mod("services")));
 
