@@ -4,6 +4,8 @@
 
     function ContractFavoriteView(model) {
 
+        throw "todo: hyperlinks on results/favs do not cover full result. make inline block. make favs and results refer to central collection of results, and only maintain ids themselves to avoid synching problems.";
+
         if (!(this instanceof app.ContractFavoriteView)) {
             return new app.ContractFavoriteView(model);
         }

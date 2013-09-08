@@ -1,5 +1,9 @@
 "use strict";
 
+//refactor to have a central collection of results
+//referred to by both favourites and search results, this
+//way consistency is assured? if not in this collection,
+//go to server to get it and add it
 (function (app) {
     function FavoritesCubeModel() {
 
