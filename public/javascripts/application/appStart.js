@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 
     window.wizerati.instance = new wizerati.App(invertebrate.env.dev);
 
-    self.wizerati.instance.router = new invertebrate.Router();
+    self.wizerati.instance.router = new invertebrate.Router('Wizerati');
     self.wizerati.instance.registerRoutes();
     self.wizerati.instance.searchForm = new wizerati.SearchFormView(new wizerati.SearchFormModel());
     self.wizerati.instance.uiRoot = new wizerati.UIRootView(new wizerati.UIRootModel());

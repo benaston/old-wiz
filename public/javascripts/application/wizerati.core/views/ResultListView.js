@@ -15,7 +15,7 @@
         this.Model = null;
 
         this.render = function (options) {
-            var defaults = { done: that.postRender };
+            var defaults = { done: function () {} };
             options = _.extend({}, defaults, options);
 
             that.$el.empty();
@@ -24,10 +24,6 @@
             });
 
             options.done();
-        };
-
-        this.postRender = function () {
-            //removed functionality to set selected item - this should now be performed via the router
         };
 
         function init() {

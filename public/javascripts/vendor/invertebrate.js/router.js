@@ -1,7 +1,7 @@
 (function (invertebrate) {
     "use strict";
 
-    function Router(homeRoute) {
+    function Router(defaultPageTitle) {
 
         function extractQueryString(queryString) {
             if (queryString == "") return {};
@@ -16,19 +16,22 @@
 
 
         var that = this,
-            _homeRoute = '/';
+            _defaultPageTitle = null;
 
         this.routes = {};
 
-        this.registerRoute = function (uri, action) {
-            that.routes[uri] = action;
+        this.registerRoute = function (uri, action, options) {
+            var defaults = { silent: false, title: _defaultPageTitle };
+            options = _.extend({}, defaults, options);
+
+            that.routes[uri] = { action: action, options: options };
         };
 
-        this.route = function (uri, dto) {
-            if (uri === _homeRoute) {
-                uri = '/';
-            }
+        this.redirect = function (uri) {
             history.pushState(null, null, uri);
+        }
+
+        this.route = function (uri, dto) {
 
             var splitUri = uri.split('?');
             var uriWithoutQueryString = splitUri[0];
@@ -45,12 +48,21 @@
                 throw "no matching route " + uriWithoutQueryString;
             }
 
+            var route = that.routes[firstMatchingRouteUri];
+
+            if (!route.options.silent) {
+                document.title = route.options.title;
+                history.pushState(null, null, uri);
+            }
+
             if (!queryString || dto) {
-                that.routes[firstMatchingRouteUri](dto);
+                route.action(dto);
+
                 return;
             }
+
             var queryStringArguments = queryString.split('&');
-            that.routes[firstMatchingRouteUri](extractQueryString(queryStringArguments));
+            route.action(extractQueryString(queryStringArguments));
         };
 
         function routeHyperlink(evt) {
@@ -74,7 +86,11 @@
         }
 
         function init() {
-            _homeRoute = homeRoute;
+            if(!defaultPageTitle) {
+                throw 'defaultPageTitle not supplied.';
+            }
+
+            _defaultPageTitle = defaultPageTitle;
 
             window.addEventListener("popstate", function (e) {
                 that.route(location.pathname);

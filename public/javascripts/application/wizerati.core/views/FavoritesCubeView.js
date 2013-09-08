@@ -1,27 +1,29 @@
 (function (app) {
     "use strict";
 
-    function FavoritesCubeView(model) {
+    function FavoritesCubeView(model, favoriteViewFactory) {
 
         if (!(this instanceof app.FavoritesCubeView)) {
-            return new app.FavoritesCubeView(model);
+            return new app.FavoritesCubeView(model, favoriteViewFactory);
         }
 
         var that = this,
-            _el = "#favorites-cube";
+            _el = "#favorites-cube",
+            _favoriteViewFactory = null;
 
         this.$el = $(_el);
         this.Model = null;
 
         this.render = function (options) {
-            var defaults = { done: that.postRender };
+            var defaults = { done: function () {} };
             options = _.extend({}, defaults, options);
 
-            options.done();
-        };
+            that.$el.empty();
+            $.each(that.Model.getFavorites(), function (index, value) {
+                that.$el.append(_favoriteViewFactory.create(value).$el);
+            });
 
-        this.postRender = function () {
-            //removed functionality to set selected item - this should now be performed via the router
+            options.done();
         };
 
         function init() {
@@ -29,7 +31,12 @@
                 throw "model not supplied";
             }
 
+            if (!favoriteViewFactory) {
+                throw "favoriteViewFactory not supplied";
+            }
+
             that.Model = model;
+            _favoriteViewFactory = favoriteViewFactory;
 
             that.render();
 

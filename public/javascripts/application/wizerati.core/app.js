@@ -31,6 +31,10 @@
 //                } });
 //            });
 
+            that.router.registerRoute('/', function () {
+                app.instance.homeController.index();
+            });
+
             that.router.registerRoute('/session/create', function (model) {
                 app.instance.sessionController.create(model);
             });
@@ -43,19 +47,17 @@
                 app.instance.advertisersController.index();
             });
 
-            that.router.registerRoute('/', function () {
-                app.instance.homeController.index();
-            });
+
 
             that.router.registerRoute('/search', function (dto) {
 
                 app.instance.searchController.show(dto);
-            });
+            }, { title:'Wizerati Search' });
 
             that.router.registerRoute('/selecteditem/update', function (dto) {
 
                 app.instance.selectedItemController.update(dto);
-            });
+            }, { silent:true });
 
         };
 

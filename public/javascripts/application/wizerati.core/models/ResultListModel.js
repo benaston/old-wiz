@@ -10,18 +10,17 @@
             _results = [];
 
         this.updateEventUri = "update://ResultListModel/";
-        this.deleteEventUri = "delete://ResultListModel/";
-
-        this.setResults = function (results) {
-
-            _results = results;
-
-            $.publish(that.updateEventUri);
-        };
 
         this.getResults = function () {
 
             return _results;
+        };
+
+        this.setResults = function (value) {
+
+            _results = value;
+
+            $.publish(that.updateEventUri);
         };
 
         this.getResult = function (id) {
@@ -48,28 +47,6 @@
             });
 
             $.publish(that.updateEventUri);
-        };
-
-        this.addResult = function (result) {
-            if (!result) {
-                throw "result not supplied";
-            }
-
-            _results.unshift(results);
-
-            $.publish(that.updateEventUri);
-        };
-
-        this.removeResult = function (id, options) {
-            if (!id) {
-                throw "id not supplied";
-            }
-
-            _results = _.reject(_results, function (result) {
-                result.id === id;
-            });
-
-            $.publish(that.deleteEventUri);
         };
 
         function init() {

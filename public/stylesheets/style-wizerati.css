@@ -497,3 +497,14 @@ textarea:focus + .meta-info {
 #purchase-panel .intro ol {
     padding: 25px 0 25px 2.50rem;
 }
+
+.thumbnail a {
+    color:black;
+}
+.thumbnail a:hover {
+    text-decoration:none;
+    color: black;
+}
+.location-and-posted, .rate {
+    color: #08c;
+}

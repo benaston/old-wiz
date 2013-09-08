@@ -28,18 +28,77 @@
     <link data-device="2G/3G/3GS" rel="apple-touch-icon" href="./images/appleTouchIcon57.png">
     <link data-device="4G/4GS" rel="apple-touch-icon" sizes="72x72" href="./images/appleTouchIcon72.png">
     <link data-device="iPad" rel="apple-touch-icon" sizes="114x114" href="./images/appleTouchIcon114.png">
-    <link data-device="iPad landscape" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage1024.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-    <link data-device="iPad portrait" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage768.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-    <link data-device="iPhone" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage320.png" media="screen and (max-device-width: 320px)">
+    <link data-device="iPad landscape" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage1024.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link data-device="iPad portrait" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage768.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link data-device="iPhone" rel="apple-touch-startup-image" href="./images/appleTouchStartupImage320.png"
+          media="screen and (max-device-width: 320px)">
 
-    <title>wizerati</title>
+    <title>Wizerati</title>
 </head>
 <body class="lucid-app-wrapper" data-ui-mode="greenfield">
 <div id="search-panel" class="panel lucid-panel-absolute-full-height overflow-visible">
     <div id="search-form">
     </div>
     <section id="favourites-cube" class="cube-container">
+        <input id="f-t" name="favourites-panel" type="radio" checked="checked">
+        <input id="f-l" name="favourites-panel" type="radio">
+        <input id="f-f" name="favourites-panel" type="radio">
+        <input id="f-r" name="favourites-panel" type="radio">
+        <input id="f-bottom" name="favourites-panel" type="radio">
+        <input id="f-back" name="favourites-panel" type="radio">
 
+        <!-- clicking on the active panel in the cube controls should make the cube wobble -->
+        <div class="cube-controls">
+            <label for="f-t" title=""></label>
+            <label for="f-l" title=""></label>
+            <label for="f-f" title=""></label>
+            <label for="f-r" title=""></label>
+            <label for="f-bottom" title=""></label>
+            <label for="f-back" title=""></label>
+        </div>
+        <div class="cube">
+            <figure class="front">
+                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </figure>
+            <figure class="back">
+                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </figure>
+            <figure class="right">
+                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </figure>
+            <figure class="left">
+                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </figure>
+            <figure class="top">
+                <div class="favourites" data-list-to-list-destination-name="favourites" ondrop="drop(event)"
+                     ondragover="allowDrop(event)">
+                    <!--<div class="hover" data-list-to-list-item-id="1">-->
+                    <div class="thumbnail thumbnail-108 selected">
+                        <h3>C# Developer / Technical Lead</h3>
+                        <h4>475-500 GBP/day</h4>
+                        <h4>London</h4>
+                    </div>
+                </div>
+            </figure>
+            <figure class="bottom">
+                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </figure>
+        </div>
+        <ol class="cube-face-labels">
+            <li for="f-t"></li>
+            <li for="f-l"></li>
+            <li for="f-f"></li>
+            <li for="f-r"></li>
+            <li for="f-bottom"></li>
+            <li for="f-back"></li>
+        </ol>
     </section>
     <div class="navbar-login">
         <a class="btn-log-in" href="/login">log in</a>
@@ -55,128 +114,145 @@
 <ul id="result-list-panel" class="panel lucid-panel-absolute-full-height overflow-y-auto hide">
 
     <li class="thumbnail thumbnail-219 selected">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites" data-list-to-list-item-id="2">S</div>
+        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
+             data-list-to-list-item-id="2">S
+        </div>
         <h3>Senior C# Developer - Fixed Incomes</h3>
+
         <p>A fantastic opportunity has arisen to join a market leader in Global Corporate/Investment banking.</p>
+
         <p class="rate">300 GBP/day</p>
+
         <p class="location-and-posted">London (3 days ago)</p>
     </li>
     <li class="thumbnail thumbnail-219">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites" data-list-to-list-item-id="2">S</div>
+        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
+             data-list-to-list-item-id="2">S
+        </div>
         <h3>C# / ASP.Net MVC Developer, Bank, Agile team</h3>
-        <p>Leading Investment Bank is looking to hire a Senior C# / ASP.Net MVC contractor to help build a brand new platform.</p>
+
+        <p>Leading Investment Bank is looking to hire a Senior C# / ASP.Net MVC contractor to help build a brand new
+            platform.</p>
+
         <p class="rate">300 GBP/day</p>
+
         <p class="location-and-posted">London (3 days ago)</p>
     </li>
     <li class="thumbnail thumbnail-219">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites" data-list-to-list-item-id="2">S</div>
+        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
+             data-list-to-list-item-id="2">S
+        </div>
         <h3>C# Risk Developer</h3>
-        <p class="rate">Our Tier 1 investment banking client is looking for an experienced .Net developer, to work on an new risk platform.</p>
+
+        <p class="rate">Our Tier 1 investment banking client is looking for an experienced .Net developer, to work on an
+            new risk platform.</p>
+
         <p class="rate">300 GBP/day</p>
+
         <p class="location-and-posted">London (3 days ago)</p>
     </li>
 </ul>
 <div id="items-of-interest-panel" class="panel lucid-columns-full-height">
 <!-- selected item goes here -->
-    <article class="selected-item overflow-y-scroll lucid-column">
-        <div id="top1" class="in-page-anchor-target"></div>
-        <section class="menu">
-            <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
-                    data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Add To Favourites">S
-            </button>
-            <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
-                    data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Block">-
-            </button>
-            <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Mark as Applied">
-                2
-            </button>
-            <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Pin">@</button>
+<article class="selected-item overflow-y-scroll lucid-column">
+    <div id="top1" class="in-page-anchor-target"></div>
+    <section class="menu">
+        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
+                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Add To Favourites">S
+        </button>
+        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
+                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Block">-
+        </button>
+        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Mark as Applied">
+            2
+        </button>
+        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Pin">@</button>
+    </section>
+    <section>
+        <h1>Cheetara Kat</h1>
+
+        <h3>New York (<i>Not Currently Available</i>)</h3>
+
+        <h3>+44 (0)7742157185 | ben@bj.ma</h3>
+
+        <h2>Personal Battle Assistant</h2>
+        <section>
+            <article class="itemSummary">
+                <blockquote>
+                    Cheetara is a member of the ThunderCats and the third to join. She is the elder of the two
+                    females in the group, the younger being WilyKit. She is a cleric whose skills take advantage of
+                    her immense speed. She wields a staff, but is also adapted to fighting unarmed.
+                </blockquote>
+            </article>
         </section>
         <section>
-            <h1>Cheetara Kat</h1>
-
-            <h3>New York (<i>Not Currently Available</i>)</h3>
-
-            <h3>+44 (0)7742157185 | ben@bj.ma</h3>
-
-            <h2>Personal Battle Assistant</h2>
-            <section>
-                <article class="itemSummary">
-                    <blockquote>
-                        Cheetara is a member of the ThunderCats and the third to join. She is the elder of the two
-                        females in the group, the younger being WilyKit. She is a cleric whose skills take advantage of
-                        her immense speed. She wields a staff, but is also adapted to fighting unarmed.
-                    </blockquote>
-                </article>
-            </section>
-            <section>
-                <hr>
-                <h2>Technologies</h2>
-                <article style="padding:0;margin:0;">
-                    <p><strong style="font-weight:bold;">Staff</strong></p>
-                </article>
-            </section>
-            <section>
-                <hr>
-                <h2>Experience</h2>
-                <article>
-                    <h3>Senior Developer</h3>
-                    <h4 style="font-style:italic;">JustGiving</h4>
-                    <h5>Mar 11- Mar 12</h5>
-
-                    <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                        blahblah blah</p>
-                </article>
-                <article>
-                    <h3>Senior Developer</h3>
-                    <h4 style="font-style:italic;">JustGiving</h4>
-                    <h5>Mar 11- Mar 12</h5>
-
-                    <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                        blahblah blah</p>
-                </article>
-            </section>
-            <section>
-                <hr/>
-                <h2>Education</h2>
-                <article>
-                    <h4></h4>
-                    <h5></h5>
-
-                    <p></p>
-                </article>
-            </section>
-            <section>
-                <hr>
-                <h2>Open Source</h2>
-                <article>
-                    <h4>NFeature</h4>
-
-                    <p><a href="github.com">github.com</a></p>
-                </article>
-            </section>
-            <section>
-                <hr>
-                <h2>Currently Interested In</h2>
-                <article>
-                    <p>JavaScript</p>
-                </article>
-            </section>
-            <section>
-                <hr/>
-                <h2>Selected Books</h2>
-                <article>
-                    <p>The Art of Programming, JK Tolkien</p>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <hr>
-                    <a href="#top1" class="back-to-top">Back to top</a>
-                </article>
-            </section>
+            <hr>
+            <h2>Technologies</h2>
+            <article style="padding:0;margin:0;">
+                <p><strong style="font-weight:bold;">Staff</strong></p>
+            </article>
         </section>
-    </article>
+        <section>
+            <hr>
+            <h2>Experience</h2>
+            <article>
+                <h3>Senior Developer</h3>
+                <h4 style="font-style:italic;">JustGiving</h4>
+                <h5>Mar 11- Mar 12</h5>
+
+                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
+                    blahblah blah</p>
+            </article>
+            <article>
+                <h3>Senior Developer</h3>
+                <h4 style="font-style:italic;">JustGiving</h4>
+                <h5>Mar 11- Mar 12</h5>
+
+                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
+                    blahblah blah</p>
+            </article>
+        </section>
+        <section>
+            <hr/>
+            <h2>Education</h2>
+            <article>
+                <h4></h4>
+                <h5></h5>
+
+                <p></p>
+            </article>
+        </section>
+        <section>
+            <hr>
+            <h2>Open Source</h2>
+            <article>
+                <h4>NFeature</h4>
+
+                <p><a href="github.com">github.com</a></p>
+            </article>
+        </section>
+        <section>
+            <hr>
+            <h2>Currently Interested In</h2>
+            <article>
+                <p>JavaScript</p>
+            </article>
+        </section>
+        <section>
+            <hr/>
+            <h2>Selected Books</h2>
+            <article>
+                <p>The Art of Programming, JK Tolkien</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <hr>
+                <a href="#top1" class="back-to-top">Back to top</a>
+            </article>
+        </section>
+    </section>
+</article>
 
 <!-- pinned items goes here -->
 <article class="selected-item overflow-y-scroll lucid-column">
@@ -303,6 +379,7 @@
             <input id="duration" class="field" type="number" placeholder="contract duration in months" name="name"/>
             <input id="ad-publication-date" class="field" type="datetime" placeholder="publication date" name="name"/>
             <textarea id="description"></textarea>
+
             <div class="form-button-container">
                 <input type="button" class="btn btn-80 btn-cancel" value="*"/>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
@@ -347,6 +424,7 @@
             <input id="password" class="field" type="password" placeholder="password" name="name"/>
             <label for="password2">Type it again: </label>
             <input id="password2" class="field" type="password" placeholder="re-type password" name="name"/>
+
             <div class="form-button-container">
                 <input type="button" class="btn btn-80 btn-cancel" value="*"/>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
@@ -356,6 +434,7 @@
             <h1>log in</h1>
             <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
             <input id="password" class="field" type="password" placeholder="password" name="name"/>
+
             <div class="form-button-container">
                 <input type="button" class="btn btn-80 btn-cancel" value="*"/>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
@@ -374,8 +453,10 @@
 <div id="log-in-panel" class="panel" data-state="log-in">
     <div class="centered-relative-container-450">
         <div class="log-in">
-            <h1>log in <div class="heading-aside">(<a href="#">register here</a>)</div></h1>
-            <p  class="message">The username or password you have entered is incorrect.</p>
+            <h1>log in
+                <div class="heading-aside">(<a href="#">register here</a>)</div>
+            </h1>
+            <p class="message">The username or password you have entered is incorrect.</p>
             <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
             <label for="email-address" class="meta-info">e.g. example@example.com</label>
             <input id="password" class="field" type="password" placeholder="password" name="name"/>
@@ -392,11 +473,13 @@
             <label for="email-address">Email address: </label>
             <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
             <label for="email-address2">Type it again:</label>
-            <input id="email-address2" class="field" type="text" name="email-address2" placeholder="re-type email address"/>
+            <input id="email-address2" class="field" type="text" name="email-address2"
+                   placeholder="re-type email address"/>
             <input id="password" class="field" type="password" placeholder="password" name="name"/>
             <label for="password" class="meta-info">must be at least 6 characters long</label>
             <label for="password2">Type it again: </label>
             <input id="password2" class="field" type="password" placeholder="re-type password" name="name"/>
+
             <div class="form-button-container">
                 <input type="button" class="btn btn-80 btn-cancel" value="*"/>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
@@ -453,7 +536,9 @@
 <script src="./javascripts/application/wizerati.core/views/ResultListView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ContractView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractFavoriteView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ContractorView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractorFavoriteView.js"></script>
 <script src="javascripts/application/wizerati.core/views/UIRootView.js"></script>
 <script src="javascripts/application/wizerati.core/views/LoginPanelView.js"></script>
 <script src="javascripts/application/wizerati.core/views/FavoritesCubeView.js"></script>
