@@ -7,7 +7,7 @@
         }
 
         var that = this,
-            _results = [];
+            _results = []; //note these will be GUIDs - use the ItemCache for the actual objects
 
         this.updateEventUri = "update://ResultListModel/";
 

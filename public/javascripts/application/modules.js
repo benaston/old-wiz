@@ -50,6 +50,12 @@
 
 (function (mod) {
 
+    mod.ItemCache = new wizerati.ItemCache();
+
+}(wizerati.mod("caches")));
+
+(function (mod) {
+
     mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").Config, wizerati.mod("services").CroniclService.getCroniclUri);
 
 }(wizerati.mod("templates")));

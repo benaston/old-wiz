@@ -83,7 +83,7 @@ h3 {
     font-size: 1em;
     color: #999;
     font-family: "proxima-nova-300";
-    font-weight:bold;
+    font-weight: bold;
 }
 
 h4, h5, h6 {
@@ -155,10 +155,12 @@ a:hover {
     color: #005580;
     text-decoration: underline;
 }
+
 .heading-aside {
-    font-size:1rem;
+    font-size: 1rem;
     font-family: "proxima-nova-400", Arial, sans-serif;
 }
+
 .field {
     color: #333;
     font-size: 1rem;

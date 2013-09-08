@@ -2,16 +2,20 @@ a:focus {
     outline: 5px auto rgb(230, 240, 248);
     outline-offset: 2px;
 }
-strong{
-	font-weight: bold;
+
+strong {
+    font-weight: bold;
 }
-em{
-	font-style: italic;
+
+em {
+    font-style: italic;
 }
-ol, ul{
-	padding: 0 0 0 2.50rem;
+
+ol, ul {
+    padding: 0 0 0 2.50rem;
 }
-ol li{
+
+ol li {
     list-style: decimal inside;
     line-height: 2rem;
 }

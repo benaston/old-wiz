@@ -24,6 +24,7 @@
                     }
                 });
 
+                //this should now use the ItemCache for the model if needed
                 _favoritesCubeView.Model.addFavorite(_resultListModel.getResult(dto.id), _favoritesCubeView.getCurrentFace());
 
                 if(shouldReRenderResultList) {

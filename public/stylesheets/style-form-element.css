@@ -62,7 +62,7 @@
     outline: 5px auto rgb(230, 240, 248);
     outline-offset: 2px;
 
-/*    box-shadow: 0 0 2px 12px rgba(255,255,255,1), 0 0 2px 15px rgba(0, 109, 204, 0.1);*/
+    /*    box-shadow: 0 0 2px 12px rgba(255,255,255,1), 0 0 2px 15px rgba(0, 109, 204, 0.1);*/
 }
 
 label:focus {
@@ -137,7 +137,7 @@ html .uneditable-input {
 input[type="text"]:focus,
 input[type="password"]:focus {
     border-bottom: 1px dashed rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 2px 12px rgba(255,255,255,1), 0 0 2px 15px rgba(0, 109, 204, 0.1);
+    box-shadow: 0 0 2px 12px rgba(255, 255, 255, 1), 0 0 2px 15px rgba(0, 109, 204, 0.1);
 }
 
 .field {
@@ -146,7 +146,7 @@ input[type="password"]:focus {
 
 input[type="radio"] {
     position: absolute;
-    opacity:0; /*we avoid display none, because it suppresses the built-in required validation message*/
+    opacity: 0; /*we avoid display none, because it suppresses the built-in required validation message*/
     cursor: pointer;
 }
 
@@ -199,7 +199,7 @@ label.radio-inverted:active {
 
 label {
     margin: 0;
- /*   -webkit-user-select: none;*/
+    /*   -webkit-user-select: none;*/
     cursor: pointer;
     display: block;
 }
@@ -221,17 +221,20 @@ button.checked {
     -webkit-transform: rotate(0);
     left: 34px;
 }
-.form-button-container{
+
+.form-button-container {
     float: right;
     padding-top: 10px;
 }
-.form-button-container:after{
+
+.form-button-container:after {
     content: ".";
     height: 0px;
     clear: both;
     line-height: 0px;
-    visibility:hidden;
+    visibility: hidden;
 }
-.form-button-container input{
+
+.form-button-container input {
     float: left;
 }

@@ -1,9 +1,6 @@
-"use strict";
-
-//Controllers are responsible for
-// decoupling service types from
-// the user interface.
 (function (app) {
+    "use strict";
+
     function SearchController(uiRootModel,
                               searchFormModel,
                               searchService,
@@ -29,8 +26,10 @@
 
                 _searchService.runSearch(_searchFormModel.getKeywords(),
                     _searchFormModel.getLocation(),
-                    _searchFormModel.getRate(), function(models){
-                        _resultListModel.setResults(models);
+                    _searchFormModel.getRate(),
+                    function(results){
+                        _itemCache.insert(results);
+                        _resultListModel.setResults(_.map(results, function(r){ return r.id; }));
                     });
             } catch (err) {
                 console.log("error: SearchController.show. " + err);

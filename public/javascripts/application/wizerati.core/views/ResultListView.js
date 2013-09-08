@@ -4,7 +4,8 @@
     function ResultListView(model, resultViewFactory) {
 
         if (!(this instanceof app.ResultListView)) {
-            return new app.ResultListView(model, resultViewFactory);
+            return new app.ResultListView(model,
+                resultViewFactory);
         }
 
         var that = this,
@@ -14,16 +15,11 @@
         this.$el = $(_el);
         this.Model = null;
 
-        this.render = function (options) {
-            var defaults = { done: function () {} };
-            options = _.extend({}, defaults, options);
-
+        this.render = function () {
             that.$el.empty();
             $.each(that.Model.getResults(), function (index, value) {
                 that.$el.append(_resultViewFactory.create(value).$el);
             });
-
-            options.done();
         };
 
         function init() {

@@ -3,12 +3,13 @@
 }
 
 body[data-ui-mode=search] #result-list-panel {
-    display:inline-block;
+    display: inline-block;
 }
+
 #result-list-panel {
     width: 259px;
     left: 316px;
-    display:none;
+    display: none;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -24,7 +25,7 @@ body[data-ui-mode=search] #result-list-panel {
 
 #items-of-interest-panel {
     left: 564px;
-    display:none;
+    display: none;
 }
 
 .selected-item {
@@ -202,10 +203,9 @@ body[data-ui-mode=greenfield] #advertiser-help {
     color: black;
 }
 
-
 .favourite-items {
     top: 27px;
-    display:none;
+    display: none;
 }
 
 input[type="radio"]:checked + label {
@@ -229,7 +229,7 @@ input[type="radio"]:checked + label {
     height: 40px;
     width: 40px;
     border-radius: 40px;
-    margin:2px;
+    margin: 2px;
 }
 
 .location-and-posted {
@@ -284,7 +284,7 @@ input[type="radio"]:checked + label {
     position: absolute;
     z-index: 4;
     opacity: 0;
-    transition : opacity .1s linear;
+    transition: opacity .1s linear;
     pointer-events: none;
 }
 
@@ -342,11 +342,11 @@ body[data-ui-mode=greenfield] #search-panel {
 }
 
 body[data-ui-mode=search] .favourite-items {
-    display:block;
+    display: block;
 }
 
 body[data-ui-mode=search] #items-of-interest-panel {
-    display:-webkit-box;
+    display: -webkit-box;
 }
 
 body[data-ui-mode=greenfield] #search-form {
@@ -356,7 +356,7 @@ body[data-ui-mode=greenfield] #search-form {
 }
 
 body[data-ui-mode=search] .logo {
-    display:none;
+    display: none;
 }
 
 .logo {
@@ -393,7 +393,7 @@ h2.logo {
 #purchase-panel,
 #item-management-panel,
 #log-in-panel {
-    display:none;
+    display: none;
     position: relative;
     width: 100%;
     opacity: 0;
@@ -447,7 +447,7 @@ body[data-ui-mode=log-in] #log-in-panel {
     width: 0px;
     line-height: 0px;
     clear: both;
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .customer-type {
@@ -468,17 +468,20 @@ body[data-ui-mode=log-in] #log-in-panel {
 }
 
 [data-ui-mode=log-in] .navbar {
-    opacity:0;
+    opacity: 0;
     pointer-events: none;
 }
+
 .panel h1 {
     margin: 10px 0 0 0;
 }
-.message{
+
+.message {
     font-weight: bold;
     display: none;
 }
-.login-error .message{
+
+.login-error .message {
     color: darkred;
     display: block;
 }
@@ -508,20 +511,24 @@ textarea:focus + .meta-info {
 .thumbnail .tld {
     margin-bottom: 5px;
 }
+
 .thumbnail a {
-    color:#333;
-}
-.thumbnail a:hover {
-    text-decoration:none;
     color: #333;
 }
+
+.thumbnail a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
 .location-and-posted, .rate {
     color: #08c;
 }
 
-.cube .thumbnail p{
+.cube .thumbnail p {
     line-height: .9rem;
 }
+
 .cube .thumbnail {
     text-align: left;
     display: inline-block;
