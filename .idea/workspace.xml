@@ -12,7 +12,7 @@
     <file path="/SearchController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378555192870" ignored="false" />
     <file path="/ContractView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378573798741" ignored="false" />
     <file path="/ResultModelFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332522407" ignored="false" />
-    <file path="/search" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332488566" ignored="false" />
+    <file path="/search" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378673757221" ignored="false" />
     <file path="/ContractModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332639113" ignored="false" />
     <file path="/ResultListModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378653913560" ignored="false" />
     <file path="/ResultListView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378639750034" ignored="false" />
@@ -34,9 +34,9 @@
     <file path="/CookieService.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378424031840" ignored="false" />
     <file path="/a.dummy" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378650017604" ignored="false" />
     <file path="/FavoritesCubeView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378657692086" ignored="false" />
-    <file path="/result.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378654227440" ignored="false" />
+    <file path="/result.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378673954364" ignored="false" />
     <file path="/cube.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378575635502" ignored="false" />
-    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378658114443" ignored="false" />
+    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378673982390" ignored="false" />
     <file path="/FavoriteViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378641838050" ignored="false" />
     <file path="/ContractFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378659195738" ignored="false" />
     <file path="/ContractorFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378648623686" ignored="false" />
@@ -62,19 +62,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContractFavoriteView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ContractFavoriteView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractFavoriteView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.21686748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="64" selection-start="3870" selection-end="3870" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,10 +131,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="result.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/contract/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="39" selection-start="358" selection-end="358" vertical-scroll-proportion="-7.464286">
+            <state line="9" column="35" selection-start="298" selection-end="298" vertical-scroll-proportion="0.44186047">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="508" column="22" selection-start="9690" selection-end="9690" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/contract/search">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="81" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,22 +168,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/FavoritesCubeFaceViewFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractorFavoriteView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/appStart.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/services/SearchService.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ResultListModel.js" />
-        <option value="$PROJECT_DIR$/public/contract/templates/result.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js" />
         <option value="$PROJECT_DIR$/public/contract/templates/favorite.html" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractFavoriteView.js" />
+        <option value="$PROJECT_DIR$/public/contract/search" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/public/contract/templates/result.html" />
       </list>
     </option>
   </component>
@@ -773,20 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/search">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="358" selection-end="358" vertical-scroll-proportion="-7.464286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-special.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="366" selection-end="465" vertical-scroll-proportion="0.0">
@@ -830,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="64" selection-start="3870" selection-end="3870" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="35" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
@@ -860,7 +848,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractFavoriteView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.21686748">
+        <state line="6" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="508" column="22" selection-start="9690" selection-end="9690" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/search">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="81" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="298" selection-end="298" vertical-scroll-proportion="0.44186047">
           <folding />
         </state>
       </provider>

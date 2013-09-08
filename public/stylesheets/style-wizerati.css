@@ -505,12 +505,15 @@ textarea:focus + .meta-info {
     padding: 25px 0 25px 2.50rem;
 }
 
+.thumbnail .tld {
+    margin-bottom: 5px;
+}
 .thumbnail a {
-    color:black;
+    color:#333;
 }
 .thumbnail a:hover {
     text-decoration:none;
-    color: black;
+    color: #333;
 }
 .location-and-posted, .rate {
     color: #08c;
