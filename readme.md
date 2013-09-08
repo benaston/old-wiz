@@ -33,3 +33,9 @@ More:
 Express documentation: http://expressjs.com/guide.html
 
 http://evanhahn.com/understanding-express-js/
+
+##Working with couch:
+
+ - https://github.com/dscape/nano
+ - 
+
