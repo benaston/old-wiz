@@ -10,7 +10,6 @@
         }
 
         var that = this,
-            _selectedItemLocationEnum = wizerati.mod("enum").SelectedItemLocation,
             _favoritesCubeModel = null,
             _resultListModel = null;
 
@@ -24,16 +23,16 @@
         };
 
         function init() {
-            if (!resultListModel) {
-                throw "resultListModel not supplied.";
-            }
-
             if (!favoritesCubeModel) {
                 throw "favoritesCubeModel not supplied.";
             }
 
-            _resultListModel = resultListModel;
+            if (!resultListModel) {
+                throw "resultListModel not supplied.";
+            }
+
             _favoritesCubeModel = favoritesCubeModel;
+            _resultListModel = resultListModel;
 
             return that;
         }

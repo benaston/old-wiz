@@ -44,6 +44,7 @@
 (function (mod) {
 
     mod.ResultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").LogInService);
+    mod.FavoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").LogInService);
 
 }(wizerati.mod("factories")));
 
