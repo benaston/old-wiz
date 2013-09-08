@@ -61,7 +61,7 @@ figure {
 }
 
 .cube figure:not(.center) {
-    opacity: 0.4;
+    opacity: 0.1;
 }
 
 .cube figure {

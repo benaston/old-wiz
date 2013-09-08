@@ -38,6 +38,13 @@
             var defaults = { done: function () {} };
             options = _.extend({}, defaults, options);
 
+            if(_.flatten(that.Model.getFavorites(), true).length == 0){
+                that.$el.addClass('hide');
+                return;
+            } else{
+                that.$el.removeClass('hide');
+            }
+
             $.each(that.Model.getFavorites(), function (index, face) {
                 var $face = that.$el.find(_faceEls[index]);
                 $face.empty();
