@@ -1,12 +1,8 @@
 <% try { %>
 <% console.log(model) %>
 <a href="/selecteditem/update?id=<%=model.id%>&location=ResultsList">
-
     <h3><%= model.title %></h3>
-    <!--<h4>foo</h4>-->
-    <!--<h4>foo</h4>-->
     <p class="rate"><%= model.rateLower %> GBP/day</p>
-
     <p class="location-and-posted"><%= model.location %></p>
 </a>
 <%

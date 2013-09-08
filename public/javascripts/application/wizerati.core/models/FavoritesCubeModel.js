@@ -59,7 +59,7 @@
                 throw "face not supplied";
             }
 
-            _favorites[face].unshift(favorite);
+            _favorites[face].push(favorite);
 
             $.publish(that.updateEventUri);
         };
