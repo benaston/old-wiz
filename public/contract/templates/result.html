@@ -1,14 +1,13 @@
 <% try { %>
-<% console.log(model) %>
-<!-- this will do a GET -->
-<a href="/selecteditem/update?id=<%=model.id%>&location=ResultsList">
+<a class="thumbnail-info pictos <%=model.isFavorite ? 'is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" >
+S
+</a>
+<a href="/selecteditem/update?id=<%=model.id%>">
 
-    <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
-         data-list-to-list-item-id="2">S
-    </div>
+
     <h3><%= model.title %></h3>
 
-    <p class="rate"><%= model.rate %> GBP/day</p>
+    <p class="rate"><%= model.rateLower %> GBP/day</p>
 
     <p class="location-and-posted"><%= model.location %> (<%= model.lastUpdated %>)</p>
 </a>

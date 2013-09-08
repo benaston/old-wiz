@@ -1,4 +1,4 @@
-.is-selected {
+.is-favorite {
     color: gold !important;
 }
 
@@ -507,4 +507,13 @@ textarea:focus + .meta-info {
 }
 .location-and-posted, .rate {
     color: #08c;
+}
+
+.cube .thumbnail p{
+    line-height: .9rem;
+}
+.cube .thumbnail {
+    text-align: left;
+    display: inline-block;
+    margin: 10px 6px 10px 6px;
 }

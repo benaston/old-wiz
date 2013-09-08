@@ -9,7 +9,7 @@
         }
 
         var that = this,
-            _el = "<li class='thumbnail thumbnail-108'></li>",
+            _el = "<div class='thumbnail thumbnail-108'></div>",
             _templateName = "favorite.html";
 
         this.$el = $(_el);

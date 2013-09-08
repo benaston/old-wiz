@@ -11,13 +11,16 @@
             _favorites = [
                 [], //top
                 [], //left
+                [], //front
                 [], //right
                 [], //bottom
-                [], //back
-                []  //front
-            ];
+                []  //back
+            ],
+            _currentFace = '0';
 
         this.updateEventUri = "update://FavoritesCubeModel/";
+
+
 
         this.getFavorites = function () {
 
@@ -47,23 +50,31 @@
             $.publish(that.updateEventUri);
         };
 
-        this.addFavorite = function (result) {
-            if (!result) {
-                throw "result not supplied";
+        this.addFavorite = function (favorite, face) {
+            if (!favorite) {
+                throw "favorite not supplied";
             }
 
-            _results.unshift(results);
+            if (!face) {
+                throw "face not supplied";
+            }
+
+            _favorites[face].unshift(favorite);
 
             $.publish(that.updateEventUri);
         };
 
-        this.removeFavorite = function (id) {
+        this.removeFavorite = function (id, face) {
             if (!id) {
                 throw "id not supplied";
             }
 
-            _favorites = _.reject(_favorites, function (f) {
-                f.id === id;
+            if (!face) {
+                throw "face not supplied";
+            }
+
+            _favorites[parseInt(face)] = _.reject(_favorites[parseInt(face)], function (f) {
+                return f.id === id;
             });
 
             $.publish(that.updateEventUri);

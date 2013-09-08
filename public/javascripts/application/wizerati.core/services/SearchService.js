@@ -10,14 +10,10 @@
         }
 
         var that = this,
-            _croniclService = null,
-            _resultModelFactory = null;
+            _croniclService = null;
 
         this.runSearch = function (keywords, location, rate, done) {
-
             done = !done ? function(data) {} : done;
-
-            console.log(keywords, location, rate);
 
             function success(data) {
                 if (!data) {

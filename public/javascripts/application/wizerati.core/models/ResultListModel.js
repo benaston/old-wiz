@@ -28,9 +28,9 @@
                 throw "id not supplied";
             }
 
-            return _results = _.filter(_results, function (result) {
-                result.id === id;
-            })[0];
+            return _.find(_results, function (r) {
+                return r.id === id;
+            });
         };
 
         this.setSelectedResultId = function (id) {

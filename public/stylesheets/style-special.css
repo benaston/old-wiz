@@ -20,11 +20,18 @@ width: 219px;
 }
 
 .thumbnail-108 {
-width: 108px;
-height: 65px;
-font-size: 0.75em;
-padding: 5px;
+    width: 116px;
+    height: 60px;
+    font-size: 0.75em;
+    padding: 1px;
 }
+
+/*.thumbnail-108 {*/
+/*width: 108px;*/
+/*height: 65px;*/
+/*font-size: 0.75em;*/
+/*padding: 5px;*/
+/*}*/
 
 .thumbnail-108 h3, .thumbnail-108 h4, .thumbnail-108 h5{
 line-height: 1.1em;

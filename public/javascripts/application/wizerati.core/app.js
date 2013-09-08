@@ -47,18 +47,21 @@
                 app.instance.advertisersController.index();
             });
 
-
-
             that.router.registerRoute('/search', function (dto) {
-
                 app.instance.searchController.show(dto);
-            }, { title:'Wizerati Search' });
+            }, { title: 'Wizerati Search' });
 
             that.router.registerRoute('/selecteditem/update', function (dto) {
-
                 app.instance.selectedItemController.update(dto);
-            }, { silent:true });
+            }, { silent: true });
 
+            that.router.registerRoute('/favorites/create', function (dto) {
+                app.instance.favoritesController.create(dto);
+            }, { silent: true });
+
+            that.router.registerRoute('/favorites/destroy', function (dto) {
+                app.instance.favoritesController.destroy(dto);
+            }, { silent: true });
         };
 
         function init() {

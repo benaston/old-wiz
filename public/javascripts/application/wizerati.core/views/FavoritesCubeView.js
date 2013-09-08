@@ -9,18 +9,41 @@
 
         var that = this,
             _el = "#favorites-cube",
-            _favoriteViewFactory = null;
+            _favoriteViewFactory = null,
+            _labelEls = [
+                "label[for=f-t]",       //top
+                "label[for=f-l]",       //left
+                "label[for=f-f]",       //front
+                "label[for=f-r]",       //right
+                "label[for=f-bottom]",  //bottom
+                "label[for=f-back]"     //back
+                 ],
+            _faceEls = [
+                ".top",
+                ".left",
+                ".front",
+                ".right",
+                ".bottom",
+                ".back"
+                 ];
 
         this.$el = $(_el);
         this.Model = null;
+
+        this.getCurrentFace = function () {
+            return that.$el.find('input[type=radio]:checked').index() + '';
+        };
 
         this.render = function (options) {
             var defaults = { done: function () {} };
             options = _.extend({}, defaults, options);
 
-            that.$el.empty();
-            $.each(that.Model.getFavorites(), function (index, value) {
-                that.$el.append(_favoriteViewFactory.create(value).$el);
+            $.each(that.Model.getFavorites(), function (index, face) {
+                var $face = that.$el.find(_faceEls[index]);
+                $face.empty();
+                $.each(face, function(index, f){
+                    $face.append(_favoriteViewFactory.create(f).$el)
+                });
             });
 
             options.done();
