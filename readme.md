@@ -39,3 +39,4 @@ http://evanhahn.com/understanding-express-js/
  - https://github.com/dscape/nano
  - 
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
