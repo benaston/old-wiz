@@ -5,7 +5,7 @@
     <ignored path="wizerati.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.ejs" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378688745795" ignored="false" />
-    <file path="/appStart.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378934951990" ignored="false" />
+    <file path="/appStart.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378936893391" ignored="false" />
     <file path="/SearchService.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378330409249" ignored="false" />
     <file path="/modules.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378930394169" ignored="false" />
     <file path="/readme.md" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378249595158" ignored="false" />
@@ -15,13 +15,13 @@
     <file path="/search" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378673757221" ignored="false" />
     <file path="/ContractModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332639113" ignored="false" />
     <file path="/ResultListModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378653913560" ignored="false" />
-    <file path="/ResultListView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378930532716" ignored="false" />
-    <file path="/ResultViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378933309937" ignored="false" />
+    <file path="/ResultListView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378936656073" ignored="false" />
+    <file path="/ResultViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378937271836" ignored="false" />
     <file path="/ContractorView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378418020446" ignored="false" />
     <file path="/SelectedItemController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378633073147" ignored="false" />
     <file path="/app.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378653202350" ignored="false" />
     <file path="/style-cube.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378419439171" ignored="false" />
-    <file path="/FavoritesCubeModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378935489653" ignored="false" />
+    <file path="/FavoritesCubeModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378938645775" ignored="false" />
     <file path="/router.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378853042807" ignored="false" />
     <file path="/SessionController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378421730458" ignored="false" />
     <file path="/LoginPanelModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378421686058" ignored="false" />
@@ -44,8 +44,12 @@
     <file path="/FavoritesCubeFaceViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378646242971" ignored="false" />
     <file path="/FavoritesController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378850581566" ignored="false" />
     <file path="/ItemCache.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378676186313" ignored="false" />
-    <file path="/ItemRepository.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378934320480" ignored="false" />
+    <file path="/ItemRepository.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378937665040" ignored="false" />
     <file path="/html.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378852169139" ignored="false" />
+    <file path="/UIRootModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378937994126" ignored="false" />
+    <file path="/SelectedResultModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378938082039" ignored="false" />
+    <file path="/SelectedCubeFaceModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378938262878" ignored="false" />
+    <file path="/SelectedCubeFaceView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378938423538" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,19 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FavoritesController.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.9109589">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FavoritesCubeModel.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FavoritesCubeModel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="40" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
+            <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.22891566">
               <folding />
             </state>
           </provider>
@@ -92,19 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appStart.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ResultViewFactory.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="24" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0">
+            <state line="50" column="25" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,16 +99,34 @@
       <file leaf-file-name="ItemRepository.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
+            <state line="18" column="23" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultListView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
+      <file leaf-file-name="UIRootModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/UIRootModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectedResultModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedResultModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="49" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectedCubeFaceModel.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="23" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,19 +141,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIRootView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js">
+      <file leaf-file-name="SelectedCubeFaceView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SelectedCubeFaceView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="22" column="12" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPanelView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/LoginPanelView.js">
+      <file leaf-file-name="ResultListView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="50" column="42" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,22 +169,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/public/html.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/SearchController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/services/SearchService.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/FavoriteViewFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractFavoriteView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/caches/ItemCache.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/appStart.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/UIRootModel.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedResultModel.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SelectedCubeFaceView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js" />
       </list>
     </option>
   </component>
@@ -610,11 +614,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views" />
+      <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/caches" />
       <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/services" />
-      <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers" />
-      <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories" />
@@ -692,7 +696,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14407684" sideWeight="0.73505974" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2411953" sideWeight="0.73505974" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -768,34 +772,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractorFavoriteView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractorView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="38" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
@@ -804,13 +780,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/LoginPanelView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchFormView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -831,30 +800,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.0">
+        <state line="50" column="25" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -866,16 +828,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="40" selection-start="1914" selection-end="1914" vertical-scroll-proportion="0.0">
+        <state line="50" column="42" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.9109589">
+        <state line="18" column="23" selection-start="547" selection-end="547" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/UIRootModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedResultModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="49" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchFormView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SelectedCubeFaceView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="12" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="23" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.22891566">
           <folding />
         </state>
       </provider>

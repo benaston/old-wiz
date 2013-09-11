@@ -1,12 +1,13 @@
 "use strict";
 
 (function (app) {
-    function FavoritesCubeModel(itemRepository,
-                                resultListModel) {
+    function FavoritesCubeModel(itemRepository, resultListModel) {
+
+        throw "get rid of selectedcubefaceview. wire up clicking of cube face selection labels to updating of the selected cube face model. wire up subscribers to changes to the selected cube face.";
 
         if (!(this instanceof app.FavoritesCubeModel)) {
             return new app.FavoritesCubeModel(itemRepository,
-                                              resultListModel);
+                resultListModel);
         }
 
         var that = this,
@@ -61,12 +62,13 @@
                 throw "face not supplied";
             }
 
-            if(!_.find(_favorites[face], function(i) { return i === id; })) {
+            if (!_.find(_favorites[face], function (i) {
+                return i === id;
+            })) {
                 _favorites[face].push(id);
-                _itemRepository.getById(id, function(item){
-                    item.isFavorite = true;
+                _itemRepository.getById(id, function (item) {
+                    item["isFavoriteOnFace" + face] = true;
                     $.publish(that.updateEventUri);
-                    $.publish(_resultListModel.updateEventUri);
                 });
             }
         };
@@ -88,11 +90,11 @@
         };
 
         function init() {
-            if(!itemRepository) {
+            if (!itemRepository) {
                 throw "itemRepository not supplied.";
             }
 
-            if(!resultListModel) {
+            if (!resultListModel) {
                 throw "resultListModel not supplied.";
             }
 

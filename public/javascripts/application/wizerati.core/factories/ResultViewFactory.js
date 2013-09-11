@@ -14,18 +14,32 @@
             _itemRepository = null,
             _roleEnum = app.mod("enum").UserRole;
 
-        this.create = function (id, done) {
+        this.create = function (id, currentCubeFace, done) {
+            if(!id) {
+                throw "id not supplied."
+            }
+
+            if(!currentCubeFace) {
+                throw "currentCubeFace not supplied."
+            }
+
+            if(!done) {
+                throw "done supplied."
+            }
+
             var role = _loginService.getCurrentRole();
             switch (role) {
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
                     _itemRepository.getById(id, function(i){
+                        i.isFavorite = i["isFavoriteOnFace" + currentCubeFace];
                         done(new app.ContractorView(i).render().$el)
                     });
                     break;
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function(i){
+                        i.isFavorite = i["isFavoriteOnFace" + currentCubeFace];
                         done(new app.ContractView(i).render().$el)
                     });
                     break;

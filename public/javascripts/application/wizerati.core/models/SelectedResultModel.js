@@ -1,39 +1,29 @@
 "use strict";
 
 (function (app) {
-    function UIRootModel() {
+    function SelectedResultModel() {
 
-        if (!(this instanceof app.UIRootModel)) {
-            return new app.UIRootModel();
+        if (!(this instanceof app.SelectedResultModel)) {
+            return new app.SelectedResultModel();
         }
 
         var that = this,
-            _previousUIMode = null,
-            _uiMode = null,
-            _uiModeEnum = wizerati.mod("enum").UIMode,
             _selectedResultId = null;
 
-        this.updateEventUri = "update://UIRootModel/";
+        this.updateEventUri = "update://SelectedResultModel/";
 
-        this.getUIMode = function () {
+        this.getSelectedResultId = function () {
 
-            return _uiMode;
+            return _selectedResultId;
         }
 
-        this.setUIMode = function (value) {
-            _previousUIMode = _uiMode;
-            _uiMode = value;
+        this.setSelectedResultId = function (value) {
+            _selectedResultId = value;
 
             $.publish(that.updateEventUri);
         }
 
-        this.getPreviousUIMode = function () {
-
-            return _previousUIMode;
-        }
-
         function init() {
-            _uiMode = _uiModeEnum.GreenfieldSearch;
 
             return that;
         }
@@ -41,7 +31,7 @@
         return init();
     };
 
-    app.UIRootModel = UIRootModel;
+    app.SelectedResultModel = SelectedResultModel;
 
 }(wizerati));
 

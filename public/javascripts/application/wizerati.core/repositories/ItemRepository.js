@@ -16,6 +16,7 @@
             var cachedItem = _itemCache.items[id];
             if(cachedItem) {
                 done(cachedItem);
+                return;
             }
 
             function success(data) {
