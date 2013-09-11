@@ -33,3 +33,10 @@ More:
 Express documentation: http://expressjs.com/guide.html
 
 http://evanhahn.com/understanding-express-js/
+
+##Working with couch:
+
+ - https://github.com/dscape/nano
+ - 
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
