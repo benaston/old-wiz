@@ -1,11 +1,12 @@
 (function (app) {
     "use strict";
 
-    function ResultListView(model, resultViewFactory) {
+    function ResultListView(model,
+                            resultViewFactory) {
 
         if (!(this instanceof app.ResultListView)) {
             return new app.ResultListView(model,
-                resultViewFactory);
+                                          resultViewFactory);
         }
 
         var that = this,
@@ -17,8 +18,10 @@
 
         this.render = function () {
             that.$el.empty();
-            $.each(that.Model.getResults(), function (index, value) {
-                that.$el.append(_resultViewFactory.create(value).$el);
+            _.each(that.Model.getResults(), function (id) {
+                _resultViewFactory.create(id, function($v){
+                    that.$el.append($v);
+                });
             });
         };
 

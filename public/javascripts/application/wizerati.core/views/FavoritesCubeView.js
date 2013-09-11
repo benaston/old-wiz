@@ -45,11 +45,13 @@
                 that.$el.removeClass('hide');
             }
 
-            $.each(that.Model.getFavorites(), function (index, face) {
+            $.each(that.Model.getFavorites(), function (index, faceFavorites) {
                 var $face = that.$el.find(_faceEls[index]);
                 $face.empty();
-                $.each(face, function(index, f){
-                    $face.append(_favoriteViewFactory.create(f).$el)
+                $.each(faceFavorites, function(index, f){
+                    _favoriteViewFactory.create(f, function($v) {
+                        $face.append($v)
+                    });
                 });
             });
 

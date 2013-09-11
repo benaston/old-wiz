@@ -1,7 +1,6 @@
-"use strict";
-
 //order of declaration matters here.
 (function (mod) {
+    "use strict";
 
     mod.UserRole = {
         Contractor: "1",
@@ -43,16 +42,22 @@
 
 (function (mod) {
 
-    mod.ResultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").LogInService);
-    mod.FavoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").LogInService);
-
-}(wizerati.mod("factories")));
-
-(function (mod) {
-
     mod.ItemCache = new wizerati.ItemCache();
 
 }(wizerati.mod("caches")));
+
+(function (mod) {
+
+    mod.ItemRepository = new wizerati.ItemRepository(wizerati.mod("caches").ItemCache, wizerati.mod("services").CroniclService);
+
+}(wizerati.mod("repositories")));
+
+(function (mod) {
+
+    mod.ResultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").LogInService, wizerati.mod("repositories").ItemRepository);
+    mod.FavoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").LogInService, wizerati.mod("repositories").ItemRepository);
+
+}(wizerati.mod("factories")));
 
 (function (mod) {
 

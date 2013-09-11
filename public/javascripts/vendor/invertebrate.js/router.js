@@ -14,7 +14,6 @@
             return b;
         }
 
-
         var that = this,
             _defaultPageTitle = null;
 
@@ -81,8 +80,21 @@
 
             if (action.slice(protocol.length) !== protocol) {
                 evt.preventDefault();
-                that.route(action);
+
+                that.route(action, createDtoFromForm($(this)));
             }
+        }
+
+        function createDtoFromForm($form) {
+//            throw "get search working - cronicl is bust and itemcache needs to be set by search";
+            var dto = {};
+            var $textfields = $form.find('input[type=text],input[type=password]');
+            _.each($textfields, function($t) { dto[$t.name] = $t.value; })
+
+            var $selections = $form.find('input[type=radio]:checked,input[type=checkbox]:checked');
+            _.each($selections, function($r) { dto[$r.name] = $r.value; })
+
+            return dto;
         }
 
         function init() {

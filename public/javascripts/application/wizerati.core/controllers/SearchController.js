@@ -4,13 +4,15 @@
     function SearchController(uiRootModel,
                               searchFormModel,
                               searchService,
-                              resultListModel) {
+                              resultListModel,
+                              itemCache) {
 
         if (!(this instanceof app.SearchController)) {
             return new app.SearchController(uiRootModel,
                                             searchFormModel,
                                             searchService,
-                                            resultListModel);
+                                            resultListModel,
+                                            itemCache);
         }
 
         var that = this,
@@ -18,15 +20,16 @@
             _uiRootModel = null,
             _searchFormModel = null,
             _searchService = null,
-            _resultListModel = null;
+            _resultListModel = null,
+            _itemCache = null;
 
         this.show = function (dto) {
             try {
                 _uiRootModel.setUIMode(_uiModeEnum.Search);
 
-                _searchService.runSearch(_searchFormModel.getKeywords(),
-                    _searchFormModel.getLocation(),
-                    _searchFormModel.getRate(),
+                _searchService.runSearch(dto.keywords,
+                                         dto.location,
+                                         dto.rate,
                     function(results){
                         _itemCache.insert(results);
                         _resultListModel.setResults(_.map(results, function(r){ return r.id; }));
@@ -53,10 +56,15 @@
                 throw "resultListModel not supplied.";
             }
 
+            if (!itemCache) {
+                throw "itemCache not supplied.";
+            }
+
             _uiRootModel = uiRootModel;
             _searchFormModel = searchFormModel;
             _searchService = searchService;
             _resultListModel = resultListModel;
+            _itemCache = itemCache;
 
             return that;
         }

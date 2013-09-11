@@ -12,7 +12,10 @@
         var that = this,
             _croniclService = null;
 
-        this.runSearch = function (keywords, location, rate, done) {
+        this.runSearch = function (keywords,
+                                   location,
+                                   rate,
+                                   done) {
             done = !done ? function(data) {} : done;
 
             function success(data) {
@@ -25,7 +28,9 @@
                 done(results);
             }
 
-            $.ajax({ url: _croniclService.getCroniclUri() + 'search', success: success, cache: false });
+            $.ajax({
+                url: _croniclService.getCroniclUri() + 'search',
+                success: success, cache: false });
         };
 
         function init() {

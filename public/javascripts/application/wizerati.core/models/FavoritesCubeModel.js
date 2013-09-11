@@ -1,14 +1,12 @@
 "use strict";
 
-//refactor to have a central collection of results
-//referred to by both favourites and search results, this
-//way consistency is assured? if not in this collection,
-//go to server to get it and add it
 (function (app) {
-    function FavoritesCubeModel() {
+    function FavoritesCubeModel(itemRepository,
+                                resultListModel) {
 
         if (!(this instanceof app.FavoritesCubeModel)) {
-            return new app.FavoritesCubeModel();
+            return new app.FavoritesCubeModel(itemRepository,
+                                              resultListModel);
         }
 
         var that = this,
@@ -20,11 +18,11 @@
                 [], //bottom
                 []  //back
             ],
-            _currentFace = '0';
+            _currentFace = '0',
+            _itemRepository = null,
+            _resultListModel = null;
 
         this.updateEventUri = "update://FavoritesCubeModel/";
-
-
 
         this.getFavorites = function () {
 
@@ -54,8 +52,8 @@
             $.publish(that.updateEventUri);
         };
 
-        this.addFavorite = function (favorite, face) {
-            if (!favorite) {
+        this.addFavorite = function (id, face) {
+            if (!id) {
                 throw "favorite not supplied";
             }
 
@@ -63,9 +61,14 @@
                 throw "face not supplied";
             }
 
-            _favorites[face].push(favorite);
-
-            $.publish(that.updateEventUri);
+            if(!_.find(_favorites[face], function(i) { return i === id; })) {
+                _favorites[face].push(id);
+                _itemRepository.getById(id, function(item){
+                    item.isFavorite = true;
+                    $.publish(that.updateEventUri);
+                    $.publish(_resultListModel.updateEventUri);
+                });
+            }
         };
 
         this.removeFavorite = function (id, face) {
@@ -85,6 +88,17 @@
         };
 
         function init() {
+            if(!itemRepository) {
+                throw "itemRepository not supplied.";
+            }
+
+            if(!resultListModel) {
+                throw "resultListModel not supplied.";
+            }
+
+            _itemRepository = itemRepository;
+            _resultListModel = resultListModel;
+
             return that;
         }
 

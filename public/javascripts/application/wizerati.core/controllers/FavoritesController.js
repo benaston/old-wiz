@@ -2,11 +2,11 @@
 
 (function (app) {
     function FavoritesController(favoritesCubeView,
-                                    resultListModel) {
+                                 resultListModel) {
 
         if (!(this instanceof app.FavoritesController)) {
             return new app.FavoritesController(favoritesCubeView,
-                resultListModel);
+                                               resultListModel);
         }
 
         var that = this,
@@ -14,50 +14,38 @@
             _resultListModel = null;
 
         this.create = function (dto) {
-            try {
-                var shouldReRenderResultList = false;
+            if(!dto) { throw "dto not supplied." }
 
-                _.each(_resultListModel.getResults(), function(r){
-                    if(r.id === dto.id) {
-                        r.isFavorite = true;
-                        shouldReRenderResultList = true;
-                    }
-                });
-
-                //this should now use the ItemCache for the model if needed
-                _favoritesCubeView.Model.addFavorite(_resultListModel.getResult(dto.id), _favoritesCubeView.getCurrentFace());
-
-                if(shouldReRenderResultList) {
-                    $.publish(_resultListModel.updateEventUri);
-                }
-
-            } catch (err) {
-                console.log("error: FavoritesController.create. " + err);
+            var currentCubeFace = _favoritesCubeView.getCurrentFace();
+            if(_.find(_favoritesCubeView.Model.getFavorites[_favoritesCubeView.getCurrentFace()], function(id){ return id === dto.id; })) {
+                return;
             }
+
+            _favoritesCubeView.Model.addFavorite(dto.id, currentCubeFace);
         };
 
-        //todo: possibly refactor so that favorite status
-        //depends on the side of the cube showing
+        //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
-            try {
-                var shouldReRenderResultList = false;
+            var shouldReRenderResultList = false;
 
-                _.each(_resultListModel.getResults(), function(r){
-                    if(r.id === dto.id) {
-                        r.isFavorite = false;
-                        shouldReRenderResultList = true;
-                    }
-                });
+            //make hash
+            var result = _.find(_resultListModel, function(id){
+                return id === dto.id;
+            });
 
-                _favoritesCubeView.Model.removeFavorite(dto.id, _favoritesCubeView.getCurrentFace());
-
-                if(shouldReRenderResultList) {
-                    $.publish(_resultListModel.updateEventUri);
-                }
-
-            } catch (err) {
-                console.log("error: FavoritesController.create. " + err);
+            if(result){
+                result.isFavorite = true;
+                shouldReRenderResultList = true;
             }
+
+            if(shouldReRenderResultList) {
+                $.publish(_resultListModel.updateEventUri);
+            }
+
+            $.publish(_favoritesCubeView.Model.updateEventUri);
+
+            _favoritesCubeView.Model.removeFavorite(dto.id,
+                _favoritesCubeView.getCurrentFace());
         };
 
         function init() {
@@ -81,3 +69,10 @@
     app.FavoritesController = FavoritesController;
 
 }(wizerati));
+
+//try {
+//
+//    _itemRepository.getById(dto.id, done);
+//} catch (err) {
+//    console.log("error: FavoritesController.create. " + err);
+//}

@@ -11,7 +11,10 @@
 
         this.items = {};
 
-        //note: if the item already exists then any additional metadata on the object is retained (e.g. whether it is currently selected)
+        //note: if the item already exists then
+        // any additional metadata on the object
+        // is retained (e.g. whether it is
+        // currently selected)
         this.insert = function(items){
             if(!items){
                 throw "items not supplied.";
