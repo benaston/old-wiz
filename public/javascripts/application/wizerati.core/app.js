@@ -62,6 +62,10 @@
             that.router.registerRoute('/favorites/destroy', function (dto) {
                 app.instance.favoritesController.destroy(dto);
             }, { silent: true });
+
+            that.router.registerRoute('/selectedcubeface/update', function (dto) {
+                app.instance.selectedCubeFaceController.update(dto);
+            }, { silent: true });
         };
 
         function init() {

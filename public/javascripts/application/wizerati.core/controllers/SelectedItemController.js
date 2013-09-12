@@ -1,38 +1,29 @@
-"use strict";
-
 (function (app) {
-    function SelectedItemController(favoritesCubeModel,
-                                    resultListModel) {
+    "use strict";
+
+    function SelectedItemController(selectedItemModel) {
 
         if (!(this instanceof app.SelectedItemController)) {
-            return new app.SelectedItemController(favoritesCubeModel,
-                resultListModel);
+            return new app.SelectedItemController(selectedItemModel);
         }
 
         var that = this,
-            _favoritesCubeModel = null,
-            _resultListModel = null;
+            _selectedItemModel = null;
 
         this.update = function (dto) {
             try {
-                _resultListModel.setSelectedResultId(dto.id);
-                _favoritesCubeModel.setSelectedFavoriteId(dto.id);
+                _selectedItemModel.setSelectedItemId(dto.id);
             } catch (err) {
                 console.log("error: SelectedItemController.update. " + err);
             }
         };
 
         function init() {
-            if (!favoritesCubeModel) {
-                throw "favoritesCubeModel not supplied.";
+            if (!selectedItemModel) {
+                throw "selectedItemModel not supplied.";
             }
 
-            if (!resultListModel) {
-                throw "resultListModel not supplied.";
-            }
-
-            _favoritesCubeModel = favoritesCubeModel;
-            _resultListModel = resultListModel;
+            _selectedItemModel = selectedItemModel;
 
             return that;
         }

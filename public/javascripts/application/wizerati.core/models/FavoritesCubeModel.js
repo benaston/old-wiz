@@ -1,9 +1,14 @@
 "use strict";
 
 (function (app) {
-    function FavoritesCubeModel(itemRepository, resultListModel) {
+    function FavoritesCubeModel(itemRepository,
+                                resultListModel) {
 
-        throw "get rid of selectedcubefaceview. wire up clicking of cube face selection labels to updating of the selected cube face model. wire up subscribers to changes to the selected cube face.";
+//        throw "get rid of selectedcubefaceview. wire up " +
+//            "clicking of cube face selection labels to " +
+//            "updating of the selected cube face model. " +
+//            "wire up subscribers to changes to the " +
+//            "selected cube face.";
 
         if (!(this instanceof app.FavoritesCubeModel)) {
             return new app.FavoritesCubeModel(itemRepository,

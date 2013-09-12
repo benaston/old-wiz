@@ -1,15 +1,23 @@
 (function (app) {
     "use strict";
 
-    function FavoritesCubeView(model, favoriteViewFactory) {
+    function FavoritesCubeView(model,
+                               favoriteViewFactory,
+                               selectedCubeFaceModel,
+                               selectedItemModel) {
 
         if (!(this instanceof app.FavoritesCubeView)) {
-            return new app.FavoritesCubeView(model, favoriteViewFactory);
+            return new app.FavoritesCubeView(model,
+                favoriteViewFactory,
+                selectedCubeFaceModel,
+                selectedItemModel);
         }
 
         var that = this,
             _el = "#favorites-cube",
             _favoriteViewFactory = null,
+            _selectedCubeFaceModel = null,
+            _selectedItemModel = null,
             _labelEls = [
                 "label[for=f-t]",       //top
                 "label[for=f-l]",       //left
@@ -55,6 +63,9 @@
                 });
             });
 
+            $.attr('data-selected-face-id',
+                _selectedCubeFaceModel.getSelectedCubeFaceId());
+
             options.done();
         };
 
@@ -67,12 +78,24 @@
                 throw "favoriteViewFactory not supplied";
             }
 
+            if (!selectedCubeFaceModel) {
+                throw "selectedCubeFaceModel not supplied";
+            }
+
+            if (!selectedItemModel) {
+                throw "selectedItemModel not supplied";
+            }
+
             that.Model = model;
             _favoriteViewFactory = favoriteViewFactory;
+            _selectedCubeFaceModel = selectedCubeFaceModel;
+            _selectedItemModel = selectedItemModel;
 
             that.render();
 
             $.subscribe(that.Model.updateEventUri, that.render);
+            $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
+            $.subscribe(_selectedItemModel.updateEventUri, that.render);
 
             return that;
         }

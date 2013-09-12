@@ -51,6 +51,9 @@
 
         <!-- clicking on the active panel in the cube controls should make the cube wobble -->
         <div class="cube-controls">
+            <a href="/selectedcubeface/update?id=0">Top</a>
+            <a href="/selectedcubeface/update?id=1">Left</a>
+            <a href="/selectedcubeface/update?id=2">Front</a>
             <label for="f-t" title=""></label>
             <label for="f-l" title=""></label>
             <label for="f-f" title=""></label>
@@ -525,6 +528,8 @@
 <script src="./javascripts/application/wizerati.core/models/UIRootModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/LoginPanelModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/FavoritesCubeModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/SelectedItemModel.js"></script>
 
 <script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ResultListView.js"></script>
@@ -544,6 +549,7 @@
 <script src="./javascripts/application/wizerati.core/controllers/SearchController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/SelectedItemController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/FavoritesController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/SelectedCubeFaceController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/ResultViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
