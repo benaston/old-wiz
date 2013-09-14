@@ -513,6 +513,7 @@ textarea:focus + .meta-info {
 }
 
 .thumbnail a {
+    display: block;
     color: #333;
 }
 

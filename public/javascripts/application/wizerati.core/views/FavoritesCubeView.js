@@ -57,7 +57,7 @@
                 var $face = that.$el.find(_faceEls[index]);
                 $face.empty();
                 $.each(faceFavorites, function(index, f){
-                    _favoriteViewFactory.create(f, function($v) {
+                    _favoriteViewFactory.create(f, that.getCurrentFace(), function($v) {
                         $face.append($v)
                     });
                 });

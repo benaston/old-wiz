@@ -54,6 +54,8 @@
     z-index: 999;
     box-shadow: 1px 3px 0px 0px #eee;
     -webkit-transition: box-shadow .1s linear;
+    /*z-index: -1;*/
+    pointer-events:none;
 }
 
 .thumbnail:hover:before {
@@ -78,6 +80,8 @@
     z-index: 999;
     box-shadow: -1px -3px 0px 0px #eee;
     -webkit-transition: box-shadow .1s linear;
+    /*z-index: -1;*/
+    pointer-events:none;
 }
 
 .thumbnail:hover:after {
