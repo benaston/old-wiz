@@ -1,6 +1,5 @@
-"use strict";
-
 (function (app) {
+    "use strict";
 
     function ContractorView(model) {
 
@@ -12,7 +11,7 @@
             _el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
             _templateName = "result.html";
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
 
         this.render = function (options) {
@@ -30,8 +29,9 @@
         this.postRender = function () {
         };
 
-        this.bindEvents = function ($el, done) {
-            //todo: route
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
         };
 
         function init() {
@@ -40,8 +40,6 @@
             }
 
             that.Model = model;
-
-            that.render();
 
             return that;
         }

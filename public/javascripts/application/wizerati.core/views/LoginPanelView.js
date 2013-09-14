@@ -16,11 +16,11 @@
             _passwordEl = ".password",
             _uiModeEnum = wizerati.mod("enum").UIMode;
 
-        this.$el = $(_el);
-        this.$cancelButton = $(_el).find(_cancelButtonEl);
-        this.$successButton = $(_el).find(_successButtonEl);
-        this.$username = $(_el).find(_usernameEl);
-        this.$password = $(_el).find(_passwordEl);
+        this.$el =
+        this.$cancelButton =
+        this.$successButton =
+        this.$username =
+        this.$password =
         this.Model = null;
 
         this.render = function (e, options) {
@@ -63,8 +63,16 @@
             app.instance.router.route('/');
         }
 
-        function init() {
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.$cancelButton = that.$el.find(_cancelButtonEl);
+            that.$password = that.$el.find(_passwordEl);
+            that.$username = that.$el.find(_usernameEl);
+            that.$successButton = that.$el.find(_successButtonEl);
             that.bindEvents();
+        };
+
+        function init() {
             if (!model) {
                 throw "model not supplied";
             }

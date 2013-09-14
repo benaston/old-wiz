@@ -11,8 +11,13 @@
         var that = this,
             _el = "body";
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
+
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
+        };
 
         function init() {
             if (!model) {
@@ -23,9 +28,8 @@
 
 
             $.subscribe(that.Model.updateEventUri, that.render);
-            that.render();
 
-            return view;
+            return that;
         }
 
         return init();

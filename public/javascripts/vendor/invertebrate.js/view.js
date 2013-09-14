@@ -17,6 +17,9 @@
 
     invertebrate.View = View;
 
+    invertebrate.View.prototype.onDomReady = function () {
+    };
+
     //static method
     invertebrate.View.isExtendedBy = function (child) {
         child.prototype = new invertebrate.View();

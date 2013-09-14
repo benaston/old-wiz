@@ -22,7 +22,7 @@
         }
 
         return init();
-    };
+    }
 
     app.AuthenticationService = AuthenticationService;
 

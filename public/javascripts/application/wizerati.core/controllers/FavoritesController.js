@@ -26,7 +26,9 @@
 
         //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
-            var shouldReRenderResultList = false;
+//            if(_.find(_favoritesCubeView.Model.getFavorites[_favoritesCubeView.getCurrentFace()], function(id){ return id === dto.id; })) {
+//                return;
+//            }
 
             //make hash
             var result = _.find(_resultListModel, function(id){

@@ -4,22 +4,25 @@
     function ResultListView(model,
                             resultViewFactory,
                             selectedCubeFaceModel,
-                            selectedItemModel) {
+                            selectedItemModel,
+                            favoritesCubeModel) {
 
         if (!(this instanceof app.ResultListView)) {
             return new app.ResultListView(model,
                                           resultViewFactory,
                                           selectedCubeFaceModel,
-                                          selectedItemModel);
+                                          selectedItemModel,
+                                          favoritesCubeModel);
         }
 
         var that = this,
             _el = "#result-list-panel",
             _resultViewFactory = null,
             _selectedCubeFaceModel = null,
-            _selectedItemModel = null;
+            _selectedItemModel = null,
+            _favoritesCubeModel = null;
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
 
         this.render = function () {
@@ -29,6 +32,11 @@
                     that.$el.append($v);
                 });
             });
+        };
+
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
         };
 
         function init() {
@@ -48,16 +56,20 @@
                 throw "selectedItemModel not supplied";
             }
 
+            if (!favoritesCubeModel) {
+                throw "selectedItemModel not supplied";
+            }
+
             that.Model = model;
             _resultViewFactory = resultViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
             _selectedItemModel = selectedItemModel;
-
-            that.render();
+            _favoritesCubeModel = favoritesCubeModel;
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
             $.subscribe(_selectedItemModel.updateEventUri, that.render);
+            $.subscribe(_favoritesCubeModel.updateEventUri, that.render);
 
             return that;
         }

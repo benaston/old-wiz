@@ -20,7 +20,7 @@
             ];
 
 
-        this.$el = $(_el);
+        this.$el = null;
         this.$loginButton = $(_loginButtonEl);
         this.Model = null;
 
@@ -38,6 +38,10 @@
         };
 
         this.bindEvents = function () {
+        };
+
+        this.onDomReady = function(){
+            that.$el = $(_el);
         };
 
         function init() {

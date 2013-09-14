@@ -26,42 +26,93 @@
 
 (function (mod) {
 
-    mod.Config = new wizerati.Config(invertebrate.env.dev);
+    mod.config = new wizerati.Config(invertebrate.env.dev);
 
 }(wizerati.mod("config")));
 
 (function (mod) {
 
-    mod.AuthenticationService = new wizerati.AuthenticationService();
-    mod.CookieService = new wizerati.CookieService();
-    mod.LogInService = new wizerati.LogInService(mod.CookieService);
-    mod.CroniclService = new wizerati.CroniclService(mod.LogInService, wizerati.mod("config").Config); //pass in login service instead?
-    mod.SearchService = new wizerati.SearchService(mod.CroniclService);
+    mod.authenticationService = new wizerati.AuthenticationService();
+    mod.cookieService = new wizerati.CookieService();
+    mod.logInService = new wizerati.LogInService(mod.cookieService);
+    mod.croniclService = new wizerati.CroniclService(mod.logInService, wizerati.mod("config").config); //pass in login service instead?
+    mod.searchService = new wizerati.SearchService(mod.croniclService);
 
 }(wizerati.mod("services")));
 
 (function (mod) {
 
-    mod.ItemCache = new wizerati.ItemCache();
+    mod.itemCache = new wizerati.ItemCache();
 
 }(wizerati.mod("caches")));
 
 (function (mod) {
 
-    mod.ItemRepository = new wizerati.ItemRepository(wizerati.mod("caches").ItemCache, wizerati.mod("services").CroniclService);
+    mod.itemRepository = new wizerati.ItemRepository(wizerati.mod("caches").itemCache, wizerati.mod("services").croniclService);
 
 }(wizerati.mod("repositories")));
 
 (function (mod) {
 
-    mod.ResultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").LogInService, wizerati.mod("repositories").ItemRepository);
-    mod.FavoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").LogInService, wizerati.mod("repositories").ItemRepository);
+    mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").config, wizerati.mod("services").croniclService.getCroniclUri);
+
+}(wizerati.mod("templates")));
+
+(function (mod) {
+
+    mod.searchFormModel = new wizerati.SearchFormModel();
+    mod.uiRootModel = new wizerati.UIRootModel();
+    mod.loginPanelModel = new wizerati.LoginPanelModel();
+    mod.resultListModel = new wizerati.ResultListModel();
+    mod.selectedCubeFaceModel = new wizerati.SelectedCubeFaceModel();
+    mod.selectedItemModel = new wizerati.SelectedItemModel();
+    mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(
+        wizerati.mod("repositories").itemRepository, mod.resultListModel);
+
+}(wizerati.mod("models")));
+
+(function (mod) {
+
+    mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
+    mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository);
 
 }(wizerati.mod("factories")));
 
 (function (mod) {
 
-    mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").Config, wizerati.mod("services").CroniclService.getCroniclUri);
+    mod.searchFormView = new wizerati.SearchFormView(wizerati.mod("models").searchFormModel);
+    mod.uiRootView = new wizerati.UIRootView(wizerati.mod("models").uiRootModel);
+    mod.loginPanelView = new wizerati.LoginPanelView(wizerati.mod("models").loginPanelModel);
+    mod.favoritesCubeView = new wizerati.FavoritesCubeView(
+        wizerati.mod("models").favoritesCubeModel,
+        wizerati.mod("factories").favoriteViewFactory,
+        wizerati.mod("models").selectedCubeFaceModel,
+        wizerati.mod("models").selectedItemModel);
+    mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel,
+        wizerati.mod("factories").resultViewFactory,
+        wizerati.mod("models").selectedCubeFaceModel,
+        wizerati.mod("models").selectedItemModel,
+        wizerati.mod("models").favoritesCubeModel);
 
-}(wizerati.mod("templates")));
+}(wizerati.mod("views")));
+
+(function (mod) {
+
+    mod.sessionController = new wizerati.SessionController(wizerati.mod("models").loginPanelModel,
+        wizerati.mod("services").authenticationService);
+    mod.loginController = new wizerati.LoginController(wizerati.mod("models").loginPanelModel,
+        wizerati.mod("models").uiRootModel);
+    mod.homeController = new wizerati.HomeController(wizerati.mod("models").uiRootModel);
+    mod.advertisersController = new wizerati.AdvertisersController(wizerati.mod("models").uiRootModel);
+    mod.searchController = new wizerati.SearchController(wizerati.mod("models").uiRootModel,
+        wizerati.mod("models").searchFormModel,
+        wizerati.mod("services").searchService,
+        wizerati.mod("models").resultListModel,
+        wizerati.mod("caches").itemCache);
+    mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
+    mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("views").favoritesCubeView, wizerati.mod("models").resultListModel);
+    mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
+    //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
+
+}(wizerati.mod("controllers")));
 

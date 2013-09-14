@@ -26,7 +26,6 @@
 
             app.instance.renderTemplate(that.$el, _templateName, that.Model, {
                 done: function ($el) {
-                    that.bindEvents($el, options.done);
                 }
             });
 
@@ -36,9 +35,10 @@
         this.postRender = function () {
         };
 
-        this.bindEvents = function ($el, done) {
-
-        };
+        that.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
+        }
 
         function init() {
             if (!model) {

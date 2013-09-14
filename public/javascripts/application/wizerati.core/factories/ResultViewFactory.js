@@ -2,16 +2,19 @@
 
 (function (app) {
     function ResultViewFactory(loginService,
-                               itemRepository) {
+                               itemRepository,
+                               selectedItemModel) {
 
         if (!(this instanceof app.ResultViewFactory)) {
             return new app.ResultViewFactory(loginService,
-                                             itemRepository);
+                                             itemRepository,
+                                             selectedItemModel);
         }
 
         var that = this,
             _loginService = null,
             _itemRepository = null,
+            _selectedItemModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace, done) {
@@ -31,16 +34,18 @@
             switch (role) {
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
-                    _itemRepository.getById(id, function(i){
-                        i.isFavorite = i["isFavoriteOnFace" + currentCubeFace];
-                        done(new app.ContractorView(i).render().$el)
+                    _itemRepository.getById(id, function(item){
+                        item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
+                        item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        done(new app.ContractorView(item).render().$el)
                     });
                     break;
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
-                    _itemRepository.getById(id, function(i){
-                        i.isFavorite = i["isFavoriteOnFace" + currentCubeFace];
-                        done(new app.ContractView(i).render().$el)
+                    _itemRepository.getById(id, function(item){
+                        item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
+                        item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        done(new app.ContractView(item).render().$el)
                     });
                     break;
                 default:
@@ -57,8 +62,13 @@
                 throw "itemRepository not supplied."
             }
 
+            if (!selectedItemModel) {
+                throw "selectedItemModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
+            _selectedItemModel = selectedItemModel;
 
             return that;
         }

@@ -8,9 +8,9 @@
 
         if (!(this instanceof app.FavoritesCubeView)) {
             return new app.FavoritesCubeView(model,
-                favoriteViewFactory,
-                selectedCubeFaceModel,
-                selectedItemModel);
+                                             favoriteViewFactory,
+                                             selectedCubeFaceModel,
+                                             selectedItemModel);
         }
 
         var that = this,
@@ -35,7 +35,7 @@
                 ".back"
                  ];
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
 
         this.getCurrentFace = function () {
@@ -69,6 +69,11 @@
             options.done();
         };
 
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
+        };
+
         function init() {
             if (!model) {
                 throw "model not supplied";
@@ -90,8 +95,6 @@
             _favoriteViewFactory = favoriteViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
             _selectedItemModel = selectedItemModel;
-
-            that.render();
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);

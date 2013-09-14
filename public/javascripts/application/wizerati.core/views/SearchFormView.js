@@ -12,7 +12,7 @@
             _el = "#search-form",
             _templateName = "search-form.html";
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
 
         this.render = function (e, options) {
@@ -45,17 +45,21 @@
 
         };
 
+        this.onDomReady = function(){
+            that.$el = $(_el);
+            that.render();
+        };
+
         function init() {
             if (!model) {
                 throw "model not supplied";
             }
 
             that.Model = model;
-            var view = _.extend(that, new invertebrate.View());
-            $.subscribe(that.Model.updateEventUri, that.render);
-            that.render();
 
-            return view;
+            $.subscribe(that.Model.updateEventUri, that.render);
+
+            return that;
         }
 
         return init();
