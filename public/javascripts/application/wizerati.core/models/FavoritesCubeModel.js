@@ -87,11 +87,14 @@
                 throw "face not supplied";
             }
 
-            _favorites[parseInt(face)] = _.reject(_favorites[parseInt(face)], function (f) {
-                return f.id === id;
+            _favorites[parseInt(face)] = _.reject(_favorites[parseInt(face)], function (idOnCubeFace) {
+                return idOnCubeFace === id;
             });
 
-            $.publish(that.updateEventUri);
+            _itemRepository.getById(id, function (item) {
+                item["isFavoriteOnFace" + face] = false;
+                $.publish(that.updateEventUri);
+            });
         };
 
         function init() {

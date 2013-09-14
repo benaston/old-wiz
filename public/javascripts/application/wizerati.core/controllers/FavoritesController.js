@@ -26,28 +26,10 @@
 
         //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
-//            if(_.find(_favoritesCubeView.Model.getFavorites[_favoritesCubeView.getCurrentFace()], function(id){ return id === dto.id; })) {
-//                return;
-//            }
 
-            //make hash
-            var result = _.find(_resultListModel, function(id){
-                return id === dto.id;
-            });
+            var currentCubeFace = _favoritesCubeView.getCurrentFace();
+            _favoritesCubeView.Model.removeFavorite(dto.id, currentCubeFace);
 
-            if(result){
-                result.isFavorite = true;
-                shouldReRenderResultList = true;
-            }
-
-            if(shouldReRenderResultList) {
-                $.publish(_resultListModel.updateEventUri);
-            }
-
-            $.publish(_favoritesCubeView.Model.updateEventUri);
-
-            _favoritesCubeView.Model.removeFavorite(dto.id,
-                _favoritesCubeView.getCurrentFace());
         };
 
         function init() {
