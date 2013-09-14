@@ -68,14 +68,15 @@
     mod.selectedItemModel = new wizerati.SelectedItemModel();
     mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(
         wizerati.mod("repositories").itemRepository, mod.resultListModel);
-    mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel();
+    mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
 
 }(wizerati.mod("models")));
 
 (function (mod) {
 
-    mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
     mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
+    mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
+    mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
 
 }(wizerati.mod("factories")));
 
@@ -96,7 +97,7 @@
         wizerati.mod("models").favoritesCubeModel);
     mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(
         wizerati.mod("models").itemsOfInterestModel,
-        wizerati.mod("factories").resultViewFactory,
+        wizerati.mod("factories").itemOfInterestViewFactory,
         wizerati.mod("models").selectedCubeFaceModel,
         wizerati.mod("models").selectedItemModel,
         wizerati.mod("models").favoritesCubeModel);
@@ -119,7 +120,7 @@
     mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
     mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("views").favoritesCubeView, wizerati.mod("models").selectedCubeFaceModel);
     mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
-    mod.itemsOfInterestController = new wizerati.ItemsOfInterestController();
+    mod.itemsOfInterestController = new wizerati.ItemsOfInterestController(wizerati.mod("models").itemsOfInterestModel);
 
 }(wizerati.mod("controllers")));
 

@@ -1,35 +1,37 @@
 "use strict";
 
 (function (app) {
-    function ItemsOfInterestModel() {
+    function ItemsOfInterestModel(selectedItemModel) {
         if (!(this instanceof app.ItemsOfInterestModel)) {
-            return new app.ItemsOfInterestModel();
+            return new app.ItemsOfInterestModel(selectedItemModel);
         }
 
         var that = this,
+            _selectedItemModel = null,
             _itemsOfInterest = []; //note these will be GUIDs - use the ItemCache for the actual objects
 
         this.updateEventUri = "update://ItemsOfInterestModel/";
 
-        this.getItemsOfInterest = function () {
-            //todo ensure selected item is always first
-            return _itemsOfInterest;
-        }
-
-        this.addItemOfInterest = function (id, face) {
-            if (!id) {
-                throw "favorite not supplied";
+        this.getItemsOfInterest = function (shouldIncludeSelectedItem) {
+            if(shouldIncludeSelectedItem) {
+                return _itemsOfInterest;
             }
 
-            if (!face) {
-                throw "face not supplied";
+            if(_itemsOfInterest[0] && _itemsOfInterest[0].id === _selectedItemModel.getSelectedItemId()) {
+                return _itemsOfInterest.splice(0,1);
+            }
+        }
+
+        this.addItemOfInterest = function (id) {
+            if (!id) {
+                throw "favorite not supplied";
             }
 
             _itemsOfInterest.push(id);
             $.publish(that.updateEventUri);
         };
 
-        this.removeItemOfInterest = function (id, face) {
+        this.removeItemOfInterest = function (id) {
             if (!id) {
                 throw "id not supplied";
             }
@@ -42,6 +44,12 @@
         };
 
         function init() {
+
+            if(!selectedItemModel){
+                throw "selectedItemModel not supplied."
+            }
+
+            _selectedItemModel = selectedItemModel;
 
             return that;
         }

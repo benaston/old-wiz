@@ -2,21 +2,29 @@
 
     <div id="top1" class="in-page-anchor-target"></div>
     <section class="menu">
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Add To Favourites">S
-        </button>
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Block">-
-        </button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Mark as Applied">
+        <% if(!model.isSelected) {%>
+        <ul class="pips reset">
+            <li><a href="#">Pinned Item 1</a></li>
+            <li><a href="#">Pinned Item 2</a></li>
+            <li><a href="#">Pinned Item 3</a></li>
+            <li><a href="#">Pinned Item 4</a></li>
+            <li><a href="#">Pinned Item 5</a></li>
+            <li><a href="#">Pinned Item 6</a></li>
+        </ul>
+        <% } %>
+        <a class="btn btn-40 btn-primary <%=model.isFavorite ? 'is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" title="Add To Favourites">S
+        </a>
+        <a class="btn btn-40 btn-primary" title="Hide this from future results">-
+        </a>
+        <a class="btn btn-40 btn-primary" title="Mark as Applied">
             2
-        </button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Pin">@</button>
+        </a>
+        <a href="/itemsofinterest/<%=model.isSelected ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(model.isSelected) {%>checked<%} %> " title="Pin">@</a>
     </section>
     <section>
-        <h1>Cheetara Kat</h1>
+        <h1><%= model.title %></h1>
 
-        <h3>New York (<i>Not Currently Available</i>)</h3>
+        <h3><%= model.location %> (<i>Not Currently Available</i>)</h3>
 
         <h3>+44 (0)7742157185 | ben@bj.ma</h3>
 

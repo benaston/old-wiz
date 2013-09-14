@@ -1,11 +1,7 @@
 (function (app) {
     "use strict";
 
-    function ItemsOfInterestView(model,
-                                 itemOfInterestViewFactory,
-                                 selectedCubeFaceModel,
-                                 selectedItemModel,
-                                 favoritesCubeModel) {
+    function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
             return new app.ItemsOfInterestView(model,
@@ -26,17 +22,22 @@
             this.Model = null;
 
         this.render = function () {
+            throw "get addition/removal behavior of items of interest working, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
-            items.unshift(_selectedItemModel.getSelectedItemId());
+            var selectedItem = _selectedItemModel.getSelectedItemId();
+            if (selectedItem) {
+                items.unshift(selectedItem);
+            }
             _.each(items, function (id) {
-                _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+                if(id === null){ return; }
+                _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                     that.$el.append($v);
                 });
             });
         };
 
-        this.onDomReady = function(){
+        this.onDomReady = function () {
             that.$el = $(_el);
             that.render();
         };
