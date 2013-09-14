@@ -1,7 +1,6 @@
 //a resource can have a template, metadata and a post-render action?
 //note 1: meant to be a function to calculate left-part of the uri to point to to retrieve resources
 (function (invertebrate) {
-
     "use strict";
 
     function SyncSvc(configSvc, serverUriSelectionFunc) {

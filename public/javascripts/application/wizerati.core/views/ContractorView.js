@@ -15,23 +15,12 @@
         this.Model = null;
 
         this.render = function (options) {
-            options = options || { done: that.postRender };
-
-            app.instance.renderTemplate(that.$el, templateName, that.Model, {
-                done: function ($el) {
-                    that.bindEvents($el, options.done);
-                }
-            });
+            app.instance.renderTemplate(that.$el,
+                                        _templateName,
+                                        that.Model,
+                                        {});
 
             return that;
-        };
-
-        this.postRender = function () {
-        };
-
-        this.onDomReady = function(){
-            that.$el = $(_el);
-            that.render();
         };
 
         function init() {

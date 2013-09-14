@@ -3,17 +3,6 @@
 
     function Router(defaultPageTitle) {
 
-        function extractQueryString(queryString) {
-            if (queryString == "") return {};
-            var b = {};
-            for (var i = 0; i < queryString.length; ++i) {
-                var p = queryString[i].split('=');
-                if (p.length != 2) continue;
-                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-            }
-            return b;
-        }
-
         var that = this,
             _defaultPageTitle = null;
 
@@ -31,7 +20,6 @@
         }
 
         this.route = function (uri, dto) {
-
             var splitUri = uri.split('?');
             var uriWithoutQueryString = splitUri[0];
             var queryString = splitUri[1];
@@ -86,7 +74,6 @@
         }
 
         function createDtoFromForm($form) {
-//            throw "get search working - cronicl is bust and itemcache needs to be set by search";
             var dto = {};
             var $textfields = $form.find('input[type=text],input[type=password]');
             _.each($textfields, function($t) { dto[$t.name] = $t.value; })
@@ -95,6 +82,17 @@
             _.each($selections, function($r) { dto[$r.name] = $r.value; })
 
             return dto;
+        }
+
+        function extractQueryString(queryString) {
+            if (queryString == "") return {};
+            var b = {};
+            for (var i = 0; i < queryString.length; ++i) {
+                var p = queryString[i].split('=');
+                if (p.length != 2) continue;
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
         }
 
         function init() {

@@ -1,6 +1,5 @@
-"use strict";
-
 (function (app) {
+    "use strict";
 
     function SearchFormView(model) {
 
@@ -15,14 +14,14 @@
         this.$el = null;
         this.Model = null;
 
-        this.render = function (e, options) {
-            options = options || { done: that.postRender };
+        this.render = function () {
+            var options = { done: that.bindToDom };
 
             return app.instance.renderTemplate(that.$el,
                 _templateName, that.Model, options);
         };
 
-        this.postRender = function () {
+        this.bindToDom = function () {
             var $keywords = that.$el.find("#keywords");
             $keywords.on('change', function () {
                 that.Model.setKeywords($keywords.val(), { silent: true });
@@ -40,9 +39,6 @@
 
             //todo: this to be connected using the post render code
             //downloaded from the template server.
-            //search service then to instantiate Result models based
-            //upon the role of the user
-
         };
 
         this.onDomReady = function(){

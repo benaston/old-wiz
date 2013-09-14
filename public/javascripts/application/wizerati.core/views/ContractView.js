@@ -1,6 +1,5 @@
-"use strict";
-
 (function (app) {
+    "use strict";
 
     function ContractView(model) {
 
@@ -9,36 +8,26 @@
         }
 
         var that = this,
-            _el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
+            _el = "<li class='thumbnail thumbnail-219'></li>",
             _templateName = "result.html";
 
         this.$el = $(_el);
         this.Model = null;
 
-        this.render = function (options) {
-            options = options || { done: that.postRender };
-
+        this.render = function () {
             if (that.Model.isSelected) {
                 that.$el.addClass('selected');
             } else {
                 that.$el.removeClass('selected');
             }
 
-            app.instance.renderTemplate(that.$el, _templateName, that.Model, {
-                done: function ($el) {
-                }
-            });
+            app.instance.renderTemplate(that.$el,
+                                        _templateName,
+                                        that.Model,
+                                        {});
 
             return that;
         };
-
-        this.postRender = function () {
-        };
-
-        that.onDomReady = function(){
-            that.$el = $(_el);
-            that.render();
-        }
 
         function init() {
             if (!model) {

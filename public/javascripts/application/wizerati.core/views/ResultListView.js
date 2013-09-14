@@ -22,7 +22,7 @@
             _selectedItemModel = null,
             _favoritesCubeModel = null;
 
-        this.$el = null;
+        this.$el =
         this.Model = null;
 
         this.render = function () {

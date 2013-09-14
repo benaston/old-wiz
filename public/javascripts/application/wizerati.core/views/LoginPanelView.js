@@ -1,6 +1,5 @@
-"use strict";
-
 (function (app) {
+    "use strict";
 
     function LoginPanelView(model) {
 
@@ -23,10 +22,7 @@
         this.$password =
         this.Model = null;
 
-        this.render = function (e, options) {
-            var defaults = { done: that.postRender };
-            options = _.extend({}, defaults, options);
-
+        this.render = function () {
             if (that.Model.getIsLoginFailedMessageVisible()) {
                 that.$el.addClass('login-error');
             }
