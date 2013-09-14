@@ -19,12 +19,12 @@
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
             _labelEls = [
-                "label[for=f-t]",       //top
-                "label[for=f-l]",       //left
-                "label[for=f-f]",       //front
-                "label[for=f-r]",       //right
-                "label[for=f-bottom]",  //bottom
-                "label[for=f-back]"     //back
+                ".cube-face-labels li:nth-child(1)",       //top
+                ".cube-face-labels li:nth-child(2)",       //left
+                ".cube-face-labels li:nth-child(3)",       //front
+                ".cube-face-labels li:nth-child(4)",       //right
+                ".cube-face-labels li:nth-child(5)",       //bottom
+                ".cube-face-labels li:nth-child(6)",       //back
                  ],
             _faceEls = [
                 ".top",
@@ -65,6 +65,11 @@
 
             that.$el.attr('data-selected-face-id',
                 _selectedCubeFaceModel.getSelectedCubeFaceId());
+
+            var faceLabels = that.Model.getFaceLabels();
+            $.each(_labelEls, function(index, el){
+                $(el).text(faceLabels[index]);
+            });
 
             options.done();
         };

@@ -4,7 +4,7 @@
     <list default="true" id="4c11be9c-a113-40c8-9f71-2b97bfe13a03" name="Default" comment="" />
     <ignored path="wizerati.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.ejs" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379179269127" ignored="false" />
+    <file path="/index.ejs" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379182372140" ignored="false" />
     <file path="/appStart.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379162994945" ignored="false" />
     <file path="/SearchService.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378330409249" ignored="false" />
     <file path="/modules.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379181515109" ignored="false" />
@@ -20,8 +20,8 @@
     <file path="/ContractorView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379163521575" ignored="false" />
     <file path="/SelectedItemController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379026317513" ignored="false" />
     <file path="/app.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379164617313" ignored="false" />
-    <file path="/style-cube.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379179110715" ignored="false" />
-    <file path="/FavoritesCubeModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379173606663" ignored="false" />
+    <file path="/style-cube.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379182019786" ignored="false" />
+    <file path="/FavoritesCubeModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379184711077" ignored="false" />
     <file path="/router.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378853042807" ignored="false" />
     <file path="/SessionController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378421730458" ignored="false" />
     <file path="/LoginPanelModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378421686058" ignored="false" />
@@ -33,7 +33,7 @@
     <file path="/SearchFormModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378423988498" ignored="false" />
     <file path="/CookieService.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378424031840" ignored="false" />
     <file path="/a.dummy" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379173394044" ignored="false" />
-    <file path="/FavoritesCubeView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379178404139" ignored="false" />
+    <file path="/FavoritesCubeView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379184749443" ignored="false" />
     <file path="/result.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378673954364" ignored="false" />
     <file path="/cube.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378575635502" ignored="false" />
     <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379176014612" ignored="false" />
@@ -93,19 +93,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FavoritesController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
+      <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+            <state line="80" column="25" selection-start="4414" selection-end="4414" vertical-scroll-proportion="-10.548388">
+              <folding>
+                <element signature="n#style#0;n#article#0;n#section#1;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#p#0;n#article#0;n#section#1;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#article#0;n#section#2;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#article#0;n#section#2;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#article#1;n#section#2;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#article#1;n#section#2;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#article#0;n#section#1;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#p#0;n#article#0;n#section#1;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#article#0;n#section#2;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#article#0;n#section#2;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#article#1;n#section#2;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#article#1;n#section#2;n#section#1;n#article#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavoritesCubeView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="36" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modules.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
+      <file leaf-file-name="FavoritesCubeModel.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="148" selection-start="4410" selection-end="4410" vertical-scroll-proportion="0.68720376">
+            <state line="20" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.3744076">
               <folding />
             </state>
           </provider>
@@ -131,12 +153,12 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/FavoriteViewFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/AdvertisersPanelModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js" />
       </list>
     </option>
   </component>
@@ -534,7 +556,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34088334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22991249" sideWeight="0.6591166" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25696102" sideWeight="0.6591166" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -623,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="316" selection-end="316" vertical-scroll-proportion="0.24058323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/AdvertisersPanelModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -654,13 +669,6 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="23" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.7405213">
           <folding />
         </state>
       </provider>
@@ -693,9 +701,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="148" selection-start="4410" selection-end="4410" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="3690" selection-end="3690" vertical-scroll-proportion="0.38744077">
+        <state line="80" column="25" selection-start="4414" selection-end="4414" vertical-scroll-proportion="-10.548388">
           <folding>
             <element signature="n#style#0;n#article#0;n#section#1;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#strong#0;n#p#0;n#article#0;n#section#1;n#section#1;n#article#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -713,23 +742,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="84" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.46327013">
+        <state line="74" column="36" selection-start="2684" selection-end="2684" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/FavoritesController.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/FavoritesCubeModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="148" selection-start="4410" selection-end="4410" vertical-scroll-proportion="0.68720376">
+        <state line="20" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.3744076">
           <folding />
         </state>
       </provider>

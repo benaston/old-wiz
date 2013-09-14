@@ -17,6 +17,7 @@ figure {
     margin: auto;
     margin-bottom: 35px; /*space for face label*/
     -webkit-user-select: none;
+    top: 20px;
 }
 
 .cube-container:not([data-selected-face-id='0']) .cube-controls label[for="f-t"]:hover,
@@ -24,14 +25,7 @@ figure {
 .cube-container:not([data-selected-face-id='2']) .cube-controls label[for="f-f"]:hover,
 .cube-container:not([data-selected-face-id='3']) .cube-controls label[for="f-r"]:hover,
 .cube-container:not([data-selected-face-id='4']) .cube-controls label[for="f-bottom"]:hover,
-.cube-container:not([data-selected-face-id='5']) .cube-controls label[for="f-back"]:hover
-/*#f-t:not(:checked) ~ .cube-controls label[for="f-t"]:hover,*/
-/*#f-l:not(:checked) ~ .cube-controls label[for="f-l"]:hover,*/
-/*#f-f:not(:checked) ~ .cube-controls label[for="f-f"]:hover,*/
-/*#f-r:not(:checked) ~ .cube-controls label[for="f-r"]:hover,*/
-/*#f-bottom:not(:checked) ~ .cube-controls label[for="f-bottom"]:hover,*/
-/*#f-back:not(:checked) ~ .cube-controls label[for="f-back"]:hover */
-{
+.cube-container:not([data-selected-face-id='5']) .cube-controls label[for="f-back"]:hover {
     border-color: rgba(255, 200, 0, 0.3);
 }
 
@@ -40,14 +34,7 @@ figure {
 .cube-container[data-selected-face-id='2'] .cube-controls .face-selector:nth-child(3),
 .cube-container[data-selected-face-id='3'] .cube-controls .face-selector:nth-child(4),
 .cube-container[data-selected-face-id='4'] .cube-controls .face-selector:nth-child(5),
-.cube-container[data-selected-face-id='5'] .cube-controls .face-selector:nth-child(6)
-/*#f-t:checked ~ .cube-controls label[for="f-t"],*/
-/*#f-l:checked ~ .cube-controls label[for="f-l"],*/
-/*#f-f:checked ~ .cube-controls label[for="f-f"],*/
-/*#f-r:checked ~ .cube-controls label[for="f-r"],*/
-/*#f-bottom:checked ~ .cube-controls label[for="f-bottom"],*/
-/*#f-back:checked ~ .cube-controls label[for="f-back"] */
-    {
+.cube-container[data-selected-face-id='5'] .cube-controls .face-selector:nth-child(6) {
     background-color: rgba(0, 109, 204, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
     border: 2px solid white;
@@ -62,13 +49,7 @@ figure {
 .cube-container[data-selected-face-id='2'] .cube-face-labels li[for="f-f"],
 .cube-container[data-selected-face-id='3'] .cube-face-labels li[for="f-r"],
 .cube-container[data-selected-face-id='4'] .cube-face-labels li[for="f-bottom"],
-.cube-container[data-selected-face-id='5'] .cube-face-labels li[for="f-back"]
-/*#f-t:checked ~      .cube-face-labels li[for="f-t"],*/
-/*#f-l:checked ~      .cube-face-labels li[for="f-l"],*/
-/*#f-f:checked ~      .cube-face-labels li[for="f-f"],*/
-/*#f-r:checked ~      .cube-face-labels li[for="f-r"],*/
-/*#f-bottom:checked ~ .cube-face-labels li[for="f-bottom"],*/
-/*#f-back:checked ~   .cube-face-labels li[for="f-back"]    */{
+.cube-container[data-selected-face-id='5'] .cube-face-labels li[for="f-back"] {
     display: block;
 }
 
@@ -120,62 +101,45 @@ figure {
 }
 
 .cube-container[data-selected-face-id='0'] .cube {
-/*#f-t:checked ~ .cube {*/
+    /*#f-t:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px) rotateX(-90deg);
 }
 
 .cube-container[data-selected-face-id='1'] .cube {
-/*#f-l:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px) rotateY(90deg);
 }
 
 .cube-container[data-selected-face-id='2'] .cube {
-/*#f-f:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px);
 }
 
 .cube-container[data-selected-face-id='3'] .cube {
-/*#f-r:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px) rotateY(-90deg);
 }
 
 .cube-container[data-selected-face-id='4'] .cube {
-/*#f-bottom:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px) rotateX(90deg);
 }
 
 .cube-container[data-selected-face-id='5'] .cube {
-/*#f-back:checked ~ .cube {*/
     -webkit-transform: translateZ(-130px) rotateX(-180deg);
 }
 
-/*#f-t:checked ~ .cube .top,*/
 .cube-container[data-selected-face-id='0'] .cube .top,
-/*#f-l:checked ~ .cube .left,*/
 .cube-container[data-selected-face-id='1'] .cube .left,
-/*#f-f:checked ~ .cube .front,*/
 .cube-container[data-selected-face-id='2'] .cube .front,
-/*#f-r:checked ~ .cube .right,*/
 .cube-container[data-selected-face-id='3'] .cube .right,
-/*#f-bottom:checked ~ .cube .bottom,*/
 .cube-container[data-selected-face-id='4'] .cube .bottom,
-/*#f-back:checked ~ .cube .back,*/
 .cube-container[data-selected-face-id='5'] .cube .back {
     opacity: 1;
     -webkit-transition: opacity 1s linear;
 }
 
-/*#f-t:not(:checked) ~ .cube .top,*/
 .cube-container:not([data-selected-face-id='0']) .cube .top,
-/*#f-l:not(:checked) ~ .cube .left,*/
 .cube-container:not([data-selected-face-id='1']) .cube .left,
-/*#f-f:not(:checked) ~ .cube .front,*/
 .cube-container:not([data-selected-face-id='2']) .cube .front,
-/*#f-r:not(:checked) ~ .cube .right,*/
 .cube-container:not([data-selected-face-id='3']) .cube .right,
-/*#f-bottom:not(:checked) ~ .cube .bottom,*/
 .cube-container:not([data-selected-face-id='4']) .cube .bottom,
-/*#f-back:not(:checked) ~ .cube .back,*/
 .cube-container:not([data-selected-face-id='5']) .cube .back {
     opacity: .3;
     -webkit-transition: opacity 1s linear;
