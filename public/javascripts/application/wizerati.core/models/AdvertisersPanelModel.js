@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function AdvertisersPanelModel() {
 
         if (!(this instanceof app.AdvertisersPanelModel)) {

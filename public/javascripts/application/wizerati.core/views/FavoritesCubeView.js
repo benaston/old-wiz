@@ -63,7 +63,7 @@
                 });
             });
 
-            $.attr('data-selected-face-id',
+            that.$el.attr('data-selected-face-id',
                 _selectedCubeFaceModel.getSelectedCubeFaceId());
 
             options.done();

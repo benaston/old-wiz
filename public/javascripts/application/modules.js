@@ -110,7 +110,7 @@
         wizerati.mod("models").resultListModel,
         wizerati.mod("caches").itemCache);
     mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
-    mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("views").favoritesCubeView, wizerati.mod("models").resultListModel);
+    mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("views").favoritesCubeView, wizerati.mod("models").selectedCubeFaceModel);
     mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
     //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
 

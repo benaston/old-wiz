@@ -1,10 +1,10 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function FavoritesCubeModel(itemRepository,
                                 resultListModel) {
 
-//        throw "get rid of selectedcubefaceview. wire up " +
+//        throw "wire up " +
 //            "clicking of cube face selection labels to " +
 //            "updating of the selected cube face model. " +
 //            "wire up subscribers to changes to the " +
