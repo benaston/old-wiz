@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function FavoritesCubeFaceViewFactory(face, favorites) {
 
         if (!(this instanceof app.FavoritesCubeFaceViewFactory)) {
@@ -38,5 +38,4 @@
     }
 
     app.FavoriteViewFactory = FavoriteViewFactory;
-
 }(wizerati));

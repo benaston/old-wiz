@@ -1,10 +1,10 @@
 (function (app) {
     "use strict";
 
-    function ContractorView(model) {
+    function ContractorResultView(model) {
 
-        if (!(this instanceof app.ContractorView)) {
-            return new app.ContractorView(model);
+        if (!(this instanceof app.ContractorResultView)) {
+            return new app.ContractorResultView(model);
         }
 
         var that = this,
@@ -36,6 +36,6 @@
         return init();
     }
 
-    app.ContractorView = ContractorView;
-    invertebrate.View.isExtendedBy(app.ContractorView);
+    app.ContractorResultView = ContractorResultView;
+    invertebrate.View.isExtendedBy(app.ContractorResultView);
 }(wizerati));

@@ -1,15 +1,15 @@
 (function (app) {
     "use strict";
 
-    function ContractView(model) {
+    function ContractItemOfInterestView(model) {
 
-        if (!(this instanceof app.ContractView)) {
-            return new app.ContractView(model);
+        if (!(this instanceof app.ContractItemOfInterestView)) {
+            return new app.ContractItemOfInterestView(model);
         }
 
         var that = this,
-            _el = "<li class='thumbnail thumbnail-219'></li>",
-            _templateName = "result.html";
+            _el = '<article id="selected-item" class="overflow-y-scroll lucid-column"></article>',
+            _templateName = "item-of-interest.html";
 
         this.$el = $(_el);
         this.Model = null;
@@ -42,6 +42,6 @@
         return init();
     }
 
-    app.ContractView = ContractView;
-    invertebrate.View.isExtendedBy(app.ContractView);
+    app.ContractItemOfInterestView = ContractItemOfInterestView;
+    invertebrate.View.isExtendedBy(app.ContractItemOfInterestView);
 }(wizerati));

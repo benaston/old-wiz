@@ -15,13 +15,13 @@
         this.Model = null;
 
         this.render = function () {
-            var options = { done: that.bindToDom };
+            var options = { done: that.bindEvents };
 
             return app.instance.renderTemplate(that.$el,
                 _templateName, that.Model, options);
         };
 
-        this.bindToDom = function () {
+        this.bindEvents = function () {
             var $keywords = that.$el.find("#keywords");
             $keywords.on('change', function () {
                 that.Model.setKeywords($keywords.val(), { silent: true });

@@ -1,5 +1,3 @@
-
-
 (function (app) {
     "use strict";
 
@@ -34,5 +32,4 @@
     };
 
     app.SelectedItemModel = SelectedItemModel;
-
 }(wizerati));

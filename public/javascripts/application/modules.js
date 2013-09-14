@@ -68,6 +68,7 @@
     mod.selectedItemModel = new wizerati.SelectedItemModel();
     mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(
         wizerati.mod("repositories").itemRepository, mod.resultListModel);
+    mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel();
 
 }(wizerati.mod("models")));
 
@@ -93,6 +94,12 @@
         wizerati.mod("models").selectedCubeFaceModel,
         wizerati.mod("models").selectedItemModel,
         wizerati.mod("models").favoritesCubeModel);
+    mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(
+        wizerati.mod("models").itemsOfInterestModel,
+        wizerati.mod("factories").resultViewFactory,
+        wizerati.mod("models").selectedCubeFaceModel,
+        wizerati.mod("models").selectedItemModel,
+        wizerati.mod("models").favoritesCubeModel);
 
 }(wizerati.mod("views")));
 
@@ -112,7 +119,7 @@
     mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
     mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("views").favoritesCubeView, wizerati.mod("models").selectedCubeFaceModel);
     mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
-    //self.wizerati.instance.itemsOfInterest = new wizerati.ItemsOfInterestView(new wizerati.ItemsOfInterestModel());
+    mod.itemsOfInterestController = new wizerati.ItemsOfInterestController();
 
 }(wizerati.mod("controllers")));
 
