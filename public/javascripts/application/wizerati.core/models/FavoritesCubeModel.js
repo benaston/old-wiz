@@ -1,14 +1,8 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function FavoritesCubeModel(itemRepository,
                                 resultListModel) {
-
-//        throw "get rid of selectedcubefaceview. wire up " +
-//            "clicking of cube face selection labels to " +
-//            "updating of the selected cube face model. " +
-//            "wire up subscribers to changes to the " +
-//            "selected cube face.";
 
         if (!(this instanceof app.FavoritesCubeModel)) {
             return new app.FavoritesCubeModel(itemRepository,
@@ -24,38 +18,20 @@
                 [], //bottom
                 []  //back
             ],
-            _currentFace = '0',
+            _faceLabels = ["my favorites","my favorites 2","my favorites 3","my favorites 4","my favorites 5","my favorites 6"],
             _itemRepository = null,
             _resultListModel = null;
 
         this.updateEventUri = "update://FavoritesCubeModel/";
 
+        this.getFaceLabels = function () {
+
+            return _faceLabels;
+        };
+
         this.getFavorites = function () {
 
             return _favorites;
-        };
-
-        this.setFavorites = function (value) {
-
-            _favorites = value;
-
-            $.publish(that.updateEventUri);
-        };
-
-        this.setSelectedFavoriteId = function (id) {
-            if (!id) {
-                throw "id not supplied";
-            }
-
-            _.each(_.flatten(_favorites, true), function (r) {
-                if (r.id === id) {
-                    r.isSelected = true;
-                } else {
-                    r.isSelected = false;
-                }
-            });
-
-            $.publish(that.updateEventUri);
         };
 
         this.addFavorite = function (id, face) {

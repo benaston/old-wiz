@@ -2,22 +2,22 @@
 
 (function (app) {
     function FavoritesController(favoritesCubeView,
-                                 resultListModel) {
+                                 selectedCubeFaceModel) {
 
         if (!(this instanceof app.FavoritesController)) {
             return new app.FavoritesController(favoritesCubeView,
-                                               resultListModel);
+                                               selectedCubeFaceModel);
         }
 
         var that = this,
             _favoritesCubeView = null,
-            _resultListModel = null;
+            _selectedCubeFaceModel = null;
 
         this.create = function (dto) {
             if(!dto) { throw "dto not supplied." }
 
-            var currentCubeFace = _favoritesCubeView.getCurrentFace();
-            if(_.find(_favoritesCubeView.Model.getFavorites[_favoritesCubeView.getCurrentFace()], function(id){ return id === dto.id; })) {
+            var currentCubeFace = _selectedCubeFaceModel.getSelectedCubeFaceId();
+            if(_.find(_favoritesCubeView.Model.getFavorites[currentCubeFace], function(id){ return id === dto.id; })) {
                 return;
             }
 
@@ -27,9 +27,7 @@
         //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
 
-            var currentCubeFace = _favoritesCubeView.getCurrentFace();
-            _favoritesCubeView.Model.removeFavorite(dto.id, currentCubeFace);
-
+            _favoritesCubeView.Model.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
         };
 
         function init() {
@@ -37,12 +35,12 @@
                 throw "favoritesCubeView not supplied.";
             }
 
-            if (!resultListModel) {
-                throw "resultListModel not supplied.";
+            if (!selectedCubeFaceModel) {
+                throw "selectedCubeFaceModel not supplied.";
             }
 
             _favoritesCubeView = favoritesCubeView;
-            _resultListModel = resultListModel;
+            _selectedCubeFaceModel = selectedCubeFaceModel;
 
             return that;
         }
@@ -53,10 +51,3 @@
     app.FavoritesController = FavoritesController;
 
 }(wizerati));
-
-//try {
-//
-//    _itemRepository.getById(dto.id, done);
-//} catch (err) {
-//    console.log("error: FavoritesController.create. " + err);
-//}
