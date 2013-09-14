@@ -53,7 +53,7 @@
             });
 
             $(document).keyup(function (e) {
-                if (e.keyCode === 27 && app.instance.uiRoot.Model.getUIMode() === _uiModeEnum.LogIn) {
+                if (e.keyCode === 27 && app.mod("views").uiRootView.Model.getUIMode() === _uiModeEnum.LogIn) {
                     cancel();
                 }
             });

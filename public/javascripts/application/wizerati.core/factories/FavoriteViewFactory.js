@@ -2,31 +2,38 @@
 
 (function (app) {
     function FavoriteViewFactory(loginService,
-                                 itemRepository) {
+                                 itemRepository,
+                                 selectedItemModel) {
 
         if (!(this instanceof app.FavoriteViewFactory)) {
             return new app.FavoriteViewFactory(loginService,
-                                               itemRepository);
+                                               itemRepository,
+                                               selectedItemModel);
         }
 
         var that = this,
             _loginService = null,
             _itemRepository = null,
+            _selectedItemModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
-        this.create = function (id, done) {
+        this.create = function (id, currentCubeFace, done) {
             var role = _loginService.getCurrentRole();
             switch (role) {
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
-                    _itemRepository.getById(id, function(i){
-                        done(new app.ContractorFavoriteView(i).render().$el)
+                    _itemRepository.getById(id, function(item){
+                        item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
+                        item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        done(new app.ContractorFavoriteView(item).render().$el)
                     });
                     break;
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
-                    _itemRepository.getById(id, function(i){
-                        done(new app.ContractFavoriteView(i).render().$el)
+                    _itemRepository.getById(id, function(item){
+                        item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
+                        item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        done(new app.ContractFavoriteView(item).render().$el)
                     });
                     break;
                 default:
@@ -43,8 +50,13 @@
                 throw "itemRepository not supplied."
             }
 
+            if (!selectedItemModel) {
+                throw "selectedItemModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
+            _selectedItemModel = selectedItemModel;
 
             return that;
         }
