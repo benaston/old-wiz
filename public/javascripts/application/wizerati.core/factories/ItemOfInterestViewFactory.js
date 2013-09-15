@@ -20,7 +20,7 @@
             _itemsOfInterestModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
-        this.create = function (id, currentCubeFace, isSelectedItem, done) {
+        this.create = function (id, currentCubeFace, isSelectedItem, initialScrollTop, done) {
             if(!id) {
                 throw "id not supplied."
             }
@@ -47,18 +47,20 @@
                         item.isPinned = !isSelectedItem;
                         item.isPinnable = !_.find(_itemsOfInterestModel.getItemsOfInterest().pinned, function(i){ i === id });
                         item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
-                        done(new app.ContractorItemOfInterestView(item).render().$el)
+                        var $e = new app.ContractorItemOfInterestView(item).render().$el;
+                        $e.scrollTop(initialScrollTop);
+                        done($e)
                     });
                     break;
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
-                        item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;
                         item.isPinnable = !isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function(i){ return i === item.id; });
                         item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
-                        done(new app.ContractItemOfInterestView(item).render().$el)
+                        done(new app.ContractItemOfInterestView(item).render().$el.scrollTop(initialScrollTop))
                     });
                     break;
                 default:

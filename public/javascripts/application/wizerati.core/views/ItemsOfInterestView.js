@@ -1,6 +1,10 @@
 (function (app) {
     "use strict";
 
+    //todo, render to in mem dom fragment with
+    //single write to DOM to minimise repaint
+    //use JQUery scrollTop to reset scroll position of
+    //scrolled elements
     function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
@@ -16,12 +20,27 @@
             _itemOfInterestViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
-            _favoritesCubeModel = null;
+            _favoritesCubeModel = null,
+            _scrollTopValues = {};
 
         this.$el =
             this.Model = null;
 
+        function storeScrollTopValues(){
+            var selectedItem = that.$el.find('.item-of-interest.selected');
+
+            if(selectedItem){
+                _scrollTopValues[selectedItem.attr('data-id')+'s'] = $(selectedItem).scrollTop();
+            }
+
+            _.each(that.$el.find('.item-of-interest:not(.selected)'), function(e){
+                _scrollTopValues[$(e).attr('data-id')] = $(e).scrollTop();
+            });
+        }
+
         this.render = function () {
+            //get and store current scroll positions
+            storeScrollTopValues();
 //            throw "get addition/removal behavior of items of interest working, without a full refresh of items of interest panel, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
@@ -31,8 +50,10 @@
                 _itemOfInterestViewFactory.create(items.selectedItem,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     true,
+                    _scrollTopValues[items.selectedItem],
                     function ($v) {
                     that.$el.append($v);
+                    $v.scrollTop(_scrollTopValues[items.selectedItem+'s']);
                     setTimeout(function(){$v.removeClass('collapsed')}, 0);
                     addPinnedItems(items.pinnedItems);
                 });
@@ -49,8 +70,10 @@
                 _itemOfInterestViewFactory.create(id,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     false,
+                    _scrollTopValues[id],
                     function ($v) {
-                    that.$el.append($v);
+                    that.$el.append($v)
+                    $v.scrollTop(_scrollTopValues[id]);
                 });
             });
         }

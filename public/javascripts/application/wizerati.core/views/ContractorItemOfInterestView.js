@@ -15,10 +15,14 @@
         this.Model = null;
 
         this.render = function () {
+            that.$el.attr('data-id', that.Model.id);
+
             if (that.Model.isSelected) {
                 that.$el.addClass('selected');
-            } else {
-                that.$el.removeClass('selected');
+            }
+
+            if (that.Model.shouldAnimateIn) {
+                that.$el.addClass('collapsed');
             }
 
             app.instance.renderTemplate(that.$el,

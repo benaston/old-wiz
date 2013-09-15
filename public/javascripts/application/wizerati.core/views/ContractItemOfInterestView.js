@@ -16,6 +16,8 @@
         this.Model = null;
 
         this.render = function () {
+            that.$el.attr('data-id', that.Model.id);
+
             if (that.Model.isSelected) {
                 that.$el.addClass('selected');
             }
