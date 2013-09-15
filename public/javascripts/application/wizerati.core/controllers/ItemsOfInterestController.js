@@ -13,11 +13,6 @@
         this.create = function (dto) {
             if(!dto) { throw "dto not supplied." }
 
-            if(_.find(_itemsOfInterestModel.getItemsOfInterest(), function(id){
-                return id === dto.id; })) {
-                return;
-            }
-
             _itemsOfInterestModel.addItemOfInterest(dto.id);
         };
 

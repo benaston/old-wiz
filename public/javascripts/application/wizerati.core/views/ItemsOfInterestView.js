@@ -22,20 +22,28 @@
             this.Model = null;
 
         this.render = function () {
-            throw "get addition/removal behavior of items of interest working, without a full refresh of items of interest panel, plus get the column layout working so content slides under the search panel.";
+//            throw "get addition/removal behavior of items of interest working, without a full refresh of items of interest panel, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
-            var selectedItem = _selectedItemModel.getSelectedItemId();
-            if (selectedItem) {
-                items.unshift(selectedItem);
+            items.selectedItem = _selectedItemModel.getSelectedItemId();
+
+            if(items.selectedItem) {
+                _itemOfInterestViewFactory.create(items.selectedItem, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+                    that.$el.append($v);
+
+                    addPinnedItems(items.pinnedItems);
+                });
             }
+        };
+
+        function addPinnedItems(items) {
             _.each(items, function (id) {
                 if(id === null){ return; }
                 _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                     that.$el.append($v);
                 });
             });
-        };
+        }
 
         this.onDomReady = function () {
             that.$el = $(_el);

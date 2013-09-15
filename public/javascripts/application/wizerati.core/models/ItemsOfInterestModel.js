@@ -8,20 +8,26 @@
 
         var that = this,
             _selectedItemModel = null,
-            _itemsOfInterest = []; //note these will be GUIDs - use the ItemCache for the actual objects
+            _itemsOfInterest = { selectedItem: "",
+                pinnedItems: [] } //note these will be GUIDs - use the ItemCache for the actual objects
 
         this.updateEventUri = "update://ItemsOfInterestModel/";
 
-        this.getItemsOfInterest = function (shouldIncludeSelectedItem) {
+        this.getItemsOfInterest = function () {
                 return _itemsOfInterest;
         }
 
         this.addItemOfInterest = function (id) {
             if (!id) {
-                throw "favorite not supplied";
+                throw "id not supplied";
             }
 
-            _itemsOfInterest.push(id);
+            if(_.find(that.getItemsOfInterest().pinnedItems, function(idOfPinnedItem){
+                return idOfPinnedItem === id; })) {
+                return;
+            }
+
+            _itemsOfInterest.pinnedItems.push(id);
             $.publish(that.updateEventUri);
         };
 
@@ -30,8 +36,8 @@
                 throw "id not supplied";
             }
 
-            _.reject(_itemsOfInterest[parseInt(face)], function (idOfItemOfInterest) {
-                return idOfItemOfInterest === id;
+            _itemsOfInterest = _.reject(_itemsOfInterest.pinnedItems, function (idOfPinnedItem) {
+                return idOfPinnedItem === id;
             });
 
             $.publish(that.updateEventUri);
