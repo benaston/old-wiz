@@ -5,6 +5,7 @@
     //single write to DOM to minimise repaint
     //use JQUery scrollTop to reset scroll position of
     //scrolled elements
+    //fix jankiness of item selection and items of interest update
     function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
@@ -39,9 +40,7 @@
         }
 
         this.render = function () {
-            //get and store current scroll positions
             storeScrollTopValues();
-//            throw "get addition/removal behavior of items of interest working, without a full refresh of items of interest panel, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
             items.selectedItem = _selectedItemModel.getSelectedItemId();
@@ -50,11 +49,10 @@
                 _itemOfInterestViewFactory.create(items.selectedItem,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     true,
-                    _scrollTopValues[items.selectedItem],
                     function ($v) {
                     that.$el.append($v);
                     $v.scrollTop(_scrollTopValues[items.selectedItem+'s']);
-                    setTimeout(function(){$v.removeClass('collapsed')}, 0);
+                    setTimeout(function(){$v.removeClass('collapsed')}, 1000);
                     addPinnedItems(items.pinnedItems);
                 });
             } else {
@@ -62,7 +60,9 @@
             }
         };
 
-        function addPinnedItems(items) {
+        function addPinnedItems(items, done) {
+            done = done || function(){};
+
             _.each(items, function (id) {
                 if (id === null) {
                     return;
@@ -70,12 +70,12 @@
                 _itemOfInterestViewFactory.create(id,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     false,
-                    _scrollTopValues[id],
                     function ($v) {
-                    that.$el.append($v)
-                    $v.scrollTop(_scrollTopValues[id]);
-                });
+                        that.$el.append($v)
+                        $v.scrollTop(_scrollTopValues[id]);
+                    });
             });
+            done();
         }
 
         this.onDomReady = function () {
