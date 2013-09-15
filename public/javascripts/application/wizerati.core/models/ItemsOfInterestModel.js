@@ -13,13 +13,7 @@
         this.updateEventUri = "update://ItemsOfInterestModel/";
 
         this.getItemsOfInterest = function (shouldIncludeSelectedItem) {
-            if(shouldIncludeSelectedItem) {
                 return _itemsOfInterest;
-            }
-
-            if(_itemsOfInterest[0] && _itemsOfInterest[0].id === _selectedItemModel.getSelectedItemId()) {
-                return _itemsOfInterest.splice(0,1);
-            }
         }
 
         this.addItemOfInterest = function (id) {
