@@ -27,7 +27,11 @@
                 return;
             }
 
+            if(_selectedItemModel.getSelectedItemId() === id) {
+                _selectedItemModel.setSelectedItemId(null);
+            }
             _itemsOfInterest.pinnedItems.push(id);
+
             $.publish(that.updateEventUri);
         };
 

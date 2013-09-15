@@ -204,7 +204,7 @@ label {
     display: block;
 }
 
-button.checked {
+button.checked, a.checked {
     background-color: rgba(0, 109, 204, 0.95);
     color: white;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;

@@ -27,18 +27,22 @@
             var items = that.Model.getItemsOfInterest();
             items.selectedItem = _selectedItemModel.getSelectedItemId();
 
-            if(items.selectedItem) {
+            if (items.selectedItem) {
                 _itemOfInterestViewFactory.create(items.selectedItem, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                     that.$el.append($v);
 
                     addPinnedItems(items.pinnedItems);
                 });
+            } else {
+                addPinnedItems(items.pinnedItems);
             }
         };
 
         function addPinnedItems(items) {
             _.each(items, function (id) {
-                if(id === null){ return; }
+                if (id === null) {
+                    return;
+                }
                 _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                     that.$el.append($v);
                 });

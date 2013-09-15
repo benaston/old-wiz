@@ -21,7 +21,7 @@ body[data-ui-mode=search] #result-list-panel {
     left: 0;
     width: 320px; /*modified from 300 to simplify transition timings*/
     transition: width .1s ease-in-out;
-    background: -webkit-gradient(linear, left top, right top, color-stop(86%,rgba(255,255,255,0.95)), color-stop(93%,rgba(255,255,255,0.95)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-gradient(linear, left top, right top, color-stop(86%, rgba(255, 255, 255, 0.95)), color-stop(93%, rgba(255, 255, 255, 0.95)), color-stop(100%, rgba(255, 255, 255, 0)));
     z-index: 999999999;
 }
 
@@ -30,7 +30,7 @@ body[data-ui-mode=search] #result-list-panel {
     display: none;
 }
 
-#selected-item {
+.item-of-interest {
     border-radius: 15px;
     padding: 0px 15px 0px 18px;
     margin: 0 8px 0 8px;
@@ -39,7 +39,7 @@ body[data-ui-mode=search] #result-list-panel {
     -webkit-overflow-scrolling: touch;
 }
 
-#selected-item .menu {
+.item-of-interest .menu {
     text-align: right;
     margin-top: 8px;
 }
@@ -193,6 +193,7 @@ body[data-ui-mode=greenfield] #advertiser-help {
     padding: 1px 12px 1px 12px;
     margin: 15px 20px 25px 20px;
 }
+
 .thumbnail-info {
     /*this sizing gives a decent clickable area for the fav star*/
     width: 25px;
@@ -202,9 +203,11 @@ body[data-ui-mode=greenfield] #advertiser-help {
     position: absolute;
     top: -7px;
 }
+
 .thumbnail-info:first-child {
     right: 30px;
 }
+
 .thumbnail-info:nth-child(2) {
     right: 0;
 }
@@ -532,7 +535,8 @@ textarea:focus + .meta-info {
     color: #333;
 }
 
-.location-and-posted, .rate {
+.location-and-posted,
+.rate {
     color: #08c;
 }
 
@@ -544,4 +548,17 @@ textarea:focus + .meta-info {
     text-align: left;
     display: inline-block;
     margin: 10px 6px 10px 6px;
+}
+
+.selected {
+    transition: width .2s linear, opacity .2s linear;
+}
+
+.collapsed {
+    width: 0;
+    opacity:0;
+}
+
+.item-of-interest-width-maintainer {
+    width: 348px;
 }
