@@ -3,18 +3,21 @@
 
     function ItemOfInterestViewFactory(loginService,
                                        itemRepository,
-                                       selectedItemModel) {
+                                       selectedItemModel,
+                                       itemsOfInterestModel) {
 
         if (!(this instanceof app.ItemOfInterestViewFactory)) {
             return new app.ItemOfInterestViewFactory(loginService,
                                              itemRepository,
-                                             selectedItemModel);
+                                             selectedItemModel,
+                                             itemsOfInterestModel);
         }
 
         var that = this,
             _loginService = null,
             _itemRepository = null,
             _selectedItemModel = null,
+            _itemsOfInterestModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace, isSelectedItem, done) {
@@ -42,6 +45,8 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
+                        item.isPinnable = !_.find(_itemsOfInterestModel.getItemsOfInterest().pinned, function(i){ i === id });
+                        item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
                         done(new app.ContractorItemOfInterestView(item).render().$el)
                     });
                     break;
@@ -51,6 +56,8 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
+                        item.isPinnable = !isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function(i){ return i === item.id; });
+                        item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
                         done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;
@@ -72,9 +79,14 @@
                 throw "selectedItemModel not supplied."
             }
 
+            if (!itemsOfInterestModel) {
+                throw "itemsOfInterestModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
             _selectedItemModel = selectedItemModel;
+            _itemsOfInterestModel = itemsOfInterestModel;
 
             return that;
         }

@@ -8,7 +8,8 @@
         }
 
         var that = this,
-            _selectedResultId = null;
+            _selectedResultId = null,
+            _previouslySelectedResultId = null;
 
         this.updateEventUri = "update://SelectedItemModel/";
 
@@ -17,7 +18,13 @@
             return _selectedResultId;
         }
 
+        this.getPreviouslySelectedItemId = function () {
+
+            return _previouslySelectedResultId;
+        }
+
         this.setSelectedItemId = function (value) {
+            _previouslySelectedResultId = _selectedResultId;
             _selectedResultId = value;
 
             $.publish(that.updateEventUri);

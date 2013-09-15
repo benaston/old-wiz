@@ -2,8 +2,7 @@
     <div class="item-of-interest-width-maintainer">
     <div id="top1" class="in-page-anchor-target"></div>
     <section class="menu">
-        <% if(!model.isSelected) {%>
-        <ul class="pips reset">
+        <ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">
             <li><a href="#">Pinned Item 1</a></li>
             <li><a href="#">Pinned Item 2</a></li>
             <li><a href="#">Pinned Item 3</a></li>
@@ -11,7 +10,6 @@
             <li><a href="#">Pinned Item 5</a></li>
             <li><a href="#">Pinned Item 6</a></li>
         </ul>
-        <% } %>
         <a class="btn btn-40 btn-primary <%=model.isFavorite ? 'is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" title="Add To Favourites">S
         </a>
         <a class="btn btn-40 btn-primary" title="Hide this from future results">-
@@ -19,7 +17,7 @@
         <a class="btn btn-40 btn-primary" title="Mark as Applied">
             2
         </a>
-        <a href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(model.isPinned) {%>checked<%} %> " title="Pin">@</a>
+        <a href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> " title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned' %>">@</a>
     </section>
     <section>
         <h1><%= model.title %></h1>

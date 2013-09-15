@@ -41,7 +41,7 @@
                 throw "id not supplied";
             }
 
-            _itemsOfInterest = _.reject(_itemsOfInterest.pinnedItems, function (idOfPinnedItem) {
+            _itemsOfInterest.pinnedItems = _.reject(_itemsOfInterest.pinnedItems, function (idOfPinnedItem) {
                 return idOfPinnedItem === id;
             });
 

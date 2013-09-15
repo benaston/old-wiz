@@ -33,7 +33,7 @@
                     true,
                     function ($v) {
                     that.$el.append($v);
-
+                    setTimeout(function(){$v.removeClass('collapsed')}, 0);
                     addPinnedItems(items.pinnedItems);
                 });
             } else {

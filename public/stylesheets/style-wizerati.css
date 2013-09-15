@@ -259,9 +259,34 @@ input[type="radio"]:checked + label {
     line-height: 1em;
 }
 
-#items-of-interest-panel > article:nth-child(2) .pips > li:nth-child(1) > a {
+#items-of-interest-panel > :nth-of-type(1) .pips > li:nth-child(1) > a,
+#items-of-interest-panel > :nth-of-type(2) .pips > li:nth-child(2) > a,
+#items-of-interest-panel > :nth-of-type(3) .pips > li:nth-child(3) > a,
+#items-of-interest-panel > :nth-of-type(4) .pips > li:nth-child(4) > a,
+#items-of-interest-panel > :nth-of-type(5) .pips > li:nth-child(5) > a,
+#items-of-interest-panel > :nth-of-type(6) .pips > li:nth-child(6) > a {
     background-color: rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
+}
+
+#items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(1) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(2) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(3) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(4) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(5) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(7) .pips > li:nth-child(6) > a {
+    background-color: rgba(0, 109, 204, 0.95);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
+}
+
+#items-of-interest-panel > .selected ~ :nth-of-type(1) .pips > li:nth-child(1) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(2) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(3) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(4) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(5) > a,
+#items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(6) > a {
+    background-color: #eee;
+    box-shadow: none;
 }
 
 .cube figure:after {
@@ -280,7 +305,11 @@ input[type="radio"]:checked + label {
 }
 
 .hide {
-    display: none;
+    display: none !important;
+}
+
+.invisible {
+    opacity: 0 !important;
 }
 
 .navbar {

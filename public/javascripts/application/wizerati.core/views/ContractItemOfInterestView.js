@@ -18,8 +18,10 @@
         this.render = function () {
             if (that.Model.isSelected) {
                 that.$el.addClass('selected');
-            } else {
-                that.$el.removeClass('selected');
+            }
+
+            if (that.Model.shouldAnimateIn) {
+                that.$el.addClass('collapsed');
             }
 
             app.instance.renderTemplate(that.$el,
