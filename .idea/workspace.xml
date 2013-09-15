@@ -94,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="640" selection-end="640" vertical-scroll-proportion="0.6616541">
+            <state line="24" column="22" selection-start="640" selection-end="640" vertical-scroll-proportion="-21.12">
               <folding />
             </state>
           </provider>
@@ -168,10 +168,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemsOfInterestView.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ItemsOfInterestView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="24" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.33171323">
               <folding />
             </state>
           </provider>
@@ -210,8 +210,8 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ItemsOfInterestModel.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-layout.css" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js" />
       </list>
     </option>
   </component>
@@ -843,16 +843,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0">
+        <state line="24" column="22" selection-start="640" selection-end="640" vertical-scroll-proportion="-21.12">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="640" selection-end="640" vertical-scroll-proportion="0.6616541">
+        <state line="24" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.33171323">
           <folding />
         </state>
       </provider>
