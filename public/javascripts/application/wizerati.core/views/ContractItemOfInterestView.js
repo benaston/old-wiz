@@ -8,7 +8,8 @@
         }
 
         var that = this,
-            _el = '<article id="selected-item" class="overflow-y-scroll lucid-column"></article>',
+            //id="selected-item"
+            _el = '<article class="item-of-interest overflow-y-scroll overflow-x-hidden lucid-column"></article>',
             _templateName = "item-of-interest.html";
 
         this.$el = $(_el);
@@ -17,8 +18,10 @@
         this.render = function () {
             if (that.Model.isSelected) {
                 that.$el.addClass('selected');
-            } else {
-                that.$el.removeClass('selected');
+            }
+
+            if (that.Model.shouldAnimateIn) {
+                that.$el.addClass('collapsed');
             }
 
             app.instance.renderTemplate(that.$el,

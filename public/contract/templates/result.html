@@ -1,4 +1,7 @@
 <% try { %>
+<a class="thumbnail-info pictos <%=model.isPinned ? 'is-pinned' : '' %>" href="/itemsofinterest/<%=model.isPinned ? 'destroy' : 'create' %>?id=<%=model.id%>" >
+@
+</a>
 <a class="thumbnail-info pictos <%=model.isFavorite ? 'is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" >
 S
 </a>

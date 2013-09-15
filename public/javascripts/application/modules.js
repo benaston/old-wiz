@@ -66,8 +66,7 @@
     mod.resultListModel = new wizerati.ResultListModel();
     mod.selectedCubeFaceModel = new wizerati.SelectedCubeFaceModel();
     mod.selectedItemModel = new wizerati.SelectedItemModel();
-    mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(
-        wizerati.mod("repositories").itemRepository, mod.resultListModel);
+    mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(wizerati.mod("repositories").itemRepository, mod.resultListModel);
     mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
 
 }(wizerati.mod("models")));
@@ -75,7 +74,7 @@
 (function (mod) {
 
     mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
-    mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
+    mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").itemsOfInterestModel);
     mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel);
 
 }(wizerati.mod("factories")));
@@ -85,22 +84,9 @@
     mod.searchFormView = new wizerati.SearchFormView(wizerati.mod("models").searchFormModel);
     mod.uiRootView = new wizerati.UIRootView(wizerati.mod("models").uiRootModel);
     mod.loginPanelView = new wizerati.LoginPanelView(wizerati.mod("models").loginPanelModel);
-    mod.favoritesCubeView = new wizerati.FavoritesCubeView(
-        wizerati.mod("models").favoritesCubeModel,
-        wizerati.mod("factories").favoriteViewFactory,
-        wizerati.mod("models").selectedCubeFaceModel,
-        wizerati.mod("models").selectedItemModel);
-    mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel,
-        wizerati.mod("factories").resultViewFactory,
-        wizerati.mod("models").selectedCubeFaceModel,
-        wizerati.mod("models").selectedItemModel,
-        wizerati.mod("models").favoritesCubeModel);
-    mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(
-        wizerati.mod("models").itemsOfInterestModel,
-        wizerati.mod("factories").itemOfInterestViewFactory,
-        wizerati.mod("models").selectedCubeFaceModel,
-        wizerati.mod("models").selectedItemModel,
-        wizerati.mod("models").favoritesCubeModel);
+    mod.favoritesCubeView = new wizerati.FavoritesCubeView(wizerati.mod("models").favoritesCubeModel, wizerati.mod("factories").favoriteViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel);
+    mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel,         wizerati.mod("factories").resultViewFactory,         wizerati.mod("models").selectedCubeFaceModel,         wizerati.mod("models").selectedItemModel,         wizerati.mod("models").favoritesCubeModel);
+    mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel,         wizerati.mod("factories").itemOfInterestViewFactory,         wizerati.mod("models").selectedCubeFaceModel,         wizerati.mod("models").selectedItemModel,         wizerati.mod("models").favoritesCubeModel);
 
 }(wizerati.mod("views")));
 
