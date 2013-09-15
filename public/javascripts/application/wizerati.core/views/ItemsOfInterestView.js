@@ -22,7 +22,7 @@
             this.Model = null;
 
         this.render = function () {
-            throw "get addition/removal behavior of items of interest working, plus get the column layout working so content slides under the search panel.";
+//            throw "get addition/removal behavior of items of interest working, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
             var selectedItem = _selectedItemModel.getSelectedItemId();

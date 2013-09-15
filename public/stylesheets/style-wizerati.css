@@ -19,10 +19,10 @@ body[data-ui-mode=search] #result-list-panel {
 
 #search-panel {
     left: 0;
-    width: 296px; /*modified from 300 to simplify transition timings*/
+    width: 320px; /*modified from 300 to simplify transition timings*/
     transition: width .1s ease-in-out;
-    background: rgba(255,255,255,0.95);
-    /*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);*/
+    background: -webkit-gradient(linear, left top, right top, color-stop(86%,rgba(255,255,255,0.95)), color-stop(93%,rgba(255,255,255,0.95)), color-stop(100%,rgba(255,255,255,0)));
+    z-index: 999999999;
 }
 
 #items-of-interest-panel {

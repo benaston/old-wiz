@@ -1,3 +1,15 @@
+.lucid-panel-fixed-full-height {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: inline-block;
+    border: 0;
+    padding: 0px;
+    margin: 0;
+    height: 100%;
+}
+
 .lucid-panel-absolute-full-height {
     position: absolute;
     top: 0;
