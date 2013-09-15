@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function FavoriteViewFactory(loginService,
                                  itemRepository,
                                  selectedItemModel) {
@@ -65,5 +65,4 @@
     }
 
     app.FavoriteViewFactory = FavoriteViewFactory;
-
 }(wizerati));

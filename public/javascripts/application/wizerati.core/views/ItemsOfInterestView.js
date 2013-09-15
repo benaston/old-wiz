@@ -1,40 +1,43 @@
 (function (app) {
     "use strict";
 
-    function ResultListView(model,
-                            resultViewFactory,
-                            selectedCubeFaceModel,
-                            selectedItemModel,
-                            favoritesCubeModel) {
+    function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel) {
 
-        if (!(this instanceof app.ResultListView)) {
-            return new app.ResultListView(model,
-                                          resultViewFactory,
-                                          selectedCubeFaceModel,
-                                          selectedItemModel,
-                                          favoritesCubeModel);
+        if (!(this instanceof app.ItemsOfInterestView)) {
+            return new app.ItemsOfInterestView(model,
+                itemOfInterestViewFactory,
+                selectedCubeFaceModel,
+                selectedItemModel,
+                favoritesCubeModel);
         }
 
         var that = this,
-            _el = "#result-list-panel",
-            _resultViewFactory = null,
+            _el = "#items-of-interest-panel",
+            _itemOfInterestViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
             _favoritesCubeModel = null;
 
         this.$el =
-        this.Model = null;
+            this.Model = null;
 
         this.render = function () {
+//            throw "get addition/removal behavior of items of interest working, plus get the column layout working so content slides under the search panel.";
             that.$el.empty();
-            _.each(that.Model.getResults(), function (id) {
-                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+            var items = that.Model.getItemsOfInterest();
+            var selectedItem = _selectedItemModel.getSelectedItemId();
+            if (selectedItem) {
+                items.unshift(selectedItem);
+            }
+            _.each(items, function (id) {
+                if(id === null){ return; }
+                _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                     that.$el.append($v);
                 });
             });
         };
 
-        this.onDomReady = function(){
+        this.onDomReady = function () {
             that.$el = $(_el);
             that.render();
         };
@@ -44,8 +47,8 @@
                 throw "model not supplied";
             }
 
-            if (!resultViewFactory) {
-                throw "resultViewFactory not supplied";
+            if (!itemOfInterestViewFactory) {
+                throw "itemOfInterestViewFactory not supplied";
             }
 
             if (!selectedCubeFaceModel) {
@@ -61,7 +64,7 @@
             }
 
             that.Model = model;
-            _resultViewFactory = resultViewFactory;
+            _itemOfInterestViewFactory = itemOfInterestViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
             _selectedItemModel = selectedItemModel;
             _favoritesCubeModel = favoritesCubeModel;
@@ -77,6 +80,6 @@
         return init();
     }
 
-    app.ResultListView = ResultListView;
-    invertebrate.View.isExtendedBy(app.ResultListView);
+    app.ItemsOfInterestView = ItemsOfInterestView;
+    invertebrate.View.isExtendedBy(app.ItemsOfInterestView);
 }(wizerati));

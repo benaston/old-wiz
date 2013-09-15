@@ -38,7 +38,7 @@
     <title>Wizerati</title>
 </head>
 <body class="lucid-app-wrapper" data-ui-mode="greenfield">
-<div id="search-panel" class="panel lucid-panel-absolute-full-height overflow-visible">
+<div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible">
     <div id="search-form">
     </div>
     <section id="favorites-cube" class="cube-container hide">
@@ -52,38 +52,37 @@
         </div>
         <div class="cube">
             <figure class="top">
-                <div class="favourites" data-list-to-list-destination-name="favourites" ondrop="drop(event)"
-                     ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
             <figure class="left">
-                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
             <figure class="front">
-                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
             <figure class="right">
-                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
             <figure class="bottom">
-                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
             <figure class="back">
-                <div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="favourites">
                 </div>
             </figure>
         </div>
         <ol class="cube-face-labels">
-            <li for="f-t">vfbfg</li>
-            <li for="f-l">gffg</li>
-            <li for="f-f">gffg</li>
-            <li for="f-r">gfgfg</li>
-            <li for="f-bottom">ggffg</li>
-            <li for="f-back">gfgf</li>
+            <li for="f-t"></li>
+            <li for="f-l"></li>
+            <li for="f-f"></li>
+            <li for="f-r"></li>
+            <li for="f-bottom"></li>
+            <li for="f-back"></li>
         </ol>
     </section>
     <div class="navbar-login">
@@ -98,254 +97,116 @@
     </div>
 </div>
 <ul id="result-list-panel" class="panel lucid-panel-absolute-full-height overflow-y-auto hide">
-
-    <li class="thumbnail thumbnail-219 selected">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
-             data-list-to-list-item-id="2">S
-        </div>
-        <h3>Senior C# Developer - Fixed Incomes</h3>
-
-        <p>A fantastic opportunity has arisen to join a market leader in Global Corporate/Investment banking.</p>
-
-        <p class="rate">300 GBP/day</p>
-
-        <p class="location-and-posted">London (3 days ago)</p>
-    </li>
-    <li class="thumbnail thumbnail-219">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
-             data-list-to-list-item-id="2">S
-        </div>
-        <h3>C# / ASP.Net MVC Developer, Bank, Agile team</h3>
-
-        <p>Leading Investment Bank is looking to hire a Senior C# / ASP.Net MVC contractor to help build a brand new
-            platform.</p>
-
-        <p class="rate">300 GBP/day</p>
-
-        <p class="location-and-posted">London (3 days ago)</p>
-    </li>
-    <li class="thumbnail thumbnail-219">
-        <div class="thumbnail-info pictos" data-list-to-list-action="toggle" data-list-to-list-name="favourites"
-             data-list-to-list-item-id="2">S
-        </div>
-        <h3>C# Risk Developer</h3>
-
-        <p class="rate">Our Tier 1 investment banking client is looking for an experienced .Net developer, to work on an
-            new risk platform.</p>
-
-        <p class="rate">300 GBP/day</p>
-
-        <p class="location-and-posted">London (3 days ago)</p>
-    </li>
 </ul>
 <div id="items-of-interest-panel" class="panel lucid-columns-full-height">
-<!-- selected item goes here -->
-<article class="selected-item overflow-y-scroll lucid-column">
-    <div id="top1" class="in-page-anchor-target"></div>
-    <section class="menu">
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Add To Favourites">S
-        </button>
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Block">-
-        </button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Mark as Applied">
-            2
-        </button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary" title="Pin">@</button>
-    </section>
-    <section>
-        <h1>Cheetara Kat</h1>
-
-        <h3>New York (<i>Not Currently Available</i>)</h3>
-
-        <h3>+44 (0)7742157185 | ben@bj.ma</h3>
-
-        <h2>Personal Battle Assistant</h2>
-        <section>
-            <article class="itemSummary">
-                <blockquote>
-                    Cheetara is a member of the ThunderCats and the third to join. She is the elder of the two
-                    females in the group, the younger being WilyKit. She is a cleric whose skills take advantage of
-                    her immense speed. She wields a staff, but is also adapted to fighting unarmed.
-                </blockquote>
-            </article>
+    <article id="selected-item" class="overflow-y-scroll lucid-column">
+    </article>
+    <!-- pinned items goes here -->
+    <article class="selected-item overflow-y-scroll lucid-column">
+        <section class="menu">
+            <ul class="pips reset">
+                <li><a href="#">Pinned Item 1</a></li>
+                <li><a href="#">Pinned Item 2</a></li>
+                <li><a href="#">Pinned Item 3</a></li>
+                <li><a href="#">Pinned Item 4</a></li>
+                <li><a href="#">Pinned Item 5</a></li>
+                <li><a href="#">Pinned Item 6</a></li>
+            </ul>
+            <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
+                    data-list-to-list-item-id="1" class="btn btn-40 btn-primary">S
+            </button>
+            <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
+                    data-list-to-list-item-id="1" class="btn btn-40 btn-primary">-
+            </button>
+            <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary">2</button>
+            <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary checked" title="Pin">@
+            </button>
         </section>
         <section>
-            <hr>
-            <h2>Technologies</h2>
-            <article style="padding:0;margin:0;">
-                <p><strong style="font-weight:bold;">Staff</strong></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Experience</h2>
-            <article>
-                <h3>Senior Developer</h3>
-                <h4 style="font-style:italic;">JustGiving</h4>
-                <h5>Mar 11- Mar 12</h5>
+            <h1>Software Architect C#/.Net/Silverlight - Banking</h1>
 
-                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                    blahblah blah</p>
-            </article>
-            <article>
-                <h3>Senior Developer</h3>
-                <h4 style="font-style:italic;">JustGiving</h4>
-                <h5>Mar 11- Mar 12</h5>
+            <h3>Zurich</h3>
 
-                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                    blahblah blah</p>
-            </article>
-        </section>
-        <section>
-            <hr/>
-            <h2>Education</h2>
-            <article>
-                <h4></h4>
-                <h5></h5>
+            <h3>RMIT Professional Resources AG | Gerard Scharm</h3>
 
-                <p></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Open Source</h2>
-            <article>
-                <h4>NFeature</h4>
-
-                <p><a href="github.com">github.com</a></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Currently Interested In</h2>
-            <article>
-                <p>JavaScript</p>
-            </article>
-        </section>
-        <section>
-            <hr/>
-            <h2>Selected Books</h2>
-            <article>
-                <p>The Art of Programming, JK Tolkien</p>
-            </article>
-        </section>
-        <section>
-            <article>
+            <h2>Software Architect</h2>
+            <section>
+                <article class="itemSummary">
+                    <blockquote>
+                        Software Architect - C#/.Net/Silverlight - Private Banking - Our client, a major Financial
+                        Services company, is currently looking for an experienced and sharp minded C# .NET Architect
+                        with a strong Banking background and excellent technical skills.
+                    </blockquote>
+                </article>
+            </section>
+            <section>
                 <hr>
-                <a href="#top1" class="back-to-top">Back to top</a>
-            </article>
-        </section>
-    </section>
-</article>
-
-<!-- pinned items goes here -->
-<article class="selected-item overflow-y-scroll lucid-column">
-    <section class="menu">
-        <ul class="pips reset">
-            <li><a href="#">Pinned Item 1</a></li>
-            <li><a href="#">Pinned Item 2</a></li>
-            <li><a href="#">Pinned Item 3</a></li>
-            <li><a href="#">Pinned Item 4</a></li>
-            <li><a href="#">Pinned Item 5</a></li>
-            <li><a href="#">Pinned Item 6</a></li>
-        </ul>
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="toggle"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary">S
-        </button>
-        <button type="button" data-list-to-list-name="favourites" data-list-to-list-action="add"
-                data-list-to-list-item-id="1" class="btn btn-40 btn-primary">-
-        </button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary">2</button>
-        <button type="button" data-list-to-list-item-id="1" class="btn btn-40 btn-primary checked" title="Pin">@
-        </button>
-    </section>
-    <section>
-        <h1>Software Architect C#/.Net/Silverlight - Banking</h1>
-
-        <h3>Zurich</h3>
-
-        <h3>RMIT Professional Resources AG | Gerard Scharm</h3>
-
-        <h2>Software Architect</h2>
-        <section>
-            <article class="itemSummary">
-                <blockquote>
-                    Software Architect - C#/.Net/Silverlight - Private Banking - Our client, a major Financial
-                    Services company, is currently looking for an experienced and sharp minded C# .NET Architect
-                    with a strong Banking background and excellent technical skills.
-                </blockquote>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Technologies</h2>
-            <article style="padding:0;margin:0;">
-                <p><strong style="font-weight:bold;">Staff</strong></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Experience</h2>
-            <article>
-                <h3>Senior Developer</h3>
-                <h4 style="font-style:italic;">JustGiving</h4>
-                <h5>Mar 11- Mar 12</h5>
-
-                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                    blahblah blah</p>
-            </article>
-            <article>
-                <h3>Senior Developer</h3>
-                <h4 style="font-style:italic;">JustGiving</h4>
-                <h5>Mar 11- Mar 12</h5>
-
-                <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
-                    blahblah blah</p>
-            </article>
-        </section>
-        <section>
-            <hr/>
-            <h2>Education</h2>
-            <article>
-                <h4></h4>
-                <h5></h5>
-
-                <p></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Open Source</h2>
-            <article>
-                <h4>NFeature</h4>
-
-                <p><a href="github.com">github.com</a></p>
-            </article>
-        </section>
-        <section>
-            <hr>
-            <h2>Currently Interested In</h2>
-            <article>
-                <p>JavaScript</p>
-            </article>
-        </section>
-        <section>
-            <hr/>
-            <h2>Selected Books</h2>
-            <article>
-                <p>The Art of Programming, JK Tolkien</p>
-            </article>
-        </section>
-        <section>
-            <article>
+                <h2>Technologies</h2>
+                <article style="padding:0;margin:0;">
+                    <p><strong style="font-weight:bold;">Staff</strong></p>
+                </article>
+            </section>
+            <section>
                 <hr>
-                <a href="#" class="back-to-top">Back to top</a>
-            </article>
+                <h2>Experience</h2>
+                <article>
+                    <h3>Senior Developer</h3>
+                    <h4 style="font-style:italic;">JustGiving</h4>
+                    <h5>Mar 11- Mar 12</h5>
+
+                    <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
+                        blahblah blah</p>
+                </article>
+                <article>
+                    <h3>Senior Developer</h3>
+                    <h4 style="font-style:italic;">JustGiving</h4>
+                    <h5>Mar 11- Mar 12</h5>
+
+                    <p style="margin-top:5px;">blah2 blah2blah blahblah blahblah2 blah2blah blahblah blahblah2 blah2blah
+                        blahblah blah</p>
+                </article>
+            </section>
+            <section>
+                <hr/>
+                <h2>Education</h2>
+                <article>
+                    <h4></h4>
+                    <h5></h5>
+
+                    <p></p>
+                </article>
+            </section>
+            <section>
+                <hr>
+                <h2>Open Source</h2>
+                <article>
+                    <h4>NFeature</h4>
+
+                    <p><a href="github.com">github.com</a></p>
+                </article>
+            </section>
+            <section>
+                <hr>
+                <h2>Currently Interested In</h2>
+                <article>
+                    <p>JavaScript</p>
+                </article>
+            </section>
+            <section>
+                <hr/>
+                <h2>Selected Books</h2>
+                <article>
+                    <p>The Art of Programming, JK Tolkien</p>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <hr>
+                    <a href="#" class="back-to-top">Back to top</a>
+                </article>
+            </section>
         </section>
-    </section>
-</article>
+    </article>
 </div>
 <div id="item-management-panel" class="panel " data-state="intro">
     <div class="centered-relative-container-450">
@@ -485,7 +346,6 @@
 
 <h2 class="logo">UK IT contract jobs search</h2>
 
-<!--<div class="vertical-line"></div>-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
 <script src="./javascripts/vendor/tiny-pub-sub.js"></script>
@@ -504,44 +364,49 @@
 
 <script src="./javascripts/application/wizerati.js"></script>
 
+<script src="./javascripts/application/wizerati.core/services/AuthenticationService.js"></script>
+<script src="./javascripts/application/wizerati.core/services/CookieService.js"></script>
 <script src="./javascripts/application/wizerati.core/services/CroniclService.js"></script>
 <script src="./javascripts/application/wizerati.core/services/LogInService.js"></script>
 <script src="./javascripts/application/wizerati.core/services/SearchService.js"></script>
-<script src="./javascripts/application/wizerati.core/services/CookieService.js"></script>
-<script src="./javascripts/application/wizerati.core/services/AuthenticationService.js"></script>
 
 <script src="./javascripts/application/wizerati.core/config.js"></script>
 
-<script src="./javascripts/application/wizerati.core/models/SearchFormModel.js"></script>
-<script src="./javascripts/application/wizerati.core/models/ResultListModel.js"></script>
-<script src="./javascripts/application/wizerati.core/models/UIRootModel.js"></script>
-<script src="./javascripts/application/wizerati.core/models/LoginPanelModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/FavoritesCubeModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/ItemsOfInterestModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/LoginPanelModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/ResultListModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/SearchFormModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/SelectedItemModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/UIRootModel.js"></script>
 
-<script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractFavoriteView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractItemOfInterestView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractorFavoriteView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractorItemOfInterestView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractorResultView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ContractResultView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/FavoritesCubeView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/ItemsOfInterestView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/LoginPanelView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ResultListView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/ContractView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/ContractFavoriteView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/ContractorView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/ContractorFavoriteView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/UIRootView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/LoginPanelView.js"></script>
-<script src="./javascripts/application/wizerati.core/views/FavoritesCubeView.js"></script>
 
-<script src="./javascripts/application/wizerati.core/controllers/SessionController.js"></script>
-<script src="./javascripts/application/wizerati.core/controllers/LoginController.js"></script>
-<script src="./javascripts/application/wizerati.core/controllers/HomeController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/AdvertisersController.js"></script>
-<script src="./javascripts/application/wizerati.core/controllers/SearchController.js"></script>
-<script src="./javascripts/application/wizerati.core/controllers/SelectedItemController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/FavoritesController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/HomeController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/ItemsOfInterestController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/LoginController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/SearchController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/SelectedCubeFaceController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/SelectedItemController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/SessionController.js"></script>
 
-<script src="./javascripts/application/wizerati.core/factories/ResultViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
+<script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>
+<script src="./javascripts/application/wizerati.core/factories/ResultViewFactory.js"></script>
 
 <script src="./javascripts/application/wizerati.core/caches/ItemCache.js"></script>
 

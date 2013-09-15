@@ -1,12 +1,12 @@
 (function (app) {
     "use strict";
 
-    function ResultViewFactory(loginService,
-                               itemRepository,
-                               selectedItemModel) {
+    function ItemOfInterestViewFactory(loginService,
+                                       itemRepository,
+                                       selectedItemModel) {
 
-        if (!(this instanceof app.ResultViewFactory)) {
-            return new app.ResultViewFactory(loginService,
+        if (!(this instanceof app.ItemOfInterestViewFactory)) {
+            return new app.ItemOfInterestViewFactory(loginService,
                                              itemRepository,
                                              selectedItemModel);
         }
@@ -37,7 +37,7 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
-                        done(new app.ContractorResultView(item).render().$el)
+                        done(new app.ContractorItemOfInterestView(item).render().$el)
                     });
                     break;
                 case _roleEnum.Contractor:
@@ -45,7 +45,7 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
-                        done(new app.ContractResultView(item).render().$el)
+                        done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;
                 default:
@@ -76,5 +76,5 @@
         return init();
     }
 
-    app.ResultViewFactory = ResultViewFactory;
+    app.ItemOfInterestViewFactory = ItemOfInterestViewFactory;
 }(wizerati));

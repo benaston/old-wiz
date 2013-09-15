@@ -19,8 +19,10 @@ body[data-ui-mode=search] #result-list-panel {
 
 #search-panel {
     left: 0;
-    width: 296px; /*modified from 300 to simplify transition timings*/
+    width: 320px; /*modified from 300 to simplify transition timings*/
     transition: width .1s ease-in-out;
+    background: -webkit-gradient(linear, left top, right top, color-stop(86%,rgba(255,255,255,0.95)), color-stop(93%,rgba(255,255,255,0.95)), color-stop(100%,rgba(255,255,255,0)));
+    z-index: 999999999;
 }
 
 #items-of-interest-panel {
@@ -28,7 +30,7 @@ body[data-ui-mode=search] #result-list-panel {
     display: none;
 }
 
-.selected-item {
+#selected-item {
     border-radius: 15px;
     padding: 0px 15px 0px 18px;
     margin: 0 8px 0 8px;
@@ -37,9 +39,13 @@ body[data-ui-mode=search] #result-list-panel {
     -webkit-overflow-scrolling: touch;
 }
 
-.selected-item .menu {
+#selected-item .menu {
     text-align: right;
     margin-top: 8px;
+}
+
+.menu a {
+    display: inline-block;
 }
 
 body[data-ui-mode=search] #search-form, body[data-ui-mode=greenfield] #search-form {

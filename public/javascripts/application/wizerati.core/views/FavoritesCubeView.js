@@ -18,34 +18,18 @@
             _favoriteViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
-            _labelEls = [
-                ".cube-face-labels li:nth-child(1)",       //top
-                ".cube-face-labels li:nth-child(2)",       //left
-                ".cube-face-labels li:nth-child(3)",       //front
-                ".cube-face-labels li:nth-child(4)",       //right
-                ".cube-face-labels li:nth-child(5)",       //bottom
-                ".cube-face-labels li:nth-child(6)",       //back
-                 ],
-            _faceEls = [
-                ".top",
-                ".left",
-                ".front",
-                ".right",
-                ".bottom",
-                ".back"
-                 ];
+            _labelEls = [ ".cube-face-labels li:nth-child(1)",   //top
+                          ".cube-face-labels li:nth-child(2)",   //left
+                          ".cube-face-labels li:nth-child(3)",   //front
+                          ".cube-face-labels li:nth-child(4)",   //right
+                          ".cube-face-labels li:nth-child(5)",   //bottom
+                          ".cube-face-labels li:nth-child(6)" ], //back
+            _faceEls = [".top", ".left", ".front", ".right", ".bottom", ".back" ];
 
         this.$el = null;
         this.Model = null;
 
-        this.getCurrentFace = function () {
-            return that.$el.find('input[type=radio]:checked').index() + '';
-        };
-
-        this.render = function (options) {
-            var defaults = { done: function () {} };
-            options = _.extend({}, defaults, options);
-
+        this.render = function () {
             if(_.flatten(that.Model.getFavorites(), true).length == 0){
                 that.$el.addClass('hide');
                 return;
@@ -57,7 +41,7 @@
                 var $face = that.$el.find(_faceEls[index]);
                 $face.empty();
                 $.each(faceFavorites, function(index, f){
-                    _favoriteViewFactory.create(f, that.getCurrentFace(), function($v) {
+                    _favoriteViewFactory.create(f, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v) {
                         $face.append($v)
                     });
                 });
@@ -70,8 +54,6 @@
             $.each(_labelEls, function(index, el){
                 $(el).text(faceLabels[index]);
             });
-
-            options.done();
         };
 
         this.onDomReady = function(){

@@ -45,6 +45,14 @@
             that.router.registerRoute('/selectedcubeface/update', function (dto) {
                 app.mod("controllers").selectedCubeFaceController.update(dto);
             }, { silent: true });
+
+            that.router.registerRoute('/itemsofinterest/create', function (dto) {
+                app.mod("controllers").itemsOfInterestController.create(dto);
+            }, { silent: true });
+
+            that.router.registerRoute('/itemsofinterest/destroy', function (dto) {
+                app.mod("controllers").itemsOfInterestController.destroy(dto);
+            }, { silent: true });
         };
 
         function init() {

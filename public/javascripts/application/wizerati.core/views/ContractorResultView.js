@@ -1,20 +1,20 @@
 (function (app) {
     "use strict";
 
-    function ContractorFavoriteView(model) {
+    function ContractorResultView(model) {
 
-        if (!(this instanceof app.ContractorFavoriteView)) {
-            return new app.ContractorFavoriteView(model);
+        if (!(this instanceof app.ContractorResultView)) {
+            return new app.ContractorResultView(model);
         }
 
         var that = this,
-            _el = "<div class='thumbnail thumbnail-108'></div>",
-            _templateName = "favorite.html";
+            _el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
+            _templateName = "result.html";
 
-        this.$el = $(_el);
+        this.$el = null;
         this.Model = null;
 
-        this.render = function () {
+        this.render = function (options) {
             app.instance.renderTemplate(that.$el,
                                         _templateName,
                                         that.Model,
@@ -30,14 +30,12 @@
 
             that.Model = model;
 
-            that.render();
-
             return that;
         }
 
         return init();
     }
 
-    app.ContractorFavoriteView = ContractorFavoriteView;
-    invertebrate.View.isExtendedBy(app.ContractorFavoriteView);
+    app.ContractorResultView = ContractorResultView;
+    invertebrate.View.isExtendedBy(app.ContractorResultView);
 }(wizerati));

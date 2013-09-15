@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function SearchFormModel() {
 
         if (!(this instanceof app.SearchFormModel)) {
@@ -31,7 +31,7 @@
         };
 
         this.getLocation = function () {
-            return that._location;
+            return _location;
         };
 
         this.setLocation = function (value, options) {
@@ -67,5 +67,4 @@
 
     app.SearchFormModel = SearchFormModel;
     invertebrate.Model.isExtendedBy(app.SearchFormModel);
-
 }(wizerati));
