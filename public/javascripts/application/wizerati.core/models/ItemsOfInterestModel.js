@@ -9,7 +9,8 @@
         var that = this,
             _selectedItemModel = null,
             _itemsOfInterest = { selectedItem: "",
-                pinnedItems: [] } //note these will be GUIDs - use the ItemCache for the actual objects
+                pinnedItems: [] };
+
 
         this.updateEventUri = "update://ItemsOfInterestModel/";
 

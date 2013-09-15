@@ -19,7 +19,7 @@
         <a class="btn btn-40 btn-primary" title="Mark as Applied">
             2
         </a>
-        <a href="/itemsofinterest/<%=model.isSelected ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(model.isSelected) {%>checked<%} %> " title="Pin">@</a>
+        <a href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(model.isPinned) {%>checked<%} %> " title="Pin">@</a>
     </section>
     <section>
         <h1><%= model.title %></h1>

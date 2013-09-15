@@ -28,7 +28,10 @@
             items.selectedItem = _selectedItemModel.getSelectedItemId();
 
             if (items.selectedItem) {
-                _itemOfInterestViewFactory.create(items.selectedItem, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+                _itemOfInterestViewFactory.create(items.selectedItem,
+                    _selectedCubeFaceModel.getSelectedCubeFaceId(),
+                    true,
+                    function ($v) {
                     that.$el.append($v);
 
                     addPinnedItems(items.pinnedItems);
@@ -43,7 +46,10 @@
                 if (id === null) {
                     return;
                 }
-                _itemOfInterestViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+                _itemOfInterestViewFactory.create(id,
+                    _selectedCubeFaceModel.getSelectedCubeFaceId(),
+                    false,
+                    function ($v) {
                     that.$el.append($v);
                 });
             });

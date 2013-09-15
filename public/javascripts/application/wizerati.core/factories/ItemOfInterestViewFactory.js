@@ -17,13 +17,17 @@
             _selectedItemModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
-        this.create = function (id, currentCubeFace, done) {
+        this.create = function (id, currentCubeFace, isSelectedItem, done) {
             if(!id) {
                 throw "id not supplied."
             }
 
             if(!currentCubeFace) {
                 throw "currentCubeFace not supplied."
+            }
+
+            if(isSelectedItem === undefined || isSelectedItem === null) {
+                throw "isSelectedItem not supplied."
             }
 
             if(!done) {
@@ -37,6 +41,7 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        item.isPinned = !isSelectedItem;
                         done(new app.ContractorItemOfInterestView(item).render().$el)
                     });
                     break;
@@ -45,6 +50,7 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        item.isPinned = !isSelectedItem;
                         done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;
