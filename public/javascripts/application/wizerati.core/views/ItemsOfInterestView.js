@@ -6,7 +6,11 @@
     //use JQUery scrollTop to reset scroll position of
     //scrolled elements
     //fix jankiness of item selection and items of interest update
-    function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel) {
+    function ItemsOfInterestView(model,
+                                 itemOfInterestViewFactory,
+                                 selectedCubeFaceModel,
+                                 selectedItemModel,
+                                 favoritesCubeModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
             return new app.ItemsOfInterestView(model,
@@ -27,14 +31,14 @@
         this.$el =
             this.Model = null;
 
-        function storeScrollTopValues(){
+        function storeScrollTopValues() {
             var selectedItem = that.$el.find('.item-of-interest.selected');
 
-            if(selectedItem){
-                _scrollTopValues[selectedItem.attr('data-id')+'s'] = $(selectedItem).scrollTop();
+            if (selectedItem) {
+                _scrollTopValues[selectedItem.attr('data-id') + 's'] = $(selectedItem).scrollTop();
             }
 
-            _.each(that.$el.find('.item-of-interest:not(.selected)'), function(e){
+            _.each(that.$el.find('.item-of-interest:not(.selected)'), function (e) {
                 _scrollTopValues[$(e).attr('data-id')] = $(e).scrollTop();
             });
         }
@@ -50,18 +54,24 @@
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     true,
                     function ($v) {
-                    that.$el.append($v);
-                    $v.scrollTop(_scrollTopValues[items.selectedItem+'s']);
-                    setTimeout(function(){$v.removeClass('collapsed')}, 1000);
-                    addPinnedItems(items.pinnedItems);
-                });
+
+                        function foo() {
+                            that.$el.prepend($v);
+                            $v.scrollTop(_scrollTopValues[items.selectedItem + 's']);
+                            setTimeout(function () {
+                                $v.removeClass('collapsed')
+                            }, 0);
+                        }
+
+                        addPinnedItems(items.pinnedItems, foo);
+                    });
             } else {
                 addPinnedItems(items.pinnedItems);
             }
         };
 
         function addPinnedItems(items, done) {
-            done = done || function(){};
+            done = done || function () {};
 
             _.each(items, function (id) {
                 if (id === null) {
