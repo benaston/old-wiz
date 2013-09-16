@@ -10,11 +10,11 @@
             <li><a href="#">Pinned Item 5</a></li>
             <li><a href="#">Pinned Item 6</a></li>
         </ul>
-        <a class="btn btn-40 btn-primary <%=model.isFavorite ? 'is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" title="Add To Favourites">S
+        <a href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isFavorite ? 'is-favorite' : '' %>" title="Add To Favourites">S
         </a>
-        <a class="btn btn-40 btn-primary" title="Hide this from future results">-
+        <a href="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary" title="Hide this from future results">-
         </a>
-        <a class="btn btn-40 btn-primary" title="Mark as Applied">
+        <a href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary" title="Mark as Applied">
             2
         </a>
         <a href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> " title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned' %>">@</a>

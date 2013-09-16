@@ -49,7 +49,15 @@
             console.log(_scrollLeft);
         }
 
+        this.renderWithSelectedItemAnimation = function () {
+            renderPrivate(true);
+        }
+
         this.render = function () {
+               renderPrivate(false);
+        };
+
+        function renderPrivate(animateSelectedItem) {
             storeScrollTopValues();
             storeScrollLeftValue();
             that.$el.empty();
@@ -60,6 +68,7 @@
                 _itemOfInterestViewFactory.create(items.selectedItem,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     true,
+                    animateSelectedItem,
                     function ($v) {
 
                         function addSelectedItem() {
@@ -77,7 +86,7 @@
             } else {
                 addPinnedItems(items.pinnedItems, function() { $('body').scrollLeft(_scrollLeft); });
             }
-        };
+        }
 
         function addPinnedItems(items, done) {
             done = done || function () {};
@@ -89,8 +98,9 @@
                 _itemOfInterestViewFactory.create(id,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     false,
+                    false,
                     function ($v) {
-                        that.$el.append($v)
+                        that.$el.prepend($v)
                         $v.scrollTop(_scrollTopValues[id]);
                     });
             });
@@ -131,7 +141,7 @@
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
-            $.subscribe(_selectedItemModel.updateEventUri, that.render);
+            $.subscribe(_selectedItemModel.updateEventUri, that.renderWithSelectedItemAnimation);
             $.subscribe(_favoritesCubeModel.updateEventUri, that.render);
 
             return that;

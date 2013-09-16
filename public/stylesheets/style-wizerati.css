@@ -11,6 +11,7 @@ body[data-ui-mode=search] #result-list-panel {
     left: 316px;
     display: none;
     -webkit-overflow-scrolling: touch;
+    padding: 0 5px 0 0;
 }
 
 .favourite-items .thumbnail:before {
@@ -26,7 +27,7 @@ body[data-ui-mode=search] #result-list-panel {
 }
 
 #items-of-interest-panel {
-    left: 564px;
+    left: 569px;
     display: none;
 }
 
@@ -214,6 +215,8 @@ body[data-ui-mode=greenfield] #advertiser-help {
 
 .thumbnail h3 {
     color: black;
+    height: 3em;
+    overflow: hidden;
 }
 
 .favourite-items {

@@ -23,11 +23,15 @@
             return _previouslySelectedResultId;
         }
 
-        this.setSelectedItemId = function (value) {
+        this.setSelectedItemId = function (value, options) {
+            options = options || { silent:false };
+
             _previouslySelectedResultId = _selectedResultId;
             _selectedResultId = value;
 
-            $.publish(that.updateEventUri);
+            if(!options.silent) {
+                $.publish(that.updateEventUri);
+            }
         }
 
         function init() {

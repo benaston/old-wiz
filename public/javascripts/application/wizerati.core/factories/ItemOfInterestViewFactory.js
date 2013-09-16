@@ -18,7 +18,9 @@
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace,
-                                isSelectedItem, done) {
+                                isSelectedItem,
+                                animateSelectedItem,
+                                done) {
             if (!id) {
                 throw "id not supplied."
             }
@@ -29,6 +31,10 @@
 
             if (isSelectedItem === undefined || isSelectedItem === null) {
                 throw "isSelectedItem not supplied."
+            }
+
+            if (animateSelectedItem === undefined || animateSelectedItem === null) {
+                throw "animateSelectedItem not supplied."
             }
 
             if (!done) {
@@ -43,10 +49,10 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
-                        item.isPinnable = !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
+                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length <= 6 && !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
                             i === id
                         });
-                        item.shouldAnimateIn = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
+                        item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();
                         var $e = new app.ContractorItemOfInterestView(item).render().$el;
                         done($e)
                     });
@@ -54,13 +60,15 @@
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function (item) {
+                        //todo:
+                        //item.isFavoritable = _cube.faces[currentCubeFace].items.length < 6
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;
-                        item.isPinnable = !isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
+                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length <= 6 && (!isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
                             return i === item.id;
-                        });
-                        item.shouldAnimateIn = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
+                        }));
+                        item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();
                         done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;
