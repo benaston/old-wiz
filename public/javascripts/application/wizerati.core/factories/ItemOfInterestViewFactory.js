@@ -43,10 +43,10 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
-                        item.isPinnable = !_.find(_itemsOfInterestModel.getItemsOfInterest().pinned, function (i) {
+                        item.isPinnable = !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
                             i === id
                         });
-                        item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
+                        item.shouldAnimateIn = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
                         var $e = new app.ContractorItemOfInterestView(item).render().$el;
                         done($e)
                     });
@@ -60,7 +60,7 @@
                         item.isPinnable = !isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
                             return i === item.id;
                         });
-                        item.shouldAnimateIn = !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
+                        item.shouldAnimateIn = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !item.isPinned && !_selectedItemModel.getPreviouslySelectedItemId();
                         done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;

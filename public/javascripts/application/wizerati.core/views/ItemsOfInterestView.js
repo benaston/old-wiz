@@ -55,7 +55,7 @@
                     true,
                     function ($v) {
 
-                        function foo() {
+                        function addSelectedItem() {
                             that.$el.prepend($v);
                             $v.scrollTop(_scrollTopValues[items.selectedItem + 's']);
                             setTimeout(function () {
@@ -63,7 +63,7 @@
                             }, 0);
                         }
 
-                        addPinnedItems(items.pinnedItems, foo);
+                        addPinnedItems(items.pinnedItems, addSelectedItem);
                     });
             } else {
                 addPinnedItems(items.pinnedItems);
