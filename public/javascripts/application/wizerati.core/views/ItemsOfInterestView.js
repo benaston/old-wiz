@@ -26,7 +26,8 @@
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
             _favoritesCubeModel = null,
-            _scrollTopValues = {};
+            _scrollTopValues = {},
+            _scrollLeft = 0;
 
         this.$el =
             this.Model = null;
@@ -43,8 +44,14 @@
             });
         }
 
+        function storeScrollLeftValue() {
+            _scrollLeft = $('body').scrollLeft();
+            console.log(_scrollLeft);
+        }
+
         this.render = function () {
             storeScrollTopValues();
+            storeScrollLeftValue();
             that.$el.empty();
             var items = that.Model.getItemsOfInterest();
             items.selectedItem = _selectedItemModel.getSelectedItemId();
@@ -61,12 +68,14 @@
                             setTimeout(function () {
                                 $v.removeClass('collapsed')
                             }, 0);
+
+                            $('body').scrollLeft(_scrollLeft);
                         }
 
                         addPinnedItems(items.pinnedItems, addSelectedItem);
                     });
             } else {
-                addPinnedItems(items.pinnedItems);
+                addPinnedItems(items.pinnedItems, function() { $('body').scrollLeft(_scrollLeft); });
             }
         };
 
