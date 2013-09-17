@@ -72,7 +72,7 @@
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function (item) {
                         //todo:
-                        item.isFavoritable = _favoritesCubeModel.getFavorites[currentCubeFace].length < 6
+//                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;
@@ -105,10 +105,15 @@
                 throw "itemsOfInterestModel not supplied."
             }
 
+            if (!favoritesCubeModel) {
+                throw "favoritesCubeModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
             _selectedItemModel = selectedItemModel;
             _itemsOfInterestModel = itemsOfInterestModel;
+            _favoritesCubeModel = favoritesCubeModel;
 
             return that;
         }

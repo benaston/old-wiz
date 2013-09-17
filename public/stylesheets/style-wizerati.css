@@ -7,8 +7,8 @@ body[data-ui-mode=search] #result-list-panel {
 }
 
 #result-list-panel {
-    width: 264px;
-    left: 326px;
+    width: 274px;
+    left: 316px;
     display: none;
     -webkit-overflow-scrolling: touch;
 }
