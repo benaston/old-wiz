@@ -7,11 +7,10 @@ body[data-ui-mode=search] #result-list-panel {
 }
 
 #result-list-panel {
-    width: 259px;
+    width: 264px;
     left: 316px;
     display: none;
     -webkit-overflow-scrolling: touch;
-    padding: 0 5px 0 0;
 }
 
 .favourite-items .thumbnail:before {
@@ -27,13 +26,14 @@ body[data-ui-mode=search] #result-list-panel {
 }
 
 #items-of-interest-panel {
-    left: 569px;
+    left: 580px;
     display: none;
 }
 
 .item-of-interest {
     border-radius: 15px;
-    padding: 0px 15px 0px 18px;
+    /*padding: 0px 15px 0px 18px;*/
+    padding: 0px 29px 0px 26px;
     margin: 0 8px 0 8px;
     height: 100%; /*important for presence of scrollbars*/
     /*display: inline-block;*/
