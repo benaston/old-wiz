@@ -24,12 +24,12 @@
         }
 
         this.setSelectedItemId = function (value, options) {
-            options = options || { silent:false };
+            options = options || { silent: false };
 
             _previouslySelectedResultId = _selectedResultId;
             _selectedResultId = value;
 
-            if(!options.silent) {
+            if (!options.silent) {
                 $.publish(that.updateEventUri);
             }
         }

@@ -3,18 +3,24 @@
 
     function FavoriteViewFactory(loginService,
                                  itemRepository,
-                                 selectedItemModel) {
+                                 selectedItemModel,
+                                 hiddenItemsModel,
+                                 actionedItemsModel) {
 
         if (!(this instanceof app.FavoriteViewFactory)) {
             return new app.FavoriteViewFactory(loginService,
                                                itemRepository,
-                                               selectedItemModel);
+                                               selectedItemModel,
+                                               hiddenItemsModel,
+                                               actionedItemsModel);
         }
 
         var that = this,
             _loginService = null,
             _itemRepository = null,
             _selectedItemModel = null,
+            _hiddenItemsModel = null,
+            _actionedItemsModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace, done) {
@@ -25,6 +31,8 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        item.isHidden = _hiddenItemsModel.isHidden(item.id);
+                        item.isActioned = _actionedItemsModel.isActioned(item.id);
                         done(new app.ContractorFavoriteView(item).render().$el)
                     });
                     break;
@@ -33,6 +41,8 @@
                     _itemRepository.getById(id, function(item){
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
+                        item.isHidden = _hiddenItemsModel.isHidden(item.id);
+                        item.isActioned = _actionedItemsModel.isActioned(item.id);
                         done(new app.ContractFavoriteView(item).render().$el)
                     });
                     break;
@@ -54,9 +64,19 @@
                 throw "selectedItemModel not supplied."
             }
 
+            if (!hiddenItemsModel) {
+                throw "hiddenItemsModel not supplied."
+            }
+
+            if (!actionedItemsModel) {
+                throw "actionedItemsModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
             _selectedItemModel = selectedItemModel;
+            _hiddenItemsModel = hiddenItemsModel;
+            _actionedItemsModel = actionedItemsModel;
 
             return that;
         }

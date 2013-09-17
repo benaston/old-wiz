@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function CroniclService(loginService, config) {
 
         if (!(this instanceof app.CroniclService)) {

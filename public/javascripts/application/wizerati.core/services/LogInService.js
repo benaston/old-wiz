@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function LogInService(cookieService) {
 
         if (!(this instanceof app.LogInService)) {

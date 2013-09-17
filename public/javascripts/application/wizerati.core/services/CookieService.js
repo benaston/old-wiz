@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function CookieService() {
 
         if (!(this instanceof CookieService)) {

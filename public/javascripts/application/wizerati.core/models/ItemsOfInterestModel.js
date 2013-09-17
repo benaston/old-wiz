@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function ItemsOfInterestModel(selectedItemModel) {
         if (!(this instanceof app.ItemsOfInterestModel)) {
             return new app.ItemsOfInterestModel(selectedItemModel);
@@ -15,7 +15,7 @@
         this.updateEventUri = "update://ItemsOfInterestModel/";
 
         this.getItemsOfInterest = function () {
-                return _itemsOfInterest;
+            return _itemsOfInterest;
         }
 
         this.addItemOfInterest = function (id) {
@@ -23,13 +23,14 @@
                 throw "id not supplied";
             }
 
-            if(_.find(that.getItemsOfInterest().pinnedItems, function(idOfPinnedItem){
-                return idOfPinnedItem === id; })) {
+            if (_.find(that.getItemsOfInterest().pinnedItems, function (idOfPinnedItem) {
+                return idOfPinnedItem === id;
+            })) {
                 return;
             }
 
-            if(_selectedItemModel.getSelectedItemId() === id) {
-                _selectedItemModel.setSelectedItemId(null, {silent:true});
+            if (_selectedItemModel.getSelectedItemId() === id) {
+                _selectedItemModel.setSelectedItemId(null, {silent: true});
                 _itemsOfInterest.selectedItem = null;
             }
 
@@ -52,7 +53,7 @@
 
         function init() {
 
-            if(!selectedItemModel){
+            if (!selectedItemModel) {
                 throw "selectedItemModel not supplied."
             }
 

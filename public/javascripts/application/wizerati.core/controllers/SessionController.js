@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function SessionController(loginPanelModel, authenticationService) {
 
         if (!(this instanceof app.SessionController)) {

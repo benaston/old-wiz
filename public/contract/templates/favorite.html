@@ -1,8 +1,13 @@
 <% try { %>
-<a href="/selecteditem/update?id=<%=model.id%>">
+<a href="/selecteditem/update?id=<%=model.id%>" class="<%=model.isHidden ? 'hidden' : '' %>">
     <h3><%= model.title %></h3>
     <p class="rate"><%= model.rateLower %> GBP/day</p>
     <p class="location-and-posted"><%= model.location %></p>
+    <% if(model.isActioned) { %>
+    <a class="thumbnail-info pictos" href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" title="Mark as Applied">
+        2
+    </a>
+    <% } %>
 </a>
 <%
 } catch(e) {

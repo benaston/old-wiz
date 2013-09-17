@@ -4,13 +4,17 @@
     function FavoritesCubeView(model,
                                favoriteViewFactory,
                                selectedCubeFaceModel,
-                               selectedItemModel) {
+                               selectedItemModel,
+                               hiddenItemsModel,
+                               actionedItemsModel) {
 
         if (!(this instanceof app.FavoritesCubeView)) {
             return new app.FavoritesCubeView(model,
                                              favoriteViewFactory,
                                              selectedCubeFaceModel,
-                                             selectedItemModel);
+                                             selectedItemModel,
+                                             hiddenItemsModel,
+                                             actionedItemsModel);
         }
 
         var that = this,
@@ -18,6 +22,8 @@
             _favoriteViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
+            _actionedItemsModel = null,
+            _hiddenItemsModel = null,
             _labelEls = [ ".cube-face-labels li:nth-child(1)",   //top
                           ".cube-face-labels li:nth-child(2)",   //left
                           ".cube-face-labels li:nth-child(3)",   //front
@@ -78,14 +84,26 @@
                 throw "selectedItemModel not supplied";
             }
 
+            if (!hiddenItemsModel) {
+                throw "hiddenItemsModel not supplied";
+            }
+
+            if (!actionedItemsModel) {
+                throw "actionedItemsModel not supplied";
+            }
+
             that.Model = model;
             _favoriteViewFactory = favoriteViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
             _selectedItemModel = selectedItemModel;
+            _hiddenItemsModel = hiddenItemsModel;
+            _actionedItemsModel = actionedItemsModel;
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
             $.subscribe(_selectedItemModel.updateEventUri, that.render);
+            $.subscribe(_hiddenItemsModel.updateEventUri, that.render);
+            $.subscribe(_actionedItemsModel.updateEventUri, that.render);
 
             return that;
         }

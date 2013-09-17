@@ -1,6 +1,5 @@
-"use strict";
-
 (function (app) {
+    "use strict";
 
     function Config(env) {
         if (!(this instanceof app.Config)) {
@@ -46,4 +45,5 @@
     }
 
     app.Config = Config;
+
 }(wizerati));

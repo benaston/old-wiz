@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function SelectedCubeFaceController(selectedCubeFaceModel) {
 
         if (!(this instanceof app.SelectedCubeFaceController)) {

@@ -1,8 +1,7 @@
 (function (app) {
     "use strict";
 
-    function FavoritesCubeModel(itemRepository,
-                                resultListModel) {
+    function FavoritesCubeModel(itemRepository, resultListModel) {
 
         if (!(this instanceof app.FavoritesCubeModel)) {
             return new app.FavoritesCubeModel(itemRepository,
@@ -18,7 +17,7 @@
                 [], //bottom
                 []  //back
             ],
-            _faceLabels = ["my favorites","my favorites 2","my favorites 3","my favorites 4","my favorites 5","my favorites 6"],
+            _faceLabels = ["my favorites", "my favorites 2", "my favorites 3", "my favorites 4", "my favorites 5", "my favorites 6"],
             _itemRepository = null,
             _resultListModel = null;
 

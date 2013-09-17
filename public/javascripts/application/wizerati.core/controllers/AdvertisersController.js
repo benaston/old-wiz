@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function AdvertisersController(uiRootModel) {
 
         if (!(this instanceof app.AdvertisersController)) {

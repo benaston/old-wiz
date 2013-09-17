@@ -10,14 +10,18 @@
                                  itemOfInterestViewFactory,
                                  selectedCubeFaceModel,
                                  selectedItemModel,
-                                 favoritesCubeModel) {
+                                 favoritesCubeModel,
+                                 hiddenItemsModel,
+                                 actionedItemsModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
             return new app.ItemsOfInterestView(model,
                 itemOfInterestViewFactory,
                 selectedCubeFaceModel,
                 selectedItemModel,
-                favoritesCubeModel);
+                favoritesCubeModel,
+                hiddenItemsModel,
+                actionedItemsModel);
         }
 
         var that = this,
@@ -26,6 +30,8 @@
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
             _favoritesCubeModel = null,
+            _hiddenItemsModel = null,
+            _actionedItemsModel = null,
             _scrollTopValues = {},
             _scrollLeft = 0;
 
@@ -133,16 +139,28 @@
                 throw "selectedItemModel not supplied";
             }
 
+            if (!hiddenItemsModel) {
+                throw "hiddenItemsModel not supplied";
+            }
+
+            if (!actionedItemsModel) {
+                throw "actionedItemsModel not supplied";
+            }
+
             that.Model = model;
             _itemOfInterestViewFactory = itemOfInterestViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
             _selectedItemModel = selectedItemModel;
             _favoritesCubeModel = favoritesCubeModel;
+            _hiddenItemsModel = hiddenItemsModel;
+            _actionedItemsModel = actionedItemsModel;
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
             $.subscribe(_selectedItemModel.updateEventUri, that.renderWithSelectedItemAnimation);
             $.subscribe(_favoritesCubeModel.updateEventUri, that.render);
+            $.subscribe(_hiddenItemsModel.updateEventUri, that.render);
+            $.subscribe(_actionedItemsModel.updateEventUri, that.render);
 
             return that;
         }

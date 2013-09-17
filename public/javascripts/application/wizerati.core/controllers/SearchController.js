@@ -1,18 +1,14 @@
 (function (app) {
     "use strict";
 
-    function SearchController(uiRootModel,
-                              searchFormModel,
-                              searchService,
-                              resultListModel,
-                              itemCache) {
+    function SearchController(uiRootModel, searchFormModel, searchService, resultListModel, itemCache) {
 
         if (!(this instanceof app.SearchController)) {
             return new app.SearchController(uiRootModel,
-                                            searchFormModel,
-                                            searchService,
-                                            resultListModel,
-                                            itemCache);
+                searchFormModel,
+                searchService,
+                resultListModel,
+                itemCache);
         }
 
         var that = this,
@@ -28,11 +24,13 @@
                 _uiRootModel.setUIMode(_uiModeEnum.Search);
 
                 _searchService.runSearch(dto.keywords,
-                                         dto.location,
-                                         dto.rate,
-                    function(results){
+                    dto.location,
+                    dto.rate,
+                    function (results) {
                         _itemCache.insert(results);
-                        _resultListModel.setResults(_.map(results, function(r){ return r.id; }));
+                        _resultListModel.setResults(_.map(results, function (r) {
+                            return r.id;
+                        }));
                     });
             } catch (err) {
                 console.log("error: SearchController.show. " + err);

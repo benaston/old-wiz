@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     //todo: split authorization and authentication?
     function AuthenticationService() {
 

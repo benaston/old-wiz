@@ -1,7 +1,6 @@
-"use strict";
-
 //try forcing service types to communicate with the UI only via routing and local storage?
 (function (app) {
+    "use strict";
 
     function SearchService(croniclService) {
 

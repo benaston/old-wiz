@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function UIRootModel() {
 
         if (!(this instanceof app.UIRootModel)) {
@@ -10,8 +10,7 @@
         var that = this,
             _previousUIMode = null,
             _uiMode = null,
-            _uiModeEnum = wizerati.mod("enum").UIMode,
-            _selectedResultId = null;
+            _uiModeEnum = wizerati.mod("enum").UIMode;
 
         this.updateEventUri = "update://UIRootModel/";
 

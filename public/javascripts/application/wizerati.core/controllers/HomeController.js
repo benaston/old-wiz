@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function HomeController(uiRootModel) {
 
         if (!(this instanceof app.HomeController)) {

@@ -1,9 +1,8 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function SelectedCubeFaceModel() {
 
-        //throw "move model and view creation to the mod bit, and then call dom binding sep. trace trhough the behavior of clicking the new top, left, right etc links and get the cube and result list re-rendering.";
         if (!(this instanceof app.SelectedCubeFaceModel)) {
             return new app.SelectedCubeFaceModel();
         }

@@ -53,6 +53,22 @@
             that.router.registerRoute('/itemsofinterest/destroy', function (dto) {
                 app.mod("controllers").itemsOfInterestController.destroy(dto);
             }, { silent: true });
+
+            that.router.registerRoute('/hiddenitems/create', function (dto) {
+                app.mod("controllers").hiddenItemsController.create(dto);
+            }, { silent: true });
+
+            that.router.registerRoute('/hiddenitems/destroy', function (dto) {
+                app.mod("controllers").hiddenItemsController.destroy(dto);
+            }, { silent: true });
+
+            that.router.registerRoute('/actioneditems/create', function (dto) {
+                app.mod("controllers").actionedItemsController.create(dto);
+            }, { silent: true });
+
+            that.router.registerRoute('/actioneditems/destroy', function (dto) {
+                app.mod("controllers").actionedItemsController.destroy(dto);
+            }, { silent: true });
         };
 
         function init() {

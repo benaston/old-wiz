@@ -1,46 +1,34 @@
-"use strict";
-
 (function (app) {
-    function ActionedItemsController(favoritesCubeView,
-                                 selectedCubeFaceModel) {
+    "use strict";
+
+    function ActionedItemsController(actionedItemsModel) {
 
         if (!(this instanceof app.ActionedItemsController)) {
-            return new app.ActionedItemsController(favoritesCubeView,
-                                               selectedCubeFaceModel);
+            return new app.ActionedItemsController(actionedItemsModel);
         }
 
         var that = this,
-            _favoritesCubeView = null,
-            _selectedCubeFaceModel = null;
+            _actionedItemsModel = null;
 
         this.create = function (dto) {
-            if(!dto) { throw "dto not supplied." }
-
-            var currentCubeFace = _selectedCubeFaceModel.getSelectedCubeFaceId();
-            if(_.find(_favoritesCubeView.Model.getFavorites[currentCubeFace], function(id){ return id === dto.id; })) {
-                return;
+            if (!dto) {
+                throw "dto not supplied."
             }
 
-            _favoritesCubeView.Model.addFavorite(dto.id, currentCubeFace);
+            _actionedItemsModel.addActionedItemId(dto.id);
         };
 
-        //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
 
-            _favoritesCubeView.Model.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
+            _actionedItemsModel.removeActionedItemId(dto.id);
         };
 
         function init() {
-            if (!favoritesCubeView) {
-                throw "favoritesCubeView not supplied.";
+            if (!actionedItemsModel) {
+                throw "actionedItemsModel not supplied.";
             }
 
-            if (!selectedCubeFaceModel) {
-                throw "selectedCubeFaceModel not supplied.";
-            }
-
-            _favoritesCubeView = favoritesCubeView;
-            _selectedCubeFaceModel = selectedCubeFaceModel;
+            _actionedItemsModel = actionedItemsModel;
 
             return that;
         }

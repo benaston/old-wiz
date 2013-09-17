@@ -1,6 +1,6 @@
-"use strict";
-
 (function (app) {
+    "use strict";
+
     function ResultListModel() {
         if (!(this instanceof app.ResultListModel)) {
             return new app.ResultListModel();

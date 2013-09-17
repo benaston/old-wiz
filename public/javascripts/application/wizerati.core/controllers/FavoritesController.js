@@ -1,45 +1,45 @@
-"use strict";
-
 (function (app) {
-    function FavoritesController(favoritesCubeView,
+    "use strict";
+
+    function FavoritesController(favoritesCubeModel,
                                  selectedCubeFaceModel) {
 
         if (!(this instanceof app.FavoritesController)) {
-            return new app.FavoritesController(favoritesCubeView,
+            return new app.FavoritesController(favoritesCubeModel,
                                                selectedCubeFaceModel);
         }
 
         var that = this,
-            _favoritesCubeView = null,
+            _favoritesCubeModel = null,
             _selectedCubeFaceModel = null;
 
         this.create = function (dto) {
             if(!dto) { throw "dto not supplied." }
 
             var currentCubeFace = _selectedCubeFaceModel.getSelectedCubeFaceId();
-            if(_.find(_favoritesCubeView.Model.getFavorites[currentCubeFace], function(id){ return id === dto.id; })) {
+            if(_.find(_favoritesCubeModel.getFavorites[currentCubeFace], function(id){ return id === dto.id; })) {
                 return;
             }
 
-            _favoritesCubeView.Model.addFavorite(dto.id, currentCubeFace);
+            _favoritesCubeModel.addFavorite(dto.id, currentCubeFace);
         };
 
         //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
 
-            _favoritesCubeView.Model.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
+            _favoritesCubeModel.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
         };
 
         function init() {
-            if (!favoritesCubeView) {
-                throw "favoritesCubeView not supplied.";
+            if (!favoritesCubeModel) {
+                throw "favoritesCubeModel not supplied.";
             }
 
             if (!selectedCubeFaceModel) {
                 throw "selectedCubeFaceModel not supplied.";
             }
 
-            _favoritesCubeView = favoritesCubeView;
+            _favoritesCubeModel = favoritesCubeModel;
             _selectedCubeFaceModel = selectedCubeFaceModel;
 
             return that;

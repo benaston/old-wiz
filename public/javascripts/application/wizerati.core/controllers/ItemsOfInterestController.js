@@ -11,7 +11,9 @@
             _itemsOfInterestModel = null;
 
         this.create = function (dto) {
-            if(!dto) { throw "dto not supplied." }
+            if (!dto) {
+                throw "dto not supplied."
+            }
 
             _itemsOfInterestModel.addItemOfInterest(dto.id);
         };
