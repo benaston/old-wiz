@@ -1,13 +1,18 @@
 (function (app) {
     "use strict";
 
-    function ItemOfInterestViewFactory(loginService, itemRepository, selectedItemModel, itemsOfInterestModel) {
+    function ItemOfInterestViewFactory(loginService,
+                                       itemRepository,
+                                       selectedItemModel,
+                                       itemsOfInterestModel,
+                                       favoritesCubeModel) {
 
         if (!(this instanceof app.ItemOfInterestViewFactory)) {
             return new app.ItemOfInterestViewFactory(loginService,
                 itemRepository,
                 selectedItemModel,
-                itemsOfInterestModel);
+                itemsOfInterestModel,
+                favoritesCubeModel);
         }
 
         var that = this,
@@ -15,6 +20,7 @@
             _itemRepository = null,
             _selectedItemModel = null,
             _itemsOfInterestModel = null,
+            _favoritesCubeModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace,
@@ -29,12 +35,17 @@
                 throw "currentCubeFace not supplied."
             }
 
+
             if (isSelectedItem === undefined || isSelectedItem === null) {
                 throw "isSelectedItem not supplied."
             }
 
             if (animateSelectedItem === undefined || animateSelectedItem === null) {
                 throw "animateSelectedItem not supplied."
+            }
+
+            if (!favoritesCubeModel) {
+                throw "favoritesCubeModel not supplied."
             }
 
             if (!done) {
@@ -61,7 +72,7 @@
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function (item) {
                         //todo:
-                        //item.isFavoritable = _cube.faces[currentCubeFace].items.length < 6
+                        item.isFavoritable = _favoritesCubeModel.getFavorites[currentCubeFace].length < 6
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;

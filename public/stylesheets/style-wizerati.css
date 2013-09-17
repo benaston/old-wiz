@@ -8,7 +8,7 @@ body[data-ui-mode=search] #result-list-panel {
 
 #result-list-panel {
     width: 264px;
-    left: 316px;
+    left: 326px;
     display: none;
     -webkit-overflow-scrolling: touch;
 }
@@ -26,7 +26,7 @@ body[data-ui-mode=search] #result-list-panel {
 }
 
 #items-of-interest-panel {
-    left: 580px;
+    left: 590px;
     display: none;
 }
 
