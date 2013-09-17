@@ -22,7 +22,7 @@ body[data-ui-mode=search] #result-list-panel {
     width: 320px; /*modified from 300 to simplify transition timings*/
     transition: width .1s ease-in-out;
     background: -webkit-gradient(linear, left top, right top, color-stop(86%, rgba(255, 255, 255, 0.95)), color-stop(93%, rgba(255, 255, 255, 0.95)), color-stop(100%, rgba(255, 255, 255, 0)));
-    z-index: 999999999;
+    z-index: 1; /*must sit in-front of results and items of interest*/
 }
 
 #items-of-interest-panel {
