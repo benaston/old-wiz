@@ -1,6 +1,8 @@
 (function (app) {
     "use strict";
 
+    //algo for re-drawing:
+    //items in dom ! (in latest item of interest collection ? leave : collapse and remove)
     function ItemOfInterestViewFactory(loginService,
                                        itemRepository,
                                        selectedItemModel,
@@ -23,7 +25,8 @@
             _favoritesCubeModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
-        this.create = function (id, currentCubeFace,
+        this.create = function (id,
+                                currentCubeFace,
                                 isSelectedItem,
                                 animateSelectedItem,
                                 done) {
@@ -72,7 +75,7 @@
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function (item) {
                         //todo:
-//                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6
+                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;

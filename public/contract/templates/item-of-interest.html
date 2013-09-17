@@ -10,10 +10,9 @@
             <li><a href="#">Pinned Item 5</a></li>
             <li><a href="#">Pinned Item 6</a></li>
         </ul>
-        <% if(model.isFavoritable) {%>
-        <a href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isFavorite ? 'is-favorite' : '' %>" title="Add To Favourites">S
+
+        <a href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite' : '' %>" title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites<% } %>">S
         </a>
-        <%}%>
         <a href="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary" title="Hide this from future results">-
         </a>
         <a href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary" title="Mark as Applied">
