@@ -9,7 +9,6 @@
 
         var that = this,
             _el = "body",
-            _loginButtonEl = ".btn-log-in",
             _uiModeEnum = wizerati.mod("enum").UIMode,
             _uiModeDataValues = [
                 { key: _uiModeEnum.GreenfieldSearch, value: "greenfield" },
@@ -20,7 +19,6 @@
 
 
         this.$el = null;
-        this.$loginButton = $(_loginButtonEl);
         this.Model = null;
 
         this.render = function (e, options) {

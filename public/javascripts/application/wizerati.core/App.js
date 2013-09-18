@@ -69,6 +69,14 @@
             that.router.registerRoute('/actioneditems/destroy', function (dto) {
                 app.mod("controllers").actionedItemsController.destroy(dto);
             }, { silent: true });
+
+            that.router.registerRoute('/purchasepanel/show', function (dto) {
+                app.mod("controllers").purchasePanelController.show(dto);
+            });
+
+            that.router.registerRoute('/purchasepanel/destroy', function (dto) {
+                app.mod("controllers").purchasePanelController.destroy(dto);
+            });
         };
 
         function init() {

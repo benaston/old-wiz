@@ -116,11 +116,10 @@
         </div>
     </div>
 </div>
-<div id="purchase-panel" class="panel" data-state="intro">
+<div id="purchase-panel" class="panel" data-state="0">
     <div class="centered-relative-container-450">
         <div class="intro">
             <h1>Post a job ad in three easy steps</h1>
-
             <ol>
                 <li>Log in or register</li>
                 <li>Pay</li>
@@ -129,14 +128,14 @@
             <ul class="customer-types">
                 <li class="customer-type">
                     <p class="label-new-customer">I am a new customer</p>
-                    <label id="btn-new-customer" for="is-new-customer" class="btn btn-80 btn-primary btn-with-notch"
-                           alt="New Customer" title="New Customer">&</label>
+                    <a  href="/purchasepanel?tab=2" id="btn-new-customer" class="btn btn-80 btn-primary btn-with-notch"
+                           alt="New Customer" title="New Customer">&</a>
                 </li>
                 <li class="customer-type">
                     <p class="label-existing-customer">I am an existing customer</p>
-                    <label id="btn-existing-customer" for="is-existing-customer"
+                    <a href="/purchasepanel/show?tab=3" id="btn-existing-customer"
                            class="btn btn-80 btn-primary btn-with-notch" alt="Existing Customer"
-                           title="Existing Customer">U</label>
+                           title="Existing Customer">U</a>
                 </li>
             </ul>
         </div>
@@ -155,31 +154,21 @@
             <input id="password2" class="field" type="password" placeholder="re-type password" name="name"/>
 
             <div class="form-button-container">
-                <input type="button" class="btn btn-80 btn-cancel" value="*"/>
-                <input type="button" class="btn btn-80 btn-success" value="3"/>
-            </div>
-        </div>
-        <div class="log-in">
-            <h1>log in</h1>
-            <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
-            <input id="password" class="field" type="password" placeholder="password" name="name"/>
-
-            <div class="form-button-container">
-                <input type="button" class="btn btn-80 btn-cancel" value="*"/>
-                <input type="button" class="btn btn-80 btn-success" value="3"/>
+                <a href="/purchasepanel/destroy" class="btn btn-80 btn-cancel">*</a>
+                <input type="submit" class="btn btn-80 btn-success" value="3"/>
             </div>
         </div>
         <div class="payment">
             <h1>payment</h1>
             TODO: stripe
             <div class="form-button-container">
-                <input type="button" class="btn btn-80 btn-cancel" value="*"/>
+                <a href="/purchasepanel/destroy" class="btn btn-80 btn-cancel">*</a>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
             </div>
         </div>
     </div>
 </div>
-<div id="log-in-panel" class="panel" data-state="log-in">
+<div id="log-in-panel" class="panel hide" data-state="log-in">
     <div class="centered-relative-container-450">
         <div class="log-in">
             <h1>log in
@@ -235,8 +224,8 @@
     <a class="btn-my-account" href="/user/show?id=userid">my account</a> | <a class="btn-log-out" href="/session/destroy">log out</a>
 </div>
 <div class="legal">
-    wizerati. &copy; ben aston 2013 | <a class="btn-advertisers" href="/advertisers">advertisers</a>
-    <a href="/advertisers" id="advertiser-help">Advertisers start here</a>
+    wizerati. &copy; ben aston 2013 | <a href="/purchasepanel?tab=0" class="btn-advertisers">advertisers</a>
+    <a href="/purchasepanel?tab=0" id="advertiser-help">Advertisers start here</a>
 </div>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
@@ -275,6 +264,7 @@
 <script src="./javascripts/application/wizerati.core/models/UIRootModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/HiddenItemsModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/ActionedItemsModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/PurchasePanelModel.js"></script>
 
 <script src="./javascripts/application/wizerati.core/views/ContractFavoriteView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ContractItemOfInterestView.js"></script>
@@ -288,6 +278,7 @@
 <script src="./javascripts/application/wizerati.core/views/ResultListView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/UIRootView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/PurchasePanelView.js"></script>
 
 <script src="./javascripts/application/wizerati.core/controllers/AdvertisersController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/FavoritesController.js"></script>
@@ -300,6 +291,7 @@
 <script src="./javascripts/application/wizerati.core/controllers/SessionController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/HiddenItemsController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/ActionedItemsController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/PurchasePanelController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>

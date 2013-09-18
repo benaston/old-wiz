@@ -127,7 +127,8 @@ body {
     -webkit-user-select: none;
 }
 
-input[type='text'] {
+input[type='text'],
+input[type='password'] {
     font-family: "proxima-nova-400", Arial;
 }
 

@@ -41,6 +41,10 @@
             $.publish(that.updateEventUri);
         };
 
+        this.getIsVisible = function () {
+            return _isVisible;
+        };
+
         this.setIsVisible = function (value) {
             _isVisible = value;
 

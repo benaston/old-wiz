@@ -23,12 +23,13 @@
         this.Model = null;
 
         this.render = function () {
+            if(that.Model.getIsVisible()) {
+                that.$el.removeClass('hide');
+            }
+
             if (that.Model.getIsLoginFailedMessageVisible()) {
                 that.$el.addClass('login-error');
             }
-        };
-
-        this.postRender = function () {
         };
 
         this.bindEvents = function () {

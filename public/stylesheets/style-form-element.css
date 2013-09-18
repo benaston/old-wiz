@@ -235,6 +235,6 @@ button.checked, a.checked {
     visibility: hidden;
 }
 
-.form-button-container input {
+.form-button-container input, .form-button-container a {
     float: left;
 }

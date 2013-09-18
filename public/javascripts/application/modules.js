@@ -101,6 +101,7 @@
         mod.actionedItemsModel = new wizerati.ActionedItemsModel();
         mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(wizerati.mod("repositories").itemRepository, mod.resultListModel);
         mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
+        mod.purchasePanelModel = new wizerati.PurchasePanelModel();
     }
     catch(e) {
         throw "problem registering models module. " + e;
@@ -130,6 +131,7 @@
         mod.favoritesCubeView = new wizerati.FavoritesCubeView(wizerati.mod("models").favoritesCubeModel, wizerati.mod("factories").favoriteViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel,         wizerati.mod("factories").resultViewFactory,         wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel,         wizerati.mod("factories").itemOfInterestViewFactory,         wizerati.mod("models").selectedCubeFaceModel,         wizerati.mod("models").selectedItemModel,         wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
+        mod.purchasePanelView = new wizerati.PurchasePanelView(wizerati.mod("models").purchasePanelModel);
     }
     catch(e) {
         throw "problem registering views module. " + e;
@@ -157,6 +159,7 @@
         mod.itemsOfInterestController = new wizerati.ItemsOfInterestController(wizerati.mod("models").itemsOfInterestModel);
         mod.hiddenItemsController = new wizerati.HiddenItemsController(wizerati.mod("models").hiddenItemsModel);
         mod.actionedItemsController = new wizerati.ActionedItemsController(wizerati.mod("models").actionedItemsModel);
+        mod.purchasePanelController = new wizerati.PurchasePanelController(wizerati.mod("models").purchasePanelModel, wizerati.mod("models").uiRootModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

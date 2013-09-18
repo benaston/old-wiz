@@ -442,7 +442,6 @@ h2.logo {
 #purchase-panel,
 #item-management-panel,
 #log-in-panel {
-    display: none;
     position: relative;
     width: 100%;
     opacity: 0;
@@ -465,14 +464,20 @@ h2.logo {
     transition: opacity .1s linear;
 }
 
-#purchase-panel[data-state='intro'] .intro,
-#purchase-panel[data-state='log-in'] .log-in,
-#purchase-panel[data-state='payment'] .payment,
-#purchase-panel[data-state='register'] .register,
-#log-in-panel[data-state='log-in'] .log-in,
-#log-in-panel[data-state='register'] .register {
+#purchase-panel[data-state='0'] .intro,
+#purchase-panel[data-state='1'] .log-in,
+#purchase-panel[data-state='3'] .payment,
+#purchase-panel[data-state='2'] .register,
+#log-in-panel[data-state='0'] .log-in,
+#log-in-panel[data-state='1'] .register {
     opacity: 1;
     pointer-events: inherit;
+}
+
+body[data-ui-mode=purchase] #search-panel,
+body[data-ui-mode=log-in] #search-panel {
+    opacity: 0;
+    pointer-events: none;
 }
 
 body[data-ui-mode=purchase] #purchase-panel,
@@ -522,7 +527,7 @@ body[data-ui-mode=log-in] #log-in-panel {
 }
 
 .panel h1 {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 -90px;
 }
 
 .message {
@@ -592,7 +597,7 @@ textarea:focus + .meta-info {
 
 .collapsed {
     width: 0;
-    opacity:0;
+    opacity: 0;
 }
 
 .item-of-interest-width-maintainer {
@@ -605,23 +610,21 @@ textarea:focus + .meta-info {
 
 .actioned {
 
-    color:#97E67B;
+    color: #97E67B;
 }
 
 .actioned:hover {
-    color:#97E67B;
+    color: #97E67B;
 }
 
-
-
 .btn.hidden {
-    color:#FF4981;
-    opacity:1;
+    color: #FF4981;
+    opacity: 1;
     box-shadow: 0 0 9px 2px rgba(255, 73, 129, 0.2);
 }
 
 .btn.hidden:hover {
-    color:#FF4981;
-    opacity:1;
+    color: #FF4981;
+    opacity: 1;
     box-shadow: 0 0 9px 2px rgba(255, 73, 129, 0.2);
 }
