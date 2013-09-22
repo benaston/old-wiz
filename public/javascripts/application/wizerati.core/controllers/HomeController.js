@@ -14,6 +14,7 @@
 
         this.index = function(){
             try {
+                throw "get redirection after purchase panel/destroy working";
                 _uiRootModel.setUIMode(_uiModeEnum.GreenfieldSearch);
                 _uiRootModel.setModal(null);
             } catch(err) {

@@ -77,7 +77,7 @@
     <file path="/PurchasePanelModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379537024938" ignored="false" />
     <file path="/PurchasePanelView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379534603783" ignored="false" />
     <file path="/style-typography.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379540251151" ignored="false" />
-    <file path="/HomeController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379893464103" ignored="false" />
+    <file path="/HomeController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379893761135" ignored="false" />
     <file path="/AccountActivationController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379875470679" ignored="false" />
     <file path="/index.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379874919904" ignored="false" />
     <file path="/AccountActivationPanelController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379876297631" ignored="false" />
@@ -172,7 +172,7 @@
       <file leaf-file-name="HomeController.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="479" selection-end="479" vertical-scroll-proportion="0.46341464">
+            <state line="16" column="75" selection-start="442" selection-end="442" vertical-scroll-proportion="0.43378997">
               <folding />
             </state>
           </provider>
@@ -725,7 +725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="479" selection-end="479" vertical-scroll-proportion="0.46341464">
+        <state line="16" column="75" selection-start="442" selection-end="442" vertical-scroll-proportion="0.43378997">
           <folding />
         </state>
       </provider>
