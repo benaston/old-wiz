@@ -31,6 +31,7 @@ app.get('/', routes.index);
 app.get('/search', routes.index);
 app.get('/advertisers', routes.index);
 app.get('/accountactivationpanel', routes.index);
+app.get('/purchasepanel', routes.index);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

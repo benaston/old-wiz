@@ -19,7 +19,9 @@
             history.pushState(null, null, uri);
         }
 
-        this.route = function (uri, dto) {
+        this.route = function (uri, dto, options) {
+            options  = options || { silent: false };
+
             var splitUri = uri.split('?');
             var uriWithoutQueryString = splitUri[0];
             var queryString = splitUri[1];
@@ -37,7 +39,7 @@
 
             var route = that.routes[firstMatchingRouteUri];
 
-            if (!route.options.silent) {
+            if (!route.options.silent && !options.silent) {
                 document.title = route.options.title;
                 history.pushState(null, null, uri);
             }
@@ -103,7 +105,7 @@
             _defaultPageTitle = defaultPageTitle;
 
             window.addEventListener("popstate", function (e) {
-                that.route(location.pathname);
+                that.route(location.pathname + location.search, null, {silent:true});
             });
 
             $(document).on('click', 'a:not([data-bypass])', routeHyperlink);
