@@ -11,16 +11,17 @@
         };
 
         mod.UIMode = {
-            GreenfieldSearch: "1",
-            LogIn: "2",
-            Purchase: "3",
-            Search: "4"
+            GreenfieldSearch: "0",
+            Search: "1"
         };
 
-        mod.SelectedItemLocation = {
-            ResultsList: "1",
-            FavouritesCube: "2"
+        mod.Modal = {
+            Purchase: "0",
+            LogIn: "1",
+            MyAccount: "2",
+            AccountActivation: "3"
         };
+
     } catch(e)
     {
         throw "problem registering enum module. " + e;
@@ -30,6 +31,7 @@
 
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.config = new wizerati.Config(invertebrate.env.dev);
@@ -41,6 +43,7 @@
 }(wizerati.mod("config")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.authenticationService = new wizerati.AuthenticationService();
@@ -56,6 +59,7 @@
 }(wizerati.mod("services")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.itemCache = new wizerati.ItemCache();
@@ -78,6 +82,7 @@
 }(wizerati.mod("repositories")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").config, wizerati.mod("services").croniclService.getCroniclUri);
@@ -89,6 +94,7 @@
 }(wizerati.mod("templates")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.searchFormModel = new wizerati.SearchFormModel();
@@ -110,6 +116,7 @@
 }(wizerati.mod("models")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
@@ -123,6 +130,7 @@
 }(wizerati.mod("factories")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.searchFormView = new wizerati.SearchFormView(wizerati.mod("models").searchFormModel);
@@ -140,6 +148,7 @@
 }(wizerati.mod("views")));
 
 (function (mod) {
+    "use strict";
 
     try {
         mod.sessionController = new wizerati.SessionController(wizerati.mod("models").loginPanelModel,
@@ -160,6 +169,8 @@
         mod.hiddenItemsController = new wizerati.HiddenItemsController(wizerati.mod("models").hiddenItemsModel);
         mod.actionedItemsController = new wizerati.ActionedItemsController(wizerati.mod("models").actionedItemsModel);
         mod.purchasePanelController = new wizerati.PurchasePanelController(wizerati.mod("models").purchasePanelModel, wizerati.mod("models").uiRootModel);
+        mod.accountActivationController = new wizerati.AccountActivationController(wizerati.mod("models").uiRootModel);
+        mod.accountActivationPanelController = new wizerati.AccountActivationPanelController(wizerati.mod("models").uiRootModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

@@ -170,4 +170,5 @@
 
     app.ItemsOfInterestView = ItemsOfInterestView;
     invertebrate.View.isExtendedBy(app.ItemsOfInterestView);
+
 }(wizerati));

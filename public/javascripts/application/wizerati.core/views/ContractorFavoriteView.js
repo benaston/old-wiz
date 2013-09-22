@@ -40,4 +40,5 @@
 
     app.ContractorFavoriteView = ContractorFavoriteView;
     invertebrate.View.isExtendedBy(app.ContractorFavoriteView);
+
 }(wizerati));

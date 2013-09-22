@@ -16,7 +16,7 @@
             try {
                 _uiRootModel.setUIMode(_uiModeEnum.GreenfieldSearch);
             } catch(err) {
-                console.log("error: HomeController.index");
+                console.log("error: HomeController.index. " + err);
             }
         };
 

@@ -48,4 +48,5 @@
 
     app.PurchasePanelModel = PurchasePanelModel;
     invertebrate.Model.isExtendedBy(app.PurchasePanelModel);
+
 }(wizerati));

@@ -38,5 +38,6 @@
     };
 
     app.HiddenItemsModel = HiddenItemsModel;
+    invertebrate.Model.isExtendedBy(app.HiddenItemsModel);
 
 }(wizerati));

@@ -2,7 +2,7 @@
     color: gold !important;
 }
 
-body[data-ui-mode=search] #result-list-panel {
+body[data-ui-mode='1'] #result-list-panel {
     display: inline-block;
 }
 
@@ -49,7 +49,7 @@ body[data-ui-mode=search] #result-list-panel {
     display: inline-block;
 }
 
-body[data-ui-mode=search] #search-form, body[data-ui-mode=greenfield] #search-form {
+body[data-ui-mode='1'] #search-form, body[data-ui-mode='0'] #search-form {
     opacity: 1;
     pointer-events: auto;
 }
@@ -99,8 +99,8 @@ body[data-ui-mode=search] #search-form, body[data-ui-mode=greenfield] #search-fo
     left: -23px;
 }
 
-body[data-ui-mode=greenfield] .contractor-help,
-body[data-ui-mode=greenfield] #advertiser-help {
+body[data-ui-mode='0'] .contractor-help,
+body[data-ui-mode='0'] #advertiser-help {
     opacity: 1;
     pointer-events: auto;
     transition: opacity .1s linear;
@@ -337,12 +337,12 @@ input[type="radio"]:checked + label {
     pointer-events: none;
 }
 
-body[data-ui-mode=greenfield] .navbar-login {
+body[data-ui-mode='0'] .navbar-login {
     opacity: 1;
     pointer-events: auto;
 }
 
-body[data-ui-mode=greenfield] .navbar {
+body[data-ui-mode='0'] .navbar {
     opacity: 0;
     pointer-events: none;
 }
@@ -368,7 +368,7 @@ body[data-ui-mode=greenfield] .navbar {
     transition: box-shadow .1s linear;
 }
 
-body[data-ui-mode=greenfield] .btn-advertisers {
+body[data-ui-mode='0'] .btn-advertisers {
     box-shadow: 0 0 0 8px white, 0 0 0 10px rgba(0, 109, 204, 0.95);
 }
 
@@ -378,33 +378,31 @@ body {
     transition: width 0s linear .1s;
 }
 
-body[data-ui-mode=greenfield],
-body[data-ui-mode=purchase],
-body[data-ui-mode=log-in] {
+body[data-ui-mode='0'] {
     width: 100%;
     transition: width 0s linear 0s;
 }
 
-body[data-ui-mode=greenfield] #search-panel {
+body[data-ui-mode='0'] #search-panel {
     width: 100%;
     transition: width 0s linear 0s;
 }
 
-body[data-ui-mode=search] .favourite-items {
+body[data-ui-mode='1'] .favourite-items {
     display: block;
 }
 
-body[data-ui-mode=search] #items-of-interest-panel {
+body[data-ui-mode='1'] #items-of-interest-panel {
     display: -webkit-box;
 }
 
-body[data-ui-mode=greenfield] #search-form {
+body[data-ui-mode='0'] #search-form {
     top: 100px;
     border-right: 2px solid rgba(0, 109, 204, 0.95);
     transition: top 0s linear 0s;
 }
 
-body[data-ui-mode=search] .logo {
+body[data-ui-mode='1'] .logo {
     display: none;
 }
 
@@ -417,7 +415,7 @@ body[data-ui-mode=search] .logo {
     margin-left: 20px;
 }
 
-body[data-ui-mode=greenfield] .logo {
+body[data-ui-mode='0'] .logo {
     opacity: 1;
 }
 
@@ -435,20 +433,30 @@ h2.logo {
 #btn-existing-customer,
 #btn-new-customer {
     display: inline-block;
-    top: 14px;
+    top: 32px;
     position: relative;
 }
 
 #purchase-panel,
 #item-management-panel,
-#log-in-panel {
+#log-in-panel,
+#account-activation-panel {
+    display: none;
     position: relative;
     width: 100%;
     opacity: 0;
     pointer-events: none;
     transition: opacity .1s linear;
+    background: rgba(255, 255, 255, .5);
+    height: 100%;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.6) 57%, rgba(255, 255, 255, 0.02) 99%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .9);
 }
-
+#account-activation-panel .activate {
+    top: 25px;
+    position: absolute;
+    margin: auto;
+    width: 450px;
+}
 .intro,
 .log-in,
 .register,
@@ -474,16 +482,13 @@ h2.logo {
     pointer-events: inherit;
 }
 
-body[data-ui-mode=purchase] #search-panel,
-body[data-ui-mode=log-in] #search-panel {
-    opacity: 0;
-    pointer-events: none;
-}
 
-body[data-ui-mode=purchase] #purchase-panel,
-body[data-ui-mode=log-in] #log-in-panel {
+body[data-modal='0'] #purchase-panel,
+body[data-modal='3'] #account-activation-panel {
     opacity: 1;
     pointer-events: auto;
+    display: block;
+    z-index: 99999999999999;
 }
 
 .customer-types {
@@ -512,10 +517,6 @@ body[data-ui-mode=log-in] #log-in-panel {
     padding-bottom: 30px;
 }
 
-.register label {
-    display: none;
-}
-
 .register .btn-success,
 .register   .btn-cancel {
     display: block;
@@ -527,7 +528,7 @@ body[data-ui-mode=log-in] #log-in-panel {
 }
 
 .panel h1 {
-    margin: 10px 0 0 -90px;
+    margin: 10px 0 20px -90px;
 }
 
 .message {
@@ -545,10 +546,17 @@ body[data-ui-mode=log-in] #log-in-panel {
     opacity: 0;
     transition: opacity .2s linear 0s, visibility 0s linear .2s;
 
-    position: relative;
-    right: -19px;
-    top: 0px;
+    position: absolute;
+    width:200px;
+    top: 24px;
+    right: -38px;
+    width: 200px;
 }
+
+.relative {
+    position: relative;
+}
+
 
 input[type='text']:focus + .meta-info,
 input[type='password']:focus + .meta-info,
@@ -559,7 +567,7 @@ textarea:focus + .meta-info {
 }
 
 #purchase-panel .intro ol {
-    padding: 25px 0 25px 2.50rem;
+    padding: 25px 0 25px 25px;
 }
 
 .thumbnail .tld {
@@ -627,4 +635,15 @@ textarea:focus + .meta-info {
     color: #FF4981;
     opacity: 1;
     box-shadow: 0 0 9px 2px rgba(255, 73, 129, 0.2);
+}
+
+#purchase-panel ol li {
+    list-style: none inside;
+    line-height: 2.5rem;
+    display: inline-block;
+    padding-right: 12px;
+}
+
+.first-letter {
+    font-size:1.1rem;
 }

@@ -63,4 +63,5 @@
 
     app.SearchFormView = SearchFormView;
     invertebrate.View.isExtendedBy(app.SearchFormView);
+
 }(wizerati));

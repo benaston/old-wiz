@@ -97,4 +97,5 @@
     }
 
     app.ResultViewFactory = ResultViewFactory;
+
 }(wizerati));

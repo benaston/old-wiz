@@ -1,20 +1,19 @@
 (function (app) {
     "use strict";
 
-    function PurchasePanelView(model) {
+    function AccountActivationView(model) {
 
-        if (!(this instanceof app.PurchasePanelView)) {
-            return new app.PurchasePanelView(model);
+        if (!(this instanceof app.AccountActivationView)) {
+            return new app.AccountActivationView(model);
         }
 
         var that = this,
-            _el = "#purchase-panel";
+            _el = "#activation-panel";
 
         this.$el = null;
         this.Model = null;
 
         this.render = function () {
-            that.$el.attr('data-state', that.Model.getActiveTab());
         };
 
         this.bindEvents = function () {
@@ -39,7 +38,7 @@
         return init();
     };
 
-    app.PurchasePanelView = PurchasePanelView;
-    invertebrate.View.isExtendedBy(app.PurchasePanelView);
+    app.AccountActivationView = AccountActivationView;
+    invertebrate.View.isExtendedBy(app.AccountActivationView);
 
 }(wizerati));

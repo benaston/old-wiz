@@ -8,20 +8,30 @@
         }
 
         var that = this,
-            _previousUIMode = null,
-            _uiMode = null,
-            _uiModeEnum = wizerati.mod("enum").UIMode;
+            _uiMode = '0',
+            _modal = null,
+            _uiModeEnum = wizerati.mod("enum").UIMode,
+            _modalEnum = wizerati.mod("enum").Modal;
 
         this.updateEventUri = "update://UIRootModel/";
 
         this.getUIMode = function () {
-
-            return _uiMode;
+            return _uiMode || "";
         }
 
         this.setUIMode = function (value) {
-            _previousUIMode = _uiMode;
             _uiMode = value;
+
+            $.publish(that.updateEventUri);
+        }
+
+        this.getModal = function () {
+
+            return _modal || "";
+        }
+
+        this.setModal = function (value) {
+            _modal = value;
 
             $.publish(that.updateEventUri);
         }
@@ -41,6 +51,7 @@
     };
 
     app.UIRootModel = UIRootModel;
+    invertebrate.Model.isExtendedBy(app.UIRootModel);
 
 }(wizerati));
 

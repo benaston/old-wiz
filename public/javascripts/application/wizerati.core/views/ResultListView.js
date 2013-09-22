@@ -97,4 +97,5 @@
 
     app.ResultListView = ResultListView;
     invertebrate.View.isExtendedBy(app.ResultListView);
+
 }(wizerati));

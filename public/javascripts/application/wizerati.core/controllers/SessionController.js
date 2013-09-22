@@ -16,7 +16,7 @@
                 _loginPanelModel.setIsLoginFailedMessageVisible(true);
             }
 
-//            console.log('starting session...' + model)
+            //...
         };
 
         function init() {

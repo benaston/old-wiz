@@ -38,4 +38,5 @@
     }
 
     app.ItemsOfInterestController = ItemsOfInterestController;
+
 }(wizerati));

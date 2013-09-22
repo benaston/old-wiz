@@ -85,4 +85,5 @@
     }
 
     app.FavoriteViewFactory = FavoriteViewFactory;
+
 }(wizerati));

@@ -37,7 +37,7 @@
 
     <title>Wizerati</title>
 </head>
-<body class="lucid-app-wrapper" data-ui-mode="greenfield">
+<body class="lucid-app-wrapper" data-ui-mode="0">
 <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible">
     <div id="search-form">
     </div>
@@ -116,42 +116,66 @@
         </div>
     </div>
 </div>
+<div id="account-activation-panel" class="panel" data-state="0">
+    <div class="centered-relative-container-450">
+        <div class="activate">
+            <h1>activate your account</h1>
+            <div class="relative">
+                <input id="activation-key" class="field" type="text" name="activation-key" placeholder="activation key"/>
+                <label for="activation-key" class="meta-info">This is the key from the email we sent you.</label>
+            </div>
+            <div class="form-button-container">
+                <a href="/accountactivationpanel/destroy" class="btn btn-80 btn-cancel">*</a>
+                <input type="submit" class="btn btn-80 btn-success" value="3"/>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="purchase-panel" class="panel" data-state="0">
     <div class="centered-relative-container-450">
         <div class="intro">
             <h1>Post a job ad in three easy steps</h1>
             <ol>
-                <li>Log in or register</li>
-                <li>Pay</li>
-                <li>Create your ad</li>
+                <li><span class="first-letter">1.</span> Log in or register</li>
+                <li><span class="pictos">]</span></li>
+                <li><span class="first-letter">2.</span> Pay</li>
+                <li><span class="pictos">]</span></li>
+                <li><span class="first-letter">3.</span> Create your ad</li>
             </ol>
             <ul class="customer-types">
+                <li class="customer-type">
+                    <p class="label-existing-customer">I am an existing customer</p>
+                    <a href="/purchasepanel?tab=3" id="btn-existing-customer"
+                       class="btn btn-80 btn-primary btn-with-notch" alt="Existing Customer"
+                       title="Existing Customer">U</a>
+                </li>
                 <li class="customer-type">
                     <p class="label-new-customer">I am a new customer</p>
                     <a  href="/purchasepanel?tab=2" id="btn-new-customer" class="btn btn-80 btn-primary btn-with-notch"
                            alt="New Customer" title="New Customer">&</a>
                 </li>
-                <li class="customer-type">
-                    <p class="label-existing-customer">I am an existing customer</p>
-                    <a href="/purchasepanel/show?tab=3" id="btn-existing-customer"
-                           class="btn btn-80 btn-primary btn-with-notch" alt="Existing Customer"
-                           title="Existing Customer">U</a>
-                </li>
+
             </ul>
+
         </div>
         <div class="register">
             <h1>register</h1>
-            <label for="name">My name is: </label>
-            <input id="name" class="field" type="text" name="name" placeholder="my name is"/>
-            <label for="email-address">Email address: </label>
-            <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
-            <label for="email-address2">Type it again:</label>
-            <input id="email-address2" class="field" type="text" name="email-address2"
-                   placeholder="re-type email address"/>
-            <label for="password">My password is:</label>
-            <input id="password" class="field" type="password" placeholder="password" name="name"/>
-            <label for="password2">Type it again: </label>
-            <input id="password2" class="field" type="password" placeholder="re-type password" name="name"/>
+            <ol>
+                <li><span class="first-letter">1.</span> Log in or register</li>
+                <li><span class="pictos">]</span></li>
+                <li><span class="first-letter">2.</span> Pay</li>
+                <li><span class="pictos">]</span></li>
+                <li><span class="first-letter">3.</span> Create your ad</li>
+            </ol>
+            <div class="relative">
+                <input id="purchase-register-name" class="field" type="text" name="name" placeholder="my name is"/>
+                <label for="purchase-register-name" class="meta-info">e.g. Joe</label>
+            </div>
+            <div class="relative">
+                <input id="purchase-register-email-address" class="field" type="text" name="email-address" placeholder="email address"/>
+                <label for="purchase-register-email-address" class="meta-info">e.g. joe@example.com.<br/>An email will be sent to this address to verify your account. </label>
+            </div>
+            <input id="purchase-register-email-address2" class="field" type="text" name="email-address2" placeholder="re-type email address"/>
 
             <div class="form-button-container">
                 <a href="/purchasepanel/destroy" class="btn btn-80 btn-cancel">*</a>
@@ -188,11 +212,13 @@
             <h1>register</h1>
             <label for="name">My name is: </label>
             <input id="name" class="field" type="text" name="name" placeholder="my name is"/>
-            <label for="email-address">Email address: </label>
-            <input id="email-address" class="field" type="text" name="email-address" placeholder="email address"/>
-            <label for="email-address2">Type it again:</label>
-            <input id="email-address2" class="field" type="text" name="email-address2"
-                   placeholder="re-type email address"/>
+            <label for="register-email-address">Email address: </label>
+            <input id="register-email-address" class="field" type="text" name="email-address" placeholder="email address"/>
+            <label for="register-email-address" class="meta-info">e.g. example@example.com</label>
+
+            <label for="register-email-address2">Type it again:</label>
+            <input id="register-email-address2" class="field" type="text" name="email-address2" placeholder="re-type email address"/>
+            <label for="register-email-address2" class="meta-info">An email will be sent to this email address, so it should be correct.</label>
             <input id="password" class="field" type="password" placeholder="password" name="name"/>
             <label for="password" class="meta-info">must be at least 6 characters long</label>
             <label for="password2">Type it again: </label>
@@ -292,6 +318,8 @@
 <script src="./javascripts/application/wizerati.core/controllers/HiddenItemsController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/ActionedItemsController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/PurchasePanelController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/AccountActivationController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/AccountActivationPanelController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>

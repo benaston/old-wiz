@@ -70,12 +70,24 @@
                 app.mod("controllers").actionedItemsController.destroy(dto);
             }, { silent: true });
 
-            that.router.registerRoute('/purchasepanel/show', function (dto) {
-                app.mod("controllers").purchasePanelController.show(dto);
+            that.router.registerRoute('/purchasepanel', function (dto) {
+                app.mod("controllers").purchasePanelController.index(dto);
             });
 
             that.router.registerRoute('/purchasepanel/destroy', function (dto) {
                 app.mod("controllers").purchasePanelController.destroy(dto);
+            });
+
+            that.router.registerRoute('/accountactivationpanel', function (dto) {
+                app.mod("controllers").accountActivationPanelController.index(dto);
+            });
+
+            that.router.registerRoute('/accountactivationpanel/destroy', function (dto) {
+                app.mod("controllers").accountActivationPanelController.destroy(dto);
+            });
+
+            that.router.registerRoute('/accountactivation/create', function (dto) {
+                app.mod("controllers").accountActivationController.create(dto);
             });
         };
 

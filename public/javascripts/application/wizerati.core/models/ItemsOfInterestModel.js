@@ -67,4 +67,5 @@
 
     app.ItemsOfInterestModel = ItemsOfInterestModel;
     invertebrate.Model.isExtendedBy(app.ItemsOfInterestModel);
+
 }(wizerati));

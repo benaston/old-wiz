@@ -113,4 +113,5 @@
 
     app.FavoritesCubeView = FavoritesCubeView;
     invertebrate.View.isExtendedBy(app.FavoritesCubeView);
+
 }(wizerati));

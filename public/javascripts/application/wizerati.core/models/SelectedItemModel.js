@@ -43,4 +43,6 @@
     };
 
     app.SelectedItemModel = SelectedItemModel;
+    invertebrate.Model.isExtendedBy(app.SelectedItemModel);
+
 }(wizerati));

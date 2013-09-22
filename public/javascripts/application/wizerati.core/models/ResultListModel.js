@@ -59,4 +59,5 @@
 
     app.ResultListModel = ResultListModel;
     invertebrate.Model.isExtendedBy(app.ResultListModel);
+
 }(wizerati));

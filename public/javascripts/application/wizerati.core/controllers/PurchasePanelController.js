@@ -10,23 +10,23 @@
         var that = this,
             _purchasePanelModel = null,
             _uiRootModel = null,
-            _uiModeEnum = wizerati.mod("enum").UIMode;
+            _uiModeEnum = wizerati.mod("enum").UIMode,
+            _modal = wizerati.mod("enum").Modal;
 
-        this.show = function (dto) {
+        this.index = function (dto) {
             try {
-                _uiRootModel.setUIMode(_uiModeEnum.Purchase);
-                _purchasePanelModel.setIsVisible(true);
+                _uiRootModel.setModal(_modal.Purchase);
                 _purchasePanelModel.setActiveTab(dto.tab);
             } catch (err) {
-                console.log("error: PurchasePanelController.show");
+                console.log("error: PurchasePanelController.show. " + err);
             }
         };
 
         this.destroy = function (dto) {
             try {
-                _uiRootModel.setUIMode(_uiRootModel.getPreviousUIMode());
+                _uiRootModel.setModal(null);
             } catch (err) {
-                console.log("error: PurchasePanelController.destroy");
+                console.log("error: PurchasePanelController.destroy. " + err);
             }
         };
 

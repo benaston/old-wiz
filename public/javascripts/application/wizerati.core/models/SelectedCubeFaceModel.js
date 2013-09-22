@@ -32,5 +32,6 @@
     };
 
     app.SelectedCubeFaceModel = SelectedCubeFaceModel;
+    invertebrate.Model.isExtendedBy(app.SelectedCubeFaceModel);
 
 }(wizerati));

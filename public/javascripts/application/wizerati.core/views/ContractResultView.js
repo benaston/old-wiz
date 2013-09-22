@@ -44,4 +44,5 @@
 
     app.ContractResultView = ContractResultView;
     invertebrate.View.isExtendedBy(app.ContractResultView);
+
 }(wizerati));

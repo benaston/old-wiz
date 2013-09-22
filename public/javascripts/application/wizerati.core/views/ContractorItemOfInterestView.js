@@ -48,4 +48,5 @@
 
     app.ContractorItemOfInterestView = ContractorItemOfInterestView;
     invertebrate.View.isExtendedBy(app.ContractorItemOfInterestView);
+
 }(wizerati));

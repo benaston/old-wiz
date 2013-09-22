@@ -67,4 +67,5 @@
 
     app.SearchFormModel = SearchFormModel;
     invertebrate.Model.isExtendedBy(app.SearchFormModel);
+
 }(wizerati));
