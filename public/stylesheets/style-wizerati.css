@@ -641,9 +641,22 @@ textarea:focus + .meta-info {
     list-style: none inside;
     line-height: 2.5rem;
     display: inline-block;
-    padding-right: 12px;
+    margin-right: 12px;
 }
 
 .first-letter {
     font-size:1.1rem;
+}
+
+
+#purchase-panel[data-state='2'] li:nth-child(1),
+#purchase-panel[data-state='3'] li:nth-child(2),
+#purchase-panel[data-state='4'] li:nth-child(3)
+ {
+    border-bottom: 2px solid rgba(0, 109, 204, 0.95);
+}
+
+.breadcrumbs {
+    position:relative;
+    top:-25px;
 }
