@@ -46,11 +46,25 @@
     "use strict";
 
     try {
+        //todo fix the dep injection here
+        mod.wizeratiClient = new wizerati.WizeratiClient(new wizerati.WizeratiClientRequestFactory(), "bar", "bam");
+    }
+    catch(e) {
+        throw "problem registering clients module. " + e;
+    }
+
+}(wizerati.mod("clients")));
+
+(function (mod) {
+    "use strict";
+
+    try {
         mod.authenticationService = new wizerati.AuthenticationService();
         mod.cookieService = new wizerati.CookieService();
         mod.logInService = new wizerati.LogInService(mod.cookieService);
         mod.croniclService = new wizerati.CroniclService(mod.logInService, wizerati.mod("config").config); //pass in login service instead?
         mod.searchService = new wizerati.SearchService(mod.croniclService);
+        mod.accountService = new wizerati.AccountService(wizerati.mod("clients").wizeratiClient);
     }
     catch(e) {
         throw "problem registering services module. " + e;
@@ -122,6 +136,7 @@
         mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").itemsOfInterestModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
+        mod.wizeratiClientRequestFactory = new wizerati.WizeratiClientRequestFactory();
     }
     catch(e) {
         throw "problem registering factories module. " + e;
@@ -171,6 +186,7 @@
         mod.purchasePanelController = new wizerati.PurchasePanelController(wizerati.mod("models").purchasePanelModel, wizerati.mod("models").uiRootModel);
         mod.accountActivationController = new wizerati.AccountActivationController(wizerati.mod("models").uiRootModel);
         mod.accountActivationPanelController = new wizerati.AccountActivationPanelController(wizerati.mod("models").uiRootModel);
+        mod.purchasePanelAccountsController = new wizerati.PurchasePanelAccountsController(wizerati.mod("models").purchasePanelModel, wizerati.mod("services").accountService);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

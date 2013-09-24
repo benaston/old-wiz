@@ -3608,3 +3608,17 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
+
+.rotate {
+    -webkit-animation-name: rotate;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
