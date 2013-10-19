@@ -413,6 +413,8 @@ body[data-ui-mode='1'] .logo {
     color: rgba(0, 109, 204, 0.95);
     margin: 0;
     margin-left: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 body[data-ui-mode='0'] .logo {
