@@ -529,8 +529,8 @@ body[data-modal='3'] #account-activation-panel {
     pointer-events: none;
 }
 
-.panel h1 {
-    /*margin: 10px 0 20px -90px;*/
+#purchase-panel h1 {
+    margin: 10px 0 20px -90px;
 }
 
 .message {
