@@ -641,9 +641,59 @@ textarea:focus + .meta-info {
     list-style: none inside;
     line-height: 2.5rem;
     display: inline-block;
-    padding-right: 12px;
+    margin-right: 12px;
 }
 
 .first-letter {
     font-size:1.1rem;
+}
+
+
+#purchase-panel[data-state='2'] li:nth-child(1),
+#purchase-panel[data-state='3'] li:nth-child(2),
+#purchase-panel[data-state='4'] li:nth-child(3)
+ {
+    border-bottom: 2px solid rgba(0, 109, 204, 0.95);
+}
+
+.breadcrumbs {
+    position:relative;
+    top:-25px;
+}
+
+#purchase-panel .btn-success:after {
+content: '3';
+display: block;
+width: 56px;
+height: 56px;
+border-top: 0;
+border-left: 0;
+border-radius: 11px 0 0 0;
+position: absolute;
+top: -4px;
+left: -4px;
+z-index: 999;
+box-shadow: -1px -3px 0px 0px #eee;
+-webkit-transition: box-shadow .1s linear;
+z-index: -1;
+pointer-events: none;
+}
+
+*[data-is-waiting='success'] .btn-success {
+    border-left:0;
+    -webkit-animation-duration: 2s;
+    /*-webkit-animation-fill-mode: both;
+    animation-fill-mode: both;*/
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function:linear;
+}
+
+/*designed to permit animiation of button borders without affecting the "content" of the button*/
+.button-label {
+    font-size: 1.9em;
+    position: relative;
+    left: -54px;
+    top: 32px;
+    pointer-events: none;   
 }

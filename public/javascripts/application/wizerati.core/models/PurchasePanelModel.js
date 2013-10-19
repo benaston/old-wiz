@@ -9,20 +9,34 @@
 
         var that = this,
             _activeTab = '0',
-            _isVisible = false;
+            _isWaiting = '', //should identify the dom element to indicate waiting
+            _notifications = []; //eg. [{ type: "formField", id: "foo" }]
 
         this.updateEventUri = "update://PurchasePanelModel/";
 
-        this.getIsVisible = function () {
-            return _isVisible;
+        this.getNotifications = function () {
+            return _notifications;
         }
 
-        this.setIsVisible = function (value) {
+        this.setNotifications = function (value) {
             if (!value) {
                 throw "value not supplied."
             }
 
-            _isVisible = value;
+            _notifications = value;
+            $.publish(that.updateEventUri);
+        };
+
+        this.getIsWaiting = function () {
+            return _isWaiting;
+        }
+
+        this.setIsWaiting = function (value) {
+            if (!value) {
+                throw "value not supplied."
+            }
+
+            _isWaiting = value;
             $.publish(that.updateEventUri);
         };
 
@@ -30,12 +44,12 @@
             return _activeTab;
         }
 
-        this.setActiveTab = function (tab) {
-            if (!tab) {
-                throw "tab not supplied."
+        this.setActiveTab = function (value) {
+            if (!value) {
+                throw "value not supplied."
             }
 
-            _activeTab = tab;
+            _activeTab = value;
             $.publish(that.updateEventUri);
         };
 

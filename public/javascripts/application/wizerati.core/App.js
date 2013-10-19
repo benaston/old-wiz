@@ -89,6 +89,10 @@
             that.router.registerRoute('/accountactivation/create', function (dto) {
                 app.mod("controllers").accountActivationController.create(dto);
             });
+
+            that.router.registerRoute('/purchasepanelaccounts/create', function (dto) {
+                app.mod("controllers").purchasePanelAccountsController.create(dto);
+            });
         };
 
         function init() {

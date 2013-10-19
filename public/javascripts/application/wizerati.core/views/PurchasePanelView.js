@@ -15,6 +15,7 @@
 
         this.render = function () {
             that.$el.attr('data-state', that.Model.getActiveTab());
+            that.$el.attr('data-is-waiting', that.Model.getIsWaiting());
         };
 
         this.bindEvents = function () {
