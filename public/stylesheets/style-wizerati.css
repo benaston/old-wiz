@@ -697,5 +697,49 @@ pointer-events: none;
     position: relative;
     left: -54px;
     top: 32px;
-    pointer-events: none;   
+    pointer-events: none;
 }
+
+.btn-apply:after,
+.btn-pin:after,
+.btn-favorite:after,
+.btn-hide:after{
+    display: block;
+    position: relative;
+    font-family: "proxima-nova-400", Arial, sans-serif;
+}
+.inline-block{
+    display:inline-block;;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.width-62 {
+    width:62px;
+}
+
+.menu .label {
+    margin-top:5px;
+}
+
+.item-of-interest .btn {
+    margin-left:0;
+}
+
+/*.btn-pin:after{*/
+    /*content: "Pin";*/
+/*}*/
+
+/*.btn-hide:after{*/
+    /*content: "Hide";*/
+/*}*/
+
+/*.btn-favorite:after{*/
+    /*content: "Favorite";*/
+/*}*/
+
+/*.btn-apply:after{*/
+    /*content: "Apply";*/
+/*}*/

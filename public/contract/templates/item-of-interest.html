@@ -1,5 +1,5 @@
 <% try { %>
-    <div class="item-of-interest-width-maintainer">
+<div class="item-of-interest-width-maintainer">
     <div id="top1" class="in-page-anchor-target"></div>
     <section class="menu">
         <ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">
@@ -10,24 +10,38 @@
             <li><a href="#">Pinned Item 5</a></li>
             <li><a href="#">Pinned Item 6</a></li>
         </ul>
-
-        <a href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite checked' : '' %>" title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites<% } %>">S
-        </a>
-        <a href="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isHidden ? 'checked' : '' %>" title="Hide this from future results">-
-        </a>
-        <a href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isActioned ? 'checked' : '' %>" title="Mark as Applied">
-            2
-        </a>
-        <a href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>" class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> " title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned' %>">@</a>
+        <div class="inline-block centered-text width-62"><a
+                href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>"
+                class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite checked' : '' %> btn-favorite"
+                title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites<% } %>">S</a>
+            <div class="label">Favorite</div>
+        </div><div class="inline-block centered-text width-62"><a
+                href="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>"
+                class="btn btn-40 btn-primary <%=model.isHidden ? 'checked' : '' %> btn-hide"
+                title="Hide this from future results">-</a>
+            <div class="label">Hide</div>
+        </div><div class="inline-block centered-text width-62"><a
+                href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>"
+                class="btn btn-40 btn-primary <%=model.isActioned ? 'checked' : '' %> btn-apply"
+                title="Apply for this job">2</a>
+            <div class="label">Apply</div>
+        </div>
+        <div class="inline-block centered-text width-62"><a
+                href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
+               class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> btn-pin"
+               title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned' %>">@</a>
+            <div class="label">Pin</div>
+        </div>
     </section>
     <section class="<%=model.isHidden ? 'hidden' : '' %>">
         <h1><%= model.title %></h1>
 
-        <h3><%= model.location %> (<i>Not Currently Available</i>)</h3>
+        <h3><%= model.location %></h3>
 
-        <h3>+44 (0)7742157185 | ben@bj.ma</h3>
+        <h3><a href="tel:<%= model.telephoneNumber %>"><%= model.telephoneNumber %></a> | <a
+                href="mailto:<%= model.email %>"><%= model.email %></a></h3>
 
-        <h2>Personal Battle Assistant</h2>
+        <h2><%= model.organization %></h2>
         <section>
             <article class="itemSummary">
                 <blockquote>
@@ -56,7 +70,7 @@
             </article>
         </section>
     </section>
-    </div>
+</div>
 <%
 } catch(e) {
 throw "template exception: item-of-interest. " + e;
