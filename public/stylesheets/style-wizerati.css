@@ -528,7 +528,7 @@ body[data-modal='3'] #account-activation-panel {
 }
 
 .panel h1 {
-    margin: 10px 0 20px -90px;
+    /*margin: 10px 0 20px -90px;*/
 }
 
 .message {
