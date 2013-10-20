@@ -1,16 +1,14 @@
 <% try { %>
 <div class="item-of-interest-width-maintainer">
     <div id="top1" class="in-page-anchor-target"></div>
-    <section class="menu">
-        <ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">
+    <section class="menu"><ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">
             <li><a href="#">Pinned Item 1</a></li>
             <li><a href="#">Pinned Item 2</a></li>
             <li><a href="#">Pinned Item 3</a></li>
             <li><a href="#">Pinned Item 4</a></li>
             <li><a href="#">Pinned Item 5</a></li>
             <li><a href="#">Pinned Item 6</a></li>
-        </ul>
-        <div class="inline-block centered-text width-62"><a
+        </ul><div class="inline-block centered-text width-62"><a
                 href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>"
                 class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite checked' : '' %> btn-favorite"
                 title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites<% } %>">S</a>
@@ -27,9 +25,9 @@
             <div class="label">apply</div>
         </div>
         <div class="inline-block centered-text width-62"><a
-                href="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
+                <%=(model.isPinnable || model.isPinned) ? 'href' : 'disabled'%>="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
                class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> btn-pin"
-               title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned' %>">@</a>
+               title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned.' %>">@</a>
             <div class="label">pin</div>
         </div>
     </section>
@@ -73,7 +71,7 @@
         <section>
             <article>
                 <hr>
-                <a href="#top1" class="back-to-top">Back to top</a>
+                <a href="#top1" data-bypass-router="true" class="back-to-top">Back to top</a>
             </article>
         </section>
     </section>

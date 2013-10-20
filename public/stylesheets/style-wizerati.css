@@ -11,6 +11,7 @@ body[data-ui-mode='1'] #result-list-panel {
     left: 316px;
     display: none;
     -webkit-overflow-scrolling: touch;
+    z-index: 0; /*required to ensure nothing overlaps the search panel*/
 }
 
 .favourite-items .thumbnail:before {
@@ -42,7 +43,7 @@ body[data-ui-mode='1'] #result-list-panel {
 
 .item-of-interest .menu {
     text-align: right;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
 .menu a {
@@ -197,12 +198,16 @@ body[data-ui-mode='0'] #advertiser-help {
 
 .thumbnail-info {
     /*this sizing gives a decent clickable area for the fav star*/
-    width: 25px;
-    height: 25px;
-    line-height: 26px;
+    width: 16px;
+    height: 16px;
+    line-height: 19px;
     text-align: center;
     position: absolute;
-    top: -7px;
+    top: -3px;
+}
+
+.thumbnail-info.thumbnail-info-pinned.is-pinned {
+    display: inline-block;
 }
 
 .thumbnail-info:first-child {
@@ -215,6 +220,14 @@ body[data-ui-mode='0'] #advertiser-help {
 
 .thumbnail-info:nth-child(3) {
     right: 0;
+}
+
+.thumbnail-info.thumbnail-info-pinned {
+    display: none;
+    border-radius: 29px;
+    background-color: rgba(0, 109, 204, 1);
+    color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;
 }
 
 .thumbnail h3 {

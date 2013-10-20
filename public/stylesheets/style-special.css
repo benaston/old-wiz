@@ -183,9 +183,10 @@ ul.pips, ul.pips li {
 }
 
 ul.pips {
-    margin: 13px 0 10px 0;
-    left: -52px;
+    margin: 0;
+    left: -24px;
     position: relative;
+    top: -30px;
 }
 
 ul.pips a {

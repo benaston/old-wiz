@@ -5,14 +5,16 @@
                                itemRepository,
                                selectedItemModel,
                                hiddenItemsModel,
-                               actionedItemsModel) {
+                               actionedItemsModel,
+                               itemsOfInterestModel) {
 
         if (!(this instanceof app.ResultViewFactory)) {
             return new app.ResultViewFactory(loginService,
                                              itemRepository,
                                              selectedItemModel,
                                              hiddenItemsModel,
-                                             actionedItemsModel);
+                                             actionedItemsModel,
+                                             itemsOfInterestModel);
         }
 
         var that = this,
@@ -21,6 +23,7 @@
             _selectedItemModel = null,
             _hiddenItemsModel = null,
             _actionedItemsModel = null,
+            _itemsOfInterestModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace, done) {
@@ -55,6 +58,7 @@
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
+                        item.isPinned = _.any(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function(i){return i === id; });
                         done(new app.ContractResultView(item).render().$el)
                     });
                     break;
@@ -84,11 +88,16 @@
                 throw "actionedItemsModel not supplied."
             }
 
+            if (!itemsOfInterestModel) {
+                throw "itemsOfInterestModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
             _selectedItemModel = selectedItemModel;
             _hiddenItemsModel = hiddenItemsModel;
             _actionedItemsModel = actionedItemsModel;
+            _itemsOfInterestModel = itemsOfInterestModel;
 
             return that;
         }

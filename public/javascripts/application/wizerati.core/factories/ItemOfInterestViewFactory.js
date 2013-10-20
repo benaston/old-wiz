@@ -69,8 +69,8 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
-                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length <= 6 && !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
-                            i === id
+                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length < 6 && !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
+                            i === id;
                         });
                         item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
@@ -86,7 +86,7 @@
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;
-                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length <= 6 && (!isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
+                        item.isPinnable = _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length < 6 && (!isSelectedItem || !_.find(_itemsOfInterestModel.getItemsOfInterest().pinnedItems, function (i) {
                             return i === item.id;
                         }));
                         item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();

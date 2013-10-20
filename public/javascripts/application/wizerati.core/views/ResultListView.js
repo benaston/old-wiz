@@ -7,7 +7,8 @@
                             selectedItemModel,
                             favoritesCubeModel,
                             hiddenItemsModel,
-                            actionedItemsModel) {
+                            actionedItemsModel,
+                            itemsOfInterestModel) {
 
         if (!(this instanceof app.ResultListView)) {
             return new app.ResultListView(model,
@@ -16,7 +17,8 @@
                                           selectedItemModel,
                                           favoritesCubeModel,
                                           hiddenItemsModel,
-                                          actionedItemsModel);
+                                          actionedItemsModel,
+                                          itemsOfInterestModel);
         }
 
         var that = this,
@@ -26,7 +28,8 @@
             _selectedItemModel = null,
             _favoritesCubeModel = null,
             _actionedItemsModel = null,
-            _hiddenItemsModel = null;
+            _hiddenItemsModel = null,
+            _itemsOfInterestModel = null;
 
         this.$el =
         this.Model = null;
@@ -74,6 +77,10 @@
                 throw "actionedItemsModel not supplied";
             }
 
+            if (!itemsOfInterestModel) {
+                throw "itemsOfInterestModel not supplied";
+            }
+
             that.Model = model;
             _resultViewFactory = resultViewFactory;
             _selectedCubeFaceModel = selectedCubeFaceModel;
@@ -81,6 +88,7 @@
             _favoritesCubeModel = favoritesCubeModel;
             _hiddenItemsModel = hiddenItemsModel;
             _actionedItemsModel = actionedItemsModel;
+            _itemsOfInterestModel = itemsOfInterestModel;
 
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
@@ -88,6 +96,7 @@
             $.subscribe(_favoritesCubeModel.updateEventUri, that.render);
             $.subscribe(_hiddenItemsModel.updateEventUri, that.render);
             $.subscribe(_actionedItemsModel.updateEventUri, that.render);
+            $.subscribe(_itemsOfInterestModel.updateEventUri, that.render);
 
             return that;
         }

@@ -135,7 +135,7 @@
     try {
         mod.favoriteViewFactory = new wizerati.FavoriteViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").itemsOfInterestModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
-        mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
+        mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel, wizerati.mod("models").itemsOfInterestModel);
         mod.wizeratiClientRequestFactory = new wizerati.WizeratiClientRequestFactory();
     }
     catch(e) {
@@ -152,8 +152,8 @@
         mod.uiRootView = new wizerati.UIRootView(wizerati.mod("models").uiRootModel);
         mod.loginPanelView = new wizerati.LoginPanelView(wizerati.mod("models").loginPanelModel);
         mod.favoritesCubeView = new wizerati.FavoritesCubeView(wizerati.mod("models").favoritesCubeModel, wizerati.mod("factories").favoriteViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
-        mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel,         wizerati.mod("factories").resultViewFactory,         wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
-        mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel,         wizerati.mod("factories").itemOfInterestViewFactory,         wizerati.mod("models").selectedCubeFaceModel,         wizerati.mod("models").selectedItemModel,         wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
+        mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel, wizerati.mod("factories").resultViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel, wizerati.mod("models").itemsOfInterestModel);
+        mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel, wizerati.mod("factories").itemOfInterestViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.purchasePanelView = new wizerati.PurchasePanelView(wizerati.mod("models").purchasePanelModel);
     }
     catch(e) {

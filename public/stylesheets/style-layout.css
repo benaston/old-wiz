@@ -79,6 +79,7 @@
 .in-page-anchor-target {
     position: relative;
     top: 0;
+    border: 1px solid white; /*required for accurate in page anchor navigation*/
 }
 
 .centered-relative-container-450 {

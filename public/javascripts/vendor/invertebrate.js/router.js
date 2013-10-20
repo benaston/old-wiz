@@ -108,7 +108,7 @@
                 that.route(location.pathname + location.search, null, {silent:true});
             });
 
-            $(document).on('click', 'a:not([data-bypass])', routeHyperlink);
+            $(document).on('click', 'a:not([data-bypass-router])', routeHyperlink);
             $(document).on('submit', 'form', routeFormSubmission);
         }
 
