@@ -12,7 +12,7 @@
     <file path="/SearchController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378923146685" ignored="false" />
     <file path="/ContractView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379190192026" ignored="false" />
     <file path="/ResultModelFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332522407" ignored="false" />
-    <file path="/search" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382291803724" ignored="false" />
+    <file path="/search" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382304158041" ignored="false" />
     <file path="/ContractModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378332639113" ignored="false" />
     <file path="/ResultListModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378653913560" ignored="false" />
     <file path="/ResultListView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382300819970" ignored="false" />
@@ -36,7 +36,7 @@
     <file path="/FavoritesCubeView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379452097751" ignored="false" />
     <file path="/result.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379454925901" ignored="false" />
     <file path="/cube.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378575635502" ignored="false" />
-    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382300445691" ignored="false" />
+    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382305188146" ignored="false" />
     <file path="/FavoriteViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379451183466" ignored="false" />
     <file path="/ContractFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379164260520" ignored="false" />
     <file path="/ContractorFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379171355151" ignored="false" />
@@ -103,7 +103,16 @@
       <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="3" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.66258246">
+            <state line="222" column="10" selection-start="4651" selection-end="4651" vertical-scroll-proportion="0.42224318">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/contract/search">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="456" column="5" selection-start="44614" selection-end="44614" vertical-scroll-proportion="-18.313726">
               <folding />
             </state>
           </provider>
@@ -113,15 +122,6 @@
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="80" column="43" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,7 +203,6 @@
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/contract/templates/search-form.html" />
         <option value="$PROJECT_DIR$/public/contract/templates/favorite.html" />
-        <option value="$PROJECT_DIR$/public/contract/search" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-typography.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js" />
@@ -215,6 +214,7 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
+        <option value="$PROJECT_DIR$/public/contract/search" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
       </list>
     </option>
@@ -714,13 +714,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="62" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="5" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0">
@@ -821,9 +814,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/search">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="456" column="5" selection-start="44614" selection-end="44614" vertical-scroll-proportion="-18.313726">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="3" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.66258246">
+        <state line="222" column="10" selection-start="4651" selection-end="4651" vertical-scroll-proportion="0.42224318">
           <folding />
         </state>
       </provider>
