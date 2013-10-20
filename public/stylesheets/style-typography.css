@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     margin: 10px 0;
-    line-height: 40px;
+    line-height: 2.1rem;
     font-size: 1.7em;
     font-family: "proxima-nova-100";
 }
@@ -77,6 +77,13 @@ h2 {
     -webkit-user-select: auto;
 }
 
+.itemMetadata h1 {
+    margin-bottom: 18px;
+}
+
+.itemMetadata h3 {
+    text-align:right;
+}
 h3 {
     margin: 10px 0;
     line-height: 21px;
@@ -100,9 +107,9 @@ hr {
 }
 
 blockquote {
-    padding: 0 0 0 15px;
-    margin: 0 0 20px;
-    border-left: 5px solid #eee;
+    padding: 0 5px 0 5px;
+    margin: 20px 0 3px 0;
+    font-style: italic;
 }
 
 code {
@@ -166,4 +173,15 @@ a:hover {
     color: #333;
     font-size: 1rem;
     line-height: 31px;
+}
+
+.itemMetadata h3,.itemContact h3 {
+    line-height: .8rem;
+}
+
+.id {
+    font-size:.7rem;
+}
+.updatedDateTime {
+    font-size:.8rem;
 }

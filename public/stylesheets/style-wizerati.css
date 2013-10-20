@@ -206,7 +206,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info:first-child {
-    right: 60px;
+    right: 0px;
 }
 
 .thumbnail-info:nth-child(2) {
@@ -722,6 +722,12 @@ pointer-events: none;
 
 .menu .label {
     margin-top:5px;
+    font-size: .8rem;
+}
+
+.back-to-top {
+    margin-bottom: 20px;
+    display: block;
 }
 
 .item-of-interest .btn {
