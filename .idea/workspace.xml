@@ -36,7 +36,7 @@
     <file path="/FavoritesCubeView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379452097751" ignored="false" />
     <file path="/result.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379454925901" ignored="false" />
     <file path="/cube.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378575635502" ignored="false" />
-    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382305188146" ignored="false" />
+    <file path="/style-wizerati.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382305718890" ignored="false" />
     <file path="/FavoriteViewFactory.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379451183466" ignored="false" />
     <file path="/ContractFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379164260520" ignored="false" />
     <file path="/ContractorFavoriteView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379171355151" ignored="false" />
@@ -103,7 +103,7 @@
       <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="10" selection-start="4651" selection-end="4651" vertical-scroll-proportion="0.42224318">
+            <state line="227" column="20" selection-start="4855" selection-end="4855" vertical-scroll-proportion="0.51178133">
               <folding />
             </state>
           </provider>
@@ -823,7 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="10" selection-start="4651" selection-end="4651" vertical-scroll-proportion="0.42224318">
+        <state line="227" column="20" selection-start="4855" selection-end="4855" vertical-scroll-proportion="0.51178133">
           <folding />
         </state>
       </provider>
