@@ -287,6 +287,7 @@ input[type="radio"]:checked + label {
 .thumbnail-108 h3 {
     font-size: 1em;
     line-height: 1em;
+    word-wrap:break-word; /*avoid word clipping*/
 }
 
 #items-of-interest-panel > :nth-of-type(1) .pips > li:nth-child(1) > a,
