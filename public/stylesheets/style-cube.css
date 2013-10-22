@@ -40,6 +40,24 @@ figure {
     border: 2px solid white;
 }
 
+.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(1) .spot,
+.cube-container[data-selected-face-id='1'] .cube-controls .face-selector:nth-child(2) .spot,
+.cube-container[data-selected-face-id='2'] .cube-controls .face-selector:nth-child(3) .spot,
+.cube-container[data-selected-face-id='3'] .cube-controls .face-selector:nth-child(4) .spot,
+.cube-container[data-selected-face-id='4'] .cube-controls .face-selector:nth-child(5) .spot,
+.cube-container[data-selected-face-id='5'] .cube-controls .face-selector:nth-child(6) .spot {
+    box-shadow: 0 0 0 0px rgba(255,255,255,0.6)
+}
+
+.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(1) .spot.filled,
+.cube-container[data-selected-face-id='1'] .cube-controls .face-selector:nth-child(2) .spot.filled,
+.cube-container[data-selected-face-id='2'] .cube-controls .face-selector:nth-child(3) .spot.filled,
+.cube-container[data-selected-face-id='3'] .cube-controls .face-selector:nth-child(4) .spot.filled,
+.cube-container[data-selected-face-id='4'] .cube-controls .face-selector:nth-child(5) .spot.filled,
+.cube-container[data-selected-face-id='5'] .cube-controls .face-selector:nth-child(6) .spot.filled {
+    background-color: white;
+}
+
 .cube-face-labels li {
     display: none;
 }
@@ -141,7 +159,7 @@ figure {
 .cube-container:not([data-selected-face-id='3']) .cube .right,
 .cube-container:not([data-selected-face-id='4']) .cube .bottom,
 .cube-container:not([data-selected-face-id='5']) .cube .back {
-    opacity: .3;
+    opacity: .05;
     -webkit-transition: opacity 1s linear;
 }
 
@@ -211,3 +229,42 @@ figure {
     border: 2px solid #eee;
 }
 
+.face-usage-indicator:hover {
+    text-decoration: none;
+}
+.face-usage-indicator .spot {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    border-radius: 1px;
+    box-shadow: 0 0 0 0px rgba(0, 109, 204, 1);
+    position: relative;
+    margin: 4px 4px 2px 4px;
+    float: left;
+}
+
+.face-usage-indicator .spot.filled {
+    background-color: rgba(0, 109, 204, 1);
+}
+
+.face-usage-indicator {
+    /*experimentally derived*/
+    font-size: 1.9rem;
+    text-align: center;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 19px;
+    margin: 0;
+    padding: 0;
+    font-family: pictos;
+}
+
+.cube-controls .face-selector {
+    font-size: 2rem;
+    color: white;
+    word-break: break-word;
+}

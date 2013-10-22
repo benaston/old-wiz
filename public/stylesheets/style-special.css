@@ -12,10 +12,15 @@
     margin: 0;
 }
 
+.thumbnail-219 a, .thumbnail-219 h3 {
+    font-size:.95rem;
+}
+
 .thumbnail-219 {
-    font-size: 0.95em;
     width: 219px;
 }
+
+
 
 .thumbnail-108 {
     width: 116px;
