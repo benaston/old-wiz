@@ -2,7 +2,7 @@ jQuery(document).ready(function () {
     "use strict";
 
 	//throw "base ui mode should be maintained, and closing of a modal causes reversion to this state";
-    FastClick.attach(document.body);
+//    FastClick.attach(document.body);
     //dom binding
     window.wizerati.instance = new wizerati.App(invertebrate.env.dev);
 
