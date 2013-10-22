@@ -20,7 +20,7 @@
     <file path="/ContractorView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379190143281" ignored="false" />
     <file path="/SelectedItemController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379026317513" ignored="false" />
     <file path="/app.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379164617313" ignored="false" />
-    <file path="/style-cube.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382474086819" ignored="false" />
+    <file path="/style-cube.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382481547677" ignored="false" />
     <file path="/FavoritesCubeModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379184711077" ignored="false" />
     <file path="/router.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379893241460" ignored="false" />
     <file path="/SessionController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1378421730458" ignored="false" />
@@ -100,10 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="50" selection-start="14140" selection-end="14140" vertical-scroll-proportion="0.27529022">
+            <state line="256" column="50" selection-start="14140" selection-end="14140" vertical-scroll-proportion="-5.928571">
               <folding />
             </state>
           </provider>
@@ -118,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-cube.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style-cube.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="16" selection-start="5787" selection-end="5787" vertical-scroll-proportion="0.0">
+            <state line="152" column="34" selection-start="5383" selection-end="5383" vertical-scroll-proportion="0.38043478">
               <folding />
             </state>
           </provider>
@@ -213,9 +213,9 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/application/appStart.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
       </list>
     </option>
   </component>
@@ -755,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="16" selection-start="5787" selection-end="5787" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -785,7 +778,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="50" selection-start="14140" selection-end="14140" vertical-scroll-proportion="0.27529022">
+        <state line="256" column="50" selection-start="14140" selection-end="14140" vertical-scroll-proportion="-5.928571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="34" selection-start="5383" selection-end="5383" vertical-scroll-proportion="0.38043478">
           <folding />
         </state>
       </provider>
