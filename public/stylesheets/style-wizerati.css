@@ -218,9 +218,7 @@ body[data-ui-mode='0'] #advertiser-help {
 .thumbnail-info:nth-child(2) {
     right: 30px;
 }
-.thumbnail-108 .thumbnail-info {
-    left: 5px;
-    top:57px;
+.thumbnail-info.actioned {
     border-radius: 29px;
     background-color: rgba(0, 109, 204, 1);
     color: white;
@@ -228,8 +226,13 @@ body[data-ui-mode='0'] #advertiser-help {
     font-size: .6rem;
 }
 
+.thumbnail-108 .thumbnail-info.actioned {
+    left: 5px;
+    top:57px;
+}
+
 .thumbnail-info:nth-child(3) {
-    right: 0;
+    right: 60px;
 }
 
 .thumbnail-info.thumbnail-info-pinned {

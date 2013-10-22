@@ -5,6 +5,11 @@
 <!--<a class="thumbnail-info pictos <%=model.isActioned ? 'actioned' : '' %>" href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" title="One-click apply">-->
     <!--2-->
 <!--</a>-->
+<% if(model.isActioned) { %>
+<a class="thumbnail-info pictos actioned" href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" title="One-click apply">
+    2
+</a>
+<% } %>
 <a class="thumbnail-info pictos thumbnail-info-pinned <%=model.isPinned ? 'is-pinned' : '' %>" href="/itemsofinterest/<%=model.isPinned ? 'destroy' : 'create' %>?id=<%=model.id%>" >
 @
 </a>
