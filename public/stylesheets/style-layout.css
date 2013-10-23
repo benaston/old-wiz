@@ -56,6 +56,7 @@
 
 .lucid-app-wrapper {
     height: 100%;
+    width: 100%; /*this is super-important to enable margin:auto centering of modals (I think)*/
     position: absolute;
     top: 0;
     bottom: 0;

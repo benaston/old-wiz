@@ -65,7 +65,7 @@
     <file path="/ContractItemOfInterest.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379195239803" ignored="false" />
     <file path="/item-of-interest.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382336394434" ignored="false" />
     <file path="/App.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379875373276" ignored="false" />
-    <file path="/style-layout.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382568781990" ignored="false" />
+    <file path="/style-layout.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382569476843" ignored="false" />
     <file path="/ContractItemOfInterestView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379452593504" ignored="false" />
     <file path="/style-form-element.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382563886297" ignored="false" />
     <file path="/ActionedItemsController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379454287954" ignored="false" />
@@ -113,7 +113,7 @@
       <file leaf-file-name="style-layout.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="104" selection-start="726" selection-end="726" vertical-scroll-proportion="0.46601942">
+            <state line="58" column="33" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.5695793">
               <folding />
             </state>
           </provider>
@@ -802,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="104" selection-start="726" selection-end="726" vertical-scroll-proportion="0.46601942">
+        <state line="58" column="33" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.5695793">
           <folding />
         </state>
       </provider>
