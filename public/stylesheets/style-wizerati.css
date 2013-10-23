@@ -599,6 +599,7 @@ body[data-modal='3'] #account-activation-panel {
 
 
 input[type='text']:focus + .meta-info,
+input[type='email']:focus + .meta-info,
 input[type='password']:focus + .meta-info,
 textarea:focus + .meta-info {
     visibility: visible;

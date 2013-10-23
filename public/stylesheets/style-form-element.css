@@ -142,6 +142,7 @@ input[type="email"]:focus,
 input[type="password"]:focus {
     border-bottom: 1px dashed rgba(0, 109, 204, 0.95);
     box-shadow: 0 0 2px 12px rgba(255, 255, 255, 1), 0 0 2px 15px #eee;
+    background-color:white;
 }
 
 .field {
