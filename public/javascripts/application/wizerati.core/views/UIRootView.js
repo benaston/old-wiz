@@ -18,8 +18,18 @@
         this.render = function (e, options) {
             options = options || { done: that.postRender };
 
+            //two step DOM manipulation to enable visibility of CSS transition
+            //first set display property
+            that.$el.removeClass("modal-visible"); //re-adding of this class will trigger CSS transition
             that.$el.attr("data-ui-mode", that.Model.getUIMode());
             that.$el.attr("data-modal", that.Model.getModal());
+
+            if(that.Model.getModal()) {
+                setTimeout(function(){
+                    that.$el.addClass("modal-visible");
+                }, 0)  //re-adding of this class will trigger CSS transition
+            }
+
          };
 
         this.postRender = function () {
@@ -47,7 +57,7 @@
         }
 
         return init();
-    };
+    }
 
     app.UIRootView = UIRootView;
     invertebrate.View.isExtendedBy(app.UIRootView);

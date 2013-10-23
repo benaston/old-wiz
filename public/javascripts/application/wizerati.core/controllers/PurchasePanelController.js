@@ -11,11 +11,14 @@
             _purchasePanelModel = null,
             _uiRootModel = null,
             _uiModeEnum = wizerati.mod("enum").UIMode,
-            _modal = wizerati.mod("enum").Modal;
+            _modalEnum = wizerati.mod("enum").Modal;
 
         this.index = function (dto) {
             try {
-                _uiRootModel.setModal(_modal.Purchase);
+                if(_uiRootModel.getModal() != _modalEnum.Purchase) {
+                    _uiRootModel.setModal(_modalEnum.Purchase);
+                }
+
                 _purchasePanelModel.setActiveTab(dto.tab);
             } catch (err) {
                 console.log("error: PurchasePanelController.show. " + err);

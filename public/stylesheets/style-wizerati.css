@@ -476,9 +476,9 @@ h2.logo {
     opacity: 0;
     pointer-events: none;
     transition: opacity .1s linear;
-    background: rgba(255, 255, 255, .5);
     height: 100%;
-    background: radial-gradient(circle at top, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.6) 57%, rgba(255, 255, 255, 0.02) 99%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .9);
+    /*no background because of use of blur filter on .main*/
+    /*background: radial-gradient(circle at top, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.6) 57%, rgba(255, 255, 255, 0.02) 99%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, .9);*/
 }
 #account-activation-panel .activate {
     top: 25px;
@@ -511,13 +511,25 @@ h2.logo {
     pointer-events: inherit;
 }
 
+body.modal-visible .main {
+    -webkit-filter: blur(60px);
+    transition: -webkit-filter .1s linear 0;
+}
+
+/*separating the opacity into a different class enables use of CSS transitions
+whilst keeping hidden modals with display block*/
+body[data-modal='0'].modal-visible #purchase-panel,
+body[data-modal='3'].modal-visible #account-activation-panel {
+    opacity: 1;
+    transition: opacity .05s linear 0;
+}
 
 body[data-modal='0'] #purchase-panel,
 body[data-modal='3'] #account-activation-panel {
-    opacity: 1;
     pointer-events: auto;
     display: block;
     z-index: 99999999999999;
+
 }
 
 .customer-types {

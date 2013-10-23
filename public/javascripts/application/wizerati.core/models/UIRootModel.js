@@ -19,10 +19,14 @@
             return _uiMode || "";
         }
 
-        this.setUIMode = function (value) {
+        this.setUIMode = function (value, options) {
+            options = options || {silent:false};
+
             _uiMode = value;
 
-            $.publish(that.updateEventUri);
+            if(!options.silent) {
+                $.publish(that.updateEventUri);
+            }
         }
 
         this.getModal = function () {

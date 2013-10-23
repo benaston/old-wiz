@@ -14,8 +14,8 @@
 
         this.index = function(){
             try {
-                throw "get redirection after purchase panel/destroy working";
-                _uiRootModel.setUIMode(_uiModeEnum.GreenfieldSearch);
+//                throw "get redirection after purchase panel/destroy working";
+                _uiRootModel.setUIMode(_uiModeEnum.GreenfieldSearch, {silent:true});
                 _uiRootModel.setModal(null);
             } catch(err) {
                 console.log("error: HomeController.index. " + err);
