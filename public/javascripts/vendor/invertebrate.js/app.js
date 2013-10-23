@@ -7,7 +7,8 @@
         }
 
         var that = this,
-            _templateServerSvc = null;
+            _templateServerSvc = null,
+            _templatePostRenderActions = {};
 
         //implements trivial string-based modularisation
         that.mod = function () {
@@ -21,8 +22,6 @@
                 return mods[name] = {};
             };
         }();
-
-        //todo consider wizerati metadata implementation
 
         //fetches a template from a URI, adds to 'public'
         //templates collection and supplies to success callback
@@ -62,14 +61,13 @@
         };
 
         that.fetchTemplatePostRenderAction = function (uri, done) {
-            self.templatePostRenderActions = self.templatePostRenderActions || {};
 
-            if (templatePostRenderActions[uri]) {
-                return done(templatePostRenderActions[uri]);
+            if (_templatePostRenderActions[uri]) {
+                return done(_templatePostRenderActions[uri]);
             }
 
             return $.ajax({url: uri, dataType: "script", cache: false, done: function (data, textStatus, jqXHR) {
-                templatePostRenderActions[uri] = data;
+                _templatePostRenderActions[uri] = data;
                 done(data);
             }}).fail(function (jqxhr, settings, exception) {
                     console.log(exception);
@@ -99,10 +97,10 @@
             that.fetchTemplate(templateUri, { done: function (tmpl) {
                 $el.html(tmpl({ model: _.clone(model) }, { jQuery: $ }));
                 if (options.postRenderActionScriptUri) {
-                    app.fetchTemplatePostRenderAction(postRenderActionScriptUri, function (data) {
+                    app.fetchTemplatePostRenderAction(options.postRenderActionScriptUri, function (data) {
                         //need to reference postrenderaction by type/template to ensure correct addressing
                         var postRenderActionLeftPart = _.str.words(options.postRenderActionScriptUri, '/')[0];
-                        app.mod("ui").PostRenderActions[postRenderActionLeftPart + "/" + templateName](view);
+                        _templatePostRenderActions[postRenderActionLeftPart + "/" + templateName](view);
                         options.done($el); //supply $el for posssible additional work, like dom insertion
                     });
                 } else {
@@ -126,3 +124,5 @@
 
     invertebrate.App = App;
 }(invertebrate));
+
+//todo consider wizerati metadata implementation

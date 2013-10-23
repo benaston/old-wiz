@@ -15,7 +15,8 @@
         this.Model = null;
 
         this.render = function () {
-            var options = { done: that.bindEvents };
+            throw 'see old wizerati implementation for the expected uri here, then complete the button wireup on the search form';
+            var options = { done: that.bindEvents, postRenderActionScriptUri: '' };
 
             return app.instance.renderTemplate(that.$el,
                 _templateName, that.Model, options);
@@ -37,6 +38,7 @@
                 that.Model.setRate(that.$el.find("input[name='r']:checked").val(), { silent: true });
             });
 
+            that.$el.attr('data-is-waiting', that.Model.getIsWaiting());
             //todo: this to be connected using the post render code
             //downloaded from the template server.
         };

@@ -194,3 +194,15 @@
 
 }(wizerati.mod("controllers")));
 
+(function (mod) {
+    "use strict";
+
+    try {
+        mod.postRenderActions = [];
+    }
+    catch(e) {
+        throw "problem registering ui module. " + e;
+    }
+
+}(wizerati.mod("ui")));
+

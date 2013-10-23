@@ -10,6 +10,7 @@
         var that = this,
             _keywords = null,
             _location = null,
+            _isWaiting = false,
             _rate = null;
 
         this.updateEventUri = "update://SearchFormModel/";
@@ -32,6 +33,23 @@
 
         this.getLocation = function () {
             return _location;
+        };
+
+        this.getIsWaiting = function () {
+            return _isWaiting;
+        };
+
+        this.setIsWaiting = function (value) {
+            if (value === null || value === undefined) {
+                throw "value not supplied."
+            }
+
+            if (value !== true && value !== false) {
+                throw "invalid argument (value)."
+            }
+
+            _isWaiting = value;
+            $.publish(that.updateEventUri);
         };
 
         this.setLocation = function (value, options) {
