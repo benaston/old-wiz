@@ -28,6 +28,10 @@
     width: 365px;
 }
 
+.main {
+    height: 100%;
+}
+
 .lucid-columns-full-height {
     position: relative;
     top: 0;
