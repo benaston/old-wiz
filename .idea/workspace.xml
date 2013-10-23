@@ -53,7 +53,7 @@
     <file path="/SelectedCubeFaceController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379021999221" ignored="false" />
     <file path="/SelectedItemModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379370508521" ignored="false" />
     <file path="/view.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379163124217" ignored="false" />
-    <file path="/UIRootView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382514673183" ignored="false" />
+    <file path="/UIRootView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382568562242" ignored="false" />
     <file path="/style-special.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382453745514" ignored="false" />
     <file path="/SelectedItemView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379188812313" ignored="false" />
     <file path="/ItemsOfInterestModel.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379371322461" ignored="false" />
@@ -65,7 +65,7 @@
     <file path="/ContractItemOfInterest.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379195239803" ignored="false" />
     <file path="/item-of-interest.html" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382336394434" ignored="false" />
     <file path="/App.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379875373276" ignored="false" />
-    <file path="/style-layout.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382567930792" ignored="false" />
+    <file path="/style-layout.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382568781990" ignored="false" />
     <file path="/ContractItemOfInterestView.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379452593504" ignored="false" />
     <file path="/style-form-element.css" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1382563886297" ignored="false" />
     <file path="/ActionedItemsController.js" changelist="4c11be9c-a113-40c8-9f71-2b97bfe13a03" time="1379454287954" ignored="false" />
@@ -113,7 +113,7 @@
       <file leaf-file-name="style-layout.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="73" selection-start="269" selection-end="269" vertical-scroll-proportion="0.12944984">
+            <state line="36" column="104" selection-start="726" selection-end="726" vertical-scroll-proportion="0.46601942">
               <folding />
             </state>
           </provider>
@@ -122,7 +122,16 @@
       <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="409" column="13" selection-start="9426" selection-end="9435" vertical-scroll-proportion="-7.92">
+            <state line="26" column="32" selection-start="772" selection-end="772" vertical-scroll-proportion="-12.48">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIRootView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,7 +170,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
         <option value="$PROJECT_DIR$/public/contract/templates/result.html" />
         <option value="$PROJECT_DIR$/public/contract/templates/favorite.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/UIRootModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/PurchasePanelController.js" />
@@ -171,6 +179,7 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style-form-element.css" />
         <option value="$PROJECT_DIR$/public/contract/templates/search-form.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-layout.css" />
       </list>
     </option>
@@ -715,11 +724,6 @@
         <state line="17" column="8" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="57" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="81" selection-start="528" selection-end="528" vertical-scroll-proportion="0.04121475" />
@@ -732,7 +736,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/PurchasePanelView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
@@ -780,16 +786,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/UIRootView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="409" column="13" selection-start="9426" selection-end="9435" vertical-scroll-proportion="-7.92">
+        <state line="26" column="32" selection-start="772" selection-end="772" vertical-scroll-proportion="-12.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="73" selection-start="269" selection-end="269" vertical-scroll-proportion="0.12944984">
+        <state line="36" column="104" selection-start="726" selection-end="726" vertical-scroll-proportion="0.46601942">
           <folding />
         </state>
       </provider>
