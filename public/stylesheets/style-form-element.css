@@ -64,7 +64,7 @@ a.btn:hover {
 
 .btn:enabled:focus {
     outline: none;
-    box-shadow: 0 0 0 4px #eee;
+    box-shadow: 0 0 1px 2px #eee;
     /*outline-offset: 2px;*/
 }
 
@@ -137,12 +137,17 @@ html .uneditable-input {
     transition: border linear 0.2s;
 }
 
+
+input[type="radio"]:focus + label {
+    box-shadow: 0 0 1px 12px rgba(255, 255, 255, 1), 0 0 1px 14px #eee; /*note the fuzz of 1px here to avoid looking like a UI line*/
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     border-bottom: 1px dashed rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 2px 12px rgba(255, 255, 255, 1), 0 0 2px 15px #eee;
-    background-color:white;
+    box-shadow: 0 0 1px 12px rgba(255, 255, 255, 1), 0 0 1px 14px #eee; /*note the fuzz of 1px here to avoid looking like a UI line*/
+    background-color: white;
 }
 
 .field {

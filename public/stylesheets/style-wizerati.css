@@ -60,7 +60,8 @@ body[data-ui-mode='1'] #search-form, body[data-ui-mode='0'] #search-form {
     pointer-events: none;
     /*border-right: 1px solid rgba(0, 0, 0, .06);*/
     border-radius: 0 0 455px 0;
-    width: 375px;
+    /*width: 375px;*/
+    width: 308px;
     height: 269px;
     position: relative;
     text-align: left;
@@ -102,7 +103,7 @@ body[data-ui-mode='1'] #search-form, body[data-ui-mode='0'] #search-form {
 
 body[data-ui-mode='0'] .contractor-help,
 body[data-ui-mode='0'] #advertiser-help {
-    opacity: 1;
+    opacity: 0; /*hide for now*/
     pointer-events: auto;
     transition: opacity .1s linear;
 }
@@ -254,11 +255,16 @@ body[data-ui-mode='0'] #advertiser-help {
     display: none;
 }
 
+
 input[type="radio"]:checked + label {
     background-color: rgba(0, 109, 204, 0.95);
     color: white;
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
     border: 2px solid white;
+}
+
+input[type="radio"]:checked:focus + label {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px #eee;
 }
 
 .search-filters input[type=radio]:not(:checked)+label:hover {
@@ -377,7 +383,7 @@ body[data-ui-mode='0'] .navbar {
 .legal {
     left: 30px;
     bottom: 20px;
-    position: fixed;
+    position: absolute;
     font-size: 0.85em;
     z-index: 4;
 }
@@ -396,7 +402,7 @@ body[data-ui-mode='0'] .navbar {
 }
 
 body[data-ui-mode='0'] .btn-advertisers {
-    box-shadow: 0 0 0 8px white, 0 0 0 10px rgba(0, 109, 204, 0.95);
+    /*box-shadow: 0 0 0 8px white, 0 0 0 10px rgba(0, 109, 204, 0.95);*/
 }
 
 body {
@@ -425,7 +431,7 @@ body[data-ui-mode='1'] #items-of-interest-panel {
 
 body[data-ui-mode='0'] #search-form {
     top: 100px;
-    border-right: 2px solid rgba(0, 109, 204, 0.95);
+    /*border-right: 2px solid rgba(0, 109, 204, 0.95);*/
     transition: top 0s linear 0s;
 }
 
