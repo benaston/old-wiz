@@ -1,6 +1,7 @@
 a:focus {
-    outline: 5px auto rgb(230, 240, 248);
+    outline: none;
     outline-offset: 2px;
+    box-shadow: 0 0 0 4px #eee;
 }
 
 strong {
