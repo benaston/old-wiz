@@ -22,11 +22,6 @@
     height: 100%;
 }
 
-.panel {
-    position: absolute;
-    top:0;
-}
-
 .lucid-column {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;

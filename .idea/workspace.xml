@@ -110,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-form-element.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style-form-element.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="27" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.45061728">
+            <state line="144" column="27" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="596" column="64" selection-start="13009" selection-end="13009" vertical-scroll-proportion="-7.24">
+            <state line="481" column="4" selection-start="10625" selection-end="10625" vertical-scroll-proportion="0.9015544">
               <folding />
             </state>
           </provider>
@@ -149,7 +149,7 @@
       <file leaf-file-name="style-layout.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="61" selection-start="258" selection-end="258" vertical-scroll-proportion="-8.88">
+            <state line="14" column="52" selection-start="270" selection-end="270" vertical-scroll-proportion="-10.64">
               <folding />
             </state>
           </provider>
@@ -212,11 +212,11 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/PurchasePanelController.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-typography.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-layout.css" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-reset-wizerati.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-form-element.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-layout.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
       </list>
     </option>
   </component>
@@ -822,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="61" selection-start="258" selection-end="258" vertical-scroll-proportion="-8.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="4" selection-start="5872" selection-end="5964" vertical-scroll-proportion="-16.285715">
@@ -843,16 +836,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="596" column="64" selection-start="13009" selection-end="13009" vertical-scroll-proportion="-7.24">
+        <state line="144" column="27" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-layout.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="27" selection-start="3536" selection-end="3536" vertical-scroll-proportion="0.45061728">
+        <state line="14" column="52" selection-start="270" selection-end="270" vertical-scroll-proportion="-10.64">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="481" column="4" selection-start="10625" selection-end="10625" vertical-scroll-proportion="0.9015544">
           <folding />
         </state>
       </provider>

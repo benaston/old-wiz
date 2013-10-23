@@ -470,6 +470,8 @@ h2.logo {
 #item-management-panel,
 #log-in-panel,
 #account-activation-panel {
+    position: absolute;
+    top:0;
     display: none;
     width: 100%;
     opacity: 0;
