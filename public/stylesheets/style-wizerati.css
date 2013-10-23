@@ -31,7 +31,7 @@ body[data-ui-mode='1'] #result-list-panel {
     display: none;
 }
 
-div.item-of-interest { /*important to qualify with the div to ensure margins take effect*/
+article.item-of-interest { /*important to qualify with the div to ensure margins take effect*/
     border-radius: 15px;
     /*padding: 0px 15px 0px 18px;*/
     padding: 0px 29px 0px 26px;
