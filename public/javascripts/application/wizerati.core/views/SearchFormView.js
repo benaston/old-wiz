@@ -15,7 +15,7 @@
         this.Model = null;
 
         this.render = function () {
-            throw 'see old wizerati implementation for the expected uri here, then complete the button wireup on the search form';
+//            throw 'see old wizerati implementation for the expected uri here, then complete the button wireup on the search form';
             var options = { done: that.bindEvents, postRenderActionScriptUri: '' };
 
             return app.instance.renderTemplate(that.$el,
@@ -23,6 +23,7 @@
         };
 
         this.bindEvents = function () {
+
             var $keywords = that.$el.find("#keywords");
             $keywords.on('change', function () {
                 that.Model.setKeywords($keywords.val(), { silent: true });
