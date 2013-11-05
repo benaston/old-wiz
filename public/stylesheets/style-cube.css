@@ -33,23 +33,23 @@ figure {
     background-color: rgba(201, 112, 227, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;
-}.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(2) {
+}.cube-container[data-selected-face-id='1'] .cube-controls .face-selector:nth-child(2) {
     background-color: rgba(109, 220, 49, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;
-}.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(3) {
+}.cube-container[data-selected-face-id='2'] .cube-controls .face-selector:nth-child(3) {
     background-color: rgba(65, 172, 250, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;
-}.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(4) {
+}.cube-container[data-selected-face-id='3'] .cube-controls .face-selector:nth-child(4) {
     background-color: rgba(243, 203, 0, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;
-}.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(5) {
+}.cube-container[data-selected-face-id='4'] .cube-controls .face-selector:nth-child(5) {
     background-color: rgba(159, 132, 93, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;
-}.cube-container[data-selected-face-id='0'] .cube-controls .face-selector:nth-child(6) {
+}.cube-container[data-selected-face-id='5'] .cube-controls .face-selector:nth-child(6) {
     background-color: rgba(246, 35, 104, 0.95);
     box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(201, 112, 227, 1) !important;
     border: 2px solid white;

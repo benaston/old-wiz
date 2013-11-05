@@ -5,7 +5,11 @@
 body[data-ui-mode='1'] #result-list-panel {
     display: inline-block;
 }
-
+.search-button-container {
+    position: absolute;
+left: 244px;
+top: 49px;
+}
 #result-list-panel {
     width: 274px;
     left: 316px;
@@ -143,9 +147,9 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 #btn-search {
-    position: absolute;
+    /*position: absolute;
     left: 244px;
-    top: 49px;
+    top: 49px;*/
 }
 
 .list-items {
@@ -767,8 +771,8 @@ pointer-events: none;
     width:62px;
 }
 
-.menu .label {
-    margin-top:5px;
+.menu .label, .search-button-container .label {
+    margin-top:4px;
     font-size: .8rem;
 }
 

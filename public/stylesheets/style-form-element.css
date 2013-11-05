@@ -3,7 +3,7 @@
     cursor: pointer;
     color: #333;
     border-color: rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) !important;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     font-family: 'pictos';
     background-color: transparent;
     -webkit-user-select: none;
@@ -128,11 +128,11 @@ html .uneditable-input {
     margin: 20px 20px 0px 20px;
     background: rgba(0, 0, 0, 0);
     border: none;
-    border-bottom: 1px dashed rgb(91, 91, 120);
+    border-bottom: 1px solid rgb(206, 214, 218);
     display: inline-block;
     vertical-align: middle;
     outline: none;
-    padding: 0;
+    padding: 0 0 4px 0; /*improves readability by moving lower line away from input*/
     width: 226px;
     transition: border linear 0.2s;
 }
@@ -145,8 +145,8 @@ input[type="radio"]:focus + label {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    border-bottom: 1px dashed rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 1px 12px rgba(255, 255, 255, 1), 0 0 1px 14px #eee; /*note the fuzz of 1px here to avoid looking like a UI line*/
+    /*border-bottom: 1px dashed rgba(0, 109, 204, 0.95);*/
+    /*box-shadow: 0 0 1px 12px rgba(255, 255, 255, 1), 0 0 1px 14px #eee; /*note the fuzz of 1px here to avoid looking like a UI line*/*/
     background-color: white;
 }
 
