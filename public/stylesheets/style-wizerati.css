@@ -413,6 +413,7 @@ body {
     min-width: 375px;
     min-height: 685px;
     transition: width 0s linear .1s;
+    background-color:white;
 }
 
 body[data-ui-mode='0'] {
