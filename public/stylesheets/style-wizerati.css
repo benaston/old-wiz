@@ -775,6 +775,9 @@ pointer-events: none;
     margin-top:4px;
     font-size: .8rem;
 }
+.search-button-container .label {
+    margin-left:1px; /*this is because the font rendering makes it look off center*/
+}
 
 .back-to-top {
     margin-bottom: 20px;
