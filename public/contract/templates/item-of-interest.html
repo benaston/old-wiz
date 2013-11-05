@@ -23,8 +23,7 @@
                 class="btn btn-40 btn-primary <%=model.isActioned ? 'checked' : '' %> btn-apply"
                 title="Apply for this job">2</a>
             <div class="label">apply</div>
-        </div>
-        <div class="inline-block centered-text width-62"><a
+        </div><div class="inline-block centered-text width-62"><a
                 <%=(model.isPinnable || model.isPinned) ? 'href' : 'disabled'%>="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
                class="btn btn-40 btn-primary <%=model.isPinnable ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> btn-pin"
                title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned.' %>">@</a>

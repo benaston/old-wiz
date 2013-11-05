@@ -132,7 +132,7 @@ html .uneditable-input {
     display: inline-block;
     vertical-align: middle;
     outline: none;
-    padding: 0 0 4px 0; /*improves readability by moving lower line away from input*/
+    padding: 0;
     width: 226px;
     transition: border linear 0.2s;
 }
@@ -151,7 +151,7 @@ input[type="password"]:focus {
 }
 
 .field {
-    height: 31px;
+    height: 35px;
 }
 
 input[type="radio"] {
