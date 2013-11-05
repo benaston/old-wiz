@@ -3,7 +3,7 @@
     cursor: pointer;
     color: #333;
     border-color: rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) !important;
-    /*margin-left: 10px;*/
+    margin: 0; /*important to avoid unexpected layout*/
     font-family: 'pictos';
     background-color: transparent;
     -webkit-user-select: none;
