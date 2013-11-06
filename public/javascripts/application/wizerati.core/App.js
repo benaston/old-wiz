@@ -102,7 +102,7 @@
 
             that.env = env;
 
-            return _.extend(that, new invertebrate.App(app.mod("templates").TemplateServerSvc));
+            return _.extend(that, new invertebrate.App(app.mod("templates").TemplateUriHelper));
         }
 
         return init();

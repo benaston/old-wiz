@@ -9,14 +9,16 @@
 
         var that = this,
             _el = "#search-form",
-            _templateName = "search-form.html";
+            _templateName = "search-form.html",
+            _postRenderScriptName = "search-form.js";
 
         this.$el = null;
         this.Model = null;
 
         this.render = function () {
-//            throw 'see old wizerati implementation for the expected uri here, then complete the button wireup on the search form';
-            var options = { done: that.bindEvents, postRenderActionScriptUri: '' };
+            var options = { done: that.bindEvents, postRenderScriptName: null };
+
+            that.$el.attr('data-is-waiting', that.Model.getIsWaiting() ? "primary" : "");
 
             return app.instance.renderTemplate(that.$el,
                 _templateName, that.Model, options);
@@ -38,10 +40,6 @@
             $rate.on('change', function () {
                 that.Model.setRate(that.$el.find("input[name='r']:checked").val(), { silent: true });
             });
-
-            that.$el.attr('data-is-waiting', that.Model.getIsWaiting());
-            //todo: this to be connected using the post render code
-            //downloaded from the template server.
         };
 
         this.onDomReady = function(){

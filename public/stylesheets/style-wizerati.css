@@ -732,7 +732,7 @@ z-index: -1;
 pointer-events: none;
 }
 
-*[data-is-waiting='success'] .btn-success {
+*[data-is-waiting='success'] .btn-success, *[data-is-waiting='primary'] .btn-primary {
     border-left:0;
     -webkit-animation-duration: 2s;
     /*-webkit-animation-fill-mode: both;

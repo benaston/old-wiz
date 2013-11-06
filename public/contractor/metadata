@@ -1,6 +1,6 @@
 try {
 	
-	app.mod("templateServer").TemplateServerSvc.metadata["templateServer"] = {
+	app.mod("templateServer").TemplateUriHelper.metadata["templateServer"] = {
 
 		//add metadata items (both data and functionality) here as needed. e.g.:
 		//foo: "bar",

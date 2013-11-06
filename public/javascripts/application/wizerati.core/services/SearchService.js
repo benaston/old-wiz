@@ -11,6 +11,7 @@
         var that = this,
             _croniclService = null;
 
+        //rename to success, plus add timeout argument and error
         this.runSearch = function (keywords,
                                    location,
                                    rate,

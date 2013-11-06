@@ -49,6 +49,7 @@
             }
 
             _isWaiting = value;
+
             $.publish(that.updateEventUri);
         };
 

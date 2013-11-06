@@ -8,7 +8,7 @@
 
         var that = this,
             _templateServerSvc = null,
-            _templatePostRenderActions = {};
+            _templatePostRenderScripts = {};
 
         //implements trivial string-based modularisation
         that.mod = function () {
@@ -60,20 +60,6 @@
                 .fail(ajaxFailCallback);
         };
 
-        that.fetchTemplatePostRenderAction = function (uri, done) {
-
-            if (_templatePostRenderActions[uri]) {
-                return done(_templatePostRenderActions[uri]);
-            }
-
-            return $.ajax({url: uri, dataType: "script", cache: false, done: function (data, textStatus, jqXHR) {
-                _templatePostRenderActions[uri] = data;
-                done(data);
-            }}).fail(function (jqxhr, settings, exception) {
-                    console.log(exception);
-                });
-        };
-
         that.renderTemplate = function ($el, templateName, model, options) {
             var defaults = {
                 done: function ($el) {
@@ -96,17 +82,34 @@
             //could modify to use self cache
             that.fetchTemplate(templateUri, { done: function (tmpl) {
                 $el.html(tmpl({ model: _.clone(model) }, { jQuery: $ }));
-                if (options.postRenderActionScriptUri) {
-                    app.fetchTemplatePostRenderAction(options.postRenderActionScriptUri, function (data) {
-                        //need to reference postrenderaction by type/template to ensure correct addressing
-                        var postRenderActionLeftPart = _.str.words(options.postRenderActionScriptUri, '/')[0];
-                        _templatePostRenderActions[postRenderActionLeftPart + "/" + templateName](view);
-                        options.done($el); //supply $el for posssible additional work, like dom insertion
+
+                if (options.postRenderScriptName) {
+                    var postRenderScriptUri = _templateServerSvc.getPostRenderScriptUri(options.postRenderScriptName);
+                    that.fetchTemplatePostRenderScript(postRenderScriptUri, function (data) {
+                        _templatePostRenderScripts[postRenderScriptUri]($, $el);
+                        options.done($el); //NOTE: this is in correct location (really)! Purpose: supply $el for posssible additional work, like dom insertion
                     });
                 } else {
                     options.done($el); //complete for when there is no post-render action script
                 }
             }});
+        };
+
+        //invoked by this.renderTemplate if a post-render action script is specified.
+        that.fetchTemplatePostRenderScript = function (uri, done) {
+            if(!uri) { throw "uri not supplied." }
+            if(!done) { throw "done not supplied." }
+
+            if (_templatePostRenderScripts[uri]) {
+                return done(_templatePostRenderScripts[uri]);
+            }
+
+            return $.ajax({url: uri, dataType: "text", cache: false, success: function (data, textStatus, jqXHR) {
+                _templatePostRenderScripts[uri] = eval(data).postRenderScript;
+                done(data);
+            }}).fail(function (jqxhr, settings, exception) {
+                    console.log(exception);
+                });
         };
 
         function init() {

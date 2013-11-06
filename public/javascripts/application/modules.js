@@ -99,7 +99,7 @@
     "use strict";
 
     try {
-        mod.TemplateServerSvc = new invertebrate.TemplateServerSvc(wizerati.mod("config").config, wizerati.mod("services").croniclService.getCroniclUri);
+        mod.TemplateUriHelper = new invertebrate.TemplateUriHelper(wizerati.mod("config").config, wizerati.mod("services").croniclService.getCroniclUri);
     }
     catch(e) {
         throw "problem registering templates module. " + e;
