@@ -9,7 +9,7 @@ http://pacific-plains-5947.herokuapp.com/
 
 1. Install base node modules for the application. To do this:
 
- - Copy the following into the root folder of the application:
+ - Copy the following into a file named `package.json` the root folder of the application:
 
 	{
 	  "name": "application-name",
