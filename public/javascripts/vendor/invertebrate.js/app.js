@@ -52,7 +52,7 @@
             that.templates = that.templates || {};
 
             if (that.templates[uri]) {
-                return done(that.templates[uri]);
+                return done(that.templates[uri]); //was done(...)
             }
 
             return $.ajax({ url: uri, cache: false })
