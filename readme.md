@@ -1,9 +1,12 @@
 wizerati
 ========
 
+Wizerati is an ongoing experimental project for me to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
+
+You can find a version of it online here:
+
 http://pacific-plains-5947.herokuapp.com/
 
-    git add -A && git commit -m "wip" &&  git push heroku master && git push origin master
 
 ##Launch Guide
 
@@ -62,6 +65,7 @@ http://evanhahn.com/understanding-express-js/
 ##Working with couch:
 
  - https://github.com/dscape/nano
- - 
+
+git add -A && git commit -m "wip" &&  git push heroku master && git push origin master
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
