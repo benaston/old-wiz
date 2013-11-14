@@ -3,7 +3,7 @@ wizerati
 
 Wizerati is an ongoing experimental project for me to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
 
-You can find a version of it online here:
+You can find a version of it online here (please note it has not been made cross-browser compatible yet, please use Chrome or Safari):
 
 http://pacific-plains-5947.herokuapp.com/
 
