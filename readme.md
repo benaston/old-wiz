@@ -68,4 +68,7 @@ http://evanhahn.com/understanding-express-js/
 
 git add -A && git commit -m "wip" &&  git push heroku master && git push origin master
 
+common.js has useful library functions for things like interfacing with CouchDBB: http://wiki.commonjs.org/wiki/CommonJS.
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
