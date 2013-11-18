@@ -23,28 +23,11 @@
 
     invertebrate.Model = Model;
 
-    //$.publish("sync://syncableModels/"); //review uri
     invertebrate.Model.prototype.sync = function () {
-        //persist and fetch from resource uri
-        return _.extend(this, new Object(json)); //?!
+        //this is a placeholder for future sync functionality
     };
 
-    //placeholder for method to hydrate object from json e.g. XHR
-    invertebrate.Model.prototype.function = function (json) {
-        return _.extend(this, new Object(json)); //?!
-    };
-
-    invertebrate.Model.prototype.get = function (json) {
-        //todo
-        console.log('get called');
-    };
-
-    invertebrate.Model.prototype.save = function (json) {
-        //todo
-        console.log('save called. resource name: ' + this.resourceName);
-    };
-
-    //'static' method
+    //todo: refactor off
     invertebrate.Model.isExtendedBy = function (child) {
         child.prototype = new invertebrate.Model();
         child.prototype.constructor = child;

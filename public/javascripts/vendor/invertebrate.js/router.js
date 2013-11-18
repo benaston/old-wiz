@@ -17,7 +17,7 @@
 
         this.redirect = function (uri) {
             history.pushState(null, null, uri);
-        }
+        };
 
         this.route = function (uri, dto, options) {
             options  = options || { silent: false };

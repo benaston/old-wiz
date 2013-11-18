@@ -20,7 +20,7 @@
     invertebrate.View.prototype.onDomReady = function () {
     };
 
-    //static method
+    //todo: refactor off
     invertebrate.View.isExtendedBy = function (child) {
         child.prototype = new invertebrate.View();
         child.prototype.constructor = child;

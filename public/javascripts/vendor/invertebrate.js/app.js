@@ -38,7 +38,7 @@
                         throw exception;
                     }
                 },
-                done = options.done, //function () { return options.done(that.metadata[uri]); }; //closes over the metadata variable
+                done = options.done,
                 ajaxDoneCallback = function (data) {
                     var tmpl = _.template(data);
                     that.templates[uri] = tmpl;
@@ -52,12 +52,12 @@
             that.templates = that.templates || {};
 
             if (that.templates[uri]) {
-                return done(that.templates[uri]); //was done(...)
+                return done(that.templates[uri]);
             }
 
             return $.ajax({ url: uri, cache: false })
-                .done(ajaxDoneCallback)
-                .fail(ajaxFailCallback);
+                    .done(ajaxDoneCallback)
+                    .fail(ajaxFailCallback);
         };
 
         that.renderTemplate = function ($el, templateName, model, options) {
@@ -87,7 +87,7 @@
                     var postRenderScriptUri = _templateServerSvc.getPostRenderScriptUri(options.postRenderScriptName);
                     that.fetchTemplatePostRenderScript(postRenderScriptUri, function (data) {
                         _templatePostRenderScripts[postRenderScriptUri]($, $el);
-                        options.done($el); //NOTE: this is in correct location (really)! Purpose: supply $el for posssible additional work, like dom insertion
+                        options.done($el); //NOTE: this is in correct location (really)! Purpose: supply $el for possible additional work, like dom insertion
                     });
                 } else {
                     options.done($el); //complete for when there is no post-render action script
@@ -127,5 +127,3 @@
 
     invertebrate.App = App;
 }(invertebrate));
-
-//todo consider wizerati metadata implementation

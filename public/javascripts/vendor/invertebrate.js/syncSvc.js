@@ -1,5 +1,3 @@
-//a resource can have a template, metadata and a post-render action?
-//note 1: meant to be a function to calculate left-part of the uri to point to to retrieve resources
 (function (invertebrate) {
     "use strict";
 
@@ -24,11 +22,11 @@
         };
 
         this.start = function () {
-            var syncinterval = _configSvc.syncinterval || 10;
+            var syncInterval = _configSvc.syncInterval || 10000;
 
             _syncInterval = setInterval(function () {
                 that.sync(null);
-            }, _syncInterval);
+            }, syncInterval);
         };
 
         this.stop = function () {
