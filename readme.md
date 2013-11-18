@@ -1,7 +1,7 @@
 wizerati
 ========
 
-Please note: I intend to move the JavaScript in Wizerati to be more idiomatic, adding methods to the prototype object instead of the actual objects themselves, but this is not high on my list of things to do at the moment.
+*Please note: I intend to move the JavaScript in Wizerati to be more idiomatic, adding methods to the prototype object instead of the actual objects themselves, but this is not high on my list of things to do at the moment.*
 
 Wizerati is an ongoing experimental project for me to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
 
