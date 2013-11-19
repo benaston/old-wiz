@@ -10,7 +10,7 @@ You can find a version of it online here (please note it has not been made cross
 http://pacific-plains-5947.herokuapp.com/
 
 
-Wizerati is based on my open source css bootstrap lucid.css (https://github.com/benaston/lucid).
+Wizerati is based on my open source CSS bootstrap lucid.css (https://github.com/benaston/lucid).
 
 ##Launch Guide
 
