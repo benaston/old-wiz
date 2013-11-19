@@ -10,7 +10,7 @@ You can find a version of it online here (please note it has not been made cross
 http://pacific-plains-5947.herokuapp.com/
 
 
-Wizerati is based on my open source css bootstrap (lucid.css)[1].
+Wizerati is based on my open source css bootstrap lucid.css (https://github.com/benaston/lucid).
 
 ##Launch Guide
 
@@ -70,7 +70,6 @@ http://evanhahn.com/understanding-express-js/
 
  - https://github.com/dscape/nano
 
-[1] https://github.com/dscape/nano
 git add -A && git commit -m "wip" &&  git push heroku master && git push origin master
 
 common.js has useful library functions for things like interfacing with CouchDBB: http://wiki.commonjs.org/wiki/CommonJS.
