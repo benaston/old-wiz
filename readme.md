@@ -26,7 +26,7 @@ Wizerati is based on my open source CSS bootstrap lucid.css (https://github.com/
 ###Application Initialisation Sequence
 
 1. Vendor libraries are included/initialised.
-2. Root "namespace" object is created. The root object is `window.wizerati`, this forms a top-level "namespace" and is created in `public/javascripts/application/wizerati.js`. Everything in the application (apart from JavaScript from 3rd party vendors) hangs off this - both constructor functions and object instances required for application operation. This is therefore the first application object to be created.
+2. Root "namespace" object is created. The root object is `window.wizerati`, this forms a top-level "namespace" and is created in `public/javascripts/application/wizerati.js`. Everything in the application hangs off this (apart from JavaScript from 3rd party vendors). This is therefore the first application object to be created.
 3. All constructor functions known about at this point (models, views, controllers, services, repositories, caches and so on and so on) are registered with the root namespace object.
 4. The runtime object-graph is then initialised ("wired-up") in modules.js, with dependencies between objects constructor-injected.
 5. The application constructor function is registered with the root object (`App.js`). This inherits from invertebrate.App to gain easy access to client-side routing and templating.
