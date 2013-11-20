@@ -12,6 +12,16 @@ http://pacific-plains-5947.herokuapp.com/
 
 Wizerati is based on my open source CSS bootstrap lucid.css (https://github.com/benaston/lucid).
 
+##Technical Details
+
+The root object is `window.wizerati`, this forms a top-level "namespace". Everything in the application (apart from JavaScript from 3rd party vendors) hangs off this - both constructor functions and object instances required for application operation.
+
+The running instance of the application is located at `window.wizerati.instance`.
+
+Integration with the client-side MVC framework (`invertebrate.js`) is achieved through prototypical inheritance from `invertebrate.App`. `invertebrate.App` provides client-side routing and templating functionality.
+
+Application wireup is performed inside modules.js. This instantiates the objects required for Wizerati to operate, placing them into string-based "namespaces" before the DOM is rendered.
+
 ##Launch Guide
 
 1. Install base node modules for the application. To do this:
