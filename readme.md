@@ -14,13 +14,27 @@ Wizerati is based on my open source CSS bootstrap lucid.css (https://github.com/
 
 ##Technical Details
 
-The root object is `window.wizerati`, this forms a top-level "namespace". Everything in the application (apart from JavaScript from 3rd party vendors) hangs off this - both constructor functions and object instances required for application operation.
+###"Vendor" libraries:
 
-The running instance of the application is located at `window.wizerati.instance`.
+- Underscore.js (string/collection utility methods)
+- jQuery (DOM manipulation)
+- TinyPubSub (string-based messaging)
+- _Cookie.js (cookie manipulation)
+- FastClick.js (click delay correction on touch devices - this is currently disabled)
+- Invertebrate.js (client-side MVC, client-side routing, templating)
 
-Integration with the client-side MVC framework (`invertebrate.js`) is achieved through prototypical inheritance from `invertebrate.App`. `invertebrate.App` provides client-side routing and templating functionality.
+###Application Initialisation Sequence
 
-Application wireup is performed inside modules.js. This instantiates the objects required for Wizerati to operate, placing them into string-based "namespaces" before the DOM is rendered.
+1. Vendor libraries are included/initialised.
+2. Root "namespace" object is created. The root object is `window.wizerati`, this forms a top-level "namespace" and is created in `public/javascripts/application/wizerati.js`. Everything in the application (apart from JavaScript from 3rd party vendors) hangs off this - both constructor functions and object instances required for application operation. This is therefore the first application object to be created.
+3. All constructor functions known about at this point (models, views, controllers, services, repositories, caches and so on and so on) are registered with the root namespace object.
+4. The runtime object-graph is then initialised ("wired-up") in modules.js, with dependencies between objects constructor-injected.
+5. The application constructor function is registered with the root object (`App.js`). This inherits from invertebrate.App to gain easy access to client-side routing and templating.
+6. The DOM is rendered.
+7. The onDomReady function on all the views is invoked to give any functionality requiring the DOM to be built a chance to run before the user gets to use the application.
+8. The application instance (i.e. the Wizerati invertebrate application) is instantiated in `appStart.js`, the router is initialised and then the routes are registered. Leaving router initialisation until this late stage ensures that the user will be unable to invoke routes before the application is ready to deal with the requests.
+
+When initialised, the running instance of the application is located at `window.wizerati.instance`.
 
 ##Launch Guide
 
