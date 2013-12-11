@@ -3,6 +3,8 @@ wizerati
 
 *Please note: I intend to move the JavaScript in this application to be more idiomatic, adding methods to the prototype object instead of the actual objects themselves, but this is not high on my list of things to do at the moment.*
 
+*This version of Wizerati is built using my own invertebrate.js client-side MVC framework.*
+
 Wizerati is an ongoing experimental project for me to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
 
 You can find a version of it online here (please note it has not been made cross-browser compatible yet, please use Chrome or Safari):
