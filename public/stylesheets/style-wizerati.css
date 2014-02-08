@@ -225,10 +225,10 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 .thumbnail-info.actioned {
     border-radius: 29px;
-    background-color: rgba(0, 109, 204, 1);
-    color: white;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;
-    font-size: .6rem;
+    /*background-color: rgba(0, 109, 204, 1);*/
+    color: #333;
+    /*box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;*/
+    font-size: .9rem;
 }
 
 .thumbnail-108 .thumbnail-info.actioned {
@@ -243,9 +243,9 @@ body[data-ui-mode='0'] #advertiser-help {
 .thumbnail-info.thumbnail-info-pinned {
     display: none;
     border-radius: 29px;
-    background-color: rgba(0, 109, 204, 1);
-    color: white;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;
+    /*background-color: rgba(0, 109, 204, 1);*/
+    color: #333;
+    /*box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(0, 109, 204, 1) !important;*/
 }
 
 .thumbnail h3 {

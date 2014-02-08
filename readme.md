@@ -74,3 +74,22 @@ common.js has useful library functions for things like interfacing with CouchDBB
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+Finding businesses, online find the top several thousand companies my revenue then search linkedin "recruitment manager x-company-name". Connnect and then contact directly.
+
+
+TODO: standardise on node conventions thorughout.
+
+
+e.g.
+
+        myCallback: function(err, result) {
+            if(err) {
+                console.log("ERROR: " + err);
+                return;
+            }
+
+            //callback stuff
+        },
+
+Include browserify, to enable Node-like syntax on both client and server.
+

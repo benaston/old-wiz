@@ -49,7 +49,7 @@
             $.each(that.Model.getFavorites(), function (index1, faceFavorites) {
                 var $face = that.$el.find(_faceEls[index1]);
                 var $faceSelectorSpots = that.$el.find('.face-selector:nth-child(' + (index1+1) +') .spot'); //plus 1 because 1-based in DOM
-                $face.empty();
+                $face.empty().append('<p class="face-empty-message">you have no favourites here</p>');
                 $faceSelectorSpots.empty();
                 $.each(faceFavorites, function(index2, f){
                     _favoriteViewFactory.create(f, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v) {
