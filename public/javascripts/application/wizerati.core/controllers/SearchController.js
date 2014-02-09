@@ -21,7 +21,12 @@
 
         this.show = function (dto) {
             try {
-//                console.log("fix the issue where search terms are lost when clicking search. get search button rotating correctly. style should indicate it is a button with a user-wait state (i.e. the wait cannot be shielded from the user).");
+                if(dto.__isInvertebrateExternal__) {
+                    _searchFormModel.setKeywords(dto.keywords, {silent:true});
+                    _searchFormModel.setLocation(dto.location, {silent:true});
+                    _searchFormModel.setRate(dto.r, {silent:true});
+                }
+
                 _uiRootModel.setUIMode(_uiModeEnum.Search);
                 _searchFormModel.setIsWaiting("true");
                 _searchService.runSearch(dto.keywords,
@@ -40,7 +45,7 @@
         };
 
         this.uriTransformShow = function (uri, dto) {
-            return uri + '?keywords=' + dto.keywords + "&location=" + dto.location + "&r=" + dto.r;
+            return uri + '?keywords=' + encodeURIComponent(dto.keywords) + "&location=" + encodeURIComponent(dto.location) + "&r=" + encodeURIComponent(dto.r);
         };
 
         function init() {

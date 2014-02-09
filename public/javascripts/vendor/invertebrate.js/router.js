@@ -9,7 +9,9 @@
         this.routes = {};
 
         this.registerRoute = function (uri, action, options) {
-            var defaults = { silent: false, title: _defaultPageTitle, uriTransform: function(uri, dto) { return uri; } };
+            var defaults = { silent: false, title: _defaultPageTitle, uriTransform: function (uri, dto) {
+                return uri;
+            }, isExternal: false };
             options = _.extend({}, defaults, options);
 
             that.routes[uri] = { action: action, options: options };
@@ -20,7 +22,7 @@
         };
 
         this.route = function (uri, dto, options) {
-            options  = options || { silent: false };
+            options = options || { silent: false };
 
             var splitUri = uri.split('?');
             var uriWithoutQueryString = splitUri[0];
@@ -51,7 +53,7 @@
             }
 
             var queryStringArguments = queryString.split('&');
-            route.action(extractQueryString(queryStringArguments));
+            route.action(extractQueryString(queryStringArguments, options.isExternal));
         };
 
         function routeHyperlink(evt) {
@@ -78,34 +80,41 @@
         function createDtoFromForm($form) {
             var dto = {};
             var $textfields = $form.find('input[type=text],input[type=password]');
-            _.each($textfields, function($t) { dto[$t.name] = $t.value; })
+            _.each($textfields, function ($t) {
+                dto[$t.name] = $t.value;
+            })
 
             var $selections = $form.find('input[type=radio]:checked,input[type=checkbox]:checked');
-            _.each($selections, function($r) { dto[$r.name] = $r.value; })
+            _.each($selections, function ($r) {
+                dto[$r.name] = $r.value;
+            })
 
             return dto;
         }
 
-        function extractQueryString(queryString) {
+        function extractQueryString(queryString, isExternal) {
             if (queryString == "") return {};
-            var b = {};
+            var dto = {};
             for (var i = 0; i < queryString.length; ++i) {
                 var p = queryString[i].split('=');
                 if (p.length != 2) continue;
-                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                dto[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
             }
-            return b;
+
+            dto.__isInvertebrateExternal__ = isExternal;
+            return dto;
         }
 
         function init() {
-            if(!defaultPageTitle) {
+            if (!defaultPageTitle) {
                 throw 'defaultPageTitle not supplied.';
             }
 
             _defaultPageTitle = defaultPageTitle;
 
             window.addEventListener("popstate", function (e) {
-                that.route(location.pathname + location.search, null, {silent:true});
+                debugger;
+                that.route(location.pathname + location.search, null, {silent: true, isExternal: true });
             });
 
             $(document).on('click', 'a:not([data-bypass-router])', routeHyperlink);

@@ -47,7 +47,6 @@
         this.postRender = function () {
         };
 
-
         //We take control here in the view of changes to the view when the wait state changes (i.e. we do not leave this to the usual template rendering process).
         //We do this because we want to control the precise timings of the checks to correspond to individual revolutions of the wait animation.
         //This enables us to always stop the animation at its natural end, rather than stopping the animation half way through, which looks jarring.

@@ -51,7 +51,6 @@ body[data-ui-mode='1'] #result-list-panel {
     color: #333;
     text-decoration: none;
     transition: opacity .05s linear;
-
     position: fixed;
     top: 249px;
     height: 74px;
@@ -66,13 +65,14 @@ body[data-ui-mode='1'] #result-list-panel {
     font-weight: bold;
     z-index: 1;
     cursor: pointer;
-}
-
-body[data-ui-mode='0'] #search-panel .handle {
     visibility: hidden;
 }
 
-#search-panel .handle .handle-icon {
+body[data-ui-mode='1'] #search-panel .handle {
+    visibility: visible;
+}
+
+#search-panel .handle .handle-icon {    
     font-family: pictos;
     font-size: 2rem;
     line-height: 2rem;

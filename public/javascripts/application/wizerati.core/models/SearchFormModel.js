@@ -24,15 +24,35 @@
 
             _keywords = value;
 
-            if (options && options.silent === true) {
-                return;
+            if (options.silent === false) {
+                $.publish(that.updateEventUri);
             }
-
-            $.publish(that.updateEventUri);
         };
 
         this.getLocation = function () {
             return _location;
+        };
+
+        this.setLocation = function (value, options) {
+            options = options || { silent: false };
+            _location = value;
+
+            if (options.silent === false) {
+                $.publish(that.updateEventUri);
+            }
+        };
+
+        this.getRate = function () {
+            return _rate;
+        };
+
+        this.setRate = function (value, options) {
+            options = options || { silent: false };
+            _rate = value;
+
+            if (options.silent === false) {
+                $.publish(that.updateEventUri);
+            }
         };
 
         this.getIsWaiting = function () {
@@ -52,33 +72,9 @@
 
             _isWaiting = value;
 
-            if (options.silent !== true) {
+            if (options.silent === false) {
                 $.publish(that.updateEventUri);
             }
-        };
-
-        this.setLocation = function (value, options) {
-            _location = value;
-
-            if (options && options.silent === true) {
-                return;
-            }
-
-            $.publish(that.updateEventUri);
-        };
-
-        this.getRate = function () {
-            return _rate;
-        };
-
-        this.setRate = function (value, options) {
-            _rate = value;
-
-            if (options && options.silent === true) {
-                return;
-            }
-
-            $.publish(that.updateEventUri);
         };
 
         function init() {
