@@ -39,9 +39,8 @@
 </head>
 <body class="lucid-app-wrapper" data-ui-mode="0">
 <div class="main">
-    <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible">
-    </div>
-    <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible">
+    <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible" data-mode="0">
+        <a class="handle" href="/searchpanelmode/update?mode=1"><span class="handle-icon">4</span></a>
         <div id="search-form">
         </div>
         <section id="favorites-cube" class="cube-container hide">
@@ -298,6 +297,7 @@
 <script src="./javascripts/application/wizerati.core/models/HiddenItemsModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/ActionedItemsModel.js"></script>
 <script src="./javascripts/application/wizerati.core/models/PurchasePanelModel.js"></script>
+<script src="./javascripts/application/wizerati.core/models/SearchPanelModel.js"></script>
 
 <script src="./javascripts/application/wizerati.core/views/ContractFavoriteView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/ContractItemOfInterestView.js"></script>
@@ -312,6 +312,7 @@
 <script src="./javascripts/application/wizerati.core/views/SearchFormView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/UIRootView.js"></script>
 <script src="./javascripts/application/wizerati.core/views/PurchasePanelView.js"></script>
+<script src="./javascripts/application/wizerati.core/views/SearchPanelView.js"></script>
 
 <script src="./javascripts/application/wizerati.core/controllers/AdvertisersController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/FavoritesController.js"></script>
@@ -328,6 +329,7 @@
 <script src="./javascripts/application/wizerati.core/controllers/AccountActivationController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/AccountActivationPanelController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/PurchasePanelAccountsController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/SearchPanelModeController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>

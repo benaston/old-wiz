@@ -93,6 +93,10 @@
             that.router.registerRoute('/purchasepanelaccounts/create', function (dto) {
                 app.mod("controllers").purchasePanelAccountsController.create(dto);
             });
+
+            that.router.registerRoute('/searchpanelmode/update', function (dto) {
+                app.mod("controllers").searchPanelModeController.update(dto);
+            }, { silent: true });
         };
 
         function init() {

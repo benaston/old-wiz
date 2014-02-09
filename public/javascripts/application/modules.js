@@ -22,6 +22,11 @@
             AccountActivation: "3"
         };
 
+        mod.SearchPanelMode = {
+            Default: "0",
+            Minimized: "1"
+        };
+
     } catch(e)
     {
         throw "problem registering enum module. " + e;
@@ -122,6 +127,7 @@
         mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(wizerati.mod("repositories").itemRepository, mod.resultListModel);
         mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
         mod.purchasePanelModel = new wizerati.PurchasePanelModel();
+        mod.searchPanelModel = new wizerati.SearchPanelModel();
     }
     catch(e) {
         throw "problem registering models module. " + e;
@@ -155,6 +161,7 @@
         mod.resultListView = new wizerati.ResultListView(wizerati.mod("models").resultListModel, wizerati.mod("factories").resultViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel, wizerati.mod("models").itemsOfInterestModel);
         mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel, wizerati.mod("factories").itemOfInterestViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.purchasePanelView = new wizerati.PurchasePanelView(wizerati.mod("models").purchasePanelModel);
+        mod.searchPanelView = new wizerati.SearchPanelView(wizerati.mod("models").searchPanelModel);
     }
     catch(e) {
         throw "problem registering views module. " + e;
@@ -187,6 +194,7 @@
         mod.accountActivationController = new wizerati.AccountActivationController(wizerati.mod("models").uiRootModel);
         mod.accountActivationPanelController = new wizerati.AccountActivationPanelController(wizerati.mod("models").uiRootModel);
         mod.purchasePanelAccountsController = new wizerati.PurchasePanelAccountsController(wizerati.mod("models").purchasePanelModel, wizerati.mod("services").accountService);
+        mod.searchPanelModeController = new wizerati.SearchPanelModeController(wizerati.mod("models").searchPanelModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;
