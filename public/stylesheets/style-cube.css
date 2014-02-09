@@ -17,7 +17,7 @@ figure {
     margin: auto;
     margin-bottom: 35px; /*space for face label*/
     -webkit-user-select: none;
-    top: 30px;
+    top: 36px;
 }
 
 .cube-container:not([data-selected-face-id='0']) .cube-controls .face-selector:nth-child(1):hover,
