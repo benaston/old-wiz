@@ -28,6 +28,10 @@
         };
 
         this.destroy = function (dto) {
+            if (!dto) {
+                throw "dto not supplied."
+            }
+
             _favoritesCubeModel.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
         };
 
