@@ -66,6 +66,7 @@
                 case _roleEnum.Employer:
                 case _roleEnum.EmployerStranger:
                     _itemRepository.getById(id, function (item) {
+                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6 && !_hiddenItemsModel.isHidden(item.id)
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isPinned = !isSelectedItem;
@@ -74,6 +75,7 @@
                         });
                         item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
+                        item.isHideable = !(_favoritesCubeModel.isFavoriteOnAnyFace(item.id));
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
                         var $e = new app.ContractorItemOfInterestView(item).render().$el;
                         done($e)
@@ -82,7 +84,7 @@
                 case _roleEnum.Contractor:
                 case _roleEnum.ContractorStranger:
                     _itemRepository.getById(id, function (item) {
-                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6
+                        item.isFavoritable = _favoritesCubeModel.getFavorites()[currentCubeFace].length < 6 && !_hiddenItemsModel.isHidden(item.id)
                         item.isFavorite = item["isFavoriteOnFace" + currentCubeFace];
                         item.isSelected = isSelectedItem;
                         item.isPinned = !isSelectedItem;
@@ -91,6 +93,7 @@
                         }));
                         item.shouldAnimateIn = animateSelectedItem && isSelectedItem && _itemsOfInterestModel.getItemsOfInterest().pinnedItems.length > 0 && !_selectedItemModel.getPreviouslySelectedItemId();
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
+                        item.isHideable = !(_favoritesCubeModel.isFavoriteOnAnyFace(item.id));
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
                         done(new app.ContractItemOfInterestView(item).render().$el)
                     });

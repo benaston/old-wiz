@@ -84,3 +84,6 @@
     app.SearchController = SearchController;
 
 }(wizerati));
+
+
+//throw "script downloaded to be assigned to an object in a known location and then subsequently invoked by the search controller for wait, success, fail, timeout";

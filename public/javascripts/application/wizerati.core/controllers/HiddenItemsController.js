@@ -11,8 +11,6 @@
             _hiddenItemsModel = null;
 
         this.create = function (dto) {
-            throw "script donloaded to be assigned to an object ina  known location and then subsequently invoked by the search controller for wait, success, fail, timeout";
-
             if (!dto) {
                 throw "dto not supplied."
             }

@@ -8,7 +8,6 @@
         }
 
         var that = this,
-            //id="selected-item"
             _el = '<article class="item-of-interest overflow-y-scroll overflow-x-hidden lucid-column"></article>',
             _templateName = "item-of-interest.html";
 

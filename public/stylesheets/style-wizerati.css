@@ -45,8 +45,6 @@ body[data-ui-mode='1'] #result-list-panel {
     opacity: .95;
 }
 
-
-
 #search-panel .handle {
     color: #333;
     text-decoration: none;
@@ -72,7 +70,7 @@ body[data-ui-mode='1'] #search-panel .handle {
     visibility: visible;
 }
 
-#search-panel .handle .handle-icon {    
+#search-panel .handle .handle-icon {
     font-family: pictos;
     font-size: 2rem;
     line-height: 2rem;
@@ -140,7 +138,7 @@ body[data-ui-mode='1'] #search-form, body[data-ui-mode='0'] #search-form {
     text-align: left;
     transition: top .5s ease-in-out;
     margin: auto;
-    top:0; /*required for transition to occur on the vertical*/
+    top: 0; /*required for transition to occur on the vertical*/
 }
 
 .contractor-help {
@@ -874,3 +872,15 @@ textarea:focus + .meta-info {
 /*.btn-apply:after{*/
 /*content: "Apply";*/
 /*}*/
+
+a.hidden:before {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    display: block;
+    content: 'hidden';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    -webkit-transform: rotate(-45deg);
+}

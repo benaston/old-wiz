@@ -1,4 +1,4 @@
-<% try { %>
+<% try { debugger; %>
 <div class="item-of-interest-width-maintainer">
     <div id="top1" class="in-page-anchor-target"></div>
     <section class="menu"><ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">
@@ -9,14 +9,16 @@
             <li><a href="">Pinned Item 5</a></li>
             <li><a href="">Pinned Item 6</a></li>
         </ul><div class="inline-block centered-text width-62"><a
-                href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>"
+                <%=(model.isFavoritable || model.isFavorite) ? 'href' : 'disabled'%>="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>"
                 class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite checked' : '' %> btn-favorite"
-                title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites<% } %>">S</a>
+                title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites / You cannot favorite hidden items<% } %>">S</a>
             <div class="label">favorite</div>
         </div><div class="inline-block centered-text width-62"><a
-                href="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>"
-                class="btn btn-40 btn-primary <%=model.isHidden ? 'checked' : '' %> btn-hide"
-                title="Hide this from future results">-</a>
+
+                <%=(model.isHideable || model.isHidden) ? 'href' : 'disabled'%>="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>"
+                class="btn btn-40 btn-primary <%=(model.isHidden ? 'checked' : '')%> btn-hide <% if(!model.isHideable) {%>disabled <%}%>"
+
+                    title="<%=model.isHideable ? 'Hide this from future results' : 'You cannot hide items that are favorites' %>">-</a>
             <div class="label">hide</div>
         </div><div class="inline-block centered-text width-62"><a
                 href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>"

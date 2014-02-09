@@ -6,13 +6,7 @@
     //use JQUery scrollTop to reset scroll position of
     //scrolled elements
     //fix jankiness of item selection and items of interest update
-    function ItemsOfInterestView(model,
-                                 itemOfInterestViewFactory,
-                                 selectedCubeFaceModel,
-                                 selectedItemModel,
-                                 favoritesCubeModel,
-                                 hiddenItemsModel,
-                                 actionedItemsModel) {
+    function ItemsOfInterestView(model, itemOfInterestViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel, hiddenItemsModel, actionedItemsModel) {
 
         if (!(this instanceof app.ItemsOfInterestView)) {
             return new app.ItemsOfInterestView(model,
@@ -56,14 +50,16 @@
         }
 
         this.renderWithSelectedItemAnimation = function () {
-            renderPrivate(true);
+            renderPrivate();
         }
 
         this.render = function () {
-               renderPrivate(false);
+            renderPrivate({ animateSelectedItem: false });
         };
 
-        function renderPrivate(animateSelectedItem) {
+        function renderPrivate(options) {
+            options = options || {animateSelectedItem: true};
+
             storeScrollTopValues();
             storeScrollLeftValue();
             that.$el.empty();
@@ -74,7 +70,7 @@
                 _itemOfInterestViewFactory.create(items.selectedItem,
                     _selectedCubeFaceModel.getSelectedCubeFaceId(),
                     true,
-                    animateSelectedItem,
+                    options.animateSelectedItem,
                     function ($v) {
 
                         function addSelectedItem() {
@@ -90,12 +86,15 @@
                         addPinnedItems(items.pinnedItems, addSelectedItem);
                     });
             } else {
-                addPinnedItems(items.pinnedItems, function() { $('body').scrollLeft(_scrollLeft); });
+                addPinnedItems(items.pinnedItems, function () {
+                    $('body').scrollLeft(_scrollLeft);
+                });
             }
         }
 
         function addPinnedItems(items, done) {
-            done = done || function () {};
+            done = done || function () {
+            };
 
             _.each(items, function (id) {
                 if (id === null) {

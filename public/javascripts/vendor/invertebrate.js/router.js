@@ -60,6 +60,11 @@
             var href = $(this).attr('href');
             var protocol = 'http//';
 
+            if(href == null) {
+                evt.preventDefault();
+                return;
+            }
+
             if (href.slice(protocol.length) !== protocol) {
                 evt.preventDefault();
                 that.route(href);

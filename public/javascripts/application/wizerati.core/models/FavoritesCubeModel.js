@@ -72,6 +72,20 @@
             });
         };
 
+        this.isFavoriteOnAnyFace = function (id) {
+            if (!id) {
+                throw "id not supplied";
+            }
+
+            return _favorites.map(function (a) {
+                return _.any(a, function (i) {
+                    return i === id;
+                });
+            }).reduce(function (prev, curr) {
+                return prev || curr;
+            });
+        };
+
         function init() {
             if (!itemRepository) {
                 throw "itemRepository not supplied.";
