@@ -30,9 +30,9 @@
                 done(result);
             }
 
-            $.ajax({ url: _croniclService.getCroniclUri() + 'items/' + id,
+            setTimeout(function(){$.ajax({ url: _croniclService.getCroniclUri() + 'items/' + id,
                      success: success,
-                     cache: false });
+                     cache: false });}, 2000);
         };
 
         function init() {

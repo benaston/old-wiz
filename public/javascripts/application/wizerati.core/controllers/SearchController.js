@@ -23,20 +23,24 @@
             try {
 //                console.log("fix the issue where search terms are lost when clicking search. get search button rotating correctly. style should indicate it is a button with a user-wait state (i.e. the wait cannot be shielded from the user).");
                 _uiRootModel.setUIMode(_uiModeEnum.Search);
-                _searchFormModel.setIsWaiting(true);
+                _searchFormModel.setIsWaiting("true");
                 _searchService.runSearch(dto.keywords,
                     dto.location,
-                    dto.rate,
+                    dto.r,
                     function (results) {
                         _itemCache.insert(results);
                         _resultListModel.setResults(_.map(results, function (r) {
                             return r.id;
                         }));
-                        _searchFormModel.setIsWaiting(false);
+                        _searchFormModel.setIsWaiting("false", {silent:true}); //silent to because we are taking special control over the rendering of the wait state.
                     });
             } catch (err) {
                 console.log("error: SearchController.show. " + err);
             }
+        };
+
+        this.uriTransformShow = function (uri, dto) {
+            return uri + '?keywords=' + dto.keywords + "&location=" + dto.location + "&r=" + dto.r;
         };
 
         function init() {

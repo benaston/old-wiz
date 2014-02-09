@@ -28,7 +28,7 @@
 
             that.router.registerRoute('/search', function (dto) {
                 app.mod("controllers").searchController.show(dto);
-            }, { title: 'Wizerati Search' });
+            }, { title: 'Wizerati Search', uriTransform: app.mod("controllers").searchController.uriTransformShow });
 
             that.router.registerRoute('/selecteditem/update', function (dto) {
                 app.mod("controllers").selectedItemController.update(dto);

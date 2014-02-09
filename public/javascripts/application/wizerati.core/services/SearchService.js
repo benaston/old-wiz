@@ -28,9 +28,9 @@
                 done(results);
             }
 
-            $.ajax({
+            setTimeout(function(){$.ajax({
                 url: _croniclService.getCroniclUri() + 'search',
-                success: success, cache: false });
+                success: success, cache: false });}, 5000);
         };
 
         function init() {

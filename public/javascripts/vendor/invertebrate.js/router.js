@@ -9,7 +9,7 @@
         this.routes = {};
 
         this.registerRoute = function (uri, action, options) {
-            var defaults = { silent: false, title: _defaultPageTitle };
+            var defaults = { silent: false, title: _defaultPageTitle, uriTransform: function(uri, dto) { return uri; } };
             options = _.extend({}, defaults, options);
 
             that.routes[uri] = { action: action, options: options };
@@ -41,7 +41,7 @@
 
             if (!route.options.silent && !options.silent) {
                 document.title = route.options.title;
-                history.pushState(null, null, uri);
+                history.pushState(null, null, route.options.uriTransform(uri, dto));
             }
 
             if (!queryString || dto) {

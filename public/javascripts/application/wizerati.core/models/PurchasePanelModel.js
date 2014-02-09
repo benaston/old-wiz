@@ -31,13 +31,18 @@
             return _isWaiting;
         }
 
-        this.setIsWaiting = function (value) {
+        this.setIsWaiting = function (value, options) {
+            options = options || { silent:false }
+
             if (!value) {
                 throw "value not supplied."
             }
 
             _isWaiting = value;
-            $.publish(that.updateEventUri);
+
+            if(!options.silent) {
+                $.publish(that.updateEventUri);
+            }
         };
 
         this.getActiveTab = function () {
