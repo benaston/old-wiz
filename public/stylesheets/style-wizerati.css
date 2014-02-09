@@ -738,15 +738,6 @@ textarea:focus + .meta-info {
     opacity: .3;
 }
 
-.actioned {
-
-    color: #97E67B;
-}
-
-.actioned:hover {
-    color: #97E67B;
-}
-
 .btn.hidden {
     color: #FF4981;
     opacity: 1;
