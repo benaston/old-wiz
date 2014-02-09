@@ -1,3 +1,15 @@
+#favorites-cube {
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+body[data-ui-mode='1'] #favorites-cube{
+    visibility: visible;
+    opacity: 1;
+    transition:opacity 1s ease-in-out;
+}
+
 footer {
     clear: both;
     top: 106px;

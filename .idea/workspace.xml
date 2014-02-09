@@ -22,74 +22,7 @@
     <favorites_list name="wizerati" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SearchFormModel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SearchFormModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="13" selection-start="4377" selection-end="4377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/SearchController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1380">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.33175355" vertical-offset="480" max-vertical-offset="5400">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2010">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchFormView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchFormView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="44" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1530">
-              <folding>
-                <marker date="1391963039000" expanded="true" signature="16:3957" placeholder="{...}" />
-                <marker date="1391963039000" expanded="true" signature="72:3855" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search-form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/contract/templates/search-form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-24.5" vertical-offset="132" max-vertical-offset="1200">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -115,7 +48,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/SearchPanelModeController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SearchPanelModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchPanelView.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-form-element.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/PurchasePanelModel.js" />
@@ -125,11 +57,12 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchFormView.js" />
         <option value="$PROJECT_DIR$/public/contract/templates/search-form.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SearchFormModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/SearchController.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -450,14 +383,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15903614" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2572234" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2572234" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32648125" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -489,13 +422,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="20" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="2010">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="27" selection-start="522" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
@@ -677,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="310" column="12" selection-start="11336" selection-end="11336" vertical-scroll-proportion="0.0" vertical-offset="4484" max-vertical-offset="5535">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/SearchPanelView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="915">
@@ -740,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="8" selection-start="4161" selection-end="4161" vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="3825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="113" column="23" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="2115">
@@ -793,15 +705,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="44" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1530">
           <folding>
-            <marker date="1391963039000" expanded="true" signature="16:3957" placeholder="{...}" />
-            <marker date="1391963039000" expanded="true" signature="72:3855" placeholder="{...}" />
+            <marker date="1391963039000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1391963039000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/contract/templates/search-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="2689" selection-end="2689" vertical-scroll-proportion="-24.5" vertical-offset="132" max-vertical-offset="1200">
+        <state line="48" column="0" selection-start="2689" selection-end="2689" vertical-scroll-proportion="0.92890996" vertical-offset="132" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
@@ -809,13 +721,6 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="13" selection-start="4377" selection-end="4377" vertical-scroll-proportion="0.0" vertical-offset="1145" max-vertical-offset="1815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2010">
           <folding />
         </state>
       </provider>
@@ -834,16 +739,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="23" selection-start="1541" selection-end="1541" vertical-scroll-proportion="0.5479452" vertical-offset="645" max-vertical-offset="13215">
+        <state line="405" column="5" selection-start="9656" selection-end="9660" vertical-scroll-proportion="-120.26923" vertical-offset="2948" max-vertical-offset="13215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="28" selection-start="3688" selection-end="3688" vertical-scroll-proportion="-16.666666" vertical-offset="680" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="-6.3461537" vertical-offset="0" max-vertical-offset="5715">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.33175355" vertical-offset="480" max-vertical-offset="5400">
+        <state line="47" column="0" selection-start="2950" selection-end="2950" vertical-scroll-proportion="-9.375" vertical-offset="480" max-vertical-offset="5400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="3858" selection-end="3858" vertical-scroll-proportion="2.7761195" vertical-offset="0" max-vertical-offset="2085">
           <folding />
         </state>
       </provider>

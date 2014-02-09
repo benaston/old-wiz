@@ -26,7 +26,7 @@
 
             var splitUri = uri.split('?');
             var uriWithoutQueryString = splitUri[0];
-            var queryString = splitUri[1];
+            var queryString = splitUri[1] || "";
 
             var escapedRoute = uriWithoutQueryString.replace(/\//g, '\\/');
             var pattern = new RegExp('^' + escapedRoute, 'g');
@@ -46,7 +46,7 @@
                 history.pushState(null, null, route.options.uriTransform(uri, dto));
             }
 
-            if (!queryString || dto) {
+            if (dto) {
                 route.action(dto);
 
                 return;
@@ -93,15 +93,19 @@
         }
 
         function extractQueryString(queryString, isExternal) {
-            if (queryString == "") return {};
             var dto = {};
+            dto.__isInvertebrateExternal__ = isExternal;
+
+            if (queryString === "") {
+                return dto;
+            }
+
             for (var i = 0; i < queryString.length; ++i) {
                 var p = queryString[i].split('=');
                 if (p.length != 2) continue;
                 dto[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
             }
 
-            dto.__isInvertebrateExternal__ = isExternal;
             return dto;
         }
 
@@ -114,6 +118,7 @@
 
             window.addEventListener("popstate", function (e) {
                 debugger;
+
                 that.route(location.pathname + location.search, null, {silent: true, isExternal: true });
             });
 
