@@ -12,7 +12,8 @@
 
         mod.UIMode = {
             GreenfieldSearch: "0",
-            Search: "1"
+            Search: "1",
+            SingleItem: "2"
         };
 
         mod.Modal = {
@@ -64,23 +65,6 @@
     "use strict";
 
     try {
-        mod.authenticationService = new wizerati.AuthenticationService();
-        mod.cookieService = new wizerati.CookieService();
-        mod.logInService = new wizerati.LogInService(mod.cookieService);
-        mod.croniclService = new wizerati.CroniclService(mod.logInService, wizerati.mod("config").config); //pass in login service instead?
-        mod.searchService = new wizerati.SearchService(mod.croniclService);
-        mod.accountService = new wizerati.AccountService(wizerati.mod("clients").wizeratiClient);
-    }
-    catch(e) {
-        throw "problem registering services module. " + e;
-    }
-
-}(wizerati.mod("services")));
-
-(function (mod) {
-    "use strict";
-
-    try {
         mod.itemCache = new wizerati.ItemCache();
     }
     catch(e) {
@@ -88,6 +72,23 @@
     }
 
 }(wizerati.mod("caches")));
+
+(function (mod) {
+    "use strict";
+
+    try {
+        mod.authenticationService = new wizerati.AuthenticationService();
+        mod.cookieService = new wizerati.CookieService();
+        mod.logInService = new wizerati.LogInService(mod.cookieService);
+        mod.croniclService = new wizerati.CroniclService(mod.logInService, wizerati.mod("config").config); //pass in login service instead?
+        mod.searchService = new wizerati.SearchService(mod.croniclService, wizerati.mod("caches").itemCache);
+        mod.accountService = new wizerati.AccountService(wizerati.mod("clients").wizeratiClient);
+    }
+    catch(e) {
+        throw "problem registering services module. " + e;
+    }
+
+}(wizerati.mod("services")));
 
 (function (mod) {
 
@@ -182,8 +183,7 @@
         mod.searchController = new wizerati.SearchController(wizerati.mod("models").uiRootModel,
             wizerati.mod("models").searchFormModel,
             wizerati.mod("services").searchService,
-            wizerati.mod("models").resultListModel,
-            wizerati.mod("caches").itemCache);
+            wizerati.mod("models").resultListModel);
         mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
         mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").selectedCubeFaceModel);
         mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);

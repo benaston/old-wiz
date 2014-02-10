@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Copyright Ben Aston 2013. All rights reserved. -->
+    <!-- Copyright Ben Aston 2014. All rights reserved. -->
     <meta name="author" content="Ben Aston">
 
     <link rel="stylesheet" type="text/css" href="./stylesheets/style-reset.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/style-animation.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-buttons.css">
     <link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-form-elements.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-dialogs.css">
 
     <noscript>
         <link rel="stylesheet" type="text/css" href="./stylesheets/style-noscript.css">
@@ -39,8 +40,8 @@
 
     <title>Wizerati</title>
 </head>
-<body class="lucid-app-wrapper" data-ui-mode="-1">
-<div class="main">
+<body class="lucid-app-wrapper modal-container" data-ui-mode="-1">
+<div class="main modal-bg">
     <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible" data-mode="0">
         <a class="handle" href="/searchpanelmode/update?mode=1"><span class="handle-icon">4</span></a>
         <div id="search-form">
@@ -254,6 +255,26 @@
                 <input type="button" class="btn btn-80 btn-cancel" value="*"/>
                 <input type="button" class="btn btn-80 btn-success" value="3"/>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-full-screen">
+    <div class="modal-content-container centered medium">
+        <div class="modal-content-panel">
+            <h1>This is a modal dialog</h1>
+            <p>You can write a message for your users here.</p>
+            <ul class="form-button-container">
+                <li class="centered-text form-button-container-item">
+                    <button class="btn btn-80" onclick="javascript:document.querySelector('.modal-container').classList.toggle('modal-visible')">*</button>
+                    <div class="label">cancel</div>
+                </li>
+                <li class="centered-text form-button-container-item">
+                    <button class="btn btn-80 btn-success" onclick="javascript:document.querySelector('.modal-container').classList.toggle('modal-visible')">3</button>
+                    <div class="label">ok</div>
+                </li>
+            </ul>
+
         </div>
     </div>
 </div>

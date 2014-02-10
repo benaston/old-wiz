@@ -122,8 +122,6 @@
             _defaultPageTitle = defaultPageTitle;
 
             window.addEventListener("popstate", function (e) {
-                debugger;
-
                 that.route(location.pathname + location.search, null, {silent: true, isExternal: true });
             });
 

@@ -1,6 +1,7 @@
 (function (app) {
     "use strict";
 
+    console.log("apply should prompt the user for credentials if not signed in, otherwise present the fields for registration")
     function App(env) {
         if (!(this instanceof app.App)) {
             return new app.App(env);

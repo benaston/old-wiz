@@ -2,14 +2,15 @@
 (function (app) {
     "use strict";
 
-    function SearchService(croniclService) {
+    function SearchService(croniclService, itemCache) {
 
         if (!(this instanceof app.SearchService)) {
-            return new app.SearchService(croniclService);
+            return new app.SearchService(croniclService, itemCache);
         }
 
         var that = this,
-            _croniclService = null;
+            _croniclService = null,
+            _itemCache = null;
 
         //rename to success, plus add timeout argument and error
         this.runSearch = function (keywords,
@@ -24,7 +25,7 @@
                 }
 
                 var results = $.parseJSON(data);
-
+                _itemCache.insert(results);
                 done(results);
             }
 
@@ -38,7 +39,12 @@
                 throw "croniclService not supplied."
             }
 
+            if (!itemCache) {
+                throw "itemCache not supplied."
+            }
+
             _croniclService = croniclService;
+            _itemCache = itemCache;
 
             return that;
         }
