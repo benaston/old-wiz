@@ -31,15 +31,19 @@
             _hiddenItemsModel = null,
             _itemsOfInterestModel = null;
 
-        this.$el =
+        this.$el = null;
+
         this.Model = null;
 
         this.render = function () {
             that.$el.empty();
             _.each(that.Model.getResults(), function (id) {
-                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
-                    that.$el.append($v);
-                });
+                setTimeout(function(){
+                    _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+                        that.$el.append($v);
+                    });
+                }, 0);
+
             });
         };
 
