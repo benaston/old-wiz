@@ -45,7 +45,7 @@
                 });
             });
 
-            that.$el.append($buffer.children());
+            that.$el.append($buffer);
         };
 
         function renderResults(results, index){
