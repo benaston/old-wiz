@@ -37,15 +37,35 @@
 
         this.render = function () {
             that.$el.empty();
-            _.each(that.Model.getResults(), function (id) {
-                setTimeout(function(){
-                    _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
-                        that.$el.append($v);
-                    });
-                }, 0);
+            var results = that.Model.getResults();
 
-            });
+            renderResults(results);
+//            setTimeout()
+//            _.each(that.Model.getResults(), function (id) {
+//                setTimeout(function(){
+//
+//                }, 0);
+//
+//                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+//                    that.$el.append($v);
+//                });
+//
+//            });
         };
+
+        function renderResults(results, index){
+            index = index === undefined ? 0 : index;
+
+            if(index === results.length) {
+                return;
+            }
+
+            _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+                that.$el.append($v);
+            });
+
+            setTimeout(function(){ renderResults(results, index++) }, 150);
+        }
 
         this.onDomReady = function(){
             that.$el = $(_el);
