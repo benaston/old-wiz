@@ -4,9 +4,14 @@
     <p class="rate"><%= model.rateLower %> GBP/day</p>
     <p class="location-and-posted"><%= model.location %></p>
     <% if(model.isActioned) { %>
-    <a class="thumbnail-info pictos actioned" href="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>" title="One-click apply">
+    <div class="thumbnail-info pictos actioned" title="Applied">
         2
-    </a>
+    </div>
+    <% } %>
+    <% if(model.isItemOfInterest) { %>
+    <div class="thumbnail-info pictos item-of-interest" title="Pinned">
+        @
+    </div>
     <% } %>
 </a>
 <%

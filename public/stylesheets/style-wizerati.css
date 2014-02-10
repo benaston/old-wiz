@@ -301,6 +301,11 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-108 .thumbnail-info.actioned {
+    left: 25px;
+    top: 57px;
+}
+
+.thumbnail-108 .thumbnail-info.item-of-interest {
     left: 5px;
     top: 57px;
 }

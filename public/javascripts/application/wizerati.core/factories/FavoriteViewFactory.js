@@ -5,14 +5,16 @@
                                  itemRepository,
                                  selectedItemModel,
                                  hiddenItemsModel,
-                                 actionedItemsModel) {
+                                 actionedItemsModel,
+                                 itemsOfInterestModel) {
 
         if (!(this instanceof app.FavoriteViewFactory)) {
             return new app.FavoriteViewFactory(loginService,
                                                itemRepository,
                                                selectedItemModel,
                                                hiddenItemsModel,
-                                               actionedItemsModel);
+                                               actionedItemsModel,
+                                               itemsOfInterestModel);
         }
 
         var that = this,
@@ -21,6 +23,7 @@
             _selectedItemModel = null,
             _hiddenItemsModel = null,
             _actionedItemsModel = null,
+            _itemsOfInterestModel = null,
             _roleEnum = app.mod("enum").UserRole;
 
         this.create = function (id, currentCubeFace, done) {
@@ -33,6 +36,7 @@
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
+                        item.isItemOfInterest = _itemsOfInterestModel.isItemOfInterest(item.id);
                         done(new app.ContractorFavoriteView(item).render().$el)
                     });
                     break;
@@ -43,6 +47,7 @@
                         item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
+                        item.isItemOfInterest = _itemsOfInterestModel.isItemOfInterest(item.id);
                         done(new app.ContractFavoriteView(item).render().$el)
                     });
                     break;
@@ -72,11 +77,16 @@
                 throw "actionedItemsModel not supplied."
             }
 
+            if (!itemsOfInterestModel) {
+                throw "itemsOfInterestModel not supplied."
+            }
+
             _loginService = loginService;
             _itemRepository = itemRepository;
             _selectedItemModel = selectedItemModel;
             _hiddenItemsModel = hiddenItemsModel;
             _actionedItemsModel = actionedItemsModel;
+            _itemsOfInterestModel = itemsOfInterestModel;
 
             return that;
         }

@@ -14,6 +14,11 @@
 
         this.updateEventUri = "update://ItemsOfInterestModel/";
 
+        this.isItemOfInterest = function (id) {
+
+            return (_itemsOfInterest.pinnedItems.indexOf(id)) != -1;
+        }
+
         this.getItemsOfInterest = function () {
             return _itemsOfInterest;
         }
