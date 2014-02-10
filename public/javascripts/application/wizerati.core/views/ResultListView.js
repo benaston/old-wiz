@@ -64,7 +64,7 @@
                 that.$el.append($v);
             });
 
-            setTimeout(function(){ renderResults(results, index++) }, 150);
+            setTimeout(function(){ renderResults(results, index++) }, 250);
         }
 
         this.onDomReady = function(){
