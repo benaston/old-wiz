@@ -37,20 +37,15 @@
 
         this.render = function () {
             that.$el.empty();
-            var results = that.Model.getResults();
+            var $buffer = $('<div></div>');
 
-            renderResults(results);
-//            setTimeout()
-//            _.each(that.Model.getResults(), function (id) {
-//                setTimeout(function(){
-//
-//                }, 0);
-//
-//                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
-//                    that.$el.append($v);
-//                });
-//
-//            });
+            _.each(that.Model.getResults(), function (id) {
+                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+                    $buffer.append($v);
+                });
+            });
+
+            that.$el.append($buffer.children());
         };
 
         function renderResults(results, index){
@@ -64,7 +59,7 @@
                 that.$el.append($v);
             });
 
-            setTimeout(function(){ renderResults(results, index++) }, 250);
+            setTimeout(function(){ renderResults(results, ++index) }, 950);
         }
 
         this.onDomReady = function(){
