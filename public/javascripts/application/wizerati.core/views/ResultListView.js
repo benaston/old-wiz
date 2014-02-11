@@ -57,10 +57,23 @@
             that.$currentEl.addClass('ios-scroll-enable'); //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
             that.$currentEl.scrollTop(_scrollTopValue);
 
-                setTimeout(function () { //hides rendering from user for new searches (yes really)
+//            if(that.$currentEl.length === 0) {
+//                setTimeout(function () { //hides rendering from user for new searches (yes really)
+//                    that.$currentEl.removeClass('buffer');
+//                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
+//                }, 50);
+//            } else {
+//
+//            }
+//                setTimeout(function () { //hides rendering from user for new searches (yes really)
+//                    that.$currentEl.removeClass('buffer');
+//                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
+//                }, 0);
+
+//            setTimeout(function () { //hides rendering from user for new searches (yes really)
                     that.$currentEl.removeClass('buffer');
-                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
-                }, 50);
+                    /*setTimeout(function () { */$prevEl.addClass('buffer');  /*setTimeout(function () { */$prevEl.removeClass('ios-scroll-enable');/* },150); }, 0);*/
+//                }, 0);
         };
 
         function renderResults(results, index) {
