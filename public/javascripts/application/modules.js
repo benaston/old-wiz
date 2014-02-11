@@ -144,6 +144,7 @@
         mod.itemOfInterestViewFactory = new wizerati.ItemOfInterestViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").itemsOfInterestModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.resultViewFactory = new wizerati.ResultViewFactory(wizerati.mod("services").logInService, wizerati.mod("repositories").itemRepository, wizerati.mod("models").selectedItemModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel, wizerati.mod("models").itemsOfInterestModel);
         mod.wizeratiClientRequestFactory = new wizerati.WizeratiClientRequestFactory();
+        mod.guidFactory = new wizerati.GuidFactory();
     }
     catch(e) {
         throw "problem registering factories module. " + e;
@@ -183,7 +184,8 @@
         mod.searchController = new wizerati.SearchController(wizerati.mod("models").uiRootModel,
             wizerati.mod("models").searchFormModel,
             wizerati.mod("services").searchService,
-            wizerati.mod("models").resultListModel);
+            wizerati.mod("models").resultListModel,
+            wizerati.mod("factories").guidFactory);
         mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
         mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").selectedCubeFaceModel);
         mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);

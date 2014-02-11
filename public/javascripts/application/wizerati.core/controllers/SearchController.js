@@ -1,13 +1,13 @@
 (function (app) {
     "use strict";
 
-    function SearchController(uiRootModel, searchFormModel, searchService, resultListModel) {
+    function SearchController(uiRootModel, searchFormModel, searchService, resultListModel, guidFactory) {
 
         if (!(this instanceof app.SearchController)) {
             return new app.SearchController(uiRootModel,
                 searchFormModel,
                 searchService,
-                resultListModel);
+                resultListModel, guidFactory);
         }
 
         var that = this,
@@ -15,7 +15,8 @@
             _uiRootModel = null,
             _searchFormModel = null,
             _searchService = null,
-            _resultListModel = null;
+            _resultListModel = null,
+            _guidFactory = null;
 
         this.show = function (dto) {
             try {
@@ -33,7 +34,7 @@
                     function (results) {
                         _resultListModel.setResults(_.map(results, function (r) {
                             return r.id;
-                        }));
+                        }), _guidFactory.create());
                         _searchFormModel.setIsWaiting("false", {silent:true}); //silent to because we are taking special control over the rendering of the wait state.
                     });
             } catch (err) {
@@ -62,10 +63,15 @@
                 throw "resultListModel not supplied.";
             }
 
+            if (!guidFactory) {
+                throw "guidFactory not supplied.";
+            }
+
             _uiRootModel = uiRootModel;
             _searchFormModel = searchFormModel;
             _searchService = searchService;
             _resultListModel = resultListModel;
+            _guidFactory = guidFactory;
 
             return that;
         }

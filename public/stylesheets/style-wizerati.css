@@ -2,7 +2,7 @@
     color: gold !important;
 }
 
-body[data-ui-mode='1'] #result-list-panel {
+body[data-ui-mode='1'] .result-list-panel {
     display: inline-block;
 }
 
@@ -12,13 +12,20 @@ body[data-ui-mode='1'] #result-list-panel {
     top: 49px;
 }
 
-#result-list-panel {
+.result-list-panel.buffer {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+}
+
+.result-list-panel {
+    opacity: 1;
     width: 274px;
     left: 316px;
     display: none;
     -webkit-overflow-scrolling: touch;
     z-index: 0; /*required to ensure nothing overlaps the search panel*/
-    transition: left .1s ease-in-out;
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
 
 #search-panel[data-mode='1'] ~ #result-list-panel {

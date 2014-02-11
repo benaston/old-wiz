@@ -1,69 +1,92 @@
 (function (app) {
     "use strict";
 
-    function ResultListView(model,
-                            resultViewFactory,
-                            selectedCubeFaceModel,
-                            selectedItemModel,
-                            favoritesCubeModel,
-                            hiddenItemsModel,
-                            actionedItemsModel,
-                            itemsOfInterestModel) {
+    function ResultListView(model, resultViewFactory, selectedCubeFaceModel, selectedItemModel, favoritesCubeModel, hiddenItemsModel, actionedItemsModel, itemsOfInterestModel) {
 
         if (!(this instanceof app.ResultListView)) {
             return new app.ResultListView(model,
-                                          resultViewFactory,
-                                          selectedCubeFaceModel,
-                                          selectedItemModel,
-                                          favoritesCubeModel,
-                                          hiddenItemsModel,
-                                          actionedItemsModel,
-                                          itemsOfInterestModel);
+                resultViewFactory,
+                selectedCubeFaceModel,
+                selectedItemModel,
+                favoritesCubeModel,
+                hiddenItemsModel,
+                actionedItemsModel,
+                itemsOfInterestModel);
         }
 
         var that = this,
-            _el = "#result-list-panel",
+            _el1 = "#result-list-panel-1",
+            _el2 = "#result-list-panel-2",
             _resultViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
             _favoritesCubeModel = null,
             _actionedItemsModel = null,
             _hiddenItemsModel = null,
-            _itemsOfInterestModel = null;
+            _itemsOfInterestModel = null,
+            _scrollTopValue = 0,
+            _lastKnownSearchId = null;
 
-        this.$el = null;
-
+        this.$el1 = null;
+        this.$el2 = null;
+        this.$currentEl = null;
         this.Model = null;
 
+        function calculateScrollTopValueToMaintain($el) {
+            if(_lastKnownSearchId === that.Model.getSearchId()) {
+                _scrollTopValue = $el.scrollTop();
+            } else {
+                _scrollTopValue = 0;
+            }
+        }
+
         this.render = function () {
-            that.$el.empty();
-            var $buffer = $('<div></div>');
+            var $prevEl = that.$currentEl || that.$el2;
+            calculateScrollTopValueToMaintain($prevEl);
+            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1;
+
+            that.$currentEl.empty();
 
             _.each(that.Model.getResults(), function (id) {
-                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
-                    $buffer.append($v);
+                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+                    that.$currentEl.append($v);
                 });
             });
 
-            that.$el.append($buffer);
+            that.$currentEl.scrollTop(_scrollTopValue);
+
+            if(_lastKnownSearchId !== that.Model.getSearchId()) {
+                setTimeout(function () { //hides rendering from user for new searches (yes really)
+                    that.$currentEl.removeClass('buffer');
+                    $prevEl.addClass('buffer');
+                }, 0);
+            } else {
+                that.$currentEl.removeClass('buffer');
+                $prevEl.addClass('buffer');
+            }
+
+            _lastKnownSearchId = that.Model.getSearchId();
         };
 
-        function renderResults(results, index){
+        function renderResults(results, index) {
             index = index === undefined ? 0 : index;
 
-            if(index === results.length) {
+            if (index === results.length) {
                 return;
             }
 
-            _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function($v){
+            _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
                 that.$el.append($v);
             });
 
-            setTimeout(function(){ renderResults(results, ++index) }, 950);
+            setTimeout(function () {
+                renderResults(results, ++index)
+            }, 950);
         }
 
-        this.onDomReady = function(){
-            that.$el = $(_el);
+        this.onDomReady = function () {
+            that.$el1 = $(_el1);
+            that.$el2 = $(_el2);
             that.render();
         };
 

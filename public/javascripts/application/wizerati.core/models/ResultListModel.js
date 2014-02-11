@@ -7,6 +7,7 @@
         }
 
         var that = this,
+            _searchId = "initial-value",
             _results = []; //note these will be GUIDs - use the ItemCache for the actual objects
 
         this.updateEventUri = "update://ResultListModel/";
@@ -16,9 +17,14 @@
             return _results;
         };
 
-        this.setResults = function (value) {
+        this.getSearchId = function () {
 
+            return _searchId;
+        };
+
+        this.setResults = function (value, searchId) {
             _results = value;
+            _searchId = searchId;
 
             $.publish(that.updateEventUri);
         };
