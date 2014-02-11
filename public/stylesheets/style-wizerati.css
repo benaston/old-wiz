@@ -18,6 +18,11 @@ body[data-ui-mode='1'] .result-list-panel {
     transition: opacity .1s ease-in-out;
 }
 
+
+.ios-scroll-disable {
+    -webkit-overflow-scrolling: auto;
+}
+
 .result-list-panel {
     opacity: 1;
     width: 274px;
