@@ -26,6 +26,7 @@ body[data-ui-mode='1'] .result-list-panel {
     pointer-events: none;
 }
 
+/*This is added by javascript dynamically (as opposed to just being on the result-list-panel class all the time) to circumvent an issue in iOS whereby a hidden div receives the scroll input.*/
 .ios-scroll-enable {
     -webkit-overflow-scrolling: touch;
 }
@@ -35,7 +36,6 @@ body[data-ui-mode='1'] .result-list-panel {
     width: 274px;
     left: 316px;
     display: none;
-
     z-index: 0; /*required to ensure nothing overlaps the search panel*/
     transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
