@@ -16,7 +16,6 @@ body[data-ui-mode='1'] .result-list-panel {
     pointer-events: none;
     opacity: 0;
     transition: opacity .1s ease-in-out;
-    -webkit-overflow-scrolling: touch;
 }
 
 .result-list-panel {
@@ -887,4 +886,8 @@ a.hidden:before {
     font-weight: bold;
     color: #333;
     -webkit-transform: rotate(-45deg);
+}
+
+.display-none {
+    display: none;
 }

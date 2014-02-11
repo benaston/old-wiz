@@ -54,11 +54,12 @@
                 });
             });
 
+            $prevEl.removeClass('display-none');
             that.$currentEl.scrollTop(_scrollTopValue);
 
                 setTimeout(function () { //hides rendering from user for new searches (yes really)
                     that.$currentEl.removeClass('buffer');
-                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.empty(); }, 0); }, 0);
+                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.addClass('display-none'); }, 0); }, 0);
                 }, 0);
         };
 
