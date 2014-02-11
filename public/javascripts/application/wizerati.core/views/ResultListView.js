@@ -37,6 +37,7 @@
                 _scrollTopValue = $el.scrollTop();
             } else {
                 _scrollTopValue = 0;
+                _lastKnownSearchId = that.Model.getSearchId();
             }
         }
 
@@ -55,17 +56,10 @@
 
             that.$currentEl.scrollTop(_scrollTopValue);
 
-            if(_lastKnownSearchId !== that.Model.getSearchId()) {
                 setTimeout(function () { //hides rendering from user for new searches (yes really)
                     that.$currentEl.removeClass('buffer');
-                    $prevEl.addClass('buffer');
+                    setTimeout(function () { $prevEl.addClass('buffer'); }, 0);
                 }, 0);
-            } else {
-                that.$currentEl.removeClass('buffer');
-                $prevEl.addClass('buffer');
-            }
-
-            _lastKnownSearchId = that.Model.getSearchId();
         };
 
         function renderResults(results, index) {
