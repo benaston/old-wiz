@@ -54,8 +54,16 @@
                 });
             });
 
+            $prevEl.removeClass('ios-scroll-enable');
             that.$currentEl.addClass('ios-scroll-enable'); //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
             that.$currentEl.scrollTop(_scrollTopValue);
+            $prevEl.addClass('buffer');
+            that.$currentEl.removeClass('buffer');
+            setTimeout(function(){
+//                $prevEl.addClass('buffer');
+//                $prevEl.removeClass('ios-scroll-enable');
+            }, 0);
+
 
 //            if(that.$currentEl.length === 0) {
 //                setTimeout(function () { //hides rendering from user for new searches (yes really)
@@ -71,9 +79,11 @@
 //                }, 0);
 
 //            setTimeout(function () { //hides rendering from user for new searches (yes really)
-                    that.$currentEl.removeClass('buffer');
-                    /*setTimeout(function () { */$prevEl.addClass('buffer');  /*setTimeout(function () { */$prevEl.removeClass('ios-scroll-enable');/* },150); }, 0);*/
+//                    that.$currentEl.removeClass('buffer');
+//                    /*setTimeout(function () { */$prevEl.addClass('buffer');  /*setTimeout(function () { */$prevEl.removeClass('ios-scroll-enable');/* },150); }, 0);*/
 //                }, 0);
+
+
         };
 
         function renderResults(results, index) {
