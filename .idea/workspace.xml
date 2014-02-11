@@ -26,7 +26,7 @@
       <file leaf-file-name="ResultListView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="39" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.4699739" vertical-offset="525" max-vertical-offset="2625">
+            <state line="55" column="17" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.3916449" vertical-offset="525" max-vertical-offset="2625">
               <folding />
             </state>
           </provider>
@@ -1105,7 +1105,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="39" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.4699739" vertical-offset="525" max-vertical-offset="2625">
+        <state line="55" column="17" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.3916449" vertical-offset="525" max-vertical-offset="2625">
           <folding />
         </state>
       </provider>

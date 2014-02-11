@@ -53,7 +53,7 @@
                     that.$currentEl.append($v);
                 });
             });
-
+            //foo
             $prevEl.removeClass('ios-scroll-enable');
             that.$currentEl.addClass('ios-scroll-enable'); //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
             that.$currentEl.scrollTop(_scrollTopValue);
