@@ -21,6 +21,9 @@ body[data-ui-mode='1'] .result-list-panel {
 
 .ios-scroll-disable {
     -webkit-overflow-scrolling: auto;
+    display: none;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .result-list-panel {
