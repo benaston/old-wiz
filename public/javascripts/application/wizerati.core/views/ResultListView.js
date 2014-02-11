@@ -54,7 +54,7 @@
                 });
             });
 
-            $prevEl.removeClass('display-none');
+            that.$currentEl.removeClass('display-none');
             that.$currentEl.scrollTop(_scrollTopValue);
 
                 setTimeout(function () { //hides rendering from user for new searches (yes really)
