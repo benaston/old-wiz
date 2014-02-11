@@ -54,12 +54,12 @@
                 });
             });
 
-            that.$currentEl.removeClass('ios-scroll-disable');
+            that.$currentEl.addClass('ios-scroll-enable');
             that.$currentEl.scrollTop(_scrollTopValue);
 
                 setTimeout(function () { //hides rendering from user for new searches (yes really)
                     that.$currentEl.removeClass('buffer');
-                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.addClass('ios-scroll-disable'); },150); }, 0);
+                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
                 }, 0);
         };
 

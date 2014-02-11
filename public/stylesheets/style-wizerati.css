@@ -26,12 +26,16 @@ body[data-ui-mode='1'] .result-list-panel {
     pointer-events: none;
 }
 
+.ios-scroll-enable {
+    -webkit-overflow-scrolling: touch;
+}
+
 .result-list-panel {
     opacity: 1;
     width: 274px;
     left: 316px;
     display: none;
-    -webkit-overflow-scrolling: touch;
+
     z-index: 0; /*required to ensure nothing overlaps the search panel*/
     transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
