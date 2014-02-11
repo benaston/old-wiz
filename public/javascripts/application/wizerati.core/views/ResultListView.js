@@ -54,7 +54,6 @@
                 });
             });
 
-            //dssdsd
             that.$currentEl.scrollTop(_scrollTopValue);
             $prevEl.addClass('buffer');
             that.$currentEl.removeClass('buffer');
