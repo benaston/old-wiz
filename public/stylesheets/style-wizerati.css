@@ -39,6 +39,7 @@ body[data-ui-mode='1'] .result-list-panel {
     z-index: 0; /*required to ensure nothing overlaps the search panel*/
     transition: left .1s ease-in-out, opacity .1s ease-in-out;
     -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
 }
 
 #search-panel[data-mode='1'] ~ .result-list-panel {
