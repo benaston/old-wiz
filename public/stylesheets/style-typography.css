@@ -140,7 +140,7 @@ input[type='password'] {
     font-family: "proxima-nova-400", Arial;
 }
 
-.pictos {
+.pictos, .p {
     font-family: 'pictos';
 }
 

@@ -1,10 +1,10 @@
 <% try { %>
-<a class="ti pictos<%=model.isFavorite ? ' is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" ></a>
+<a class="ti p<%=model.isFavorite ? ' is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" ></a>
 <% if(model.isActioned) { %>
-<i class="ti pictos actioned" title="One-click apply"></i>
+<i class="ti p actioned"></i>
 <% } %>
 <% if(model.isPinned) { %>
-<i class="ti pictos ti-pinned <%=model.isPinned ? 'is-pinned' : '' %>"></i>
+<i class="ti p ti-pinned <%=model.isPinned ? 'is-pinned' : '' %>"></i>
 <% } %>
 <a href="/selecteditem/update?id=<%=model.id%>" class="<%=model.isHidden ? 'hidden' : '' %>">
     <h3><%= model.title %></h3>

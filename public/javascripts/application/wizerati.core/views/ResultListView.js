@@ -76,21 +76,21 @@
             }, 300); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
         };
 
-        function renderResults(results, index) {
-            index = index === undefined ? 0 : index;
-
-            if (index === results.length) {
-                return;
-            }
-
-            _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
-                that.$el1.append($v);
-            });
-
-            setTimeout(function () {
-                renderResults(results, ++index)
-            }, 950);
-        }
+//        function renderResults(results, index) {
+//            index = index === undefined ? 0 : index;
+//
+//            if (index === results.length) {
+//                return;
+//            }
+//
+//            _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+//                that.$el1.append($v);
+//            });
+//
+//            setTimeout(function () {
+//                renderResults(results, ++index)
+//            }, 950);
+//        }
 
         this.onDomReady = function () {
             that.$el1 = $(_el1);
