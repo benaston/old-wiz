@@ -49,7 +49,7 @@
             that.$currentEl.empty();
 
             that.$currentEl.removeClass('display-none');
-//            that.$currentEl.addClass('ios-scroll-enable');
+            that.$currentEl.addClass('ios-scroll-enable');
 
             _.each(that.Model.getResults(), function (id) {
                 _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
@@ -70,8 +70,8 @@
 
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
-                  $prevEl.add('display-none');
-//                $prevEl.removeClass('ios-scroll-enable');
+//                  $prevEl.add('display-none');
+                $prevEl.removeClass('ios-scroll-enable');
             }, 900); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
         };
 
