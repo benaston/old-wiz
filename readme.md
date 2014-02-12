@@ -9,6 +9,8 @@ Wizerati is an ongoing experimental project for me to test out user interface id
 
 You can find a version of it online here (please note it has not been made cross-browser compatible yet, please use Chrome or Safari):
 
+http://guarded-cliffs-7163.herokuapp.com
+
 http://pacific-plains-5947.herokuapp.com/
 
 
