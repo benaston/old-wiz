@@ -46,6 +46,10 @@ body[data-ui-mode='1'] .result-list-panel {
     left: 0px;
 }
 
+.result-list-panel.thumbnail {
+    -webkit-transform:translate3d(0,0,0);
+}
+
 .favourite-items .thumbnail:before {
     bottom: -4px;
 }
