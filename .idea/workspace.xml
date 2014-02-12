@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ResultListView.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ResultListView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="31" selection-start="1108" selection-end="1131" vertical-scroll-proportion="1.1538461" vertical-offset="495" max-vertical-offset="2430">
+            <state line="72" column="16" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.751503" vertical-offset="705" max-vertical-offset="2430">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemsOfInterestView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ItemsOfInterestView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="51" selection-start="3887" selection-end="3887" vertical-scroll-proportion="0.71428573" vertical-offset="1245" max-vertical-offset="2940">
+            <state line="103" column="13" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="2925">
               <folding />
             </state>
           </provider>
@@ -168,10 +168,10 @@
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ResultListModel.js" />
         <option value="$PROJECT_DIR$/public/contract/search" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
       </list>
     </option>
   </component>
@@ -1104,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="1108" selection-end="1131" vertical-scroll-proportion="1.1538461" vertical-offset="495" max-vertical-offset="2430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="43" selection-start="6740" selection-end="6767" vertical-scroll-proportion="-9.458333" vertical-offset="1408" max-vertical-offset="5895">
@@ -1127,7 +1120,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="51" selection-start="3887" selection-end="3887" vertical-scroll-proportion="0.71428573" vertical-offset="1245" max-vertical-offset="2940">
+        <state line="103" column="13" selection-start="3742" selection-end="3742" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="2925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="16" selection-start="2856" selection-end="2856" vertical-scroll-proportion="0.751503" vertical-offset="705" max-vertical-offset="2430">
           <folding />
         </state>
       </provider>

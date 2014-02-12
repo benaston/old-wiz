@@ -70,7 +70,7 @@
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
                 $prevEl.removeClass('ios-scroll-enable');
-            }, 200); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
+            }, 900); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
         };
 
         function renderResults(results, index) {
