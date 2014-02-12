@@ -321,8 +321,18 @@ body[data-ui-mode='0'] #advertiser-help {
     right: 0px;
 }
 
+.thumbnail-info:first-child:after {
+    content: 'S';
+}
+
+
+
 .thumbnail-info:nth-child(2) {
     right: 30px;
+}
+
+.thumbnail-info.actioned:after {
+    content: '2';
 }
 
 .thumbnail-info.actioned {
@@ -345,6 +355,10 @@ body[data-ui-mode='0'] #advertiser-help {
 
 .thumbnail-info:nth-child(3) {
     right: 60px;
+}
+
+.thumbnail-info.thumbnail-info-pinned:after {
+    content:'@';
 }
 
 .thumbnail-info.thumbnail-info-pinned {
