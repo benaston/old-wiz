@@ -59,7 +59,7 @@
             if(that.$currentEl.is(':empty')) {
                 setTimeout(function(){
                 that.$currentEl.removeClass('buffer');
-                }, 5000);
+                }, 10000);
             } else {
                 that.$currentEl.removeClass('buffer');
             }
