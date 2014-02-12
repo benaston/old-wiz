@@ -87,7 +87,7 @@
                             $v.scrollTop(_scrollTopValues[items.selectedItem + 's']);
                             setTimeout(function () {
                                 $v.removeClass('collapsed')
-                            }, 300);
+                            }, 600);
 
                             $('body').scrollLeft(_scrollLeft);
                         }
