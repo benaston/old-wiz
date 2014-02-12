@@ -68,13 +68,10 @@
             storeScrollTopValues();
             storeScrollLeftValue();
 
-
             var $prevEl = that.$currentEl || that.$el2;
             that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
-
-//            that.$el1.empty();
             var items = that.Model.getItemsOfInterest();
             items.selectedItem = _selectedItemModel.getSelectedItemId();
 
@@ -90,7 +87,7 @@
                             $v.scrollTop(_scrollTopValues[items.selectedItem + 's']);
                             setTimeout(function () {
                                 $v.removeClass('collapsed')
-                            }, 0);
+                            }, 300);
 
                             $('body').scrollLeft(_scrollLeft);
                         }

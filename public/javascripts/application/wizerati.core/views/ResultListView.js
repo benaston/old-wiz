@@ -57,15 +57,14 @@
             });
 
             that.$currentEl.scrollTop(_scrollTopValue);
-            setTimeout(function(){$prevEl.addClass('buffer');}, 0);
-
+            setTimeout(function(){$prevEl.addClass('buffer');}, 0); //reduces jank on iOS (yes really)
 
             if(isFreshSearch) {
                 setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
                 }, 350);
             } else {
-                setTimeout(function(){that.$currentEl.removeClass('buffer');}, 0);
+                setTimeout(function(){that.$currentEl.removeClass('buffer');}, 0); //reduces jank on iOS (yes really)
             }
 
             setTimeout(function(){
