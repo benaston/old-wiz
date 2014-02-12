@@ -58,21 +58,16 @@
             $prevEl.addClass('buffer');
 
             if(isFreshSearch) {
-                setTimeout(function(){
+                setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
                 }, 350);
             } else {
                 that.$currentEl.removeClass('buffer');
             }
 
-//            if(that.$currentEl.is(':empty')) {
-//                setTimeout(function(){
-//                that.$currentEl.removeClass('buffer');
-//                }, 10000);
-//            } else {
-//                that.$currentEl.removeClass('buffer');
-//            }
-
+            //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
+            $prevEl.removeClass('ios-scroll-enable');
+            that.$currentEl.addClass('ios-scroll-enable');
 
             setTimeout(function(){
 //                $prevEl.removeClass('ios-scroll-enable');
