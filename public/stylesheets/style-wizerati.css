@@ -908,7 +908,7 @@ a.hidden:before {
 }
 
 .items-of-interest-container {
-    position: relative;
+    position: absolute;
     top: 0;
     bottom: 0;
     /*overflow: hidden;*/

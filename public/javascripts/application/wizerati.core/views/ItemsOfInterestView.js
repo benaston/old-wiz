@@ -103,8 +103,10 @@
                 });
             }
 
+
             $prevEl.addClass('buffer');
             that.$currentEl.removeClass('buffer');
+            setTimeout(function(){ $prevEl.empty(); }, 300)
         }
 
         function addPinnedItems(items, done) {
