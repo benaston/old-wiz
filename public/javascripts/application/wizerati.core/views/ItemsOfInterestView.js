@@ -19,7 +19,8 @@
         }
 
         var that = this,
-            _el = "#items-of-interest-panel",
+            _el1 = "#items-of-interest-panel-1",
+            _el2 = "#items-of-interest-panel-2",
             _itemOfInterestViewFactory = null,
             _selectedCubeFaceModel = null,
             _selectedItemModel = null,
@@ -29,17 +30,19 @@
             _scrollTopValues = {},
             _scrollLeft = 0;
 
-        this.$el =
-            this.Model = null;
+        this.$el1 = null;
+        this.$el2 = null;
+        this.$currentEl = null;
+        this.Model = null;
 
         function storeScrollTopValues() {
-            var selectedItem = that.$el.find('.item-of-interest.selected');
+            var selectedItem = that.$el1.find('.item-of-interest.selected');
 
             if (selectedItem) {
                 _scrollTopValues[selectedItem.attr('data-id') + 's'] = $(selectedItem).scrollTop();
             }
 
-            _.each(that.$el.find('.item-of-interest:not(.selected)'), function (e) {
+            _.each(that.$el1.find('.item-of-interest:not(.selected)'), function (e) {
                 _scrollTopValues[$(e).attr('data-id')] = $(e).scrollTop();
             });
         }
@@ -54,7 +57,9 @@
         }
 
         this.render = function () {
+
             renderPrivate({ animateSelectedItem: false });
+
         };
 
         function renderPrivate(options) {
@@ -62,7 +67,14 @@
 
             storeScrollTopValues();
             storeScrollLeftValue();
-            that.$el.empty();
+
+
+            var $prevEl = that.$currentEl || that.$el2;
+            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
+            that.$currentEl.empty();
+
+
+//            that.$el1.empty();
             var items = that.Model.getItemsOfInterest();
             items.selectedItem = _selectedItemModel.getSelectedItemId();
 
@@ -74,7 +86,7 @@
                     function ($v) {
 
                         function addSelectedItem() {
-                            that.$el.prepend($v);
+                            that.$currentEl.prepend($v);
                             $v.scrollTop(_scrollTopValues[items.selectedItem + 's']);
                             setTimeout(function () {
                                 $v.removeClass('collapsed')
@@ -90,6 +102,9 @@
                     $('body').scrollLeft(_scrollLeft);
                 });
             }
+
+            $prevEl.addClass('buffer');
+            that.$currentEl.removeClass('buffer');
         }
 
         function addPinnedItems(items, done) {
@@ -105,7 +120,7 @@
                     false,
                     false,
                     function ($v) {
-                        that.$el.prepend($v)
+                        that.$currentEl.prepend($v)
                         $v.scrollTop(_scrollTopValues[id]);
                     });
             });
@@ -113,7 +128,8 @@
         }
 
         this.onDomReady = function () {
-            that.$el = $(_el);
+            that.$el1 = $(_el1);
+            that.$el2 = $(_el2);
             that.render();
         };
 

@@ -12,7 +12,7 @@ body[data-ui-mode='1'] .result-list-panel {
     top: 49px;
 }
 
-.result-list-panel.buffer {
+.result-list-panel.buffer, .items-of-interest-panel.buffer {
     pointer-events: none;
     opacity: 0;
     transition: opacity .1s ease-in-out;
@@ -110,14 +110,17 @@ body[data-ui-mode='1'] #search-panel .handle {
     -webkit-transform: rotate(0deg);
 }
 
-#items-of-interest-panel {
-    left: 590px;
+.items-of-interest-panel {
+    /*left: 590px;*/
+    left: 0px;
     display: none;
-    transition: left .1s ease-in-out;
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
+    position: absolute;
 }
 
-#search-panel[data-mode='1'] ~ #items-of-interest-panel {
+#search-panel[data-mode='1'] ~ .items-of-interest-panel-container {
     left: 274px;
+    transition: left .1s ease-in-out;
 }
 
 article.item-of-interest {
@@ -395,32 +398,32 @@ input[type="radio"]:checked:focus + label {
     word-wrap: break-word; /*avoid word clipping*/
 }
 
-#items-of-interest-panel > :nth-of-type(1) .pips > li:nth-child(1) > a,
-#items-of-interest-panel > :nth-of-type(2) .pips > li:nth-child(2) > a,
-#items-of-interest-panel > :nth-of-type(3) .pips > li:nth-child(3) > a,
-#items-of-interest-panel > :nth-of-type(4) .pips > li:nth-child(4) > a,
-#items-of-interest-panel > :nth-of-type(5) .pips > li:nth-child(5) > a,
-#items-of-interest-panel > :nth-of-type(6) .pips > li:nth-child(6) > a {
+.items-of-interest-panel > :nth-of-type(1) .pips > li:nth-child(1) > a,
+.items-of-interest-panel > :nth-of-type(2) .pips > li:nth-child(2) > a,
+.items-of-interest-panel > :nth-of-type(3) .pips > li:nth-child(3) > a,
+.items-of-interest-panel > :nth-of-type(4) .pips > li:nth-child(4) > a,
+.items-of-interest-panel > :nth-of-type(5) .pips > li:nth-child(5) > a,
+.items-of-interest-panel > :nth-of-type(6) .pips > li:nth-child(6) > a {
     background-color: rgba(0, 109, 204, 0.95);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
 }
 
-#items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(1) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(2) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(3) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(4) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(5) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(7) .pips > li:nth-child(6) > a {
+.items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(1) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(2) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(3) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(4) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(5) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(7) .pips > li:nth-child(6) > a {
     background-color: rgba(0, 109, 204, 0.95);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
 }
 
-#items-of-interest-panel > .selected ~ :nth-of-type(1) .pips > li:nth-child(1) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(2) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(3) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(4) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(5) > a,
-#items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(6) > a {
+.items-of-interest-panel > .selected ~ :nth-of-type(1) .pips > li:nth-child(1) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(2) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(3) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(4) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(5) > a,
+.items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(6) > a {
     background-color: #eee;
     box-shadow: none;
 }
@@ -521,7 +524,7 @@ body[data-ui-mode='1'] .favourite-items {
     display: block;
 }
 
-body[data-ui-mode='1'] #items-of-interest-panel {
+body[data-ui-mode='1'] .items-of-interest-panel {
     display: -webkit-box;
 }
 
@@ -902,4 +905,23 @@ a.hidden:before {
 
 .display-none {
     display: none;
+}
+
+.items-of-interest-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    /*overflow: hidden;*/
+    box-shadow: 0 0 1px 0 black;
+    padding: 0px;
+    margin: 0;
+    height: 100%;
+    display: inline-block;
+    /*display: -webkit-box;*/
+    /*display: -moz-box;*/
+    /*-webkit-box-align: stretch;*/
+    /*-moz-box-align: stretch;*/
+    /*-webkit-box-orient: horizontal;*/
+    /*-moz-box-orient: horizontal;*/
+    left: 590px;
 }

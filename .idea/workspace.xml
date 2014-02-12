@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ResultListView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ResultListView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="18" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.77837837" vertical-offset="534" max-vertical-offset="2775">
+            <state line="31" column="31" selection-start="1108" selection-end="1131" vertical-scroll-proportion="1.1538461" vertical-offset="495" max-vertical-offset="2430">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemsOfInterestView.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="28" selection-start="4313" selection-end="4313" vertical-scroll-proportion="0.71428573" vertical-offset="1455" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
@@ -62,7 +71,7 @@
       <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="-17.884615" vertical-offset="15" max-vertical-offset="13650">
+            <state line="917" column="17" selection-start="19332" selection-end="19332" vertical-scroll-proportion="-11.115385" vertical-offset="13466" max-vertical-offset="13980">
               <folding />
             </state>
           </provider>
@@ -95,19 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuidFactory.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/GuidFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="525">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="119" selection-start="6579" selection-end="6579" vertical-scroll-proportion="-8.75" vertical-offset="1365" max-vertical-offset="5820">
+            <state line="109" column="43" selection-start="6740" selection-end="6767" vertical-scroll-proportion="-9.458333" vertical-offset="1408" max-vertical-offset="5895">
               <folding />
             </state>
           </provider>
@@ -162,16 +162,16 @@
         <option value="$PROJECT_DIR$/public/contract/templates/favorite.html" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js" />
         <option value="$PROJECT_DIR$/public/contract/templates/item-of-interest.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/GuidFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/SearchController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ResultListModel.js" />
         <option value="$PROJECT_DIR$/public/contract/search" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js" />
       </list>
     </option>
   </component>
@@ -803,6 +803,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29036143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2572234" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -813,7 +814,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29277107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -910,7 +910,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1740" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1740">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/syncSvc.js">
@@ -975,7 +977,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="67" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2010" />
+        <state line="51" column="67" selection-start="2384" selection-end="2384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2010">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/ItemsOfInterestController.js">
@@ -1002,7 +1006,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="116" selection-start="4923" selection-end="4923" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2370" />
+        <state line="95" column="116" selection-start="4923" selection-end="4923" vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="2370">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
@@ -1013,11 +1019,6 @@
     <entry file="file://$PROJECT_DIR$/public/contractor/search">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2670" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/view.js">
@@ -1096,13 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="706" selection-end="706" vertical-scroll-proportion="-17.884615" vertical-offset="15" max-vertical-offset="13650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
@@ -1110,16 +1104,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="119" selection-start="6579" selection-end="6579" vertical-scroll-proportion="-8.75" vertical-offset="1365" max-vertical-offset="5820">
+        <state line="31" column="31" selection-start="1108" selection-end="1131" vertical-scroll-proportion="1.1538461" vertical-offset="495" max-vertical-offset="2430">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="18" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.77837837" vertical-offset="534" max-vertical-offset="2775">
+        <state line="109" column="43" selection-start="6740" selection-end="6767" vertical-scroll-proportion="-9.458333" vertical-offset="1408" max-vertical-offset="5895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="917" column="17" selection-start="19332" selection-end="19332" vertical-scroll-proportion="-11.115385" vertical-offset="13466" max-vertical-offset="13980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="28" selection-start="4313" selection-end="4313" vertical-scroll-proportion="0.71428573" vertical-offset="1455" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>

@@ -11,21 +11,21 @@
             _el = '<article id="selected-item" class="overflow-y-scroll lucid-column"></article>',
             _templateName = "item-of-interest.html";
 
-        this.$el = $(_el);
+        this.$el1 = $(_el);
         this.Model = null;
 
         this.render = function () {
-            that.$el.attr('data-id', that.Model.id);
+            that.$el1.attr('data-id', that.Model.id);
 
             if (that.Model.isSelected) {
-                that.$el.addClass('selected');
+                that.$el1.addClass('selected');
             }
 
             if (that.Model.shouldAnimateIn) {
-                that.$el.addClass('collapsed');
+                that.$el1.addClass('collapsed');
             }
 
-            app.instance.renderTemplate(that.$el,
+            app.instance.renderTemplate(that.$el1,
                                         _templateName,
                                         that.Model,
                                         {});

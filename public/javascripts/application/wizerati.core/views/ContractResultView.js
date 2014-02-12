@@ -11,17 +11,17 @@
             _el = "<li class='thumbnail thumbnail-219'></li>",
             _templateName = "result.html";
 
-        this.$el = $(_el);
+        this.$el1 = $(_el);
         this.Model = null;
 
         this.render = function () {
             if (that.Model.isSelected) {
-                that.$el.addClass('selected');
+                that.$el1.addClass('selected');
             } else {
-                that.$el.removeClass('selected');
+                that.$el1.removeClass('selected');
             }
 
-            app.instance.renderTemplate(that.$el,
+            app.instance.renderTemplate(that.$el1,
                                         _templateName,
                                         that.Model,
                                         {});

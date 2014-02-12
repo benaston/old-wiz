@@ -72,7 +72,7 @@
             options = _.extend({}, defaults, options);
 
             if (!$el) {
-                throw "$el not supplied";
+                throw "$el1 not supplied";
             }
             if (!model) {
                 throw "model not supplied";
@@ -87,7 +87,7 @@
                     var postRenderScriptUri = _templateServerSvc.getPostRenderScriptUri(options.postRenderScriptName);
                     that.fetchTemplatePostRenderScript(postRenderScriptUri, function (data) {
                         _templatePostRenderScripts[postRenderScriptUri]($, $el);
-                        options.done($el); //NOTE: this is in correct location (really)! Purpose: supply $el for possible additional work, like dom insertion
+                        options.done($el); //NOTE: this is in correct location (really)! Purpose: supply $el1 for possible additional work, like dom insertion
                     });
                 } else {
                     options.done($el); //complete for when there is no post-render action script

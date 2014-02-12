@@ -67,33 +67,10 @@
                 that.$currentEl.removeClass('buffer');
             }
 
-
-
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
                 $prevEl.removeClass('ios-scroll-enable');
             }, 200); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
-
-
-//            if(that.$currentEl.length === 0) {
-//                setTimeout(function () { //hides rendering from user for new searches (yes really)
-//                    that.$currentEl.removeClass('buffer');
-//                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
-//                }, 50);
-//            } else {
-//
-//            }
-//                setTimeout(function () { //hides rendering from user for new searches (yes really)
-//                    that.$currentEl.removeClass('buffer');
-//                    setTimeout(function () { $prevEl.addClass('buffer');  setTimeout(function () { $prevEl.removeClass('ios-scroll-enable'); },150); }, 0);
-//                }, 0);
-
-//            setTimeout(function () { //hides rendering from user for new searches (yes really)
-//                    that.$currentEl.removeClass('buffer');
-//                    /*setTimeout(function () { */$prevEl.addClass('buffer');  /*setTimeout(function () { */$prevEl.removeClass('ios-scroll-enable');/* },150); }, 0);*/
-//                }, 0);
-
-
         };
 
         function renderResults(results, index) {
@@ -104,7 +81,7 @@
             }
 
             _resultViewFactory.create(results[index], _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
-                that.$el.append($v);
+                that.$el1.append($v);
             });
 
             setTimeout(function () {

@@ -10,7 +10,7 @@
         var that = this,
             _el = "#activation-panel";
 
-        this.$el = null;
+        this.$el1 = null;
         this.Model = null;
 
         this.render = function () {
@@ -20,7 +20,7 @@
         };
 
         this.onDomReady = function(){
-            that.$el = $(_el);
+            that.$el1 = $(_el);
         };
 
         function init() {
