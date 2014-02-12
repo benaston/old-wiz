@@ -38,8 +38,10 @@ body[data-ui-mode='1'] .result-list-panel {
     display: none;
     z-index: 0; /*required to ensure nothing overlaps the search panel*/
     transition: left .1s ease-in-out, opacity .1s ease-in-out;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0);
     -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000;
 }
 
 #search-panel[data-mode='1'] ~ .result-list-panel {
@@ -48,6 +50,9 @@ body[data-ui-mode='1'] .result-list-panel {
 
 .result-list-panel.thumbnail {
     -webkit-transform:translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000;
 }
 
 .favourite-items .thumbnail:before {
