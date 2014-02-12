@@ -44,8 +44,7 @@
         this.render = function () {
             var $prevEl = that.$currentEl || that.$el2;
             calculateScrollTopValueToMaintain($prevEl);
-            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1;
-
+            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
             _.each(that.Model.getResults(), function (id) {
