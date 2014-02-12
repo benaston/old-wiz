@@ -48,7 +48,6 @@
             that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
-//            that.$currentEl.removeClass('display-none');
             that.$currentEl.addClass('ios-scroll-enable');
 
             _.each(that.Model.getResults(), function (id) {
@@ -58,20 +57,20 @@
             });
 
             that.$currentEl.scrollTop(_scrollTopValue);
-            $prevEl.addClass('buffer');
+            setTimeout(function(){$prevEl.addClass('buffer');}, 0);
+
 
             if(isFreshSearch) {
                 setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
                 }, 350);
             } else {
-                that.$currentEl.removeClass('buffer');
+                setTimeout(function(){that.$currentEl.removeClass('buffer');}, 0);
             }
 
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
                 $prevEl.empty();
-//                $prevEl.add('display-none');
                 $prevEl.removeClass('ios-scroll-enable');
             }, 300); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
         };
