@@ -48,6 +48,7 @@
             that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
+            that.$currentEl.removeClass('display-none');
             that.$currentEl.addClass('ios-scroll-enable');
 
             _.each(that.Model.getResults(), function (id) {
@@ -69,6 +70,7 @@
 
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
+                  $prevEl.add('display-none');
 //                $prevEl.removeClass('ios-scroll-enable');
             }, 900); //This timeout must be longer than the css transition to avoid interrupting it with a flicker.
         };
