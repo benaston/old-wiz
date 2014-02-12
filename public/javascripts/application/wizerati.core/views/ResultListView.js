@@ -55,8 +55,14 @@
 
             that.$currentEl.scrollTop(_scrollTopValue);
             $prevEl.addClass('buffer');
-            that.$currentEl.removeClass('buffer');
 
+            if(that.$currentEl.is(':empty')) {
+                setTimeout(function(){
+                that.$currentEl.removeClass('buffer');
+                }, 5000);
+            } else {
+                that.$currentEl.removeClass('buffer');
+            }
 
 
             setTimeout(function(){
@@ -105,7 +111,7 @@
         this.onDomReady = function () {
             that.$el1 = $(_el1);
             that.$el2 = $(_el2);
-            that.render();
+//            that.render();
         };
 
         function init() {
