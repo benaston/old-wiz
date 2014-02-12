@@ -8,7 +8,7 @@
         }
 
         var that = this,
-            _el = "<li class='thumbnail thumbnail-219'></li>",
+            _el = "<li class='t t-219'></li>",
             _templateName = "result.html";
 
         this.$el1 = $(_el);
