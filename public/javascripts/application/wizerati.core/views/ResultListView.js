@@ -43,6 +43,7 @@
 
         this.render = function () {
             var $prevEl = that.$currentEl || that.$el2;
+            $prevEl.removeClass('ios-scroll-enable');
             var isFreshSearch = _lastKnownSearchId !== that.Model.getSearchId();
             calculateScrollTopValueToMaintain($prevEl);
             that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
@@ -69,7 +70,7 @@
 
             setTimeout(function(){
                 //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
-                $prevEl.removeClass('ios-scroll-enable');
+
                 that.$currentEl.addClass('ios-scroll-enable');
             }, 0);
 
