@@ -69,11 +69,11 @@
 
 
 
-            setTimeout(function(){
-                //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
-                $prevEl.removeClass('ios-scroll-enable');
-
-            }, 50);
+//            setTimeout(function(){
+//                //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
+//                $prevEl.removeClass('ios-scroll-enable');
+//
+//            }, 50);
 
 
 //            if(that.$currentEl.length === 0) {
