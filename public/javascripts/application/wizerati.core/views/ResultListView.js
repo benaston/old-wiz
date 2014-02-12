@@ -43,6 +43,7 @@
 
         this.render = function () {
             var $prevEl = that.$currentEl || that.$el2;
+            var isFreshSearch = _lastKnownSearchId !== that.Model.getSearchId();
             calculateScrollTopValueToMaintain($prevEl);
             that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
@@ -56,13 +57,21 @@
             that.$currentEl.scrollTop(_scrollTopValue);
             $prevEl.addClass('buffer');
 
-            if(that.$currentEl.is(':empty')) {
+            if(isFreshSearch) {
                 setTimeout(function(){
-                that.$currentEl.removeClass('buffer');
-                }, 10000);
+                    that.$currentEl.removeClass('buffer');
+                }, 1000);
             } else {
                 that.$currentEl.removeClass('buffer');
             }
+
+//            if(that.$currentEl.is(':empty')) {
+//                setTimeout(function(){
+//                that.$currentEl.removeClass('buffer');
+//                }, 10000);
+//            } else {
+//                that.$currentEl.removeClass('buffer');
+//            }
 
 
             setTimeout(function(){
