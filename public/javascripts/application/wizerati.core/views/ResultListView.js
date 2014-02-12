@@ -49,7 +49,7 @@
             that.$currentEl.empty();
 
             that.$currentEl.removeClass('display-none');
-            that.$currentEl.addClass('ios-scroll-enable');
+//            that.$currentEl.addClass('ios-scroll-enable');
 
             _.each(that.Model.getResults(), function (id) {
                 _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
