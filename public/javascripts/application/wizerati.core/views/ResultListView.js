@@ -49,6 +49,7 @@
             that.$currentEl.empty();
 
             that.$currentEl.addClass('ios-scroll-enable');
+            $prevEl.removeClass('ios-scroll-enable');
 
             _.each(that.Model.getResults(), function (id) {
                 _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
@@ -57,6 +58,7 @@
             });
 
             that.$currentEl.scrollTop(_scrollTopValue);
+
             $prevEl.addClass('buffer');
 
             if(isFreshSearch) {
@@ -70,9 +72,9 @@
 
 
 //            setTimeout(function(){
-//                //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
+                //Circumvent iOS bug whereby scrolling is applied to the hidden "buffer" list.
 //                $prevEl.removeClass('ios-scroll-enable');
-//
+
 //            }, 50);
 
 
