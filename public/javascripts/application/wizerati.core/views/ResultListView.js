@@ -60,7 +60,7 @@
             if(isFreshSearch) {
                 setTimeout(function(){
                     that.$currentEl.removeClass('buffer');
-                }, 500);
+                }, 0);
             } else {
                 that.$currentEl.removeClass('buffer');
             }
