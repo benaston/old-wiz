@@ -115,3 +115,13 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
     border: none;
 }
+
+@media only screen and (max-width: 480px) {
+    .item-of-interest, .item-of-interest-width-maintainer {
+        width:300px !important;
+    }
+
+    .width-62 {
+        width: 51px !important;
+    }
+}

@@ -128,7 +128,7 @@ body[data-ui-mode='1'] #search-panel .handle {
     position: absolute;
 }
 
-#search-panel[data-mode='1'] ~ .items-of-interest-panel-container {
+#search-panel[data-mode='1'] ~ .items-of-interest-container {
     left: 274px;
     transition: left .1s ease-in-out;
 }
