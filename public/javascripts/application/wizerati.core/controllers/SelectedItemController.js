@@ -18,6 +18,7 @@
 
                 if(dto.__isInvertebrateExternal__){
                     app.instance.router.redirect('/items/show?id=' + dto.id);
+                    return;
                 }
 
                 _selectedItemModel.setSelectedItemId(dto.id);

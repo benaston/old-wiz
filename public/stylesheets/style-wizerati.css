@@ -134,11 +134,13 @@ body[data-ui-mode='1'] #search-panel .handle {
 }
 
 article.item-of-interest {
+    /*must have no padding or margin to maintain a clean reveal effect in the slide animation*/
     /*important to qualify with the div to ensure margins take effect*/
-    border-radius: 15px;
     /*padding: 0px 15px 0px 18px;*/
-    padding: 0px 29px 0px 26px;
-    margin: 0 8px 0 8px;
+    /*padding: 0px 29px 0px 26px;*/
+    /*margin: 0 8px 0 8px;*/
+    padding:0;
+    margin:0;
     height: 100%; /*important for presence of scrollbars*/
     /*display: inline-block;*/
     -webkit-overflow-scrolling: touch;
@@ -771,7 +773,7 @@ textarea:focus + .meta-info {
 }
 
 .selected {
-    transition: width .3s ease-in-out, margin .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out;
+    transition: width .3s ease-in-out 0s, opacity .3s ease-in-out;
 }
 
 .item-of-interest.collapsed, .collapsed {
@@ -783,6 +785,9 @@ textarea:focus + .meta-info {
 
 .item-of-interest-width-maintainer {
     width: 348px;
+    /*margin:auto; *//*ensure centered in container*/
+    /*box-shadow: 0 0 0 1px black;*/
+    margin-left: 34px;
 }
 
 .hidden {
@@ -948,4 +953,8 @@ a.hidden:before {
     /*-webkit-box-orient: horizontal;*/
     /*-moz-box-orient: horizontal;*/
     left: 590px;
+}
+
+.item-of-interest:not(:first-child) .item-of-interest-width-maintainer  {
+/*margin-left: 55px;*/
 }

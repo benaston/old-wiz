@@ -26,7 +26,8 @@
 .lucid-column {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
-    width: 365px;
+    /*width: 365px;*/
+    width: 436px;
 }
 
 .main {
