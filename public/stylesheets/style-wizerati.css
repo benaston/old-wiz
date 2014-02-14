@@ -30,6 +30,20 @@ body[data-ui-mode='1'] .result-list-panel {
     -webkit-overflow-scrolling: touch;
 }
 
+.t a {
+    -webkit-transition: height .3s ease-in-out;
+}
+
+.t a.hidden h3{
+    font-size: .7rem;
+    line-height: 1rem;
+}
+.t a.hidden {
+    height: 43px;
+    overflow: hidden;
+    -webkit-transition: height .3s ease-in-out;
+}
+
 .result-list-panel {
     opacity: 1;
     width: 274px;
@@ -1004,13 +1018,14 @@ textarea:focus + .meta-info {
 
 a.hidden:before {
     position: absolute;
-    left: 30px;
-    top: 80px;
+    left: 75px;
+    top: 19px;
     display: block;
-    content: 'hidden';
-    font-size: 3rem;
+    font-family: pictos;
+    content: '-';
+    font-size: 4rem;
     font-weight: bold;
-    color: #333;
+    color: rgba(0,0,0,0.2);
     -webkit-transform: rotate(-45deg);
 }
 
