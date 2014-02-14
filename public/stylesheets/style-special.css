@@ -191,12 +191,11 @@ ul.pips {
 ul.pips a {
     display: inline-block;
     background-color: #eee; /* #666;*/
-    border-radius: 15px;
-    -moz-border-radius: 15px;
+    border-radius: 1px;
     text-indent: -999em;
     overflow: hidden;
     width: 8px;
-    height: 8px;
+    height: 17px;
 }
 
 #no-script {

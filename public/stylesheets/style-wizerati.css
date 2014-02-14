@@ -421,60 +421,22 @@ input[type="radio"]:checked:focus + label {
     word-wrap: break-word; /*avoid word clipping*/
 }
 
-
-
-
-
-
-.items-of-interest-panel > :nth-of-type(1) .pips > li:nth-child(1) > a,
-.items-of-interest-panel > :nth-of-type(2) .pips > li:nth-child(2) > a,
-.items-of-interest-panel > :nth-of-type(3) .pips > li:nth-child(3) > a,
-.items-of-interest-panel > :nth-of-type(4) .pips > li:nth-child(4) > a,
-.items-of-interest-panel > :nth-of-type(5) .pips > li:nth-child(5) > a,
-.items-of-interest-panel > :nth-of-type(6) .pips > li:nth-child(6) > a {
+.item-of-interest:nth-of-type(1) .pips > li:nth-child(1) > a,
+.item-of-interest:nth-of-type(2) .pips > li:nth-child(2) > a,
+.item-of-interest:nth-of-type(3) .pips > li:nth-child(3) > a,
+.item-of-interest:nth-of-type(4) .pips > li:nth-child(4) > a,
+.item-of-interest:nth-of-type(5) .pips > li:nth-child(5) > a,
+.item-of-interest:nth-of-type(6) .pips > li:nth-child(6) > a {
     background-color: rgba(0, 109, 204, 0.95);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
 }
 
-.items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(1) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(2) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(3) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(4) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(5) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(7) .pips > li:nth-child(6) > a {
-    background-color: rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
-}
-
-.items-of-interest-panel > .selected ~ :nth-of-type(1) .pips > li:nth-child(1) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(2) .pips > li:nth-child(2) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(3) .pips > li:nth-child(3) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(4) .pips > li:nth-child(4) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(5) .pips > li:nth-child(5) > a,
-.items-of-interest-panel > .selected ~ :nth-of-type(6) .pips > li:nth-child(6) > a {
-    background-color: #eee;
-    box-shadow: none;
-}
-
-.item-of-interest:first-child:nth-last-child(1) .pips > li:nth-child(1) > a{
-    background-color: rgba(0, 109, 204, 0.95);
-}
 
 /*two items of interest*/
-.item-of-interest:nth-child(2):nth-last-child(1) .pips > li:nth-child(1) > a,
-.item-of-interest:first-child:nth-last-child(2) .pips > li:nth-child(2) > a{
-    background-color: rgba(0, 109, 204, 0.95);
-}
-
-/*two items of interest*/
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(2) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(1) .pips > li:nth-child(1) > a
+.item-of-interest:nth-child(1):nth-last-child(2) .pips > li:nth-child(2) > a,
+.item-of-interest:nth-child(2):nth-last-child(1) .pips > li:nth-child(1) > a
 {
     background-color: rgba(0, 109, 204, 0.95);
-}
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(2) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(1) .pips > li:nth-child(3) > a{
-    background-color: #eee;
 }
 
 /*three items of interest*/
@@ -488,38 +450,8 @@ input[type="radio"]:checked:focus + label {
     background-color: rgba(0, 109, 204, 0.95);
 }
 
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(3) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(3) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(2) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(2) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(1) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(1) .pips > li:nth-child(2) > a
-{
-    background-color: rgba(0, 109, 204, 0.95);
-}
-
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(3) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(2) .pips > li:nth-child(4) > a {
-    background-color: #eee;
-}
 
 /*four items of interest*/
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(4) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(4) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(4) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(3) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(3) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(3) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(2) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(2) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(2) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(1) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(1) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(1) .pips > li:nth-child(3) > a
-{
-    background-color: rgba(0, 109, 204, 0.95);
-}
-
 .item-of-interest:nth-child(1):nth-last-child(4) .pips > li:nth-child(2) > a,
 .item-of-interest:nth-child(1):nth-last-child(4) .pips > li:nth-child(3) > a,
 .item-of-interest:nth-child(1):nth-last-child(4) .pips > li:nth-child(4) > a,
@@ -532,16 +464,11 @@ input[type="radio"]:checked:focus + label {
 .item-of-interest:nth-child(4):nth-last-child(1) .pips > li:nth-child(1) > a,
 .item-of-interest:nth-child(4):nth-last-child(1) .pips > li:nth-child(2) > a,
 .item-of-interest:nth-child(4):nth-last-child(1) .pips > li:nth-child(3) > a
+
 {
     background-color: rgba(0, 109, 204, 0.95);
 }
 
-.item-of-interest.selected ~ :nth-child(1):nth-last-child(5) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(4) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(3) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(2) .pips > li:nth-child(5) > a {
-    background-color: #eee;
-}
 
 /*five items of interest*/
 .item-of-interest:nth-child(1):nth-last-child(5) .pips > li:nth-child(2) > a,
@@ -566,37 +493,6 @@ input[type="radio"]:checked:focus + label {
 .item-of-interest:nth-child(5):nth-last-child(1) .pips > li:nth-child(4) > a
 {
     background-color: rgba(0, 109, 204, 0.95);
-}
-
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(5) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(5) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(5) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(5) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(4) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(4) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(4) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(4) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(3) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(3) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(3) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(3) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(2) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(2) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(2) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(2) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(1) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(1) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(1) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(1) .pips > li:nth-child(4) > a
-{
-    background-color: rgba(0, 109, 204, 0.95);
-}
-
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(5) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(4) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(3) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(2) .pips > li:nth-child(6) > a {
-    background-color: #eee;
 }
 
 /*six items of interest*/
@@ -630,41 +526,6 @@ input[type="radio"]:checked:focus + label {
 .item-of-interest:nth-child(6):nth-last-child(1) .pips > li:nth-child(3) > a,
 .item-of-interest:nth-child(6):nth-last-child(1) .pips > li:nth-child(4) > a,
 .item-of-interest:nth-child(6):nth-last-child(1) .pips > li:nth-child(5) > a
-{
-    background-color: rgba(0, 109, 204, 0.95);
-}
-
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(6) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(6) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(6) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(6) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(2):nth-last-child(6) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(5) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(5) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(5) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(5) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(3):nth-last-child(5) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(4) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(4) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(4) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(4) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(4):nth-last-child(4) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(3) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(3) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(3) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(3) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(5):nth-last-child(3) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(2) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(2) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(2) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(2) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(6):nth-last-child(2) .pips > li:nth-child(6) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(1) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(2) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(3) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(4) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(5) > a,
-.item-of-interest.selected ~ :nth-child(7):nth-last-child(1) .pips > li:nth-child(6) > a
 {
     background-color: rgba(0, 109, 204, 0.95);
 }
