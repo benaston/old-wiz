@@ -15,7 +15,7 @@ body[data-ui-mode='1'] .result-list-panel {
 .result-list-panel.buffer, .items-of-interest-panel.buffer {
     pointer-events: none;
     opacity: 0;
-    transition: opacity .1s ease-in-out;
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
 
 .ios-scroll-disable {
@@ -61,7 +61,7 @@ body[data-ui-mode='1'] .result-list-panel {
 #search-panel {
     left: 0;
     width: 320px; /*modified from 300 to simplify transition timings*/
-    transition: width .5s ease-in-out, left .5s ease-in-out;
+    transition: width .5s ease-in-out, left .1s ease-in-out;
     background: -webkit-gradient(linear, left top, right top, color-stop(86%, rgba(255, 255, 255, 0.95)), color-stop(93%, rgba(255, 255, 255, 0.95)), color-stop(100%, rgba(255, 255, 255, 0)));
     z-index: 1; /*must sit in-front of results and items of interest*/
 }
@@ -126,6 +126,10 @@ body[data-ui-mode='1'] #search-panel .handle {
     display: none;
     transition: left .1s ease-in-out, opacity .1s ease-in-out;
     position: absolute;
+}
+
+#search-panel[data-mode='0'] ~ .items-of-interest-container {
+    transition: left .1s ease-in-out;
 }
 
 #search-panel[data-mode='1'] ~ .items-of-interest-container {
