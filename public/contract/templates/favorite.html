@@ -4,12 +4,10 @@
     <p class="rate"><%= model.rateLower %> GBP/day</p>
     <p class="location-and-posted"><%= model.location %></p>
     <% if(model.isActioned) { %>
-    <i class="thumbnail-info pictos actioned" title="Applied">
-    </i>
+    <i class="ti p actioned" title="Applied"></i>
     <% } %>
     <% if(model.isItemOfInterest) { %>
-    <i class="thumbnail-info pictos item-of-interest" title="Pinned">
-    </i>
+    <i class="ti p pinned ti-pinned" title="Pinned"></i>
     <% } %>
 </a>
 <%
