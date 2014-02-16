@@ -127,7 +127,8 @@ body[data-ui-mode='1'] .result-list-panel {
 }
 
 #search-panel[data-mode='1'] {
-    -webkit-filter: blur(10px);
+    /*-webkit-filter: blur(10px);*/
+    opacity: 0;
 }
 
 #search-panel[data-mode='1'] {
