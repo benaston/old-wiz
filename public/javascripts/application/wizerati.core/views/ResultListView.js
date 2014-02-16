@@ -15,6 +15,7 @@
         }
 
         var that = this,
+            _elContainer = ".result-list-container",
             _el1 = "#result-list-panel-1",
             _el2 = "#result-list-panel-2",
             _resultViewFactory = null,
@@ -27,6 +28,7 @@
             _scrollTopValue = 0,
             _lastKnownSearchId = null;
 
+        this.$elContainer = null;
         this.$el = null;
         this.$el2 = null;
         this.$currentEl = null;
@@ -62,13 +64,13 @@
             if(isFreshSearch) {
                 setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
-                    that.$currentEl.attr('data-mode', that.Model.getMode());
-                    $prevEl.attr('data-mode', that.Model.getMode());
+                    that.$elContainer.attr('data-mode', that.Model.getMode());
                 }, 350);
             } else {
-                setTimeout(function(){that.$currentEl.removeClass('buffer');}, 0); //reduces jank on iOS (yes really)
-                that.$currentEl.attr('data-mode', that.Model.getMode());
-                $prevEl.attr('data-mode', that.Model.getMode());
+                setTimeout(function(){
+                    that.$currentEl.removeClass('buffer');
+                    that.$elContainer.attr('data-mode', that.Model.getMode());
+                }, 0); //reduces jank on iOS (yes really)
             }
 
             setTimeout(function(){
@@ -97,7 +99,7 @@
         this.onDomReady = function () {
             that.$el = $(_el1);
             that.$el2 = $(_el2);
-//            that.render();
+            that.$elContainer = $(_elContainer);
         };
 
         function init() {

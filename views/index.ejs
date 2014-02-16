@@ -104,12 +104,14 @@
     <div class="centered-text handle btn-container">
         <a href="/searchpanelmode/update?mode=0" class="btn btn-primary btn-50 fa">&#xf065;</a><div class="label">expand search</div>
     </div>
-    <ul id="result-list-panel-1" data-mode="0" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
-    </ul>
-    <ul id="result-list-panel-2" data-mode="0" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
-    </ul>
-    <div class="centered-text handle btn-container handle-result-list">
-        <a href="/resultlistmode/update?mode=0" class="btn btn-primary btn-50 fa">&#xf065;</a><div class="label">expand results</div>
+    <div class="result-list-container lucid-panel-absolute-full-height" data-mode="0">
+        <ul id="result-list-panel-1" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
+        </ul>
+        <ul id="result-list-panel-2" data-mode="0" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
+        </ul>
+        <div class="centered-text btn-container handle-result-list">
+            <a href="/resultlistmode/update?mode=0" class="btn btn-primary btn-50 fa">&#xf065;</a><div class="label">show results</div>
+        </div>
     </div>
     <div class="items-of-interest-container">
         <div id="items-of-interest-panel-1" class="items-of-interest-panel panel lucid-columns-full-height buffer">

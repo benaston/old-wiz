@@ -28,7 +28,7 @@
                 if(dto.source === "results") {
                     _searchPanelModel.setMode(_searchPanelModeEnum.Minimized);
                 } else if(dto.source === "favorites") {
-                    _resultListModel.setMode(_resultListModeEnum.Minimized);
+                    _resultListModel.setMode(_resultListModeEnum.Minimized, {silent:true});
                 }
 
                 _selectedItemModel.setSelectedItemId(dto.id);
