@@ -6,6 +6,8 @@
     background-repeat: no-repeat;
     cursor: pointer;
     padding: 4px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .thumbnail h2, .t h2 {
@@ -185,7 +187,7 @@ ul.pips {
     margin: 0;
     left: -24px;
     position: relative;
-    top: -30px;
+    top: 12px;
 }
 
 ul.pips a {

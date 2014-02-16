@@ -30,7 +30,7 @@
                 <%=(model.isPinnable || model.isPinned) ? 'href' : 'disabled'%>="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
                class="btn btn-40 btn-primary <%=model.isPinnable || model.isPinned ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> btn-pin"
                title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned / You have the maximum number of permitted pinned items / You cannot pin hidden items' %>">@</a>
-            <div class="label">pin</div>
+            <div class="label">pin to compare</div>
         </div>
     </section>
     <section class="<%=model.isHidden ? 'hidden' : '' %>">

@@ -62,9 +62,13 @@
             if(isFreshSearch) {
                 setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
+                    that.$currentEl.attr('data-mode', that.Model.getMode());
+                    $prevEl.attr('data-mode', that.Model.getMode());
                 }, 350);
             } else {
                 setTimeout(function(){that.$currentEl.removeClass('buffer');}, 0); //reduces jank on iOS (yes really)
+                that.$currentEl.attr('data-mode', that.Model.getMode());
+                $prevEl.attr('data-mode', that.Model.getMode());
             }
 
             setTimeout(function(){

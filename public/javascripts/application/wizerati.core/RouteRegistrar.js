@@ -98,6 +98,10 @@
                 instance.router.registerRoute('/searchpanelmode/update', function (dto) {
                     app.mod("controllers").searchPanelModeController.update(dto);
                 }, { silent: true });
+
+                instance.router.registerRoute('/resultlistmode/update', function (dto) {
+                    app.mod("controllers").resultListModeController.update(dto);
+                });
             } catch(e) {
                 throw "registerRoutes::registerRoutes threw an exception. " + e;
             }

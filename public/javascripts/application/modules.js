@@ -28,6 +28,11 @@
             Minimized: "1"
         };
 
+        mod.ResultListMode = {
+            Default: "0",
+            Minimized: "1"
+        };
+
     } catch(e)
     {
         throw "problem registering enum module. " + e;
@@ -186,7 +191,7 @@
             wizerati.mod("services").searchService,
             wizerati.mod("models").resultListModel,
             wizerati.mod("factories").guidFactory);
-        mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel, wizerati.mod("models").searchPanelModel);
+        mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel, wizerati.mod("models").searchPanelModel, wizerati.mod("models").resultListModel);
         mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").selectedCubeFaceModel);
         mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
         mod.itemsOfInterestController = new wizerati.ItemsOfInterestController(wizerati.mod("models").itemsOfInterestModel);
@@ -197,6 +202,7 @@
         mod.accountActivationPanelController = new wizerati.AccountActivationPanelController(wizerati.mod("models").uiRootModel);
         mod.purchasePanelAccountsController = new wizerati.PurchasePanelAccountsController(wizerati.mod("models").purchasePanelModel, wizerati.mod("services").accountService);
         mod.searchPanelModeController = new wizerati.SearchPanelModeController(wizerati.mod("models").searchPanelModel);
+        mod.resultListModeController = new wizerati.ResultListModeController(wizerati.mod("models").resultListModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

@@ -8,6 +8,8 @@
 
         var that = this,
             _searchId = "initial-value",
+            _mode = "0",
+            _searchPanelModeEnum = wizerati.mod("enum  ").ResultListPanelMode,
             _results = []; //note these will be GUIDs - use the ItemCache for the actual objects
 
         this.updateEventUri = "update://ResultListModel/";
@@ -28,6 +30,21 @@
 
             $.publish(that.updateEventUri);
         };
+
+        this.getMode = function () {
+
+            return _mode;
+        };
+
+        this.setMode = function (value, options) {
+            options = options || {silent:false};
+
+            _mode = value;
+
+            if(!options.silent) {
+                $.publish(that.updateEventUri);
+            }
+        }
 
         this.getResult = function (id) {
             if (!id) {

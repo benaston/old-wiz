@@ -1,5 +1,5 @@
 <% try { %>
-<a href="/selecteditem/update?id=<%=model.id%>" class="<%=model.isHidden ? 'hidden' : '' %>">
+<a href="/selecteditem/update?id=<%=model.id%>&source=favorites" class="<%=model.isHidden ? 'hidden' : '' %>">
     <h3><%= model.title %></h3>
     <p class="rate"><%= model.rateLower %> GBP/day</p>
     <p class="location-and-posted"><%= model.location %></p>
