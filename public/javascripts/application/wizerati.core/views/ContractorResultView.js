@@ -11,11 +11,11 @@
             _el = "<li class='thumbnail thumbnail-219' data-id='" + model.Id + "'></li>",
             _templateName = "result.html";
 
-        this.$el1 = null;
+        this.$el = null;
         this.Model = null;
 
         this.render = function (options) {
-            app.instance.renderTemplate(that.$el1,
+            app.instance.renderTemplate(that.$el,
                                         _templateName,
                                         that.Model,
                                         {});

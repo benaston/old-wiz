@@ -1,5 +1,7 @@
 <% try { %>
+<% if(!model.isHidden) { %>
 <a class="ti p<%=model.isFavorite ? ' is-favorite' : '' %>" href="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>" ></a>
+<% } %>
 <% if(model.isActioned) { %>
 <i class="ti p actioned"></i>
 <% } %>

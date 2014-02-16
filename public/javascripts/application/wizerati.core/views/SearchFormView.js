@@ -13,30 +13,30 @@
             _postRenderScriptName = "search-form.js",
             _waitStateIsBeingMonitored = false;; //is the periodic check for whether we are waiting running?
 
-        this.$el1 = null;
+        this.$el = null;
         this.Model = null;
 
         this.render = function () {
             var options = { done: that.bindEvents, postRenderScriptName: null };
 
-            return app.instance.renderTemplate(that.$el1,
+            return app.instance.renderTemplate(that.$el,
                 _templateName, that.Model, options);
         };
 
         this.bindEvents = function () {
-            var $keywords = that.$el1.find("#keywords");
+            var $keywords = that.$el.find("#keywords");
             $keywords.on('change', function () {
                 that.Model.setKeywords($keywords.val(), { silent: true });
             });
 
-            var $location = that.$el1.find("#location");
+            var $location = that.$el.find("#location");
             $location.on('change', function () {
                 that.Model.setLocation($location.val(), { silent: true });
             });
 
-            var $rate = that.$el1.find("input[name='r']");
+            var $rate = that.$el.find("input[name='r']");
             $rate.on('change', function () {
-                that.Model.setRate(that.$el1.find("input[name='r']:checked").val(), { silent: true });
+                that.Model.setRate(that.$el.find("input[name='r']:checked").val(), { silent: true });
             });
 
             if (!_waitStateIsBeingMonitored) {
@@ -59,19 +59,19 @@
             _waitStateIsBeingMonitored = true;
 
             if (that.Model.getIsWaiting() === "true") {
-                that.$el1.find('.btn-primary').attr('data-is-waiting', "false");
+                that.$el.find('.btn-primary').attr('data-is-waiting', "false");
                 setTimeout(function () {
-                    that.$el1.find('.btn-primary').attr('data-is-waiting', "true"); //trigger animation
+                    that.$el.find('.btn-primary').attr('data-is-waiting', "true"); //trigger animation
                     setTimeout(monitorWaitState, 2500); //wait for animation to complete before checking
                 }, 0);
             } else {
-                that.$el1.find('.btn-primary').attr('data-is-waiting', "false");
+                that.$el.find('.btn-primary').attr('data-is-waiting', "false");
                 _waitStateIsBeingMonitored = false;
             }
         }
 
         this.onDomReady = function () {
-            that.$el1 = $(_el);
+            that.$el = $(_el);
             that.render();
         };
 

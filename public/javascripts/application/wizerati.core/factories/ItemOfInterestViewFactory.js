@@ -78,7 +78,7 @@
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isHideable = !(_favoritesCubeModel.isFavoriteOnAnyFace(item.id));
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
-                        var $e = new app.ContractorItemOfInterestView(item).render().$el1;
+                        var $e = new app.ContractorItemOfInterestView(item).render().$el;
                         done($e)
                     });
                     break;
@@ -98,7 +98,7 @@
                         item.isHideable = !(_favoritesCubeModel.isFavoriteOnAnyFace(item.id)) && isSelectedItem && !_actionedItemsModel.isActioned(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
                         item.isActionable =  !_hiddenItemsModel.isHidden(item.id);
-                        done(new app.ContractItemOfInterestView(item).render().$el1)
+                        done(new app.ContractItemOfInterestView(item).render().$el)
                     });
                     break;
                 default:

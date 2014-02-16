@@ -11,11 +11,11 @@
             _el = "<div class='thumbnail thumbnail-108'></div>",
             _templateName = "favorite.html";
 
-        this.$el1 = $(_el);
+        this.$el = $(_el);
         this.Model = null;
 
         this.render = function () {
-            app.instance.renderTemplate(that.$el1,
+            app.instance.renderTemplate(that.$el,
                                         _templateName,
                                         that.Model,
                                         {});

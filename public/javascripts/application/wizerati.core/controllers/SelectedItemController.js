@@ -1,14 +1,16 @@
 (function (app) {
     "use strict";
 
-    function SelectedItemController(selectedItemModel) {
+    function SelectedItemController(selectedItemModel, searchPanelModel) {
 
         if (!(this instanceof app.SelectedItemController)) {
-            return new app.SelectedItemController(selectedItemModel);
+            return new app.SelectedItemController(selectedItemModel, searchPanelModel);
         }
 
         var that = this,
-            _selectedItemModel = null;
+            _selectedItemModel = null,
+            _searchPanelModel = null,
+            _searchPanelModeEnum = wizerati.mod("enum").SearchPanelMode;
 
         this.update = function (dto) {
             try {
@@ -21,6 +23,7 @@
                     return;
                 }
 
+                _searchPanelModel.setMode(_searchPanelModeEnum.Minimized)
                 _selectedItemModel.setSelectedItemId(dto.id);
             } catch (err) {
                 console.log("error: SelectedItemController.update. " + err);
@@ -32,7 +35,12 @@
                 throw "selectedItemModel not supplied.";
             }
 
+            if (!searchPanelModel) {
+                throw "searchPanelModel not supplied.";
+            }
+
             _selectedItemModel = selectedItemModel;
+            _searchPanelModel = searchPanelModel;
 
             return that;
         }

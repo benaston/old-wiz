@@ -37,7 +37,6 @@
 <body class="lucid-app-wrapper modal-container" data-ui-mode="-1">
 <div class="main modal-bg">
     <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible" data-mode="0">
-        <a class="handle" href="/searchpanelmode/update?mode=1"><span class="handle-icon">4</span></a>
         <div id="search-form">
         </div>
         <section id="favorites-cube" class="cube-container hide">
@@ -100,8 +99,10 @@
         </div>
         <div class="legal">
             wizerati. &copy; 2013 ben aston | <a href="/purchasepanel?tab=0" class="btn-advertisers">recruiters</a>
-            <a href="/purchasepanel?tab=0" id="advertiser-help">Recruiters start here</a>
         </div>
+    </div>
+    <div class="centered-text handle btn-container">
+        <a href="/searchpanelmode/update?mode=0" class="btn btn-primary btn-50 fa">&#xf065;</a><div class="label">expand search</div>
     </div>
     <ul id="result-list-panel-1" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
     </ul>
@@ -368,6 +369,7 @@
 <script src="./javascripts/application/wizerati.core/repositories/ItemRepository.js"></script>
 
 <script src="./javascripts/application/modules.js"></script>
+<script src="./javascripts/application/wizerati.core/RouteRegistrar.js"></script>
 <script src="./javascripts/application/wizerati.core/App.js"></script>
 <script src="./javascripts/application/appStart.js"></script>
 

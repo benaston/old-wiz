@@ -10,19 +10,19 @@
         var that = this,
             _el = "#purchase-panel";
 
-        this.$el1 = null;
+        this.$el = null;
         this.Model = null;
 
         this.render = function () {
-            that.$el1.attr('data-state', that.Model.getActiveTab());
-            that.$el1.attr('data-is-waiting', that.Model.getIsWaiting());
+            that.$el.attr('data-state', that.Model.getActiveTab());
+            that.$el.attr('data-is-waiting', that.Model.getIsWaiting());
         };
 
         this.bindEvents = function () {
         };
 
         this.onDomReady = function(){
-            that.$el1 = $(_el);
+            that.$el = $(_el);
         };
 
         function init() {

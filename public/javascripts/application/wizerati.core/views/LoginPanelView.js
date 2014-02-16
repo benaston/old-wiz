@@ -15,7 +15,7 @@
             _passwordEl = ".password",
             _uiModeEnum = wizerati.mod("enum").UIMode;
 
-        this.$el1 =
+        this.$el =
         this.$cancelButton =
         this.$successButton =
         this.$username =
@@ -24,11 +24,11 @@
 
         this.render = function () {
             if(that.Model.getIsVisible()) {
-                that.$el1.removeClass('hide');
+                that.$el.removeClass('hide');
             }
 
             if (that.Model.getIsLoginFailedMessageVisible()) {
-                that.$el1.addClass('login-error');
+                that.$el.addClass('login-error');
             }
         };
 
@@ -46,7 +46,7 @@
             });
 
             that.$successButton.on('click', function () {
-                app.instance.router.route('/session/create', { $parentDomNode: that.$el1 });
+                app.instance.router.route('/session/create', { $parentDomNode: that.$el });
             });
 
             $(document).keyup(function (e) {
@@ -61,11 +61,11 @@
         }
 
         this.onDomReady = function(){
-            that.$el1 = $(_el);
-            that.$cancelButton = that.$el1.find(_cancelButtonEl);
-            that.$password = that.$el1.find(_passwordEl);
-            that.$username = that.$el1.find(_usernameEl);
-            that.$successButton = that.$el1.find(_successButtonEl);
+            that.$el = $(_el);
+            that.$cancelButton = that.$el.find(_cancelButtonEl);
+            that.$password = that.$el.find(_passwordEl);
+            that.$username = that.$el.find(_usernameEl);
+            that.$successButton = that.$el.find(_successButtonEl);
             that.bindEvents();
         };
 

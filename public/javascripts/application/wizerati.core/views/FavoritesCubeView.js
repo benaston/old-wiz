@@ -35,20 +35,20 @@
                           ".cube-face-labels li:nth-child(6)" ], //back
             _faceEls = [".top", ".left", ".front", ".right", ".bottom", ".back" ];
 
-        this.$el1 = null;
+        this.$el = null;
         this.Model = null;
 
         this.render = function () {
             if(_.flatten(that.Model.getFavorites(), true).length == 0){
-                that.$el1.addClass('hide');
+                that.$el.addClass('hide');
                 return;
             } else {
-                that.$el1.removeClass('hide');
+                that.$el.removeClass('hide');
             }
 
             $.each(that.Model.getFavorites(), function (index1, faceFavorites) {
-                var $face = that.$el1.find(_faceEls[index1]);
-                var $faceSelectorSpots = that.$el1.find('.face-selector:nth-child(' + (index1+1) +') .spot'); //plus 1 because 1-based in DOM
+                var $face = that.$el.find(_faceEls[index1]);
+                var $faceSelectorSpots = that.$el.find('.face-selector:nth-child(' + (index1+1) +') .spot'); //plus 1 because 1-based in DOM
                 $face.find('*').not('.face-empty-message').remove();
                 $faceSelectorSpots.removeClass('filled');
                 $.each(faceFavorites, function(index2, f){
@@ -59,7 +59,7 @@
                 });
             });
 
-            that.$el1.attr('data-selected-face-id',
+            that.$el.attr('data-selected-face-id',
                 _selectedCubeFaceModel.getSelectedCubeFaceId());
 
             var faceLabels = that.Model.getFaceLabels();
@@ -69,7 +69,7 @@
         };
 
         this.onDomReady = function(){
-            that.$el1 = $(_el);
+            that.$el = $(_el);
             that.render();
         };
 

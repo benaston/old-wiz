@@ -27,7 +27,7 @@
             _scrollTopValue = 0,
             _lastKnownSearchId = null;
 
-        this.$el1 = null;
+        this.$el = null;
         this.$el2 = null;
         this.$currentEl = null;
         this.Model = null;
@@ -45,7 +45,7 @@
             var $prevEl = that.$currentEl || that.$el2;
             var isFreshSearch = _lastKnownSearchId !== that.Model.getSearchId();
             calculateScrollTopValueToMaintain($prevEl);
-            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
+            that.$currentEl = $prevEl === that.$el ? that.$el2 : that.$el; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
             that.$currentEl.addClass('ios-scroll-enable');
@@ -91,7 +91,7 @@
 //        }
 
         this.onDomReady = function () {
-            that.$el1 = $(_el1);
+            that.$el = $(_el1);
             that.$el2 = $(_el2);
 //            that.render();
         };

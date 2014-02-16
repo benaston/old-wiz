@@ -1,4 +1,11 @@
 @font-face {
+    font-family: fa;
+    src: url("../fonts/font-awesome.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: pictos;
     src: url("../fonts/pictos.woff");
     font-weight: normal;

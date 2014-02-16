@@ -37,7 +37,7 @@
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
                         item.isItemOfInterest = _itemsOfInterestModel.isItemOfInterest(item.id);
-                        done(new app.ContractorFavoriteView(item).render().$el1)
+                        done(new app.ContractorFavoriteView(item).render().$el)
                     });
                     break;
                 case _roleEnum.Contractor:
@@ -48,7 +48,7 @@
                         item.isHidden = _hiddenItemsModel.isHidden(item.id);
                         item.isActioned = _actionedItemsModel.isActioned(item.id);
                         item.isItemOfInterest = _itemsOfInterestModel.isItemOfInterest(item.id);
-                        done(new app.ContractFavoriteView(item).render().$el1)
+                        done(new app.ContractFavoriteView(item).render().$el)
                     });
                     break;
                 default:

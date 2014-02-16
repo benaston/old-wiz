@@ -30,26 +30,25 @@
             _scrollTopValues = {},
             _scrollLeft = 0;
 
-        this.$el1 = null;
+        this.$el = null;
         this.$el2 = null;
         this.$currentEl = null;
         this.Model = null;
 
         function storeScrollTopValues() {
-            var selectedItem = that.$el1.find('.item-of-interest.selected');
+            var selectedItem = that.$el.find('.item-of-interest.selected');
 
             if (selectedItem) {
                 _scrollTopValues[selectedItem.attr('data-id') + 's'] = $(selectedItem).scrollTop();
             }
 
-            _.each(that.$el1.find('.item-of-interest:not(.selected)'), function (e) {
+            _.each(that.$el.find('.item-of-interest:not(.selected)'), function (e) {
                 _scrollTopValues[$(e).attr('data-id')] = $(e).scrollTop();
             });
         }
 
         function storeScrollLeftValue() {
             _scrollLeft = $('body').scrollLeft();
-            console.log(_scrollLeft);
         }
 
         this.renderWithSelectedItemAnimation = function () {
@@ -69,7 +68,7 @@
             storeScrollLeftValue();
 
             var $prevEl = that.$currentEl || that.$el2;
-            that.$currentEl = $prevEl === that.$el1 ? that.$el2 : that.$el1; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
+            that.$currentEl = $prevEl === that.$el ? that.$el2 : that.$el; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
             var items = that.Model.getItemsOfInterest();
@@ -126,7 +125,7 @@
         }
 
         this.onDomReady = function () {
-            that.$el1 = $(_el1);
+            that.$el = $(_el1);
             that.$el2 = $(_el2);
             that.render();
         };

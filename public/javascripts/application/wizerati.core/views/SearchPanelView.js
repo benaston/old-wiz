@@ -11,15 +11,15 @@
             _el = "#search-panel",
             _searchPanelModeEnum = wizerati.mod("enum").SearchPanelMode;
 
-        this.$el1 = null;
+        this.$el = null;
         this.Model = null;
 
         this.render = function (e, options) {
             options = options || { done: that.postRender };
 
-            that.$el1.attr("data-mode", that.Model.getMode());
+            that.$el.attr("data-mode", that.Model.getMode());
             var oppositeMode = that.Model.getMode() === _searchPanelModeEnum.Default ? _searchPanelModeEnum.Minimized : _searchPanelModeEnum.Default;
-            that.$el1.find('.handle').attr("href", '/searchpanelmode/update?mode=' + oppositeMode);;
+            that.$el.find('.handle').attr("href", '/searchpanelmode/update?mode=' + oppositeMode);;
          };
 
         this.postRender = function () {
@@ -29,7 +29,7 @@
         };
 
         this.onDomReady = function(){
-            that.$el1 = $(_el);
+            that.$el = $(_el);
         };
 
         function init() {

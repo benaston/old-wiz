@@ -186,7 +186,7 @@
             wizerati.mod("services").searchService,
             wizerati.mod("models").resultListModel,
             wizerati.mod("factories").guidFactory);
-        mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel);
+        mod.selectedItemController = new wizerati.SelectedItemController(wizerati.mod("models").selectedItemModel, wizerati.mod("models").searchPanelModel);
         mod.favoritesController = new wizerati.FavoritesController(wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").selectedCubeFaceModel);
         mod.selectedCubeFaceController = new wizerati.SelectedCubeFaceController(wizerati.mod("models").selectedCubeFaceModel);
         mod.itemsOfInterestController = new wizerati.ItemsOfInterestController(wizerati.mod("models").itemsOfInterestModel);
