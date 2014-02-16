@@ -101,7 +101,7 @@
 
                 instance.router.registerRoute('/resultlistmode/update', function (dto) {
                     app.mod("controllers").resultListModeController.update(dto);
-                });
+                }, { silent: true });
             } catch(e) {
                 throw "registerRoutes::registerRoutes threw an exception. " + e;
             }
