@@ -31,7 +31,7 @@
                 _searchService.runSearch(dto.keywords,
                     dto.location,
                     dto.r,
-                    function (results) {
+                    function done(results) {
                         _resultListModel.setResults(_.map(results, function (r) {
                             return r.id;
                         }), _guidFactory.create());

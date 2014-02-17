@@ -128,12 +128,12 @@ body[data-ui-mode='1'] .result-list-panel {
 
 #search-panel[data-mode='1'] {
     /*-webkit-filter: blur(10px);*/
-    opacity: 0;
+    opacity: 1;
 }
 
 #search-panel[data-mode='1'] {
-    /*left: -320px;*/
-    left: -266px;
+    left: -320px;
+    /*left: -266px;*/
 }
 
 /*#search-panel[data-mode='1']:before:hover {*/
@@ -163,30 +163,42 @@ body[data-ui-mode='1'] .result-list-panel {
 
 
 
-.handle {
+.handle, .handle-search-panel {
     color: #333;
     text-decoration: none;
-    transition: opacity .2s linear;
+    /*transition: opacity .2s linear;*/
     /*position: fixed;*/
     position: absolute;
     top: 8px;
     left: 10px;
-    opacity: .5;
+    opacity: 0;
     z-index: 1;
     cursor: pointer;
     z-index: 2;
     width: 50px;
 }
 
+#search-panel[data-mode='0'] + .handle-search-panel {
+    opacity: 0;
+    pointer-events:none;
+    transition: opacity .1s linear 0;
+}
+
+#search-panel[data-mode='1'] + .handle-search-panel {
+    opacity: 1;
+    pointer-events:auto;
+    transition: opacity .2s linear .2s;
+}
+
 .handle-result-list {
     color: #333;
     text-decoration: none;
-    transition: opacity .2s linear;
+
     /*position: fixed;*/
     position: absolute;
     top: 8px;
     left: 15px;
-    opacity: .5;
+    opacity: 0;
     z-index: 1;
     cursor: pointer;
     z-index: 2;
@@ -196,11 +208,13 @@ body[data-ui-mode='1'] .result-list-panel {
 .result-list-container[data-mode='0'] .handle-result-list {
     opacity: 0;
     pointer-events:none;
+    transition: opacity .2s linear 0;
 }
 
 .result-list-container[data-mode='1'] .handle-result-list {
     opacity: 1;
     pointer-events:auto;
+    transition: opacity .2s linear .2s;
 }
 
 .btn {
@@ -240,7 +254,7 @@ body[data-ui-mode='1'] #result-list-panel[data-mode='1'] {
     /*left: 590px;*/
     left: 0px;
     display: none;
-    transition: left .2s ease-in-out, opacity .1s ease-in-out;
+    transition: left .2s ease-in-out, opacity .1s ease-in-out, width .2s ease-in-out;
     position: absolute;
 }
 
@@ -568,6 +582,30 @@ input[type="radio"]:checked:focus + label {
     font-size: 1em;
     line-height: 1em;
     word-wrap: break-word; /*avoid word clipping*/
+}
+
+@media only screen and (min-width: 1025px) {
+.item-of-interest:nth-child(1):nth-last-child(1) {
+    transition: width .2s;
+    width:536px;
+}
+.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+    transition: width .2s;
+    width:448px;
+}
+}
+
+@media only screen and (min-width: 1180px) {
+.item-of-interest:nth-child(1):nth-last-child(1) {
+    transition: width .2s;
+    /*width:636px;*/
+    width:686px;
+}
+.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+    transition: width .2s;
+    /*width:548px;*/
+    width:598px;
+}
 }
 
 .item-of-interest:nth-of-type(1) .pips > li:nth-child(1) > a,
