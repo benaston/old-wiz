@@ -53,7 +53,7 @@
                 return idOfPinnedItem === id;
             });
 
-            $.publish(that.updateEventUri);
+            $.publish(that.updateEventUri, { action: "removal", removedItemId: id});
         };
 
         function init() {

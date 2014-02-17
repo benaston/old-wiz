@@ -56,9 +56,11 @@
         }
 
         this.render = function () {
+            console.log("ItemsOfInterestView::render");
+            var args = Array.prototype.slice.call(arguments);
 
-            renderPrivate({ animateSelectedItem: false });
-
+            var options = args.length > 1 ? args[1] : {};
+            renderPrivate({ animateSelectedItem: false, removedItemId: options.removedItemId });
         };
 
         function renderPrivate(options) {
@@ -97,6 +99,17 @@
                 addPinnedItems(items.pinnedItems, function () {
                     $('body').scrollLeft(_scrollLeft);
                 });
+            }
+
+            if(options.removedItemId) {
+                $prevEl.find('.item-of-interest[data-id=' + options.removedItemId + ']').addClass('collapsed');
+                setTimeout(function(){
+                    $prevEl.addClass('buffer');
+                    that.$currentEl.removeClass('buffer');
+                    setTimeout(function(){ $prevEl.empty(); }, 300)
+                }, 200); //wait for removal animation to complete
+
+                return;
             }
 
             $prevEl.addClass('buffer');

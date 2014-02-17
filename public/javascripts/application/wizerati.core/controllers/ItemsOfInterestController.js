@@ -20,6 +20,7 @@
 
         //todo: result list items should be object literals like {id:'foo'}
         this.destroy = function (dto) {
+            //take control of the rendering process here to avoid the jarring re-paint with a massively changed width
 
             _itemsOfInterestModel.removeItemOfInterest(dto.id);
         };

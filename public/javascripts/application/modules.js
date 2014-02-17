@@ -33,6 +33,10 @@
             Minimized: "1"
         };
 
+        mod.ItemsOfInterestAction = {
+            Remove: "0"
+        };
+
     } catch(e)
     {
         throw "problem registering enum module. " + e;

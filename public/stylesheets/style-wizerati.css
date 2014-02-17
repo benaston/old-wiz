@@ -294,6 +294,7 @@ article.item-of-interest {
     height: 100%; /*important for presence of scrollbars*/
     /*display: inline-block;*/
     -webkit-overflow-scrolling: touch;
+    -webkit-transition: width .2s ease-in-out;
 }
 
 .item-of-interest .menu {
@@ -605,6 +606,19 @@ input[type="radio"]:checked:focus + label {
     transition: width .2s;
     /*width:548px;*/
     width:598px;
+}
+}
+
+@media only screen and (min-width: 1280px) {
+.item-of-interest:nth-child(1):nth-last-child(1) {
+    transition: width .2s;
+    /*width:636px;*/
+    width:786px;
+}
+.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+    transition: width .2s;
+    /*width:548px;*/
+    width:698px;
 }
 }
 
