@@ -107,6 +107,10 @@
                     app.mod("controllers").favoritesGroupController.create(dto);
                 }, { silent: true });
 
+                instance.router.registerRoute('/favoritescubemode/update', function (dto) {
+                    app.mod("controllers").favoritesCubeModeController.update(dto);
+                }, { silent: true });
+
             } catch(e) {
                 throw "registerRoutes::registerRoutes threw an exception. " + e;
             }

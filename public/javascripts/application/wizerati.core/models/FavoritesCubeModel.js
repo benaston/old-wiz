@@ -20,13 +20,29 @@
             _faceLabels = ["my favorites", "my favorites 2", "my favorites 3", "my favorites 4", "my favorites 5", "my favorites 6"],
             _itemRepository = null,
             _resultListModel = null,
-            _faceActiveStatuses = [true, false, false, false, false, false];
+            _faceActiveStatuses = [true, false, false, false, false, false],
+            _modeEnum = app.mod('enum').FavoritesCubeMode,
+            _mode = _modeEnum.Default;
 
         this.updateEventUri = "update://FavoritesCubeModel/";
 
         this.getFaceLabels = function () {
 
             return _faceLabels;
+        };
+
+        this.getMode = function () {
+
+            return _mode;
+        };
+
+        this.setMode = function (value) {
+            if(!value) {
+                throw "value not supplied";
+            }
+
+            _mode = value;
+            $.publish(that.updateEventUri);
         };
 
         this.getFaceStatuses = function () {

@@ -37,6 +37,11 @@
             Remove: "0"
         };
 
+        mod.FavoritesCubeMode = {
+            Default: "0",
+            Edit: "1"
+        };
+
     } catch(e)
     {
         throw "problem registering enum module. " + e;
@@ -208,6 +213,7 @@
         mod.searchPanelModeController = new wizerati.SearchPanelModeController(wizerati.mod("models").searchPanelModel);
         mod.resultListModeController = new wizerati.ResultListModeController(wizerati.mod("models").resultListModel);
         mod.favoritesGroupController = new wizerati.FavoritesGroupController(wizerati.mod("models").favoritesCubeModel);
+        mod.favoritesCubeModeController = new wizerati.FavoritesCubeModeController(wizerati.mod("models").favoritesCubeModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

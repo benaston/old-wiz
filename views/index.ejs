@@ -39,14 +39,32 @@
     <div id="search-panel" class="panel lucid-panel-fixed-full-height overflow-visible" data-mode="0">
         <div id="search-form">
         </div>
-        <section id="favorites-cube" class="cube-container hide">
+        <section id="favorites-cube" class="cube-container hide" data-mode="0">
             <div class="cube-controls" data-active-faces="100000">
-                <a class="face-selector" href="/selectedcubeface/update?id=0"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
-                <a class="face-selector" href="/selectedcubeface/update?id=1"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
-                <a class="face-selector" href="/selectedcubeface/update?id=2"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
-                <a class="face-selector" href="/selectedcubeface/update?id=3"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
-                <a class="face-selector" href="/selectedcubeface/update?id=4"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
-                <a class="face-selector" href="/selectedcubeface/update?id=5"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                <div class="face-selector-container">
+                  <a class="face-selector" href="/selectedcubeface/update?id=0"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                  <a href="/favoritesgroup/delete?id=1" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
+                <div class="face-selector-container">
+                    <a class="face-selector" href="/selectedcubeface/update?id=1"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                    <a href="/favoritesgroup/delete?id=2" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
+                <div class="face-selector-container">
+                    <a class="face-selector" href="/selectedcubeface/update?id=2"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                    <a href="/favoritesgroup/delete?id=3" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
+                <div class="face-selector-container">
+                    <a class="face-selector" href="/selectedcubeface/update?id=3"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                    <a href="/favoritesgroup/delete?id=4" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
+                <div class="face-selector-container">
+                    <a class="face-selector" href="/selectedcubeface/update?id=4"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                    <a href="/favoritesgroup/delete?id=5" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
+                <div class="face-selector-container">
+                    <a class="face-selector" href="/selectedcubeface/update?id=5"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                    <a href="/favoritesgroup/delete?id=6" class="btn-delete-face-selector" alt="Delete this group of favorites" title="Delete this group of favorites">-</a>
+                </div>
                 <a class="face-selector btn-add-active-cube-face" href="/favoritesgroup/create" title="Add another group of favorites" alt="Add another group of favorites">+</a>
             </div>
             <div class="cube">
@@ -81,7 +99,7 @@
                     </div>
                 </figure>
             </div>
-            <a class="favorites-cube-edit-link" href="/favoritescubemode/update?mode=edit">edit</a>
+            <a class="favorites-cube-edit-link" href="/favoritescubemode/update?mode=1">edit</a>
             <ol class="cube-face-labels">
                 <li for="f-t">
 
@@ -365,6 +383,7 @@
 <script src="./javascripts/application/wizerati.core/controllers/SearchPanelModeController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/ResultListModeController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/FavoritesGroupController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/FavoritesCubeModeController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>
