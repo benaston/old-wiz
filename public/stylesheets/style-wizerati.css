@@ -193,15 +193,11 @@ body[data-ui-mode='1'] .result-list-panel {
 .handle-result-list {
     color: #333;
     text-decoration: none;
-
-    /*position: fixed;*/
     position: absolute;
     top: 8px;
     left: 15px;
     opacity: 0;
-    z-index: 1;
     cursor: pointer;
-    z-index: 2;
     width: 50px;
 }
 
@@ -586,23 +582,24 @@ input[type="radio"]:checked:focus + label {
 }
 
 @media only screen and (min-width: 1025px) {
-.item-of-interest:nth-child(1):nth-last-child(1) {
+#search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) {
     transition: width .2s;
     width:536px;
 }
-.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+#search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
     transition: width .2s;
     width:448px;
 }
 }
 
 @media only screen and (min-width: 1180px) {
-.item-of-interest:nth-child(1):nth-last-child(1) {
+ #search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) {
     transition: width .2s;
     /*width:636px;*/
     width:686px;
 }
-.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+
+#search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
     transition: width .2s;
     /*width:548px;*/
     width:598px;
@@ -610,12 +607,12 @@ input[type="radio"]:checked:focus + label {
 }
 
 @media only screen and (min-width: 1280px) {
-.item-of-interest:nth-child(1):nth-last-child(1) {
+#search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) {
     transition: width .2s;
     /*width:636px;*/
     width:786px;
 }
-.item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
+#search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
     transition: width .2s;
     /*width:548px;*/
     width:698px;

@@ -19,13 +19,28 @@
             ],
             _faceLabels = ["my favorites", "my favorites 2", "my favorites 3", "my favorites 4", "my favorites 5", "my favorites 6"],
             _itemRepository = null,
-            _resultListModel = null;
+            _resultListModel = null,
+            _faceActiveStatuses = [true, false, false, false, false, false];
 
         this.updateEventUri = "update://FavoritesCubeModel/";
 
         this.getFaceLabels = function () {
 
             return _faceLabels;
+        };
+
+        this.getFaceStatuses = function () {
+
+            return _faceActiveStatuses;
+        };
+
+        this.setFaceStatuses = function (value) {
+            if(!value) {
+                throw "value not supplied";
+            }
+
+            _faceActiveStatuses = value;
+            $.publish(that.updateEventUri);
         };
 
         this.getFavorites = function () {

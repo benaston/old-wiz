@@ -39,6 +39,10 @@
         this.Model = null;
 
         this.render = function () {
+            that.$el.find('.cube-controls').attr('data-active-faces', that.Model.getFaceStatuses().reduce(function(previousValue, currentValue, index, array){
+                return previousValue + (currentValue ? '1' : '0');
+            }, ''))
+
             if(_.flatten(that.Model.getFavorites(), true).length == 0){
                 that.$el.addClass('hide');
                 return;

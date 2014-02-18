@@ -207,6 +207,7 @@
         mod.purchasePanelAccountsController = new wizerati.PurchasePanelAccountsController(wizerati.mod("models").purchasePanelModel, wizerati.mod("services").accountService);
         mod.searchPanelModeController = new wizerati.SearchPanelModeController(wizerati.mod("models").searchPanelModel);
         mod.resultListModeController = new wizerati.ResultListModeController(wizerati.mod("models").resultListModel);
+        mod.favoritesGroupController = new wizerati.FavoritesGroupController(wizerati.mod("models").favoritesCubeModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

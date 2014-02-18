@@ -37,10 +37,15 @@ figure {
 .cube-container:not([data-selected-face-id='2']) .cube-controls .face-selector:nth-child(3):hover,
 .cube-container:not([data-selected-face-id='3']) .cube-controls .face-selector:nth-child(4):hover,
 .cube-container:not([data-selected-face-id='4']) .cube-controls .face-selector:nth-child(5):hover,
-.cube-container:not([data-selected-face-id='5']) .cube-controls .face-selector:nth-child(6):hover {
+.cube-container:not([data-selected-face-id='5']) .cube-controls .face-selector:nth-child(6):hover,
+.face-selector.btn-add-active-cube-face:hover {
     border-color: rgba(255, 200, 0, 0.3);
+    text-decoration: none;
 }
 
+.face-selector.btn-add-active-cube-face:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
 /*.cube-container:not([data-selected-face-id='0']) .cube-controls .face-selector:nth-child(1) {*/
     /*border-color: rgba(201, 112, 227, 0.55);*/
 /*}*/
@@ -372,4 +377,73 @@ figure {
     font-size: 2rem;
     color: white;
     word-break: break-word;
+    opacity: 0;
+    pointer-events:none;
+}
+
+.cube-controls[data-active-faces='100000'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='110000'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='110000'] > .face-selector:nth-child(2),
+.cube-controls[data-active-faces='111000'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='111000'] > .face-selector:nth-child(2),
+.cube-controls[data-active-faces='111000'] > .face-selector:nth-child(3),
+.cube-controls[data-active-faces='111100'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='111100'] > .face-selector:nth-child(2),
+.cube-controls[data-active-faces='111100'] > .face-selector:nth-child(3),
+.cube-controls[data-active-faces='111100'] > .face-selector:nth-child(4),
+.cube-controls[data-active-faces='111110'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='111110'] > .face-selector:nth-child(2),
+.cube-controls[data-active-faces='111110'] > .face-selector:nth-child(3),
+.cube-controls[data-active-faces='111110'] > .face-selector:nth-child(4),
+.cube-controls[data-active-faces='111110'] > .face-selector:nth-child(5),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(1),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(2),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(3),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(4),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(5),
+.cube-controls[data-active-faces='111111'] > .face-selector:nth-child(6)
+{
+    opacity: 1;
+    pointer-events:auto;
+}
+
+.cube-controls[data-active-faces='111111'] > .face-selector.btn-add-active-cube-face {
+    display: none;
+}
+
+.face-selector.btn-add-active-cube-face {
+    position: absolute;
+    opacity: 1;
+    left: 53px;
+    color: #eee;
+    font-size: 3rem;
+    line-height: 2.4rem;
+    cursor: pointer;
+    pointer-events:auto;
+}
+
+.cube-controls[data-active-faces='100000'] .face-selector.btn-add-active-cube-face {
+    left: 53px;
+}
+
+.cube-controls[data-active-faces='110000'] .face-selector.btn-add-active-cube-face {
+    left: 97px;
+}
+
+.cube-controls[data-active-faces='111000'] .face-selector.btn-add-active-cube-face {
+    left: 140px;
+}
+
+.cube-controls[data-active-faces='111100'] .face-selector.btn-add-active-cube-face {
+    left: 183px;
+}
+
+.cube-controls[data-active-faces='111110'] .face-selector.btn-add-active-cube-face {
+    left: 226px;
+}
+
+.favorites-cube-edit-link {
+    position: absolute;
+    top:-30px;
+    z-index: 1;
 }

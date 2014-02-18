@@ -40,13 +40,14 @@
         <div id="search-form">
         </div>
         <section id="favorites-cube" class="cube-container hide">
-            <div class="cube-controls">
+            <div class="cube-controls" data-active-faces="100000">
                 <a class="face-selector" href="/selectedcubeface/update?id=0"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
                 <a class="face-selector" href="/selectedcubeface/update?id=1"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
                 <a class="face-selector" href="/selectedcubeface/update?id=2"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
                 <a class="face-selector" href="/selectedcubeface/update?id=3"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
                 <a class="face-selector" href="/selectedcubeface/update?id=4"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
                 <a class="face-selector" href="/selectedcubeface/update?id=5"><span class="face-usage-indicator"><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div><div class="spot"></div></span></a>
+                <a class="face-selector btn-add-active-cube-face" href="/favoritesgroup/create" title="Add another group of favorites" alt="Add another group of favorites">+</a>
             </div>
             <div class="cube">
                 <figure class="top">
@@ -80,6 +81,7 @@
                     </div>
                 </figure>
             </div>
+            <a class="favorites-cube-edit-link" href="/favoritescubemode/update?mode=edit">edit</a>
             <ol class="cube-face-labels">
                 <li for="f-t">
 
@@ -90,6 +92,7 @@
                 <li for="f-bottom"></li>
                 <li for="f-back"></li>
             </ol>
+
         </section>
         <div class="navbar-login">
             <a class="btn-log-in" href="/login">log in</a>
@@ -361,6 +364,7 @@
 <script src="./javascripts/application/wizerati.core/controllers/PurchasePanelAccountsController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/SearchPanelModeController.js"></script>
 <script src="./javascripts/application/wizerati.core/controllers/ResultListModeController.js"></script>
+<script src="./javascripts/application/wizerati.core/controllers/FavoritesGroupController.js"></script>
 
 <script src="./javascripts/application/wizerati.core/factories/FavoriteViewFactory.js"></script>
 <script src="./javascripts/application/wizerati.core/factories/ItemOfInterestViewFactory.js"></script>

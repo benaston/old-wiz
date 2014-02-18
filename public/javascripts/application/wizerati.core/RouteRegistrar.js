@@ -9,8 +9,8 @@
         var that = this;
 
         this.registerRoutes = function (instance) {
-
             try {
+
                 instance.router.registerRoute('/', function () {
                     app.mod("controllers").homeController.index();
                 });
@@ -102,6 +102,11 @@
                 instance.router.registerRoute('/resultlistmode/update', function (dto) {
                     app.mod("controllers").resultListModeController.update(dto);
                 }, { silent: true });
+
+                instance.router.registerRoute('/favoritesgroup/create', function (dto) {
+                    app.mod("controllers").favoritesGroupController.create(dto);
+                }, { silent: true });
+
             } catch(e) {
                 throw "registerRoutes::registerRoutes threw an exception. " + e;
             }
