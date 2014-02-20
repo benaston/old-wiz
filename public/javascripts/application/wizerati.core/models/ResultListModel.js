@@ -14,14 +14,14 @@
 
         this.updateEventUri = "update://ResultListModel/";
 
-        this.getResults = function () {
-
-            return _results;
-        };
-
         this.getSearchId = function () {
 
             return _searchId;
+        };
+
+        this.getResults = function () {
+
+            return _results;
         };
 
         this.setResults = function (value, searchId) {

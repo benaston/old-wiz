@@ -915,12 +915,19 @@ body.modal-visible .main {
     transition: -webkit-filter .1s linear 0;
 }
 
+#delete-favorite-group-confirmation-dialog {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /*separating the opacity into a different class enables use of CSS transitions
 whilst keeping hidden modals with display block*/
 body[data-modal='0'].modal-visible #purchase-panel,
-body[data-modal='3'].modal-visible #account-activation-panel {
+body[data-modal='3'].modal-visible #account-activation-panel,
+body[data-modal='4'].modal-visible #delete-favorite-group-confirmation-dialog {
     opacity: 1;
     transition: opacity .05s linear 0;
+    pointer-events: auto;
 }
 
 body[data-modal='0'] #purchase-panel,

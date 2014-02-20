@@ -20,7 +20,8 @@
             Purchase: "0",
             LogIn: "1",
             MyAccount: "2",
-            AccountActivation: "3"
+            AccountActivation: "3",
+            DeleteFavoriteGroupConfirmationDialog: "4"
         };
 
         mod.SearchPanelMode = {
@@ -143,6 +144,7 @@
         mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
         mod.purchasePanelModel = new wizerati.PurchasePanelModel();
         mod.searchPanelModel = new wizerati.SearchPanelModel();
+        mod.deleteFavoriteGroupConfirmationDialogModel = new wizerati.DeleteFavoriteGroupConfirmationDialogModel();
     }
     catch(e) {
         throw "problem registering models module. " + e;
@@ -178,6 +180,7 @@
         mod.itemsOfInterestView = new wizerati.ItemsOfInterestView(wizerati.mod("models").itemsOfInterestModel, wizerati.mod("factories").itemOfInterestViewFactory, wizerati.mod("models").selectedCubeFaceModel, wizerati.mod("models").selectedItemModel, wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").hiddenItemsModel, wizerati.mod("models").actionedItemsModel);
         mod.purchasePanelView = new wizerati.PurchasePanelView(wizerati.mod("models").purchasePanelModel);
         mod.searchPanelView = new wizerati.SearchPanelView(wizerati.mod("models").searchPanelModel);
+        mod.deleteFavoriteGroupConfirmationDialogView = new wizerati.DeleteFavoriteGroupConfirmationDialogView(wizerati.mod("models").deleteFavoriteGroupConfirmationDialogModel, wizerati.mod("models").favoritesCubeModel);
     }
     catch(e) {
         throw "problem registering views module. " + e;
@@ -212,8 +215,9 @@
         mod.purchasePanelAccountsController = new wizerati.PurchasePanelAccountsController(wizerati.mod("models").purchasePanelModel, wizerati.mod("services").accountService);
         mod.searchPanelModeController = new wizerati.SearchPanelModeController(wizerati.mod("models").searchPanelModel);
         mod.resultListModeController = new wizerati.ResultListModeController(wizerati.mod("models").resultListModel);
-        mod.favoritesGroupController = new wizerati.FavoritesGroupController(wizerati.mod("models").favoritesCubeModel);
+        mod.favoriteGroupController = new wizerati.FavoriteGroupController(wizerati.mod("models").favoritesCubeModel, wizerati.mod("models").uiRootModel);
         mod.favoritesCubeModeController = new wizerati.FavoritesCubeModeController(wizerati.mod("models").favoritesCubeModel);
+        mod.deleteFavoriteGroupConfirmationDialogController = new wizerati.DeleteFavoriteGroupConfirmationDialogController(wizerati.mod("models").deleteFavoriteGroupConfirmationDialogModel, wizerati.mod("models").uiRootModel);
     }
     catch(e) {
         throw "problem registering controllers module. " + e;

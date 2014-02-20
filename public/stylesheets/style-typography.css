@@ -193,3 +193,21 @@ a:hover {
 .updatedDateTime {
     font-size:.8rem;
 }
+
+.modal-content-panel h1
+{
+    margin-bottom: 40px;
+}
+
+.message-container blockquote {
+    margin-bottom:20px;
+    margin-left:10px;
+}
+
+.message-container em {
+    font-weight: bold;
+}
+
+.message-container p {
+    margin-bottom:20px;
+}

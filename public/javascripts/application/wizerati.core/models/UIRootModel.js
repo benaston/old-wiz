@@ -52,7 +52,7 @@
         }
 
         return init();
-    };
+    }
 
     app.UIRootModel = UIRootModel;
     invertebrate.Model.isExtendedBy(app.UIRootModel);

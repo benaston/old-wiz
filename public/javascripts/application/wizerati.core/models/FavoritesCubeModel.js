@@ -31,6 +31,11 @@
             return _faceLabels;
         };
 
+        this.getFavoriteGroupName = function (id) {
+
+            return _faceLabels[id];
+        };
+
         this.getMode = function () {
 
             return _mode;
@@ -42,6 +47,30 @@
             }
 
             _mode = value;
+            $.publish(that.updateEventUri);
+        };
+
+        this.deactivateFace = function (faceId) {
+            if(faceId > 5) {
+                throw "faceId invalid."
+            }
+
+            _faceActiveStatuses[faceId] = false;
+
+            //update the client-side results collection
+            for(var i = 0; i < _favorites[faceId].length; i++){
+                var id = _favorites[faceId][i];
+                _itemRepository.getById(id, function (item) {
+                    item["isFavoriteOnFace" + faceId] = false;
+                });
+            }
+
+            _favorites[faceId] = [];
+
+            if(_faceActiveStatuses.indexOf(true) == -1) {
+                _mode = _modeEnum.Default;
+            }
+            //ensure the items of interest and result list views are notified
             $.publish(that.updateEventUri);
         };
 

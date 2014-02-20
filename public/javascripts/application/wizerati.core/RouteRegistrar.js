@@ -103,18 +103,29 @@
                     app.mod("controllers").resultListModeController.update(dto);
                 }, { silent: true });
 
-                instance.router.registerRoute('/favoritesgroup/create', function (dto) {
-                    app.mod("controllers").favoritesGroupController.create(dto);
+                instance.router.registerRoute('/favoritegroup/create', function (dto) {
+                    app.mod("controllers").favoriteGroupController.create(dto);
+                }, { silent: true });
+
+                instance.router.registerRoute('/favoritegroup/destroy', function (dto) {
+                    app.mod("controllers").favoriteGroupController.destroy(dto);
                 }, { silent: true });
 
                 instance.router.registerRoute('/favoritescubemode/update', function (dto) {
                     app.mod("controllers").favoritesCubeModeController.update(dto);
                 }, { silent: true });
 
-            } catch(e) {
-                throw "registerRoutes::registerRoutes threw an exception. " + e;
-            }
+                instance.router.registerRoute('/deletefavoritegroupconfirmationdialog', function (dto) {
+                    app.mod("controllers").deleteFavoriteGroupConfirmationDialogController.index(dto);
+                }, { silent: true });
 
+                instance.router.registerRoute('/deletefavoritegroupconfirmationdialog/destroy', function (dto) {
+                    app.mod("controllers").deleteFavoriteGroupConfirmationDialogController.destroy(dto);
+                }, { silent: true });
+
+            } catch(e) {
+                throw "RouteRegistrar::registerRoutes threw an exception. " + e;
+            }
         };
 
         function init() {

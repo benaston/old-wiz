@@ -18,7 +18,8 @@
         };
 
         this.redirect = function (uri) {
-            history.pushState(null, null, uri);
+//            history.pushState(null, null, uri);
+            that.route(uri);
         };
 
         this.route = function (uri, dto, options) {

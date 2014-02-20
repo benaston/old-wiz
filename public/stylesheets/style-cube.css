@@ -510,6 +510,10 @@ figure {
     pointer-events: auto;
 }
 
+#favorites-cube[data-mode='1'] .face-selector.btn-add-active-cube-face {
+    opacity: 0;
+}
+
 .btn-delete-face-selector {
     display: inline-block;
     position: absolute;
@@ -520,8 +524,7 @@ figure {
     font-size: 2.3rem;
     line-height: .9rem;
     color: white;
-
-    bottom: -27px;
+    bottom: -28px;
     font-weight: normal;
     opacity: 0;
     pointer-events: none;
