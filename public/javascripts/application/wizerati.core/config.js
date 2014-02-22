@@ -38,8 +38,6 @@
             config.prodConfig = prodConfig;
             config.sharedConfig = sharedConfig;
             config.collateConfiguration();
-
-            console.log(JSON.stringify(config.config));
             return config;
         }
 
