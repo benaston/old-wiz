@@ -319,7 +319,7 @@ figure {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: -41px;
+    bottom: -34px;
     margin: auto;
     text-align: center;
 }
@@ -525,7 +525,7 @@ figure {
     font-size: 2.3rem;
     line-height: .9rem;
     color: white;
-    bottom: -28px;
+    bottom: -26px;
     font-weight: normal;
     opacity: 0;
     pointer-events: none;
