@@ -56,7 +56,6 @@
         }
 
         this.render = function () {
-            console.log("ItemsOfInterestView::render");
             var args = Array.prototype.slice.call(arguments);
             var options = args.length > 1 ? args[1] : {};
             renderPrivate({ animateSelectedItem: false, removedItemId: options.removedItemId });

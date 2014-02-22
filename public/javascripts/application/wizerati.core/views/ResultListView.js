@@ -34,26 +34,28 @@
         this.$currentEl = null;
         this.Model = null;
 
-        function calculateScrollTopValueToMaintain($el) {
-            if(_lastKnownSearchId === that.Model.getSearchId()) {
+        function calculateScrollTopValueToMaintain($el, searchId) {
+            if(_lastKnownSearchId === searchId) {
                 _scrollTopValue = $el.scrollTop();
             } else {
                 _scrollTopValue = 0;
-                _lastKnownSearchId = that.Model.getSearchId();
+                _lastKnownSearchId = searchId;
             }
         }
 
         this.render = function () {
             var $prevEl = that.$currentEl || that.$el2;
-            var isFreshSearch = _lastKnownSearchId !== that.Model.getSearchId();
-            calculateScrollTopValueToMaintain($prevEl);
+            var searchId = that.Model.getSearchId();
+            var isFreshSearch = _lastKnownSearchId !== searchId;
+            calculateScrollTopValueToMaintain($prevEl, searchId);
             that.$currentEl = $prevEl === that.$el ? that.$el2 : that.$el; //Double buffering to ensure the user sees no "flicker" as the results are rendered.
             that.$currentEl.empty();
 
             that.$currentEl.addClass('ios-scroll-enable');
 
+            var selectedCubeFaceId = _selectedCubeFaceModel.getSelectedCubeFaceId();
             _.each(that.Model.getResults(), function (id) {
-                _resultViewFactory.create(id, _selectedCubeFaceModel.getSelectedCubeFaceId(), function ($v) {
+                _resultViewFactory.create(id, selectedCubeFaceId, function ($v) {
                     that.$currentEl.append($v);
                 });
             });
@@ -61,15 +63,16 @@
             that.$currentEl.scrollTop(_scrollTopValue);
             setTimeout(function(){$prevEl.addClass('buffer');}, 0); //reduces jank on iOS (yes really)
 
+            var mode = that.Model.getMode();
             if(isFreshSearch) {
                 setTimeout(function(){ //this avoids the user seeing the appending of results to the DOM as an "animation"
                     that.$currentEl.removeClass('buffer');
-                    that.$elContainer.attr('data-mode', that.Model.getMode());
+                    that.$elContainer.attr('data-mode', mode);
                 }, 350);
             } else {
                 setTimeout(function(){
                     that.$currentEl.removeClass('buffer');
-                    that.$elContainer.attr('data-mode', that.Model.getMode());
+                    that.$elContainer.attr('data-mode', mode);
                 }, 0); //reduces jank on iOS (yes really)
             }
 

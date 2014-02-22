@@ -40,9 +40,10 @@
         this.Model = null;
 
         this.render = function () {
-            that.$el.attr('data-mode', that.Model.getMode());
-            that.$el.find('.favorites-cube-edit-link').attr('href', '/favoritescubemode/update?mode=' + (that.Model.getMode() === _modeEnum.Default ? _modeEnum.Edit : _modeEnum.Default));
-            that.$el.find('.favorites-cube-edit-link').text((that.Model.getMode() === _modeEnum.Default ? 'edit' : 'done'));
+            var mode = that.Model.getMode();
+            that.$el.attr('data-mode', mode);
+            that.$el.find('.favorites-cube-edit-link').attr('href', '/favoritescubemode/update?mode=' + (mode === _modeEnum.Default ? _modeEnum.Edit : _modeEnum.Default));
+            that.$el.find('.favorites-cube-edit-link').text((mode === _modeEnum.Default ? 'edit' : 'done'));
             that.$el.find('.cube-controls').attr('data-active-faces', that.Model.getFaceStatuses().reduce(function(previousValue, currentValue, index, array){
                 return previousValue + (currentValue ? '1' : '0');
             }, ''))
@@ -118,6 +119,7 @@
             _actionedItemsModel = actionedItemsModel;
             _itemsOfInterestModel = itemsOfInterestModel;
 
+            $.subscribe(that.Model.updateEventUriPrivate, that.render);
             $.subscribe(that.Model.updateEventUri, that.render);
             $.subscribe(_selectedCubeFaceModel.updateEventUri, that.render);
             $.subscribe(_selectedItemModel.updateEventUri, that.render);

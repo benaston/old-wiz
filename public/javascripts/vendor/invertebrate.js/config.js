@@ -15,13 +15,14 @@
         //should be called from types implementing this prototype
         this.collateConfiguration = function () {
             this.envEnum = envEnum || invertebrate.env;
+            console.log(env);
 
             switch (env) {
                 case this.envEnum.dev:
-                    this.config = _.extend({}, this.devConfig, this.sharedConfig);
+                    this.config = _.extend({}, this.sharedConfig, this.devConfig);
                     break;
                 case this.envEnum.prod:
-                    this.config = _.extend({}, this.prodConfig, this.sharedConfig);
+                    this.config = _.extend({}, this.sharedConfig, this.prodConfig);
                     break;
                 default:
                     throw "invalid environment: " + env;

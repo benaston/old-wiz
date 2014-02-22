@@ -56,6 +56,10 @@
             $.publish(that.updateEventUri, { action: "removal", removedItemId: id});
         };
 
+        this.isPinned = function(id){
+            return _.any(_itemsOfInterest.pinnedItems, function(i){return i === id; })
+        }
+
         function init() {
 
             if (!selectedItemModel) {

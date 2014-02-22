@@ -25,6 +25,7 @@
             _mode = _modeEnum.Default;
 
         this.updateEventUri = "update://FavoritesCubeModel/";
+        this.updateEventUriPrivate = "update://favoritescubemodel/private"; //used when it is unneccessary to tell other UI elements of a change, saving re-painting.
 
         this.getFaceLabels = function () {
 
@@ -47,7 +48,7 @@
             }
 
             _mode = value;
-            $.publish(that.updateEventUri);
+            $.publish(that.updateEventUriPrivate);
         };
 
         this.deactivateFace = function (faceId) {

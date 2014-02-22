@@ -43,8 +43,7 @@
             Edit: "1"
         };
 
-    } catch(e)
-    {
+    } catch (e) {
         throw "problem registering enum module. " + e;
     }
 
@@ -57,7 +56,7 @@
     try {
         mod.config = new wizerati.Config(invertebrate.env.dev);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering config module. " + e;
     }
 
@@ -70,7 +69,7 @@
         //todo fix the dep injection here
         mod.wizeratiClient = new wizerati.WizeratiClient(new wizerati.WizeratiClientRequestFactory(), "bar", "bam");
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering clients module. " + e;
     }
 
@@ -82,7 +81,7 @@
     try {
         mod.itemCache = new wizerati.ItemCache();
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering caches module. " + e;
     }
 
@@ -99,7 +98,7 @@
         mod.searchService = new wizerati.SearchService(mod.croniclService, wizerati.mod("caches").itemCache);
         mod.accountService = new wizerati.AccountService(wizerati.mod("clients").wizeratiClient);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering services module. " + e;
     }
 
@@ -110,7 +109,7 @@
     try {
         mod.itemRepository = new wizerati.ItemRepository(wizerati.mod("caches").itemCache, wizerati.mod("services").croniclService);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering repositories module. " + e;
     }
 
@@ -122,35 +121,42 @@
     try {
         mod.TemplateUriHelper = new invertebrate.TemplateUriHelper(wizerati.mod("config").config, wizerati.mod("services").croniclService.getCroniclUri);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering templates module. " + e;
     }
 
 }(wizerati.mod("templates")));
 
-(function (mod) {
+(function (mod, i, config) {
     "use strict";
 
-    try {
-        mod.searchFormModel = new wizerati.SearchFormModel();
-        mod.uiRootModel = new wizerati.UIRootModel();
-        mod.loginPanelModel = new wizerati.LoginPanelModel();
-        mod.resultListModel = new wizerati.ResultListModel();
-        mod.selectedCubeFaceModel = new wizerati.SelectedCubeFaceModel();
-        mod.selectedItemModel = new wizerati.SelectedItemModel();
-        mod.hiddenItemsModel = new wizerati.HiddenItemsModel();
-        mod.actionedItemsModel = new wizerati.ActionedItemsModel();
-        mod.favoritesCubeModel = new wizerati.FavoritesCubeModel(wizerati.mod("repositories").itemRepository, mod.resultListModel);
-        mod.itemsOfInterestModel = new wizerati.ItemsOfInterestModel(mod.selectedItemModel);
-        mod.purchasePanelModel = new wizerati.PurchasePanelModel();
-        mod.searchPanelModel = new wizerati.SearchPanelModel();
-        mod.deleteFavoriteGroupConfirmationDialogModel = new wizerati.DeleteFavoriteGroupConfirmationDialogModel();
+    function traceCalls(context, done) {
+        if(config.enableTrace === "true") {
+            console.log(context.timestamp + ': ' + context.ctor + '::' + context.methodName + '%s', context.args.length > 0 ? ' called with: ' + context.args : '');
+        }
+        return done(null, null);
     }
-    catch(e) {
+
+    try {
+        mod.searchFormModel = i.util.decorate(new wizerati.SearchFormModel(), traceCalls);
+        mod.uiRootModel = i.util.decorate(new wizerati.UIRootModel(), traceCalls);
+        mod.loginPanelModel = i.util.decorate(new wizerati.LoginPanelModel(), traceCalls);
+        mod.resultListModel = i.util.decorate(new wizerati.ResultListModel(), traceCalls);
+        mod.selectedCubeFaceModel = i.util.decorate(new wizerati.SelectedCubeFaceModel(), traceCalls);
+        mod.selectedItemModel = i.util.decorate(new wizerati.SelectedItemModel(), traceCalls);
+        mod.hiddenItemsModel = i.util.decorate(new wizerati.HiddenItemsModel(), traceCalls);
+        mod.actionedItemsModel = i.util.decorate(new wizerati.ActionedItemsModel(), traceCalls);
+        mod.favoritesCubeModel = i.util.decorate(new wizerati.FavoritesCubeModel(wizerati.mod("repositories").itemRepository, mod.resultListModel), traceCalls);
+        mod.itemsOfInterestModel = i.util.decorate(new wizerati.ItemsOfInterestModel(mod.selectedItemModel), traceCalls);
+        mod.purchasePanelModel = i.util.decorate(new wizerati.PurchasePanelModel(), traceCalls);
+        mod.searchPanelModel = i.util.decorate(new wizerati.SearchPanelModel(), traceCalls);
+        mod.deleteFavoriteGroupConfirmationDialogModel = i.util.decorate(new wizerati.DeleteFavoriteGroupConfirmationDialogModel(), traceCalls);
+    }
+    catch (e) {
         throw "problem registering models module. " + e;
     }
 
-}(wizerati.mod("models")));
+}(wizerati.mod("models"), invertebrate, wizerati.mod("config").config.config));
 
 (function (mod) {
     "use strict";
@@ -162,7 +168,7 @@
         mod.wizeratiClientRequestFactory = new wizerati.WizeratiClientRequestFactory();
         mod.guidFactory = new wizerati.GuidFactory();
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering factories module. " + e;
     }
 
@@ -182,7 +188,7 @@
         mod.searchPanelView = new wizerati.SearchPanelView(wizerati.mod("models").searchPanelModel);
         mod.deleteFavoriteGroupConfirmationDialogView = new wizerati.DeleteFavoriteGroupConfirmationDialogView(wizerati.mod("models").deleteFavoriteGroupConfirmationDialogModel, wizerati.mod("models").favoritesCubeModel);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering views module. " + e;
     }
 
@@ -219,7 +225,7 @@
         mod.favoritesCubeModeController = new wizerati.FavoritesCubeModeController(wizerati.mod("models").favoritesCubeModel);
         mod.deleteFavoriteGroupConfirmationDialogController = new wizerati.DeleteFavoriteGroupConfirmationDialogController(wizerati.mod("models").deleteFavoriteGroupConfirmationDialogModel, wizerati.mod("models").uiRootModel);
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering controllers module. " + e;
     }
 
@@ -231,7 +237,7 @@
     try {
         mod.postRenderActions = [];
     }
-    catch(e) {
+    catch (e) {
         throw "problem registering ui module. " + e;
     }
 

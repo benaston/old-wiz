@@ -14,7 +14,8 @@
                     "2": "./contractor/",
                     "3": "./contract/",
                     "4": "./contractor/"
-                }
+                },
+                "enableTrace": "true"
             },
             prodConfig = {
                 wizeratiUri: "https://www.wizerati.com/",
@@ -38,6 +39,7 @@
             config.sharedConfig = sharedConfig;
             config.collateConfiguration();
 
+            console.log(JSON.stringify(config.config));
             return config;
         }
 

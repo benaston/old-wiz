@@ -29,7 +29,7 @@ figure {
     margin: auto;
     margin-bottom: 35px; /*space for face label*/
     -webkit-user-select: none;
-    top: 36px;
+    top: 26px;
 }
 
 .cube-container:not([data-selected-face-id='0']) .cube-controls .face-selector:nth-child(1):hover,
@@ -447,6 +447,7 @@ figure {
 .favorites-cube-edit-link {
     position: absolute;
     top: -30px;
+    right:0;
     z-index: 1;
 }
 
@@ -554,3 +555,47 @@ figure {
 .cube-controls .face-selector-container:nth-child(6)  .btn-delete-face-selector {
     left: 227px;
 }
+
+/*@media only screen and (max-height: 703px) {*/
+    /*.cube-container {*/
+        /*top: 26px;*/
+        /*transition: top .2s;*/
+    /*}*/
+
+    /*.cube-container[data-mode='1'] {*/
+        /*top: 18px;*/
+        /*-webkit-transition: top .2s;*/
+    /*}*/
+/*}*/
+
+.cube-container {
+    top: 42px;
+}
+
+/*@media only screen and (min-height: 713px) {*/
+    /*.cube-container {*/
+        /*top: 36px;*/
+        /*transition: top .2s;*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (min-height: 723px) {*/
+    /*.cube-container {*/
+        /*top: 46px;*/
+        /*transition: top .2s;*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (min-height: 733px) {*/
+    /*.cube-container {*/
+        /*top: 42px;*/
+        /*transition: top .2s;*/
+    /*}*/
+/*}*/
+
+/*@media only screen and (min-height: 743px) {*/
+    /*.cube-container {*/
+        /*top: 66px;*/
+        /*transition: top .2s;*/
+    /*}*/
+/*}*/

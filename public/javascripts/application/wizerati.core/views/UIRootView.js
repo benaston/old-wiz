@@ -8,9 +8,7 @@
         }
 
         var that = this,
-            _el = "body",
-            _uiModeEnum = wizerati.mod("enum").UIMode,
-            _modalEnum = wizerati.mod("enum").Modal;
+            _el = "body";
 
         this.$el = null;
         this.Model = null;
@@ -20,11 +18,12 @@
 
             //two step DOM manipulation to enable visibility of CSS transition
             //first set display property
+            var modal = that.Model.getModal();
             that.$el.removeClass("modal-visible"); //re-adding of this class will trigger CSS transition
             that.$el.attr("data-ui-mode", that.Model.getUIMode());
-            that.$el.attr("data-modal", that.Model.getModal());
+            that.$el.attr("data-modal", modal);
 
-            if(that.Model.getModal()) {
+            if(modal) {
                 setTimeout(function(){
                     that.$el.addClass("modal-visible");
                 }, 0)  //re-adding of this class will trigger CSS transition
