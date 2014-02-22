@@ -1,44 +1,44 @@
-(function (app) {
-    "use strict";
+(function (app, $, invertebrate) {
+  'use strict';
 
-    function AccountActivationView(model) {
+  function AccountActivationView(model) {
 
-        if (!(this instanceof app.AccountActivationView)) {
-            return new app.AccountActivationView(model);
-        }
+    if (!(this instanceof app.AccountActivationView)) {
+      return new app.AccountActivationView(model);
+    }
 
-        var that = this,
-            _el = "#activation-panel";
+    var that = this,
+        _el = '#activation-panel';
 
-        this.$el = null;
-        this.Model = null;
+    this.$el = null;
+    this.Model = null;
 
-        this.render = function () {
-        };
-
-        this.bindEvents = function () {
-        };
-
-        this.onDomReady = function(){
-            that.$el = $(_el);
-        };
-
-        function init() {
-            if (!model) {
-                throw "model not supplied";
-            }
-
-            that.Model = model;
-
-            $.subscribe(that.Model.updateEventUri, that.render);
-
-            return that;
-        }
-
-        return init();
+    this.render = function () {
     };
 
-    app.AccountActivationView = AccountActivationView;
-    invertebrate.View.isExtendedBy(app.AccountActivationView);
+    this.bindEvents = function () {
+    };
 
-}(wizerati));
+    this.onDomReady = function () {
+      that.$el = $(_el);
+    };
+
+    function init() {
+      if (!model) {
+        throw 'model not supplied';
+      }
+
+      that.Model = model;
+
+      $.subscribe(that.Model.updateEventUri, that.render);
+
+      return that;
+    }
+
+    return init();
+  }
+
+  app.AccountActivationView = AccountActivationView;
+  invertebrate.View.isExtendedBy(app.AccountActivationView);
+
+}(wizerati, $, invertebrate));

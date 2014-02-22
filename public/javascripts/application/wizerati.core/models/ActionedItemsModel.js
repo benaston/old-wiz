@@ -1,43 +1,41 @@
-(function (app) {
-    "use strict";
+(function (app, $, invertebrate) {
+  'use strict';
 
-    function ActionedItemsModel() {
+  function ActionedItemsModel() {
 
-        if (!(this instanceof app.ActionedItemsModel)) {
-            return new app.ActionedItemsModel();
-        }
+    if (!(this instanceof app.ActionedItemsModel)) {
+      return new app.ActionedItemsModel();
+    }
 
-        var that = this,
-            _actionedItems = {};
+    var that = this,
+        _actionedItems = {};
 
-        this.updateEventUri = "update://ActionedItemsModel/";
+    this.updateEventUri = 'update://ActionedItemsModel/';
 
-        this.isActioned = function (id) {
-
-            return !!_actionedItems[id];
-        }
-
-        this.addActionedItemId = function (value) {
-            _actionedItems[value] = value;
-
-            $.publish(that.updateEventUri);
-        }
-
-        this.removeActionedItemId = function (value) {
-            delete _actionedItems[value];
-
-            $.publish(that.updateEventUri);
-        }
-
-        function init() {
-
-            return that;
-        }
-
-        return init();
+    this.isActioned = function (id) {
+      return !!_actionedItems[id];
     };
 
-    app.ActionedItemsModel = ActionedItemsModel;
-    invertebrate.Model.isExtendedBy(app.ActionedItemsModel);
+    this.addActionedItemId = function (value) {
+      _actionedItems[value] = value;
 
-}(wizerati));
+      $.publish(that.updateEventUri);
+    };
+
+    this.removeActionedItemId = function (value) {
+      delete _actionedItems[value];
+
+      $.publish(that.updateEventUri);
+    };
+
+    function init() {
+      return that;
+    }
+
+    return init();
+  }
+
+  app.ActionedItemsModel = ActionedItemsModel;
+  invertebrate.Model.isExtendedBy(app.ActionedItemsModel);
+
+}(wizerati, $, invertebrate));

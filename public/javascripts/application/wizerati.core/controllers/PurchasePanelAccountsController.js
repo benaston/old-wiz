@@ -11,7 +11,7 @@
     var that = this,
         _accountService = null,
         _purchasePanelModel = null,
-        _modalEnum = wizerati.mod('enum').Modal;
+        _modalEnum = app.mod('enum').Modal;
 
     this.create = function (dto) {
       try {
@@ -23,7 +23,7 @@
               fail: function () {
                 _purchasePanelModel.setIsWaiting(' ');
                 var notifications = _purchasePanelModel.getNotifications();
-                notifications.push({type: 'error', message: 'An error occurred while creating your account.' });
+                notifications.push({type: 'error', message: 'An error occurred while creating your account.'});
                 _purchasePanelModel.setNotifications(notifications);
               },
               wait: function () {

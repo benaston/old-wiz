@@ -1,5 +1,5 @@
 (function (app) {
-  "use strict";
+  'use strict';
 
   function FavoriteGroupController(favoritesCubeModel, uiRootModel) {
 
@@ -14,7 +14,7 @@
     this.create = function () {
       var faceStatuses = _favoritesCubeModel.getFaceStatuses();
       if (faceStatuses.indexOf(false) === -1) {
-        throw "Up to six favorite groups may be created.";
+        throw 'Up to six favorite groups may be created.';
       }
 
       faceStatuses[faceStatuses.indexOf(false)] = true;
@@ -23,7 +23,7 @@
 
     this.destroy = function (dto) {
       if (dto.id == null) {
-        throw "id not supplied.";
+        throw 'id not supplied.';
       }
 
       _favoritesCubeModel.deactivateFace(dto.id);
@@ -32,11 +32,11 @@
 
     function init() {
       if (!favoritesCubeModel) {
-        throw "favoritesCubeModel not supplied.";
+        throw 'favoritesCubeModel not supplied.';
       }
 
       if (!uiRootModel) {
-        throw "uiRootModel not supplied.";
+        throw 'uiRootModel not supplied.';
       }
 
       _favoritesCubeModel = favoritesCubeModel;

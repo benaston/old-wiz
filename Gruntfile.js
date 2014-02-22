@@ -7,7 +7,24 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['public/javascripts/application/**/*.js'],
+        src: ['public/javascripts/vendor/invertebrate.js/invertebrate.js',
+              'public/javascripts/vendor/invertebrate.js/**.js',
+              'public/javascripts/application/wizerati.js',
+              'public/javascripts/application/wizerati.core/services/**/*.js',
+              'public/javascripts/application/wizerati.core/clients/**/*.js', 
+              'public/javascripts/application/wizerati.core/Config.js', 
+              'public/javascripts/application/wizerati.core/models/**/*.js', 
+              'public/javascripts/application/wizerati.core/views/**/*.js', 
+              'public/javascripts/application/wizerati.core/controllers/**/*.js', 
+              'public/javascripts/application/wizerati.core/factories/**/*.js', 
+              'public/javascripts/application/wizerati.core/caches/**/*.js', 
+              'public/javascripts/application/wizerati.core/entities/**/*.js', 
+              'public/javascripts/application/wizerati.core/repositories/**/*.js', 
+              'public/javascripts/application/modules.js',
+              'public/javascripts/application/wizerati.core/RouteRegistrar.js',
+              'public/javascripts/application/wizerati.core/App.js',
+              'public/javascripts/application/appStart.js'
+              ],
         dest: 'public/javascripts/<%= pkg.name %>.js'
       }
     },

@@ -1,5 +1,5 @@
 (function (app) {
-  "use strict";
+  'use strict';
 
   function HiddenItemsController(hiddenItemsModel) {
 
@@ -12,7 +12,7 @@
 
     this.create = function (dto) {
       if (!dto) {
-        throw "dto not supplied.";
+        throw 'dto not supplied.';
       }
 
       _hiddenItemsModel.addHiddenItemId(dto.id);
@@ -25,7 +25,7 @@
 
     function init() {
       if (!hiddenItemsModel) {
-        throw "hiddenItemsModel not supplied.";
+        throw 'hiddenItemsModel not supplied.';
       }
 
       _hiddenItemsModel = hiddenItemsModel;

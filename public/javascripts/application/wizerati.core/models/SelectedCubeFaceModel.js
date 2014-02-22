@@ -1,37 +1,34 @@
-(function (app) {
-    "use strict";
+(function (app, $, invertebrate) {
+  'use strict';
 
-    function SelectedCubeFaceModel() {
+  function SelectedCubeFaceModel() {
 
-        if (!(this instanceof app.SelectedCubeFaceModel)) {
-            return new app.SelectedCubeFaceModel();
-        }
+    if (!(this instanceof app.SelectedCubeFaceModel)) {
+      return new app.SelectedCubeFaceModel();
+    }
 
-        var that = this,
-            _selectedCubeFaceId = '0';
+    var that = this,
+        _selectedCubeFaceId = '0';
 
-        this.updateEventUri = "update://SelectedCubeFaceModel/";
+    this.updateEventUri = 'update://SelectedCubeFaceModel/';
 
-        this.getSelectedCubeFaceId = function () {
-
-            return _selectedCubeFaceId;
-        }
-
-        this.setSelectedCubeFaceId = function (value) {
-            _selectedCubeFaceId = value;
-
-            $.publish(that.updateEventUri);
-        }
-
-        function init() {
-
-            return that;
-        }
-
-        return init();
+    this.getSelectedCubeFaceId = function () {
+      return _selectedCubeFaceId;
     };
 
-    app.SelectedCubeFaceModel = SelectedCubeFaceModel;
-    invertebrate.Model.isExtendedBy(app.SelectedCubeFaceModel);
+    this.setSelectedCubeFaceId = function (value) {
+      _selectedCubeFaceId = value;
+      $.publish(that.updateEventUri);
+    };
 
-}(wizerati));
+    function init() {
+      return that;
+    }
+
+    return init();
+  }
+
+  app.SelectedCubeFaceModel = SelectedCubeFaceModel;
+  invertebrate.Model.isExtendedBy(app.SelectedCubeFaceModel);
+
+}(wizerati, $, invertebrate));

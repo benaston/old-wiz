@@ -29,6 +29,19 @@ html .uneditable-input {
     transition: border linear 0.2s;
 }
 
+.rotate {
+    -webkit-animation-name: rotate;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
 
 
 input[type=radio]:not(:checked) + label:hover {

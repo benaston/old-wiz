@@ -1,5 +1,5 @@
 (function (app) {
-  "use strict";
+  'use strict';
 
   function FavoritesController(favoritesCubeModel, selectedCubeFaceModel) {
 
@@ -14,7 +14,7 @@
 
     this.create = function (dto) {
       if (!dto) {
-        throw "dto not supplied.";
+        throw 'dto not supplied.';
       }
 
       var currentCubeFace = _selectedCubeFaceModel.getSelectedCubeFaceId();
@@ -29,7 +29,7 @@
 
     this.destroy = function (dto) {
       if (!dto) {
-        throw "dto not supplied.";
+        throw 'dto not supplied.';
       }
 
       _favoritesCubeModel.removeFavorite(dto.id, _selectedCubeFaceModel.getSelectedCubeFaceId());
@@ -37,11 +37,11 @@
 
     function init() {
       if (!favoritesCubeModel) {
-        throw "favoritesCubeModel not supplied.";
+        throw 'favoritesCubeModel not supplied.';
       }
 
       if (!selectedCubeFaceModel) {
-        throw "selectedCubeFaceModel not supplied.";
+        throw 'selectedCubeFaceModel not supplied.';
       }
 
       _favoritesCubeModel = favoritesCubeModel;

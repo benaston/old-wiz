@@ -1,43 +1,43 @@
-(function (app) {
-    "use strict";
+(function (app, $, invertebrate) {
+  'use strict';
 
-    function HiddenItemsModel() {
+  function HiddenItemsModel() {
 
-        if (!(this instanceof app.HiddenItemsModel)) {
-            return new app.HiddenItemsModel();
-        }
+    if (!(this instanceof app.HiddenItemsModel)) {
+      return new app.HiddenItemsModel();
+    }
 
-        var that = this,
-            _hiddenItems = {};
+    var that = this,
+        _hiddenItems = {};
 
-        this.updateEventUri = "update://HiddenItemsModel/";
+    this.updateEventUri = 'update://HiddenItemsModel/';
 
-        this.isHidden = function (id) {
+    this.isHidden = function (id) {
 
-            return !!_hiddenItems[id];
-        }
-
-        this.addHiddenItemId = function (value) {
-            _hiddenItems[value] = value;
-
-            $.publish(that.updateEventUri);
-        }
-
-        this.removeHiddenItemId = function (value) {
-            delete _hiddenItems[value];
-
-            $.publish(that.updateEventUri);
-        }
-
-        function init() {
-
-            return that;
-        }
-
-        return init();
+      return !!_hiddenItems[id];
     };
 
-    app.HiddenItemsModel = HiddenItemsModel;
-    invertebrate.Model.isExtendedBy(app.HiddenItemsModel);
+    this.addHiddenItemId = function (value) {
+      _hiddenItems[value] = value;
 
-}(wizerati));
+      $.publish(that.updateEventUri);
+    };
+
+    this.removeHiddenItemId = function (value) {
+      delete _hiddenItems[value];
+
+      $.publish(that.updateEventUri);
+    };
+
+    function init() {
+
+      return that;
+    }
+
+    return init();
+  }
+
+  app.HiddenItemsModel = HiddenItemsModel;
+  invertebrate.Model.isExtendedBy(app.HiddenItemsModel);
+
+}(wizerati, $, invertebrate));

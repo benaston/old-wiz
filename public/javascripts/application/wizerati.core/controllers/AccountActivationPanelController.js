@@ -9,8 +9,8 @@
 
     var that = this,
         _uiRootModel = null,
-        _uiModeEnum = wizerati.mod('enum').UIMode,
-        _modalEnum = wizerati.mod('enum').Modal;
+        _uiModeEnum = app.mod('enum').UIMode,
+        _modalEnum = app.mod('enum').Modal;
 
     this.index = function () {
       _uiRootModel.setModal(_modalEnum.AccountActivation);
@@ -31,7 +31,7 @@
       } else if (uiMode === _uiModeEnum.Search) {
         app.instance.router.redirect('/search');
       } else {
-        throw 'invalid UI mode'
+        throw 'invalid UI mode';
       }
     };
 

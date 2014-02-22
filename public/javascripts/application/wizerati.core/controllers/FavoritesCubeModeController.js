@@ -1,5 +1,5 @@
 (function (app) {
-  "use strict";
+  'use strict';
 
   function FavoritesCubeModeController(favoritesCubeModel) {
 
@@ -16,7 +16,7 @@
 
     function init() {
       if (!favoritesCubeModel) {
-        throw "favoritesCubeModel not supplied.";
+        throw 'favoritesCubeModel not supplied.';
       }
 
       _favoritesCubeModel = favoritesCubeModel;
