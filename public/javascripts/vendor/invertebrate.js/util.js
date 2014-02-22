@@ -1,9 +1,9 @@
 (function (invertebrate) {
-//    "use strict";
+    "use strict";
 
     var util = {};
 
-    //`decoratingFunction` should accept arguments `context, done(err, result)`. `context` looks like this: `{methodName: ''}`.
+    //`decoratingFunction` should accept arguments `context, done(err, result)`.
     util.decorate = function (objectToDecorate, decoratingFunction) {
 
         var decoratedObject = Object.create(objectToDecorate);
@@ -11,8 +11,7 @@
         getAllMethodNames(objectToDecorate).forEach(function (methodName) {
             decoratedObject[methodName] = function decoratorFunction () {
                 var args = [].slice.call(arguments, 0);
-                var context = { callingFunction: getFunctionName(decoratorFunction.caller),
-                                ctor: objectToDecorate.constructor.name,
+                var context = { ctor: objectToDecorate.constructor.name,
                                 ptype: objectToDecorate.prototype,
                                 objectType: typeof (objectToDecorate),
                                 methodName: methodName,
