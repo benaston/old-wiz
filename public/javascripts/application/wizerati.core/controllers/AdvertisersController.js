@@ -1,37 +1,37 @@
 (function (app) {
-    "use strict";
+  'use strict';
 
-    function AdvertisersController(uiRootModel) {
+  function AdvertisersController(uiRootModel) {
 
-        if (!(this instanceof app.AdvertisersController)) {
-            return new app.AdvertisersController(uiRootModel);
-        }
-
-        var that = this,
-            _uiRootModel = null,
-            _uiModeEnum = wizerati.mod("enum").UIMode;
-
-        this.index = function () {
-            try {
-                _uiRootModel.setUIMode(_uiModeEnum.Purchase);
-            } catch (err) {
-                console.log("error: AdvertisersController.index");
-            }
-        };
-
-        function init() {
-            if (!uiRootModel) {
-                throw "uiRootModel not supplied.";
-            }
-
-            _uiRootModel = uiRootModel;
-
-            return that;
-        }
-
-        return init();
+    if (!(this instanceof app.AdvertisersController)) {
+      return new app.AdvertisersController(uiRootModel);
     }
 
-    app.AdvertisersController = AdvertisersController;
+    var that = this,
+        _uiRootModel = null,
+        _uiModeEnum = app.mod('enum').UIMode;
+
+    this.index = function () {
+      try {
+        _uiRootModel.setUIMode(_uiModeEnum.Purchase);
+      } catch (err) {
+        console.log('error: AdvertisersController.index');
+      }
+    };
+
+    function init() {
+      if (!uiRootModel) {
+        throw 'uiRootModel not supplied.';
+      }
+
+      _uiRootModel = uiRootModel;
+
+      return that;
+    }
+
+    return init();
+  }
+
+  app.AdvertisersController = AdvertisersController;
 
 }(wizerati));

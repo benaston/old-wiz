@@ -1,20 +1,20 @@
 (function (app) {
-    "use strict";
+  'use strict';
 
-    function AccountEntity() {
+  function AccountEntity() {
 
-        if (!(this instanceof app.AccountEntity)) {
-            return new app.AccountEntity();
-        }
-
-        var that = this,
-            _loginService = null,
-            _config = null;
-
-        this.name = "";
-        this.email = "";
+    if (!(this instanceof app.AccountEntity)) {
+      return new app.AccountEntity();
     }
 
-    app.AccountEntity = AccountEntity;
+    var that = this,
+        _loginService = null,
+        _config = null;
+
+    this.name = '';
+    this.email = '';
+  }
+
+  app.AccountEntity = AccountEntity;
 
 }(wizerati));
