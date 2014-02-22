@@ -15,7 +15,7 @@
                     "3": "./contract/",
                     "4": "./contractor/"
                 },
-                "enableTrace": "true"
+                "enableTrace": "false"
             },
             prodConfig = {
                 wizeratiUri: "https://www.wizerati.com/",
