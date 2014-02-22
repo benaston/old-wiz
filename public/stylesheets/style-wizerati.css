@@ -813,11 +813,12 @@ body[data-ui-mode='0'] .navbar {
 }
 
 .legal {
-    left: 30px;
-    bottom: 1px;
-    position: absolute;
+    /*left: 30px;*/
+    /*bottom: 1px;*/
+    position: relative;
+    left:15px;
     font-size: 0.75em;
-    z-index: 4;
+    /*z-index: 4;*/
 }
 
 .navbar-advertisers {
