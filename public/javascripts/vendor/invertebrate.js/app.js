@@ -1,4 +1,4 @@
-(function (invertebrate, $, _) {
+(function (invertebrate, $, _, moment) {
   'use strict';
 
   function App(templateServerSvc) {
@@ -90,7 +90,7 @@
       var templateUri = _templateServerSvc.getTemplateUri(templateName);
       //could modify to use self cache
       that.fetchTemplate(templateUri, { done: function (tmpl) {
-        $el.html(tmpl({ model: _.clone(model) }, { jQuery: $ }));
+        $el.html(tmpl({ model: _.clone(model), $: $, moment: moment }));
 
         if (options.postRenderScriptName) {
           var postRenderScriptUri = _templateServerSvc.getPostRenderScriptUri(options.postRenderScriptName);
@@ -138,4 +138,4 @@
   }
 
   invertebrate.App = App;
-}(invertebrate, $, _));
+}(invertebrate, $, _, moment));

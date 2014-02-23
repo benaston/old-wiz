@@ -1,11 +1,11 @@
 (function (app) {
-    "use strict";
+  'use strict';
 
-    function postRenderScript ($, $el) {
+  function postRenderScript($, $el) {
 
-        console.log(app);
-    }
+    console.log(app);
+  }
 
-    return { postRenderScript: postRenderScript };
+  return { postRenderScript: postRenderScript };
 
 }(wizerati));

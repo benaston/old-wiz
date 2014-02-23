@@ -1,31 +1,36 @@
 wizerati
 ========
 
-*Please note: I intend to move the JavaScript in this application to be more idiomatic, adding methods to the prototype object instead of the actual objects themselves, but this is not high on my list of things to do at the moment.*
-
-*This version of Wizerati is built using my own invertebrate.js client-side MVC framework.*
-
-Wizerati is an ongoing experimental project for me to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
+Wizerati is an ongoing project to test out user interface ideas and hone my skills developing JavaScript-heavy single-page web applications.
 
 You can find a version of it online here (please note it has not been made cross-browser compatible yet, please use Chrome or Safari):
 
-http://guarded-cliffs-7163.herokuapp.com
+http://intense-dusk-2508.herokuapp.com/
 
-http://pacific-plains-5947.herokuapp.com/
-
-
-Wizerati is based on my open source CSS bootstrap lucid.css (https://github.com/benaston/lucid).
+##Aims
+- To obsolete CWJobs and JobServe.
+- One-second page load times.
+- Delightful user experience.
 
 ##Technical Details
 
-###"Vendor" libraries:
+###Server-side
+
+- Node.js
+- EJS (templating)
+- Grunt (task runner)
+- Uglify (minification)
+- Concat/GruntCSS (concatenation)
+- CouchDB / Cloudant (data-tier)
+
+###Client-side
 
 - Underscore.js (string/collection utility methods)
-- jQuery (DOM manipulation)
+- Zepto.js (DOM manipulation)
 - TinyPubSub (string-based messaging)
 - _Cookie.js (cookie manipulation)
-- FastClick.js (click delay correction on touch devices - this is currently disabled)
-- Invertebrate.js (client-side MVC, client-side routing, templating)
+- Invertebrate.js (client-side MVC, client-side routing, templating (in concert with underscore templating))
+- Lucid.css (CSS)
 
 ###Application Initialisation Sequence
 
@@ -105,21 +110,6 @@ common.js has useful library functions for things like interfacing with CouchDBB
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/benaston/wiz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Finding businesses, online find the top several thousand companies my revenue then search linkedin "recruitment manager x-company-name". Connnect and then contact directly.
-
-
-TODO: standardise on node conventions thorughout.
-
-
-e.g.
-
-        myCallback: function(err, result) {
-            if(err) {
-                console.log("ERROR: " + err);
-                return;
-            }
-
-            //callback stuff
-        },
 
 Include browserify, to enable Node-like syntax on both client and server.
 

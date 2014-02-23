@@ -14,6 +14,7 @@ module.exports = function (grunt) {
           'public/javascripts/vendor/zepto-deferred.js',
           'public/javascripts/vendor/underscore.js',
           'public/javascripts/vendor/_cookie.js',
+          'public/javascripts/vendor/moment.min.js',
           'public/javascripts/vendor/invertebrate.js/invertebrate.js',
           'public/javascripts/vendor/invertebrate.js/**.js',
           'public/javascripts/application/wizerati.js',
@@ -47,7 +48,8 @@ module.exports = function (grunt) {
           'public/stylesheets/style-wizerati.css',
           'public/stylesheets/lucid-style-buttons.css',
           'public/stylesheets/lucid-style-form-elements.css',
-          'public/stylesheets/lucid-style-dialogs.css'
+          'public/stylesheets/lucid-style-dialogs.css',
+          'public/stylesheets/lucid-style-table.css'
         ],
         dest: 'public/stylesheets/<%= pkg.name %>.css'
       }

@@ -283,6 +283,22 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.item-of-interest p {
+    margin-bottom: 2rem;
+}
+
+.item-of-interest .location, .item-of-interest .country {
+    font-size: .8rem;
+}
+
+.item-of-interest li {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.item-of-interest ul, .item-of-interest ol {
+    margin-bottom: 20px;
+}
 .lucid-panel-fixed-full-height {
     position: fixed;
     top: 0;
@@ -2445,6 +2461,36 @@ a.hidden:before {
     font-family: fa !important;
 }
 
+.item-of-interest:nth-child(even) table {float:left;}
+.item-of-interest:nth-child(odd) table {float:right;}
+
+.item-of-interest table {
+    width: 100%;
+    max-width: 400px;
+    /*text-align: center;*/
+}
+
+.item-of-interest table td:nth-of-type(1):nth-last-of-type(2){ width:50%;}
+.item-of-interest table td:nth-of-type(2):nth-last-of-type(1){ width:50%;}
+.item-of-interest table td:nth-of-type(1):nth-last-of-type(1){ width:100%; text-align: left;}
+
+.item-of-interest .table-bordered {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.item-of-interest .table-bordered td {
+    padding: 6px;
+}
+
+.cell-content-container {
+    height:21px;
+    overflow: hidden;
+}
+
+.itemMetadata h1 {
+    clear:none;
+}
 .btn {
     padding: 0 !important;
     cursor: pointer;
@@ -2845,4 +2891,44 @@ this node.*/
 
 body.modal-container.modal-visible {
     overflow: hidden;
+}
+
+table {
+    pointer-events:auto;
+}
+
+.table-bordered {
+    border: 1px solid rgb(206, 214, 218); /*slightly darker than needed to cater for poor monitors*/
+    border-collapse: separate;
+    border-radius: 7px;
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th {
+    padding: 20px;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: rgba(206, 214, 218, .3);
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td {
+    background-color: rgba(206, 214, 218, .1);
+}
+
+.table-bordered > tbody > tr:first-child td:first-child,
+.table-bordered > tbody > tr:first-child th:first-child {
+    border-top-left-radius: 7px;
+}
+
+.table-bordered > tbody > tr:first-child td:last-child,
+.table-bordered > tbody > tr:first-child th:last-child {
+    border-top-right-radius: 7px;
+}
+
+.table-bordered > tbody > tr:last-child td:first-child {
+    border-bottom-left-radius: 7px;
+}
+
+.table-bordered > tbody > tr:last-child td:last-child {
+    border-bottom-right-radius: 7px;
 }

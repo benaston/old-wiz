@@ -205,3 +205,20 @@ a:hover {
 .message-container p {
     margin-bottom: 20px;
 }
+
+.item-of-interest p {
+    margin-bottom: 2rem;
+}
+
+.item-of-interest .location, .item-of-interest .country {
+    font-size: .8rem;
+}
+
+.item-of-interest li {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.item-of-interest ul, .item-of-interest ol {
+    margin-bottom: 20px;
+}
