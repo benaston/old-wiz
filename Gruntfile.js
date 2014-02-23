@@ -12,6 +12,7 @@ module.exports = function (grunt) {
           'public/javascripts/vendor/zepto.min.js',
           'public/javascripts/vendor/zepto-callbacks.js',
           'public/javascripts/vendor/zepto-deferred.js',
+//          'public/javascripts/vendor/underscore.min.js',
           'public/javascripts/vendor/_cookie.js',
           'public/javascripts/vendor/invertebrate.js/invertebrate.js',
           'public/javascripts/vendor/invertebrate.js/**.js',
@@ -31,7 +32,7 @@ module.exports = function (grunt) {
           'public/javascripts/application/wizerati.core/App.js',
           'public/javascripts/application/appStart.js'
         ],
-        dest: 'public/javascripts/<%= pkg.name %>.js'
+        dest: 'public/javascripts/<%= pkg.name %>.temp.js'
       },
       css: {
         src: [
@@ -49,15 +50,26 @@ module.exports = function (grunt) {
           'public/stylesheets/lucid-style-dialogs.css'
         ],
         dest: 'public/stylesheets/<%= pkg.name %>.css'
+      },
+      addunderscore: {
+        options: {
+          separator: ';'
+        },
+        src: [
+          'public/javascripts/<%= pkg.name %>.min.temp.js',
+          'public/javascripts/vendor/underscore.min.js'
+        ],
+        dest: 'public/javascripts/<%= pkg.name %>.ben.js'
       }
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+        preserveComments: false
       },
       dist: {
         files: {
-          'public/javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'public/javascripts/<%= pkg.name %>.min.temp.js': ['<%= concat.dist.dest %>']
         }
       }
     },
@@ -97,6 +109,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['jshint', 'qunit']);
 
-  grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['concat:dist','concat:css', 'uglify', 'concat:addunderscore', 'cssmin']);
 
 };
