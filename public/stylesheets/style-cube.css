@@ -54,7 +54,7 @@ figure {
 .cube-container[data-selected-face-id='4'] .cube-controls .face-selector-container:nth-child(5) .face-selector,
 .cube-container[data-selected-face-id='5'] .cube-controls .face-selector-container:nth-child(6) .face-selector {
     background-color: rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
+    box-shadow: 0 0 0 2px rgba(0, 109, 204, 1) !important;
     border: 2px solid white;
 }
 

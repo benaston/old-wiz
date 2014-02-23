@@ -76,15 +76,8 @@ ol li {
 }
 
 @font-face {
-    font-family: fa;
-    src: url("../fonts/fontello.woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: pictos;
-    src: url("../fonts/pictos.woff");
+    font-family: 'glyph';
+    src: url('../fonts/glyph.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -129,6 +122,10 @@ ol li {
     src: url("../fonts/proxima-nova-500.woff");
     font-weight: normal;
     font-style: normal;
+}
+
+.glyph {
+    font-family: glyph;
 }
 
 body {
@@ -223,10 +220,6 @@ input[type='text'],
 input[type='email'],
 input[type='password'] {
     font-family: "proxima-nova-400", Arial;
-}
-
-.pictos, .p {
-    font-family: 'pictos';
 }
 
 .hovering-text {
@@ -648,7 +641,7 @@ table {
     background-color: rgb(0, 0, 0);
     border-radius: 41px;
     box-shadow: 0px 0px 0 0px rgb(51, 51, 51);
-    content: "";
+    content: '';
     color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 20px;
@@ -820,7 +813,7 @@ figure {
 .cube-container[data-selected-face-id='4'] .cube-controls .face-selector-container:nth-child(5) .face-selector,
 .cube-container[data-selected-face-id='5'] .cube-controls .face-selector-container:nth-child(6) .face-selector {
     background-color: rgba(0, 109, 204, 0.95);
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1) !important;
+    box-shadow: 0 0 0 2px rgba(0, 109, 204, 1) !important;
     border: 2px solid white;
 }
 
@@ -1262,12 +1255,6 @@ body[data-ui-mode='1'] .result-list-panel {
     top: 49px;
 }
 
-.result-list-panel.buffer, .items-of-interest-panel.buffer {
-    pointer-events: none;
-    opacity: 0;
-    transition: left .1s ease-in-out, opacity .1s ease-in-out;
-}
-
 .ios-scroll-disable {
     -webkit-overflow-scrolling: auto;
     display: none;
@@ -1320,6 +1307,12 @@ body[data-ui-mode='1'] .result-list-panel {
     opacity: 1;
     transition: left .2s ease-in-out, opacity .1s ease-in-out .2s, width .2s ease-in-out;
     /*width: 58px; *//*same as search panel minimized*//* *//*needed?*/
+}
+
+.result-list-panel.buffer, .items-of-interest-panel.buffer {
+    pointer-events: none;
+    opacity: 0 !important; /*this is the whole point of 'buffering'*/
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
 
 .result-list-panel {
@@ -1659,6 +1652,7 @@ body[data-ui-mode='0'] #advertiser-help {
     position: absolute;
     top: -2px; /*keep away from text of result*/
     /*font-size: .8rem;*/
+    font-family: 'glyph';
 }
 
 .thumbnail-info.thumbnail-info-pinned.is-pinned, .ti.ti-pinned.is-pinned {
@@ -1670,7 +1664,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info:first-child:after, .ti:first-child:after {
-    content: 'S';
+    content: '\e801';
 }
 
 .thumbnail-info:nth-child(2), .ti:nth-child(2) {
@@ -1678,7 +1672,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info.actioned:after, .ti.actioned:after {
-    content: '2';
+    content: '\e803';
 }
 
 .thumbnail-info.actioned, .ti.actioned {
@@ -1712,7 +1706,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info.thumbnail-info-pinned:after, .ti.ti-pinned:after {
-    content: '@';
+    content: '\e804';
 }
 
 .thumbnail-info.thumbnail-info-pinned, .ti.ti-pinned {
@@ -1956,7 +1950,6 @@ input[type="radio"]:checked:focus + label {
 
 .cube figure:after {
     display: block;
-    /*content: '';*/
     width: 2px;
     background-color: white;
     height: 17px;
@@ -2340,7 +2333,7 @@ textarea:focus + .meta-info {
 }
 
 #purchase-panel .btn-success:after {
-    content: '3';
+    content: '\e805';
     display: block;
     width: 56px;
     height: 56px;
@@ -2367,7 +2360,7 @@ textarea:focus + .meta-info {
     -webkit-animation-timing-function: linear;
 }
 
-/*designed to permit animiation of button borders without affecting the "content" of the button*/
+/*designed to permit animiation of button borders without affecting the content of the button*/
 .button-label {
     font-size: 1.9em;
     position: relative;
@@ -2420,8 +2413,8 @@ a.hidden:before {
     left: 75px;
     top: 19px;
     display: block;
-    font-family: pictos;
-    content: '-';
+    font-family: glyph;
+    content: '\e802';
     font-size: 4rem;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.2);
@@ -2458,7 +2451,7 @@ a.hidden:before {
     color: #333;
     border-color: rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.45) !important;
     margin: 0; /*important to avoid unexpected layout*/
-    font-family: 'pictos';
+    font-family: 'glyph';
     background-color: transparent;
     -webkit-user-select: none;
     text-align: center;
@@ -2559,7 +2552,7 @@ label:focus {
 
 .btn ~ .button-icon {
     display: inline-block;
-
+    font-family: 'glyph';
     position: relative;
     pointer-events: none;
 }
@@ -2567,7 +2560,7 @@ label:focus {
 .btn.btn-80 ~ .button-icon:after {
     display: block;
     font-size: 1.9em;
-    content: 's';
+    content: '\e809';
     position: absolute;
     left: -52px;
     top: -43px;
@@ -2577,9 +2570,9 @@ label:focus {
 .btn.btn-50 ~ .button-icon:after {
     display: block;
     font-size: 1.3em;
-    content: 's';
+    content: '\e809';
     position: absolute;
-    left: -34px;
+    left: -35px;
     top: -32px;
     pointer-events: none;
 }
@@ -2587,7 +2580,7 @@ label:focus {
 .btn.btn-40 ~ .button-icon:after {
     display: block;
     font-size: 1em;
-    content: 's';
+    content: '\e809';
     position: absolute;
     left: -27px;
     top: -26px;
@@ -2707,7 +2700,7 @@ input[type=radio]:not(:checked) + label:hover {
 input[type="radio"]:checked + label {
     background-color: rgba(0, 109, 204, 0.95);
     color: white;
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px rgba(0, 109, 204, 1);
+    box-shadow: 0 0 0 2px rgba(0, 109, 204, 1);
     border: 2px solid white;
 }
 
@@ -2788,7 +2781,8 @@ textarea:focus + .meta-info {
 }
 
 input[type="radio"]:checked:focus + label {
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px #eee;
+    /*box-shadow: 0 0 0 0px rgba(255, 255, 255, 1), 0 0 0 2px #eee;*/
+    box-shadow: 0 0 0 2px #eee;
 }
 
 input[type="radio"]:focus + label {

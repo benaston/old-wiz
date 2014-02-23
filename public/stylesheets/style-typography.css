@@ -1,6 +1,6 @@
 @font-face {
-    font-family: fa;
-    src: url("../fonts/fontello.woff");
+    font-family: 'glyph';
+    src: url('../fonts/glyph.woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -45,6 +45,10 @@
     src: url("../fonts/proxima-nova-500.woff");
     font-weight: normal;
     font-style: normal;
+}
+
+.glyph {
+    font-family: glyph;
 }
 
 body {
@@ -139,10 +143,6 @@ input[type='text'],
 input[type='email'],
 input[type='password'] {
     font-family: "proxima-nova-400", Arial;
-}
-
-.pictos, .p {
-    font-family: 'pictos';
 }
 
 .hovering-text {

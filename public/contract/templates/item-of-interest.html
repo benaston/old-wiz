@@ -1,7 +1,6 @@
 <% try { %>
 <div class="item-of-interest-width-maintainer">
     <div id="top1" class="in-page-anchor-target"></div>
-    <!--<section class="menu"><ul class="pips reset <% if(!model.isPinned) {%>invisible<%}%>">-->
     <section class="menu"><ul class="pips reset">
             <li><a>Pinned Item 1</a></li>
             <li><a>Pinned Item 2</a></li>
@@ -12,24 +11,24 @@
         </ul><div class="inline-block centered-text width-62"><a
                 <%=(model.isFavoritable || model.isFavorite) ? 'href' : 'disabled'%>="/favorites/<%=model.isFavorite ? 'destroy' : 'create' %>?id=<%=model.id%>"
                 class="btn btn-40 btn-primary <% if(!model.isFavoritable && !model.isFavorite) {%>disabled<%}%> <%=model.isFavorite ? 'is-favorite checked' : '' %> btn-favorite"
-                title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites / You cannot favorite hidden items<% } %>">S</a>
+                title="<% if(model.isFavorite) {%>Remove favorite<%} else if(model.isFavoritable){ %> Add To Favourites <% } else { %>You have maxed out your favorites / You cannot favorite hidden items<% } %>">&#xe801;</a>
             <div class="label">favorite</div>
         </div><div class="inline-block centered-text width-62"><a
 
                 <%=(model.isHideable || model.isHidden) ? 'href' : 'disabled'%>="/hiddenitems/<%=!model.isHidden ? 'create' : 'destroy' %>?id=<%=model.id%>"
                 class="btn btn-40 btn-primary <%=(model.isHidden ? 'checked' : '')%> btn-hide <% if(!model.isHideable) {%>disabled <%}%>"
 
-                    title="<%=model.isHideable ? 'Hide this from future results' : 'You cannot hide items that are favorites, are applied-for or are pinned' %>">-</a>
+                    title="<%=model.isHideable ? 'Hide this from future results' : 'You cannot hide items that are favorites, are applied-for or are pinned' %>">&#xe802;</a>
             <div class="label">hide</div>
         </div><div class="inline-block centered-text width-62"><a
                 <%=(model.isActionable || model.isActionable) ? 'href' : 'disabled'%>="/actioneditems/<%=!model.isActioned ? 'create' : 'destroy' %>?id=<%=model.id%>"
                 class="btn btn-40 btn-primary <%=model.isActioned ? 'checked' : '' %> <%=model.isActionable ? '' : 'disabled' %>  btn-apply"
-                title="<%=model.isActionable ? 'Apply for this job' : 'You cannot apply for hidden items' %>">2</a>
+                title="<%=model.isActionable ? 'Apply for this job' : 'You cannot apply for hidden items' %>">&#xe803;</a>
             <div class="label">apply</div>
         </div><div class="inline-block centered-text width-62"><a
         <%=(model.isPinnable || model.isPinned) ? 'href' : 'disabled'%>="/itemsofinterest/<%=!model.isPinned ? 'create' : 'destroy' %>?id=<%=model.id%>"
         class="btn btn-40 btn-primary <%=model.isPinnable || model.isPinned ? '' : 'disabled' %> <% if(model.isPinned) {%>checked<%} %> btn-pin"
-        title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned / You have the maximum number of permitted pinned items / You cannot pin hidden items' %>">@</a>
+        title="<%=model.isPinnable ? 'Pin' : 'This item is already pinned / You have the maximum number of permitted pinned items / You cannot pin hidden items' %>">&#xe804;</a>
         <div class="label">pin to compare</div>
     </div>
     </section>

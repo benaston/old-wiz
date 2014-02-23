@@ -17,12 +17,6 @@ body[data-ui-mode='1'] .result-list-panel {
     top: 49px;
 }
 
-.result-list-panel.buffer, .items-of-interest-panel.buffer {
-    pointer-events: none;
-    opacity: 0;
-    transition: left .1s ease-in-out, opacity .1s ease-in-out;
-}
-
 .ios-scroll-disable {
     -webkit-overflow-scrolling: auto;
     display: none;
@@ -75,6 +69,12 @@ body[data-ui-mode='1'] .result-list-panel {
     opacity: 1;
     transition: left .2s ease-in-out, opacity .1s ease-in-out .2s, width .2s ease-in-out;
     /*width: 58px; *//*same as search panel minimized*//* *//*needed?*/
+}
+
+.result-list-panel.buffer, .items-of-interest-panel.buffer {
+    pointer-events: none;
+    opacity: 0 !important; /*this is the whole point of 'buffering'*/
+    transition: left .1s ease-in-out, opacity .1s ease-in-out;
 }
 
 .result-list-panel {
@@ -414,6 +414,7 @@ body[data-ui-mode='0'] #advertiser-help {
     position: absolute;
     top: -2px; /*keep away from text of result*/
     /*font-size: .8rem;*/
+    font-family: 'glyph';
 }
 
 .thumbnail-info.thumbnail-info-pinned.is-pinned, .ti.ti-pinned.is-pinned {
@@ -425,7 +426,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info:first-child:after, .ti:first-child:after {
-    content: 'S';
+    content: '\e801';
 }
 
 .thumbnail-info:nth-child(2), .ti:nth-child(2) {
@@ -433,7 +434,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info.actioned:after, .ti.actioned:after {
-    content: '2';
+    content: '\e803';
 }
 
 .thumbnail-info.actioned, .ti.actioned {
@@ -467,7 +468,7 @@ body[data-ui-mode='0'] #advertiser-help {
 }
 
 .thumbnail-info.thumbnail-info-pinned:after, .ti.ti-pinned:after {
-    content: '@';
+    content: '\e804';
 }
 
 .thumbnail-info.thumbnail-info-pinned, .ti.ti-pinned {
@@ -711,7 +712,6 @@ input[type="radio"]:checked:focus + label {
 
 .cube figure:after {
     display: block;
-    /*content: '';*/
     width: 2px;
     background-color: white;
     height: 17px;
@@ -1095,7 +1095,7 @@ textarea:focus + .meta-info {
 }
 
 #purchase-panel .btn-success:after {
-    content: '3';
+    content: '\e805';
     display: block;
     width: 56px;
     height: 56px;
@@ -1122,7 +1122,7 @@ textarea:focus + .meta-info {
     -webkit-animation-timing-function: linear;
 }
 
-/*designed to permit animiation of button borders without affecting the "content" of the button*/
+/*designed to permit animiation of button borders without affecting the content of the button*/
 .button-label {
     font-size: 1.9em;
     position: relative;
@@ -1175,8 +1175,8 @@ a.hidden:before {
     left: 75px;
     top: 19px;
     display: block;
-    font-family: pictos;
-    content: '-';
+    font-family: glyph;
+    content: '\e802';
     font-size: 4rem;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.2);

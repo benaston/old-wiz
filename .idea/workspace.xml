@@ -23,30 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="57" selection-start="55761" selection-end="55761" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="5445">
-              <folding>
-                <element signature="tag#section#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wizerati.min.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="26" selection-start="0" selection-end="53912" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style-typography.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="124" selection-end="124" vertical-scroll-proportion="0.13863216" vertical-offset="0" max-vertical-offset="3195">
+            <state line="322" column="7561" selection-start="144433" selection-end="144433" vertical-scroll-proportion="0.800759" vertical-offset="4408" max-vertical-offset="6600">
               <folding />
             </state>
           </provider>
@@ -55,26 +35,18 @@
       <file leaf-file-name="wizerati.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="24" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="42900">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wizerati.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="15" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractResultView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractResultView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="795">
-              <folding />
+            <state line="2" column="32" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="42810">
+              <folding>
+                <marker date="1393157525000" expanded="true" signature="31518:31561" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="31608:31845" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="31947:31968" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="31997:32071" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="32085:32220" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="32245:32298" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="32545:32596" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="32655:32800" placeholder="{...}" />
+                <marker date="1393157525000" expanded="true" signature="32930:33095" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,45 +60,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="wizerati.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="0" column="0" selection-start="0" selection-end="53823" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wizerati.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
+      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0" vertical-offset="2479" max-vertical-offset="80250">
-              <folding>
-                <marker date="1393150859000" expanded="true" signature="4221:8068" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4310:8039" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4353:4367" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4536:4747" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4580:4695" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4584:4621" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4871:5798" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="4843:4886" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5057:5271" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5117:5125" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5218:5257" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5335:5385" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5657:5675" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5938:7124" placeholder="{...}" />
-                <marker date="1393150859000" expanded="true" signature="5911:6140" placeholder="{&quot;postRenderActionScriptUri&quot;: null...}" />
-                <marker date="1393150859000" expanded="true" signature="6040:6068" placeholder="{...}" />
-              </folding>
+            <state line="75" column="67" selection-start="1883" selection-end="1883" vertical-scroll-proportion="-8.461538" vertical-offset="905" max-vertical-offset="18210">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="wizerati.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="46" selection-start="1943" selection-end="1943" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1575">
+            <state line="3" column="14" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultListView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="169" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="2625">
               <folding />
             </state>
           </provider>
@@ -142,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/GuidFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ActionedItemsModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/HiddenItemsModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ItemsOfInterestModel.js" />
@@ -174,25 +137,26 @@
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/TemplateUriHelper.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/util.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/view.js" />
-        <option value="$PROJECT_DIR$/public/contract/templates/search-form.html" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/invertebrate.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-reset.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-dialogs.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-table.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-layout.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-form-element.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/noscript.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css" />
-        <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/wizerati.css" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-special.css" />
+        <option value="$PROJECT_DIR$/public/contract/templates/search-form.html" />
+        <option value="$PROJECT_DIR$/public/contract/templates/item-of-interest.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-typography.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-cube.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -341,54 +305,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="invertebrate.js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -433,7 +349,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati.core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati.core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -591,7 +549,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28674698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28118393" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28118393" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3253012" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -623,30 +581,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="4729" selection-end="4729" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="2085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ItemsOfInterestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="0" selection-start="6149" selection-end="6149" vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="3105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/LoginPanelView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="0.88593155" vertical-offset="1836" max-vertical-offset="2625">
           <folding />
         </state>
       </provider>
@@ -784,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/templates/search-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/invertebrate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -810,27 +740,6 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/drags.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1208" column="0" selection-start="31246" selection-end="31246" vertical-scroll-proportion="0.0" vertical-offset="17644" max-vertical-offset="18210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-table.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-special.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.86702126" vertical-offset="2721" max-vertical-offset="3300">
           <folding />
         </state>
       </provider>
@@ -856,44 +765,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="0" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.8366606" vertical-offset="1384" max-vertical-offset="1935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="0" selection-start="16530" selection-end="16530" vertical-scroll-proportion="0.0" vertical-offset="6709" max-vertical-offset="7260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/noscript.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-dialogs.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="0" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="14" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
           <folding />
         </state>
       </provider>
@@ -923,50 +797,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="180" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0" vertical-offset="2479" max-vertical-offset="80250">
           <folding>
-            <marker date="1393150859000" expanded="true" signature="4221:8068" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4310:8039" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4353:4367" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4536:4747" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4580:4695" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4584:4621" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4871:5798" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="4843:4886" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5057:5271" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5117:5125" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5218:5257" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5335:5385" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5657:5675" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5938:7124" placeholder="{...}" />
-            <marker date="1393150859000" expanded="true" signature="5911:6140" placeholder="{&quot;postRenderActionScriptUri&quot;: null...}" />
-            <marker date="1393150859000" expanded="true" signature="6040:6068" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{&quot;postRenderActionScriptUri&quot;: null...}" />
+            <marker date="1393157525000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="26" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2205">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="26" selection-start="0" selection-end="53912" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <folding />
         </state>
       </provider>
@@ -978,25 +831,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-dialogs.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="21" selection-start="884" selection-end="891" vertical-scroll-proportion="-6.576923" vertical-offset="399" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-form-element.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="11" selection-start="2574" selection-end="2581" vertical-scroll-proportion="-12.384615" vertical-offset="1433" max-vertical-offset="1935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-special.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="15" selection-start="2068" selection-end="2068" vertical-scroll-proportion="0.0" vertical-offset="1288" max-vertical-offset="3300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-table.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/templates/search-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="188" selection-start="3190" selection-end="3201" vertical-scroll-proportion="-5.36" vertical-offset="692" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="2575" selection-end="2575" vertical-scroll-proportion="-5.625" vertical-offset="315" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="1" selection-start="2673" selection-end="2673" vertical-scroll-proportion="-6.0" vertical-offset="2019" max-vertical-offset="3195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="13" selection-start="2503" selection-end="2503" vertical-scroll-proportion="-14.5" vertical-offset="1528" max-vertical-offset="3045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-cube.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="16" selection-start="2110" selection-end="2110" vertical-scroll-proportion="-6.423077" vertical-offset="673" max-vertical-offset="7260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.401487" vertical-offset="639" max-vertical-offset="2265">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="2625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="24" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="42900">
+        <state line="2" column="32" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="42810">
+          <folding>
+            <marker date="1393157525000" expanded="true" signature="31518:31561" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="31608:31845" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="31947:31968" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="31997:32071" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="32085:32220" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="32245:32298" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="32545:32596" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="32655:32800" placeholder="{...}" />
+            <marker date="1393157525000" expanded="true" signature="32930:33095" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="67" selection-start="1883" selection-end="1883" vertical-scroll-proportion="-8.461538" vertical-offset="905" max-vertical-offset="18210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="53823" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="14" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="26" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2205">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="57" selection-start="55761" selection-end="55761" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="5445">
-          <folding>
-            <element signature="tag#section#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="124" selection-end="124" vertical-scroll-proportion="0.13863216" vertical-offset="0" max-vertical-offset="3195">
+        <state line="322" column="7561" selection-start="144433" selection-end="144433" vertical-scroll-proportion="0.800759" vertical-offset="4408" max-vertical-offset="6600">
           <folding />
         </state>
       </provider>
