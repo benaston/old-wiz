@@ -26,134 +26,88 @@
       <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="79" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.5654762" vertical-offset="0" max-vertical-offset="6420">
+            <state line="331" column="0" selection-start="137758" selection-end="137758" vertical-scroll-proportion="0.9404762" vertical-offset="4491" max-vertical-offset="6480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wizerati.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.css">
+      <file leaf-file-name="ItemRepository.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="334" column="1" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.0" vertical-offset="4729" max-vertical-offset="42900">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wizerati.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="15" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultViewFactory.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="32" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractResultView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractResultView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="795">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="26" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2205">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wizerati.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0" vertical-offset="2479" max-vertical-offset="80250">
               <folding>
-                <marker date="1393115914000" expanded="true" signature="1138:1208" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="1224:1243" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="1251:1275" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="1291:1314" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="1328:1380" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4459:4506" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4538:4603" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4619:4676" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4749:4770" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4806:4814" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4864:4868" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4930:4951" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="4997:5001" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="5045:5052" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="6660:6679" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="6717:6736" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="6772:6791" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="6839:6936" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="7004:7034" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="7102:7132" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="7164:7359" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="7532:7561" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9062:9323" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9479:9519" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9591:9657" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9759:9790" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9894:9925" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="9953:10030" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="10095:10099" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="10176:10229" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="10243:10328" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="13635:13680" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="13746:13938" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="14002:14176" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="14218:14272" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="14290:14356" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="14378:14542" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="14566:14751" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="30301:30626" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="30678:30682" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="31315:31317" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="61634:61682" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="61748:61805" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="61833:61868" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="61950:62169" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="62199:62207" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="62267:62420" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="62533:62564" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="64799:64859" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="64975:64999" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="65112:65202" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="65246:65264" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="65835:65945" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="66090:66270" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="66335:66624" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="66688:66828" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67032:67078" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67198:67214" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67279:67318" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67394:67415" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67480:67527" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67699:67722" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67755:67915" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="67945:68126" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="68547:68783" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="68816:68849" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="68881:68936" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="68964:68993" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="69205:69261" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="69364:69499" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="69524:69792" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="69870:69972" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70042:70122" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70218:70274" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70335:70405" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70435:70517" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70694:70890" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="70970:71110" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="71240:71264" placeholder="{...}" />
-                <marker date="1393115914000" expanded="true" signature="71375:71401" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4221:8068" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4310:8039" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4353:4367" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4536:4747" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4580:4695" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4584:4621" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4871:5798" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="4843:4886" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5057:5271" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5117:5125" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5218:5257" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5335:5385" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5657:5675" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5938:7124" placeholder="{...}" />
+                <marker date="1393150002000" expanded="true" signature="5911:6140" placeholder="{&quot;postRenderActionScriptUri&quot;: null...}" />
+                <marker date="1393150002000" expanded="true" signature="6040:6068" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style-typography.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="0" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0" vertical-offset="2249" max-vertical-offset="3300">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lucid-style-buttons.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="14" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lucid-style-dialogs.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-dialogs.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lucid-style-form-elements.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="0" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +115,7 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="8" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="1755">
+            <state line="33" column="14" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1575">
               <folding />
             </state>
           </provider>
@@ -170,7 +124,7 @@
       <file leaf-file-name="wizerati.min.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="0" column="543" selection-start="0" selection-end="53916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -186,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/entities/AccountEntity.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/GuidFactory.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ActionedItemsModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/HiddenItemsModel.js" />
@@ -213,7 +166,6 @@
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/config.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/env.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/arrayItemMove.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/model.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/syncSvc.js" />
@@ -235,6 +187,8 @@
         <option value="$PROJECT_DIR$/public/stylesheets/noscript.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/lucid-style-buttons.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
@@ -345,7 +299,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="invertebrate.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati.core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -364,28 +414,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="contract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contract" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,34 +585,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractorResultView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="779">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractorItemOfInterestView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractResultView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/DeleteFavoriteGroupConfirmationDialogView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/FavoritesCubeView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="0" selection-start="4729" selection-end="4729" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="2085">
@@ -655,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="545" column="0" selection-start="16946" selection-end="16946" vertical-scroll-proportion="0.0" vertical-offset="77976" max-vertical-offset="78720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
@@ -690,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="789">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="2" selection-start="32" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
@@ -707,13 +693,6 @@
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/arrayItemMove.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="3865" selection-end="3865" vertical-scroll-proportion="-11.563637" vertical-offset="1344" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
@@ -785,7 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11490">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -881,118 +860,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0" vertical-offset="2249" max-vertical-offset="3300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="334" column="1" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.0" vertical-offset="4729" max-vertical-offset="42900">
           <folding>
-            <marker date="1393115914000" expanded="true" signature="1138:1208" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="1224:1243" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="1251:1275" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="1291:1314" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="1328:1380" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4459:4506" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4538:4603" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4619:4676" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4749:4770" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4806:4814" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4864:4868" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4930:4951" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="4997:5001" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="5045:5052" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="6660:6679" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="6717:6736" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="6772:6791" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="6839:6936" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="7004:7034" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="7102:7132" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="7164:7359" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="7532:7561" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9062:9323" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9479:9519" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9591:9657" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9759:9790" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9894:9925" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="9953:10030" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="10095:10099" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="10176:10229" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="10243:10328" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="13635:13680" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="13746:13938" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="14002:14176" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="14218:14272" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="14290:14356" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="14378:14542" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="14566:14751" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="30301:30626" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="30678:30682" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="31315:31317" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="61634:61682" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="61748:61805" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="61833:61868" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="61950:62169" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="62199:62207" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="62267:62420" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="62533:62564" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="64799:64859" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="64975:64999" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="65112:65202" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="65246:65264" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="65835:65945" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="66090:66270" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="66335:66624" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="66688:66828" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67032:67078" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67198:67214" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67279:67318" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67394:67415" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67480:67527" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67699:67722" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67755:67915" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="67945:68126" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="68547:68783" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="68816:68849" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="68881:68936" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="68964:68993" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="69205:69261" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="69364:69499" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="69524:69792" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="69870:69972" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70042:70122" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70218:70274" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70335:70405" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70435:70517" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70694:70890" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="70970:71110" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="71240:71264" placeholder="{...}" />
-            <marker date="1393115914000" expanded="true" signature="71375:71401" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-typography.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="1" selection-start="2969" selection-end="2969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/wizerati.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+        <state line="0" column="543" selection-start="0" selection-end="53916" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/factories/ResultViewFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="32" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ContractResultView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="0" selection-start="4822" selection-end="4822" vertical-scroll-proportion="0.0" vertical-offset="2479" max-vertical-offset="80250">
+          <folding>
+            <marker date="1393150002000" expanded="true" signature="4221:8068" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4310:8039" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4353:4367" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4536:4747" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4580:4695" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4584:4621" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4871:5798" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="4843:4886" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5057:5271" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5117:5125" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5218:5257" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5335:5385" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5657:5675" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5938:7124" placeholder="{...}" />
+            <marker date="1393150002000" expanded="true" signature="5911:6140" placeholder="{&quot;postRenderActionScriptUri&quot;: null...}" />
+            <marker date="1393150002000" expanded="true" signature="6040:6068" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="26" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2205">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="8" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="1755">
+        <state line="33" column="14" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="15" selection-start="0" selection-end="71743" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="79" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.5654762" vertical-offset="0" max-vertical-offset="6420">
+        <state line="331" column="0" selection-start="137758" selection-end="137758" vertical-scroll-proportion="0.9404762" vertical-offset="4491" max-vertical-offset="6480">
           <folding />
         </state>
       </provider>

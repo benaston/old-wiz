@@ -43,7 +43,7 @@
             item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
             item.isHidden = _hiddenItemsModel.isHidden(item.id);
             item.isActioned = _actionedItemsModel.isActioned(item.id);
-            done(new app.ContractorResultView(item).render().$el)
+            done(new app.ContractorResultView(item).render().$el);
           });
           break;
         case _roleEnum.Contractor:
@@ -54,7 +54,7 @@
             item.isHidden = _hiddenItemsModel.isHidden(item.id);
             item.isActioned = _actionedItemsModel.isActioned(item.id);
             item.isPinned = _itemsOfInterestModel.isPinned(item.id);
-            done(new app.ContractResultView(item).render().$el)
+            done(new app.ContractResultView(item).render().$el);
           });
           break;
         default:

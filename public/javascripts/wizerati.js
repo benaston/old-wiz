@@ -142,7 +142,7 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
   }
 
   invertebrate.TemplateUriHelper = TemplateUriHelper;
-}(invertebrate));;(function (invertebrate, $) {
+}(invertebrate));;(function (invertebrate, $, _) {
   'use strict';
 
   function App(templateServerSvc) {
@@ -152,10 +152,12 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
 
     var that = this,
         _templateServerSvc = null,
-        _templatePostRenderScripts = {};
+        _templates = {},
+        _templatePostRenderScripts = {},
+        _inFlightRequests = {};
 
     //implements trivial string-based modularisation
-    that.mod = function () {
+    this.mod = function () {
       var mods = {};
 
       return function (name) {
@@ -167,13 +169,7 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
       };
     }();
 
-    //fetches a template from a URI, adds to 'public'
-    //templates collection and supplies to success callback
-    that.fetchTemplate = function (uri, options) {
-      if (!options) {
-        throw 'options not supplied';
-      }
-
+    this.fetchTemplate = function (uri, options) {
       var defaultOptions = {
         done: function (metadata) {
         },
@@ -181,30 +177,42 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
           console.log(exception);
           throw exception;
         }
-      },
-      done = options.done,
-      ajaxDoneCallback = function (data) {
-        var tmpl = _.template(data);
-        that.templates[uri] = tmpl;
-        done(tmpl);
-      },
-      ajaxFailCallback = function (jqxhr, settings, exception) {
-        console.log(jqxhr.status);
       };
 
       options = _.extend({}, defaultOptions, options);
-      that.templates = that.templates || {};
 
-      if (that.templates[uri]) {
-        return done(that.templates[uri]);
+      //attempt to solve issue of sending off many requests for the same template before first request has returned
+      if(_inFlightRequests[uri]) {
+        setTimeout(function checkCacheForTemplate(){
+          if (_templates[uri]) {
+            return options.done(_templates[uri]);
+          } else {
+            setTimeout(checkCacheForTemplate, 10);
+          }
+        }, 10);
+
+        return; /*critical*/
       }
 
+      if (_templates[uri]) {
+        return options.done(_templates[uri]);
+      }
+
+      _inFlightRequests[uri] = 'inFlight';
       return $.ajax({ url: uri, cache: false })
-          .done(ajaxDoneCallback)
-          .fail(ajaxFailCallback);
+          .done(function (data) {
+            delete _inFlightRequests[uri];
+            var t = _.template(data);
+            _templates[uri] = t;
+            options.done(t);
+          })
+          .fail(function ajaxFail(jqxhr, settings, exception) {
+            console.log(jqxhr.status);
+          });
+
     };
 
-    that.renderTemplate = function ($el, templateName, model, options) {
+    this.renderTemplate = function ($el, templateName, model, options) {
       var defaults = {
         done: function ($el) {
         },
@@ -212,7 +220,8 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
           console.log(exception);
           throw exception;
         },
-        postRenderActionScriptUri: null };
+        postRenderActionScriptUri: null
+      };
       options = _.extend({}, defaults, options);
 
       if (!$el) {
@@ -240,7 +249,7 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
     };
 
     //invoked by this.renderTemplate if a post-render action script is specified.
-    that.fetchTemplatePostRenderScript = function (uri, done) {
+    this.fetchTemplatePostRenderScript = function (uri, done) {
       if (!uri) {
         throw 'uri not supplied.';
       }
@@ -273,7 +282,7 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
   }
 
   invertebrate.App = App;
-}(invertebrate, $));
+}(invertebrate, $, _));
 ;'use strict';
 
 Array.prototype.move = function (oldIndex, newIndex) {
@@ -4691,7 +4700,7 @@ window.wizerati = {
             item.isSelected = _selectedItemModel.getSelectedItemId() === item.id;
             item.isHidden = _hiddenItemsModel.isHidden(item.id);
             item.isActioned = _actionedItemsModel.isActioned(item.id);
-            done(new app.ContractorResultView(item).render().$el)
+            done(new app.ContractorResultView(item).render().$el);
           });
           break;
         case _roleEnum.Contractor:
@@ -4702,7 +4711,7 @@ window.wizerati = {
             item.isHidden = _hiddenItemsModel.isHidden(item.id);
             item.isActioned = _actionedItemsModel.isActioned(item.id);
             item.isPinned = _itemsOfInterestModel.isPinned(item.id);
-            done(new app.ContractResultView(item).render().$el)
+            done(new app.ContractResultView(item).render().$el);
           });
           break;
         default:

@@ -97,16 +97,3 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };
-
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-reset.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-reset-wizerati.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-typography.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-layout.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-form-element.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-table.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-special.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-cube.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-wizerati.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-buttons.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-form-elements.css">-->
-//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-dialogs.css">-->

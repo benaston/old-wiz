@@ -1,4 +1,4 @@
-(function (invertebrate, $) {
+(function (invertebrate, $, _) {
   'use strict';
 
   function App(templateServerSvc) {
@@ -8,10 +8,12 @@
 
     var that = this,
         _templateServerSvc = null,
-        _templatePostRenderScripts = {};
+        _templates = {},
+        _templatePostRenderScripts = {},
+        _inFlightRequests = {};
 
     //implements trivial string-based modularisation
-    that.mod = function () {
+    this.mod = function () {
       var mods = {};
 
       return function (name) {
@@ -23,13 +25,7 @@
       };
     }();
 
-    //fetches a template from a URI, adds to 'public'
-    //templates collection and supplies to success callback
-    that.fetchTemplate = function (uri, options) {
-      if (!options) {
-        throw 'options not supplied';
-      }
-
+    this.fetchTemplate = function (uri, options) {
       var defaultOptions = {
         done: function (metadata) {
         },
@@ -37,30 +33,42 @@
           console.log(exception);
           throw exception;
         }
-      },
-      done = options.done,
-      ajaxDoneCallback = function (data) {
-        var tmpl = _.template(data);
-        that.templates[uri] = tmpl;
-        done(tmpl);
-      },
-      ajaxFailCallback = function (jqxhr, settings, exception) {
-        console.log(jqxhr.status);
       };
 
       options = _.extend({}, defaultOptions, options);
-      that.templates = that.templates || {};
 
-      if (that.templates[uri]) {
-        return done(that.templates[uri]);
+      //attempt to solve issue of sending off many requests for the same template before first request has returned
+      if(_inFlightRequests[uri]) {
+        setTimeout(function checkCacheForTemplate(){
+          if (_templates[uri]) {
+            return options.done(_templates[uri]);
+          } else {
+            setTimeout(checkCacheForTemplate, 10);
+          }
+        }, 10);
+
+        return; /*critical*/
       }
 
+      if (_templates[uri]) {
+        return options.done(_templates[uri]);
+      }
+
+      _inFlightRequests[uri] = 'inFlight';
       return $.ajax({ url: uri, cache: false })
-          .done(ajaxDoneCallback)
-          .fail(ajaxFailCallback);
+          .done(function (data) {
+            delete _inFlightRequests[uri];
+            var t = _.template(data);
+            _templates[uri] = t;
+            options.done(t);
+          })
+          .fail(function ajaxFail(jqxhr, settings, exception) {
+            console.log(jqxhr.status);
+          });
+
     };
 
-    that.renderTemplate = function ($el, templateName, model, options) {
+    this.renderTemplate = function ($el, templateName, model, options) {
       var defaults = {
         done: function ($el) {
         },
@@ -68,7 +76,8 @@
           console.log(exception);
           throw exception;
         },
-        postRenderActionScriptUri: null };
+        postRenderActionScriptUri: null
+      };
       options = _.extend({}, defaults, options);
 
       if (!$el) {
@@ -96,7 +105,7 @@
     };
 
     //invoked by this.renderTemplate if a post-render action script is specified.
-    that.fetchTemplatePostRenderScript = function (uri, done) {
+    this.fetchTemplatePostRenderScript = function (uri, done) {
       if (!uri) {
         throw 'uri not supplied.';
       }
@@ -129,4 +138,4 @@
   }
 
   invertebrate.App = App;
-}(invertebrate, $));
+}(invertebrate, $, _));
