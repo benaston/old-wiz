@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/Config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="0" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/underscore/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1612" column="0" selection-start="55291" selection-end="55291" vertical-scroll-proportion="-7.3333335" vertical-offset="24004" max-vertical-offset="37095">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.ejs" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="416" column="44" selection-start="80589" selection-end="80589" vertical-scroll-proportion="0.53504044" vertical-offset="5843" max-vertical-offset="6585">
+            <state line="319" column="0" selection-start="72681" selection-end="72681" vertical-scroll-proportion="0.63672656" vertical-offset="4466" max-vertical-offset="6690">
               <folding />
             </state>
           </provider>
@@ -35,52 +53,8 @@
       <file leaf-file-name="appStart.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="470" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="12" column="3" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wizerati.ben.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.ben.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="0" selection-end="144446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20295">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wizerati.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="0" selection-start="31043" selection-end="31043" vertical-scroll-proportion="0.0" vertical-offset="2775" max-vertical-offset="83910">
-              <folding>
-                <marker date="1393161707000" expanded="true" signature="47423:47448" placeholder="/*...*/" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zepto-deferred.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/zepto-deferred.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="9" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="1845">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="underscore.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/underscore.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1343" column="14" selection-start="45577" selection-end="45577" vertical-scroll-proportion="-28.192308" vertical-offset="19412" max-vertical-offset="20235">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,16 +62,16 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="50" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1800">
+            <state line="61" column="49" selection-start="2707" selection-end="2707" vertical-scroll-proportion="-15.576923" vertical-offset="510" max-vertical-offset="1665">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wizerati.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
+      <file leaf-file-name="underscore.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/underscore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7914" selection-start="0" selection-end="113290" vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="150">
+            <state line="1193" column="2" selection-start="40639" selection-end="40659" vertical-scroll-proportion="0.0" vertical-offset="17644" max-vertical-offset="20310">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -105,10 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <file leaf-file-name="wizerati.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="4" column="7949" selection-start="0" selection-end="113312" vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="150">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RouteRegistrar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/RouteRegistrar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1358" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
@@ -124,10 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/ResultListModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SearchPanelModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedCubeFaceModel.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SelectedItemModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/models/SingleItemModel.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/repositories/ItemRepository.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/services/CookieService.js" />
@@ -171,9 +152,13 @@
         <option value="$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/invertebrate.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/zepto-deferred.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/zepto-callbacks.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/public/javascripts/vendor/underscore.min.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/wizerati.ben.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/vendor/underscore.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/appStart.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/wizerati.min.temp.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/wizerati.min.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
@@ -284,50 +269,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,7 +424,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868525" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28674698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28674698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28118393" sideWeight="0.8415961" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -517,48 +458,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="1381" max-vertical-offset="2160">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/syncSvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="3" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/invertebrate.js/TemplateUriHelper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="33" selection-start="1343" selection-end="1343" vertical-scroll-proportion="-5.8" vertical-offset="341" max-vertical-offset="1065">
@@ -724,15 +623,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="32" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="42810">
           <folding>
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393163150000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393168994000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -754,13 +653,6 @@
     <entry file="file://$PROJECT_DIR$/public/html.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/Config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
@@ -823,29 +715,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="0" selection-start="31043" selection-end="31043" vertical-scroll-proportion="0.0" vertical-offset="2775" max-vertical-offset="83910">
-          <folding>
-            <marker date="1393161707000" expanded="true" signature="47423:47448" placeholder="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/zepto-deferred.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="9" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="1845">
+        <state line="117" column="9" selection-start="3857" selection-end="3857" vertical-scroll-proportion="0.88778055" vertical-offset="1043" max-vertical-offset="1845">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7914" selection-start="0" selection-end="113290" vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="150">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -857,41 +731,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="50" selection-start="2617" selection-end="2617" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1800">
+        <state line="1" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3750">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/underscore.min.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1343" column="14" selection-start="45577" selection-end="45577" vertical-scroll-proportion="-28.192308" vertical-offset="19412" max-vertical-offset="20235">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="15" column="0" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.ben.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/RouteRegistrar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="0" selection-end="144446" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20295">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/Config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/underscore/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1612" column="0" selection-start="55291" selection-end="55291" vertical-scroll-proportion="-7.3333335" vertical-offset="24004" max-vertical-offset="37095">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/appStart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="470" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="12" column="3" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/vendor/underscore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1193" column="2" selection-start="40639" selection-end="40659" vertical-scroll-proportion="0.0" vertical-offset="17644" max-vertical-offset="20310">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="49" selection-start="2707" selection-end="2707" vertical-scroll-proportion="-15.576923" vertical-offset="510" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/wizerati.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7949" selection-start="0" selection-end="113312" vertical-scroll-proportion="-2.3076923" vertical-offset="0" max-vertical-offset="150">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="416" column="44" selection-start="80589" selection-end="80589" vertical-scroll-proportion="0.53504044" vertical-offset="5843" max-vertical-offset="6585">
+        <state line="319" column="0" selection-start="72681" selection-end="72681" vertical-scroll-proportion="0.63672656" vertical-offset="4466" max-vertical-offset="6690">
           <folding />
         </state>
       </provider>

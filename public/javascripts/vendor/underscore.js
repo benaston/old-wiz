@@ -1196,6 +1196,11 @@
     interpolate : /<%=([\s\S]+?)%>/g,
     escape      : /<%-([\s\S]+?)%>/g
   };
+//  _.templateSettings = {
+//    evaluate    : /<\u0025([\s\S]+?)\u0025>/g,
+//    interpolate : /<\u0025=([\s\S]+?)\u0025>/g,
+//    escape      : /<\u0025-([\s\S]+?)\u0025>/g
+//  };
 
   // When customizing `templateSettings`, if you don't want to define an
   // interpolation, evaluation or escaping regex, we need one that is
