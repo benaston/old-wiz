@@ -544,6 +544,8 @@ input[type="radio"]:checked:focus + label {
         transition: width .2s;
         width: 448px;
     }
+
+
 }
 
 /*minimized search results*/
@@ -595,6 +597,11 @@ input[type="radio"]:checked:focus + label {
     #search-panel[data-mode='1'] ~ .result-list-container[data-mode='0'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) .item-of-interest-width-maintainer {
         transition: width .2s;
         width: 648px;
+    }
+
+    #search-panel[data-mode='1'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) .itemMetadata h1 {
+        clear:none;
+        height: 98px;
     }
 }
 
@@ -1234,6 +1241,8 @@ a.hidden:before {
     overflow: hidden;
 }
 
-.itemMetadata h1 {
-    clear:none;
+
+
+.itemPrelim {
+    text-align:right;
 }
