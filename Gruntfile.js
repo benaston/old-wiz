@@ -9,6 +9,9 @@ module.exports = function (grunt) {
           separator: ';'
         },
         src: [
+          'public/javascripts/vendor/zepto.min.js',
+          'public/javascripts/vendor/zepto-callbacks.js',
+          'public/javascripts/vendor/zepto-deferred.js',
           'public/javascripts/vendor/_cookie.js',
           'public/javascripts/vendor/invertebrate.js/invertebrate.js',
           'public/javascripts/vendor/invertebrate.js/**.js',

@@ -21,4 +21,4 @@ window.invertebrate = {}; //'namespace' in the global namespace to hang stuff of
     o.trigger.apply(o, arguments);
   };
 
-}(jQuery));
+}($));
