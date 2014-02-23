@@ -68,9 +68,8 @@ a.btn:hover {
     text-decoration: none;
 }
 
-.btn:enabled:hover
 /*a.btn:not(.disabled):hover*/
-{
+.btn:enabled:hover {
     text-decoration: none;
     border-color: rgba(0, 0, 0, 0.85) rgba(0, 0, 0, 0.85) rgba(0, 0, 0, 0.85) !important;
 }
@@ -104,15 +103,6 @@ label:focus {
     position: relative;
 }
 
-/*.btn.btn-80 + .button-icon {*/
-/*display: inline-block;*/
-/*font-size: 1.9em;*/
-/*position: absolute;*/
-/*left: 28px;*/
-/*top: 32px;*/
-/*pointer-events: none;*/
-/*}*/
-
 .btn ~ .button-icon {
     display: inline-block;
 
@@ -123,7 +113,7 @@ label:focus {
 .btn.btn-80 ~ .button-icon:after {
     display: block;
     font-size: 1.9em;
-    content:'s';
+    content: 's';
     position: absolute;
     left: -52px;
     top: -43px;
@@ -133,7 +123,7 @@ label:focus {
 .btn.btn-50 ~ .button-icon:after {
     display: block;
     font-size: 1.3em;
-    content:'s';
+    content: 's';
     position: absolute;
     left: -34px;
     top: -32px;
@@ -143,7 +133,7 @@ label:focus {
 .btn.btn-40 ~ .button-icon:after {
     display: block;
     font-size: 1em;
-    content:'s';
+    content: 's';
     position: absolute;
     left: -27px;
     top: -26px;
@@ -178,10 +168,6 @@ a.btn-primary:not(.disabled):hover {
 
 .btn-danger:enabled:hover, .btn-danger:not(:disabled):hover {
     border-color: rgba(189, 54, 47, .95) rgba(189, 54, 47, .95) rgba(189, 54, 47, .95) !important;
-}
-
-.btn-with-notch {
-    /*position:relative;*/
 }
 
 .btn-with-notch:before {

@@ -103,11 +103,6 @@ button.checked, a.checked {
     visibility: hidden;
 }
 
-/*.form-button-container input,*/
-/*.form-button-container a {*/
-    /*float: left;*/
-/*}*/
-
 .rotating-button-container > .btn[data-is-waiting='false'] {
     transition: border-left-width .2s ease-out;
 }

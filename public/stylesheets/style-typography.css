@@ -89,8 +89,9 @@ h2 {
 }
 
 .itemMetadata h3 {
-    text-align:right;
+    text-align: right;
 }
+
 h3 {
     margin: 10px 0;
     line-height: 21px;
@@ -183,25 +184,25 @@ a:hover {
     line-height: 35px;
 }
 
-.itemMetadata h3,.itemContact h3 {
+.itemMetadata h3, .itemContact h3 {
     line-height: .8rem;
 }
 
 .id {
-    font-size:.7rem;
-}
-.updatedDateTime {
-    font-size:.8rem;
+    font-size: .7rem;
 }
 
-.modal-content-panel h1
-{
+.updatedDateTime {
+    font-size: .8rem;
+}
+
+.modal-content-panel h1 {
     margin-bottom: 40px;
 }
 
 .message-container blockquote {
-    margin-bottom:20px;
-    margin-left:10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .message-container em {
@@ -209,5 +210,5 @@ a:hover {
 }
 
 .message-container p {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }

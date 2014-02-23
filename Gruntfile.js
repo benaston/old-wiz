@@ -1,37 +1,49 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
-      options: {
-        separator: ';'
-      },
+
       dist: {
-        src: ['public/javascripts/vendor/_cookie.js',
-              'public/javascripts/vendor/invertebrate.js/invertebrate.js',
-              'public/javascripts/vendor/invertebrate.js/**.js',
-              'public/javascripts/application/wizerati.js',
-              'public/javascripts/application/wizerati.core/services/**/*.js',
-              'public/javascripts/application/wizerati.core/clients/**/*.js', 
-              'public/javascripts/application/wizerati.core/Config.js', 
-              'public/javascripts/application/wizerati.core/models/**/*.js', 
-              'public/javascripts/application/wizerati.core/views/**/*.js', 
-              'public/javascripts/application/wizerati.core/controllers/**/*.js', 
-              'public/javascripts/application/wizerati.core/factories/**/*.js', 
-              'public/javascripts/application/wizerati.core/caches/**/*.js', 
-              'public/javascripts/application/wizerati.core/entities/**/*.js', 
-              'public/javascripts/application/wizerati.core/repositories/**/*.js', 
-              'public/javascripts/application/modules.js',
-              'public/javascripts/application/wizerati.core/RouteRegistrar.js',
-              'public/javascripts/application/wizerati.core/App.js',
-              'public/javascripts/application/appStart.js'
-              ],
+        options: {
+          separator: ';'
+        },
+        src: [
+          'public/javascripts/vendor/_cookie.js',
+          'public/javascripts/vendor/invertebrate.js/invertebrate.js',
+          'public/javascripts/vendor/invertebrate.js/**.js',
+          'public/javascripts/application/wizerati.js',
+          'public/javascripts/application/wizerati.core/services/**/*.js',
+          'public/javascripts/application/wizerati.core/clients/**/*.js',
+          'public/javascripts/application/wizerati.core/Config.js',
+          'public/javascripts/application/wizerati.core/models/**/*.js',
+          'public/javascripts/application/wizerati.core/views/**/*.js',
+          'public/javascripts/application/wizerati.core/controllers/**/*.js',
+          'public/javascripts/application/wizerati.core/factories/**/*.js',
+          'public/javascripts/application/wizerati.core/caches/**/*.js',
+          'public/javascripts/application/wizerati.core/entities/**/*.js',
+          'public/javascripts/application/wizerati.core/repositories/**/*.js',
+          'public/javascripts/application/modules.js',
+          'public/javascripts/application/wizerati.core/RouteRegistrar.js',
+          'public/javascripts/application/wizerati.core/App.js',
+          'public/javascripts/application/appStart.js'
+        ],
         dest: 'public/javascripts/<%= pkg.name %>.js'
       },
       css: {
         src: [
-          'public/stylesheets/**/lucid-*.css',
-          'public/stylesheets/**/style-*.css'
+          'public/stylesheets/style-reset.css',
+          'public/stylesheets/style-reset-wizerati.css',
+          'public/stylesheets/style-typography.css',
+          'public/stylesheets/style-layout.css',
+          'public/stylesheets/style-form-element.css',
+          'public/stylesheets/style-table.css',
+          'public/stylesheets/style-special.css',
+          'public/stylesheets/style-cube.css',
+          'public/stylesheets/style-wizerati.css',
+          'public/stylesheets/lucid-style-buttons.css',
+          'public/stylesheets/lucid-style-form-elements.css',
+          'public/stylesheets/lucid-style-dialogs.css'
         ],
         dest: 'public/stylesheets/<%= pkg.name %>.css'
       }
@@ -44,6 +56,12 @@ module.exports = function(grunt) {
         files: {
           'public/javascripts/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
         }
+      }
+    },
+    cssmin: {
+      css: {
+        src: 'public/stylesheets/<%= pkg.name %>.css',
+        dest: 'public/stylesheets/<%= pkg.name %>.min.css'
       }
     },
     qunit: {
@@ -72,9 +90,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-css');
 
   grunt.registerTask('test', ['jshint', 'qunit']);
 
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };
+
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-reset.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-reset-wizerati.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-typography.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-layout.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-form-element.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-table.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-special.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-cube.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/style-wizerati.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-buttons.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-form-elements.css">-->
+//<!--<link rel="stylesheet" type="text/css" href="./stylesheets/lucid-style-dialogs.css">-->
