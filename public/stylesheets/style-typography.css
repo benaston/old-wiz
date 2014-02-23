@@ -6,13 +6,6 @@
 }
 
 @font-face {
-    font-family: pictos;
-    src: url("../fonts/pictos.woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: proxima-nova-100;
     src: url("../fonts/proxima-nova-100.woff");
     font-weight: normal;
