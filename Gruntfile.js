@@ -7,7 +7,8 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['public/javascripts/vendor/invertebrate.js/invertebrate.js',
+        src: ['public/javascripts/vendor/_cookie.js',
+              'public/javascripts/vendor/invertebrate.js/invertebrate.js',
               'public/javascripts/vendor/invertebrate.js/**.js',
               'public/javascripts/application/wizerati.js',
               'public/javascripts/application/wizerati.core/services/**/*.js',
@@ -26,6 +27,13 @@ module.exports = function(grunt) {
               'public/javascripts/application/appStart.js'
               ],
         dest: 'public/javascripts/<%= pkg.name %>.js'
+      },
+      css: {
+        src: [
+          'public/stylesheets/**/lucid-*.css',
+          'public/stylesheets/**/style-*.css'
+        ],
+        dest: 'public/stylesheets/<%= pkg.name %>.css'
       }
     },
     uglify: {
