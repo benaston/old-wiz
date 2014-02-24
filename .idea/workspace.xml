@@ -63,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style-wizerati.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="604" column="5" selection-start="15206" selection-end="15206" vertical-scroll-proportion="-27.307692" vertical-offset="8350" max-vertical-offset="18795">
+            <state line="1227" column="75" selection-start="31994" selection-end="31994" vertical-scroll-proportion="0.5135135" vertical-offset="18025" max-vertical-offset="18870">
               <folding />
             </state>
           </provider>
@@ -99,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/contract/search">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.2154047" vertical-offset="570" max-vertical-offset="10095">
+            <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="10095">
               <folding />
             </state>
           </provider>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style-typography.css" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/public/contract/templates/item-of-interest.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
         <option value="$PROJECT_DIR$/public/contract/search" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
       </list>
     </option>
   </component>
@@ -942,16 +942,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
+    <entry file="file://$PROJECT_DIR$/public/contract/search">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="604" column="5" selection-start="15206" selection-end="15206" vertical-scroll-proportion="-27.307692" vertical-offset="8350" max-vertical-offset="18795">
+        <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="10095">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/search">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.2154047" vertical-offset="570" max-vertical-offset="10095">
+        <state line="1227" column="75" selection-start="31994" selection-end="31994" vertical-scroll-proportion="0.5135135" vertical-offset="18025" max-vertical-offset="18870">
           <folding />
         </state>
       </provider>
