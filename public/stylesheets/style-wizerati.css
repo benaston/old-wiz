@@ -1233,9 +1233,7 @@ a.hidden:before {
     border: none;
 }
 
-.item-of-interest .table-bordered td:nth-child(2) {
-    text-align:right;
-}
+
 .item-of-interest .table-bordered td {
     padding: 6px;
     text-align: center;
