@@ -2503,6 +2503,10 @@ a.hidden:before {
 .itemPrelim {
     text-align:right;
 }
+
+.item-of-interest-content {
+    margin-top:3px;
+}
 .btn {
     padding: 0 !important;
     cursor: pointer;
