@@ -744,6 +744,8 @@ input[type="radio"]:checked:focus + label {
     bottom: 18px;
     position: absolute;
     z-index: 4;
+    opacity: 0;
+    pointer-events:none;
     transition: opacity .1s linear;
 }
 
@@ -804,9 +806,17 @@ body[data-ui-mode='0'] {
     transition: width 0s linear 0s;
 }
 
+body[data-ui-mode='-1'] #search-panel {
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0s linear 0s, opacity .1s linear;
+}
+
 body[data-ui-mode='0'] #search-panel {
     width: 100%;
-    transition: width 0s linear 0s;
+    pointer-events: auto;
+    transition: width 0s linear 0s, opacity .1s linear;
 }
 
 body[data-ui-mode='1'] .favourite-items {

@@ -6537,6 +6537,7 @@ window.wizerati = {
     };
 
     mod.UIMode = {
+      NotReady: '-1',
       GreenfieldSearch: '0',
       Search: '1',
       SingleItem: '2'
