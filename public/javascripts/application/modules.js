@@ -202,7 +202,7 @@
         wizerati.mod('services').authenticationService);
     mod.loginController = new wizerati.LoginController(wizerati.mod('models').loginPanelModel,
         wizerati.mod('models').uiRootModel);
-    mod.homeController = new wizerati.HomeController(wizerati.mod('models').uiRootModel, wizerati.mod('models').searchPanelModel);
+    mod.homeController = new wizerati.HomeController(wizerati.mod('models').uiRootModel, wizerati.mod('models').searchPanelModel, wizerati.mod('models').resultListModel);
     mod.advertisersController = new wizerati.AdvertisersController(wizerati.mod('models').uiRootModel);
     mod.searchController = new wizerati.SearchController(wizerati.mod('models').uiRootModel,
         wizerati.mod('models').searchFormModel,
