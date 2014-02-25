@@ -1243,12 +1243,13 @@ a.hidden:before {
 
 .item-of-interest table td:nth-of-type(1):nth-last-of-type(2) {
     width: 50%;
-    border-right: 1px #eee solid;
+    /*border-right: 1px #eee solid;*/
 }
 
 .item-of-interest table td:nth-of-type(2):nth-last-of-type(1) {
     width: 50%;
-    border-left: 1px #eee solid;
+    box-shadow: -1px 0 0 0px #eee;
+    /*border-left: 1px #eee solid;*/
 }
 
 .item-of-interest table td:nth-of-type(1):nth-last-of-type(1) {

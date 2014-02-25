@@ -26,7 +26,34 @@
       <file leaf-file-name="style-wizerati.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="761" column="52" selection-start="22846" selection-end="22846" vertical-scroll-proportion="0.3527027" vertical-offset="11154" max-vertical-offset="19275">
+            <state line="1250" column="26" selection-start="32373" selection-end="32373" vertical-scroll-proportion="0.43243244" vertical-offset="18430" max-vertical-offset="19290">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style-table.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style-table.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/contract/search">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10095">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item-of-interest.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="49" selection-start="4327" selection-end="4327" vertical-scroll-proportion="-17.791666" vertical-offset="458" max-vertical-offset="1365">
               <folding />
             </state>
           </provider>
@@ -45,13 +72,6 @@
             <state line="79" column="29" selection-start="3187" selection-end="3187" vertical-scroll-proportion="-13.115385" vertical-offset="844" max-vertical-offset="2160">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apple-touch-icon-152-4.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/apple-touch-icon-152-4.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -80,24 +100,6 @@
         <entry file="file://$PROJECT_DIR$/public/images/apple-touch-icon-120-4.png">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="17" selection-start="6568" selection-end="6568" vertical-scroll-proportion="-60.625" vertical-offset="0" max-vertical-offset="4770">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/application/modules.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="17" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3765">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -156,11 +158,11 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style-typography.css" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/public/contract/search" />
-        <option value="$PROJECT_DIR$/public/contract/templates/item-of-interest.html" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/controllers/HomeController.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/modules.js" />
         <option value="$PROJECT_DIR$/public/javascripts/application/wizerati.core/RouteRegistrar.js" />
+        <option value="$PROJECT_DIR$/public/contract/templates/item-of-interest.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/style-wizerati.css" />
       </list>
     </option>
@@ -256,6 +258,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -296,15 +316,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
+              <option name="myItemId" value="contract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wizerati" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wiz" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wizerati.core" />
+              <option name="myItemId" value="contract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,13 +511,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/lucid-style-form-elements.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="16" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.401487" vertical-offset="639" max-vertical-offset="2265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/application/wizerati.core/views/ResultListView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="169" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="2625">
@@ -686,24 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/search">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="10095">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="20" selection-start="2847" selection-end="2871" vertical-scroll-proportion="-10.916667" vertical-offset="248" max-vertical-offset="1290">
-          <folding>
-            <element signature="n#style#0;n#section#3;n#article#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#section#4;n#article#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#section#5;n#article#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/images/apple-touch-icon-120-1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -747,9 +756,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="0" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="44700">
           <folding>
-            <marker date="1393286432000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393286432000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1393286432000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393288009000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393288009000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1393288009000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -819,9 +828,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/search">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="23" selection-start="4282" selection-end="4282" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="10095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/contract/templates/item-of-interest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="49" selection-start="4327" selection-end="4327" vertical-scroll-proportion="-17.791666" vertical-offset="458" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style-table.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style-wizerati.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="761" column="52" selection-start="22846" selection-end="22846" vertical-scroll-proportion="0.3527027" vertical-offset="11154" max-vertical-offset="19275">
+        <state line="1250" column="26" selection-start="32373" selection-end="32373" vertical-scroll-proportion="0.43243244" vertical-offset="18430" max-vertical-offset="19290">
           <folding />
         </state>
       </provider>

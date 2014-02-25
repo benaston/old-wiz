@@ -44,14 +44,19 @@
                     <td><div class="cell-content-container"><%= model.industry %></div></td>
                 </tr>
                 <tr>
+                    <td><div class="cell-content-container"><%= model.organization %></div></td>
+                    <td><div class="cell-content-container">Updated <%= moment(model.updatedDateTime).fromNow() %></div></td>
+                </tr>
+                <tr>
                     <td colspan="2"><div class="cell-content-container"><%= model.skills.split(',').map(function(s){ return '<code>' + s.trim() + '</code>'; }).join(' ') %></div></td>
                 </tr>
             </table>
             <h1><%= model.title %></h1>
         </section>
         <section class="itemPrelim">
-            <h3><%= model.organization %></h3>
-            <h3 class="updatedDateTime">Updated <%= moment(model.updatedDateTime).fromNow() %></h3>
+            <h3>Contact <%= model.contact %></h3>
+            <h3><%= model.telephoneNumber %></h3>
+            <!--<h3 class="updatedDateTime"></h3>-->
             <h3 class="id">Job ID: <%= model.id %></h3>
         </section>
         <section class="itemSummary">
