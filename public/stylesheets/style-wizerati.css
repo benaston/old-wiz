@@ -759,7 +759,7 @@ input[type="radio"]:checked:focus + label {
     pointer-events: none;
 }
 
-body[data-ui-mode='0'] .navbar {
+body[data-ui-mode='0'] .navbar, body[data-ui-mode='1'] .navbar {
     opacity: 1;
     pointer-events: auto;
 }
