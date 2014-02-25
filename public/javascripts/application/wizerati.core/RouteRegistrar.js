@@ -77,7 +77,7 @@
 
         instance.router.registerRoute('/purchasepanel/destroy', function (dto) {
           app.mod('controllers').purchasePanelController.destroy(dto);
-        });
+        }, { silent: true });
 
         instance.router.registerRoute('/accountactivationpanel', function (dto) {
           app.mod('controllers').accountActivationPanelController.index(dto);
