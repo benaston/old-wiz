@@ -53,7 +53,7 @@
 
     this.renderWithSelectedItemAnimation = function () {
       renderPrivate();
-    }
+    };
 
     this.render = function () {
       var args = Array.prototype.slice.call(arguments);
@@ -69,7 +69,8 @@
 
       var $prevEl = that.$currentEl || that.$el2;
       that.$currentEl = $prevEl === that.$el ? that.$el2 : that.$el; //Double buffering to ensure the user sees no 'flicker' as the results are rendered.
-      that.$currentEl.empty();
+//      that.$currentEl.empty();
+      that.$currentEl.children().not('.handle-pinned-items').remove();
 
       var items = that.Model.getItemsOfInterest();
       items.selectedItem = _selectedItemModel.getSelectedItemId();
@@ -105,7 +106,8 @@
           $prevEl.addClass('buffer');
           that.$currentEl.removeClass('buffer');
           setTimeout(function () {
-            $prevEl.empty();
+//            $prevEl.empty();
+            $prevEl.children().not('.handle-pinned-items').remove();
           }, 300);
         }, 200); //wait for removal animation to complete
 
@@ -115,7 +117,8 @@
       $prevEl.addClass('buffer');
       that.$currentEl.removeClass('buffer');
       setTimeout(function () {
-        $prevEl.empty();
+//        $prevEl.empty();
+        $prevEl.children().not('.handle-pinned-items').remove();
       }, 300);
     }
 

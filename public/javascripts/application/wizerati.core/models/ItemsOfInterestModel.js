@@ -8,8 +8,7 @@
 
     var that = this,
         _selectedItemModel = null,
-        _itemsOfInterest = { selectedItem: '',
-          pinnedItems: [] };
+        _itemsOfInterest = { selectedItem: '', pinnedItems: [] };
 
     this.updateEventUri = 'update://ItemsOfInterestModel/';
 

@@ -110,7 +110,7 @@
         </div>
     </div>
     <div class="centered-text handle handle-search-panel btn-container">
-        <a href="/searchpanelmode/update?mode=0" class="btn btn-primary btn-50">&#xe800;</a><div class="label">expand search</div>
+        <a href="/searchpanelmode/update?mode=0" class="btn btn-primary btn-50">&#xe800;</a><div class="label">show search & favorites</div>
     </div>
     <div class="result-list-container lucid-panel-absolute-full-height" data-mode="0">
         <ul id="result-list-panel-1" class="result-list-panel panel lucid-panel-absolute-full-height overflow-y-auto buffer">
@@ -123,9 +123,16 @@
     </div>
     <div class="items-of-interest-container">
         <div id="items-of-interest-panel-1" class="items-of-interest-panel panel lucid-columns-full-height buffer">
+            <div class="centered-text handle handle-pinned-items btn-container">
+                <a href="/itemsofinterestpanelmode/update?mode=0" class="btn btn-primary btn-50"></a><div class="label">expand pinned items</div>
+            </div>
         </div>
         <div id="items-of-interest-panel-2" class="items-of-interest-panel panel lucid-columns-full-height buffer">
+            <div class="centered-text handle handle-pinned-items btn-container">
+                <a href="/itemsofinterestpanelmode/update?mode=0" class="btn btn-primary btn-50"></a><div class="label">expand pinned items</div>
+            </div>
         </div>
+
     </div>
 
     <h1 class="logo">wizerati</h1>
@@ -292,20 +299,8 @@
         </div>
     </div>
 </div>
-<script>
-    <!-- To inline all JavaScript here including underscore.js, you need to escape instances of angle-bracket - percent (by putting a backslash before the percent symbol) to avoid server-side templating causing an error -->
-</script>
-<script src="javascripts/wizerati.js" />
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-29544338-1', 'pacific-plains-5947.herokuapp.com');
-    ga('send', 'pageview');
-
-</script>
+<!-- To inline all JavaScript here including underscore.js, you need to escape instances of angle-bracket - percent (by putting a backslash before the percent symbol) to avoid server-side templating causing an error -->
+<script src="javascripts/wizerati.js"></script>
 <div id="no-script">
     JavaScript must be enabled to use this website.
 </div>

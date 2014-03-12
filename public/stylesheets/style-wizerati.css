@@ -44,6 +44,8 @@ body[data-ui-mode='1'] .result-list-panel {
     -webkit-transition: height .3s ease-in-out;
 }
 
+
+
 .result-list-container {
     left: 316px;
     width: 533px;
@@ -488,6 +490,8 @@ body[data-ui-mode='0'] #advertiser-help {
     overflow: hidden;
 }
 
+
+
 .favourite-items {
     top: 27px;
     display: none;
@@ -534,6 +538,8 @@ input[type="radio"]:checked:focus + label {
     line-height: 1em;
     word-wrap: break-word; /*avoid word clipping*/
 }
+
+
 
 @media only screen and (min-width: 1115px) {
     #search-panel[data-mode='1'] ~ .result-list-container[data-mode='0'] ~ .items-of-interest-container .item-of-interest:nth-child(1):nth-last-child(1) {
@@ -1278,4 +1284,12 @@ a.hidden:before {
 
 .item-of-interest-content {
     margin-top: 3px;
+}
+
+.handle-pinned-items {
+    position:absolute;
+    right:0;
+    opacity: 1;
+    left:auto;
+    z-index: 9;
 }

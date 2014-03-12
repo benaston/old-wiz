@@ -14,6 +14,7 @@ module.exports = function (grunt) {
           'public/javascripts/vendor/zepto-deferred.js',
           'public/javascripts/vendor/underscore.js',
           'public/javascripts/vendor/_cookie.js',
+          'public/javascripts/vendor/tiny-pub-sub.js',
           'public/javascripts/vendor/moment.min.js',
           'public/javascripts/vendor/invertebrate.js/invertebrate.js',
           'public/javascripts/vendor/invertebrate.js/**.js',
